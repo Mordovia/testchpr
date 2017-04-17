@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width,user-scalable=no" />
+        <title>html5 page</title>
+    </head>
+
+    <body>
+
+        <script src="js/j2ds.js" type="text/javascript"></script>
+        <script src="js/engine.js" type="text/javascript"></script>
+        <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script>
+        <script src="https://vk.com/js/api/openapi.js"></script>
+        <script type="text/javascript">
+            'use strict';
+
+gs.add('gamepreloading', function() {
+market['loaded'] = false;
+scene.setGameState('gameloading');
+loadGame();
+});
+gs.add('gameloading', function() {
+    
+                if (market['loaded']) {
+                    imageMap.photo_1 = tm.loadImageMap(market['photo_1']),
+                    imageMap.photo_2 = tm.loadImageMap(market['photo_2']),
+                    imageMap.photo_3 = tm.loadImageMap(market['photo_3']),
+                    imageMap.photo_4 = tm.loadImageMap(market['photo_4']),
+                    imageMap.photo_5 = tm.loadImageMap(market['photo_5']),
+                    imageMap.photo_6 = tm.loadImageMap(market['photo_6']),
+                    imageMap.photo_7 = tm.loadImageMap(market['photo_7']),
+                    imageMap.photo_8 = tm.loadImageMap(market['photo_8']); 
+                    imageMap.photo_9 = tm.loadImageMap(market['photo_9']),
+                    imageMap.photo_10 = tm.loadImageMap(market['photo_10']),
+                    imageMap.photo_11 = tm.loadImageMap(market['photo_11']),
+                    imageMap.photo_12 = tm.loadImageMap(market['photo_12']),
+                    imageMap.photo_13 = tm.loadImageMap(market['photo_13']);
+                    imageMap.photo_14 = tm.loadImageMap(market['photo_14']),
+                    imageMap.photo_15 = tm.loadImageMap(market['photo_15']),
+                    imageMap.photo_16 = tm.loadImageMap(market['photo_16']),
+                    imageMap.photo_17 = tm.loadImageMap(market['photo_17']),
+                    imageMap.photo_18 = tm.loadImageMap(market['photo_18']);                       
+                    scene.setGameState('gameloading2');
+                }
+                text.drawSimpleText('Загрузка...');
+});
+
+gs.add('gameloading2', function() {
+                if (res.show().added == res.show().loaded) {
+                    photo_1 = scene.addSpriteNode(m.v2f(180, 90), m.v2f(85, 85),
+                    imageMap.photo_1.getAnimation(0, 0, 600, 600, 1));
+                    photo_2 = scene.addSpriteNode(m.v2f(180, 135), m.v2f(85, 85),
+                    imageMap.photo_2.getAnimation(0, 0, 600, 600, 1));
+                    photo_3 = scene.addSpriteNode(m.v2f(180, 190), m.v2f(85, 85),
+                    imageMap.photo_3.getAnimation(0, 0, 600, 600, 1));
+                    photo_4 = scene.addSpriteNode(m.v2f(180, 235), m.v2f(85, 85),
+                    imageMap.photo_4.getAnimation(0, 0, 600, 600, 1));
+                    photo_5 = scene.addSpriteNode(m.v2f(180, 90), m.v2f(85, 85),
+                    imageMap.photo_5.getAnimation(0, 0, 600, 600, 1));
+                    photo_6 = scene.addSpriteNode(m.v2f(180, 135), m.v2f(85, 85),
+                    imageMap.photo_6.getAnimation(0, 0, 600, 600, 1));
+                    photo_7 = scene.addSpriteNode(m.v2f(180, 190), m.v2f(85, 85),
+                    imageMap.photo_7.getAnimation(0, 0, 600, 600, 1));
+                    photo_8 = scene.addSpriteNode(m.v2f(180, 235), m.v2f(85, 85),
+                    imageMap.photo_8.getAnimation(0, 0, 600, 600, 1));
+                    photo_9 = scene.addSpriteNode(m.v2f(45, 240), m.v2f(85, 85),
+                    imageMap.photo_9.getAnimation(0, 0, 600, 600, 1));
+                    photo_10 = scene.addSpriteNode(m.v2f(245, 240), m.v2f(85, 85),
+                    imageMap.photo_10.getAnimation(0, 0, 600, 600, 1));
+                    photo_11 = scene.addSpriteNode(m.v2f(45, 290), m.v2f(85, 85),
+                    imageMap.photo_11.getAnimation(0, 0, 600, 600, 1));
+                    photo_12 = scene.addSpriteNode(m.v2f(245, 290), m.v2f(85, 85),
+                    imageMap.photo_12.getAnimation(0, 0, 600, 600, 1));
+                    photo_13 = scene.addSpriteNode(m.v2f(45, 340), m.v2f(85, 85),
+                    imageMap.photo_13.getAnimation(0, 0, 600, 600, 1));
+                    photo_14 = scene.addSpriteNode(m.v2f(245, 340), m.v2f(85, 85),
+                    imageMap.photo_14.getAnimation(0, 0, 600, 600, 1));
+                    photo_15 = scene.addSpriteNode(m.v2f(45, 390), m.v2f(85, 85),
+                    imageMap.photo_15.getAnimation(0, 0, 600, 600, 1));
+                    photo_16 = scene.addSpriteNode(m.v2f(245, 390), m.v2f(85, 85),
+                    imageMap.photo_16.getAnimation(0, 0, 600, 600, 1));
+                    photo_17 = scene.addSpriteNode(m.v2f(45, 440), m.v2f(85, 85),
+                    imageMap.photo_17.getAnimation(0, 0, 600, 600, 1));
+                    photo_18 = scene.addSpriteNode(m.v2f(245, 440), m.v2f(85, 85),
+                    imageMap.photo_18.getAnimation(0, 0, 600, 600, 1));
+                    scene.setGameState('game');
+                }
+});
+            gs.add('week', function() {
+            	 text.drawSimpleText('День', m.v2f(55, 110));
+            	 text.drawSimpleText('Ночь', m.v2f(225, 110));
+          		 text.drawSimpleText(now.toLocaleString("ru", options) + '', m.v2f(0,165));
+                text.drawSimpleText(tomorrow.toLocaleString("ru", options) + '', m.v2f(0,215));
+                text.drawSimpleText(day3.toLocaleString("ru", options) + '', m.v2f(0,265));
+                text.drawSimpleText(day4.toLocaleString("ru", options) + '', m.v2f(0,315));
+                text.drawSimpleText(day5.toLocaleString("ru", options) + '', m.v2f(0,365));
+                text.drawSimpleText(day6.toLocaleString("ru", options) + '', m.v2f(0,415));
+                text.drawSimpleText(day7.toLocaleString("ru", options) + '', m.v2f(0,465));
+                text.drawSimpleText(user['name'] + ', твой чайный прогноз от ' + group['groupname'] + ':', m.v2f(55,10));
+                avatar.draw();
+
+					 text.drawSimpleText(market['descript2'], m.v2f(110,165));
+                if (io.onNode(photo_2) && io.isMousePress('LEFT')) {
+                    window.open(url[2]);
+                   }
+                    
+					 photo_2.setPosition(m.v2f(85,170));
+                photo_2.draw(m.v2f(10,10));
+                
+					 
+					 text.drawSimpleText(market['descript4'], m.v2f(310,165));
+                if (io.onNode(photo_4) && io.isMousePress('LEFT')) {
+                    window.open(url[4]);
+                   }
+                photo_4.setPosition(m.v2f(285,170));   
+                photo_4.draw();
+
+                text.drawSimpleText(market['descript6'], m.v2f(110,215));
+                if (io.onNode(photo_6) && io.isMousePress('LEFT')) {
+                    window.open(url[6]);
+                   }
+                photo_6.setPosition(m.v2f(85,225));
+                photo_6.draw();
+
+                text.drawSimpleText(market['descript8'], m.v2f(310,215));
+                if (io.onNode(photo_8) && io.isMousePress('LEFT')) {
+                    window.open(url[8]);
+                   }
+                photo_8.setPosition(m.v2f(285,225));
+                photo_8.draw();
+                
+                text.drawSimpleText(market['descript9'], m.v2f(110,265));
+                if (io.onNode(photo_9) && io.isMousePress('LEFT')) {
+                    window.open(url[9]);
+                   }
+                photo_9.draw();
+               
+                text.drawSimpleText(market['descript10'], m.v2f(310,265));
+                if (io.onNode(photo_10) && io.isMousePress('LEFT')) {
+                    window.open(url[10]);
+                   }
+                photo_10.draw();
+                text.drawSimpleText(market['descript11'], m.v2f(110,315));
+                if (io.onNode(photo_11) && io.isMousePress('LEFT')) {
+                    window.open(url[11]);
+                   }
+                photo_11.draw();
+                text.drawSimpleText(market['descript12'], m.v2f(310,315));
+                if (io.onNode(photo_12) && io.isMousePress('LEFT')) {
+                    window.open(url[12]);
+                   }
+                photo_12.draw();
+                text.drawSimpleText(market['descript13'], m.v2f(110,365));
+                if (io.onNode(photo_13) && io.isMousePress('LEFT')) {
+                    window.open(url[13]);
+                   }
+                photo_13.draw();
+                
+                text.drawSimpleText(market['descript14'], m.v2f(310,365));
+                if (io.onNode(photo_14) && io.isMousePress('LEFT')) {
+                    window.open(url[14]);
+                   }
+                photo_14.draw();
+               
+                text.drawSimpleText(market['descript15'], m.v2f(110,415));
+                if (io.onNode(photo_15) && io.isMousePress('LEFT')) {
+                    window.open(url[15]);
+                   }
+                photo_15.draw();
+                text.drawSimpleText(market['descript16'], m.v2f(310,415));
+                if (io.onNode(photo_16) && io.isMousePress('LEFT')) {
+                    window.open(url[16]);
+                   }
+                photo_16.draw();
+                text.drawSimpleText(market['descript17'], m.v2f(110,465));
+                if (io.onNode(photo_17) && io.isMousePress('LEFT')) {
+                    window.open(url[17]);
+                   }
+                photo_17.draw();
+                text.drawSimpleText(market['descript18'], m.v2f(310,465));
+                if (io.onNode(photo_18) && io.isMousePress('LEFT')) {
+                    window.open(url[18]);
+                   }
+                photo_18.draw();
+                
+                
+                
+                
+                
+                if (io.onNode(text_2) && io.isMousePress('LEFT')) {
+                    scene.setGameState('game');
+                   }
+                text_2.draw();
+                
+                if (io.onNode(text_3) && io.isMousePress('LEFT')) {
+                    scene.setGameState('tomorrow');
+                   }
+                text_3.draw();
+                if (io.onNode(week) && io.isMousePress('LEFT')) {
+                    scene.setGameState('week');
+                   }
+                week.draw();
+                if (io.onNode(reloadButton.reloadGame) && io.isMousePress('LEFT')) {
+                    scene.setGameState('gamepreloading');
+                   }
+                   reloadButton.reloadGame.setPosition(m.v2f(385,550));
+                   reloadButton.reloadGame.draw();
+            });
+            
+            gs.add('tomorrow', function() {
+            	 text.drawSimpleText('Утро: ', m.v2f(125, 115));
+          		 text.drawSimpleText('День: ', m.v2f(125,165));
+                text.drawSimpleText('Вечер: ', m.v2f(125,215));
+                text.drawSimpleText('Ночь: ', m.v2f(125,265));
+                text.drawSimpleText(user['name'] + ', твой чайный прогноз от ' + group['groupname'] + ':', m.v2f(55,10));
+                avatar.draw();
+                text.drawSimpleText(market['descript5'], m.v2f(265,115));
+                if (io.onNode(photo_5) && io.isMousePress('LEFT')) {
+                    window.open(url[5]);
+                   }
+                photo_5.draw();
+                text.drawSimpleText(market['descript6'], m.v2f(265,165));
+                if (io.onNode(photo_6) && io.isMousePress('LEFT')) {
+                    window.open(url[6]);
+                   }
+                photo_6.setPosition(m.v2f(225,180));
+                photo_6.draw();
+                text.drawSimpleText(market['descript7'], m.v2f(265,215));
+                if (io.onNode(photo_7) && io.isMousePress('LEFT')) {
+                    window.open(url[7]);
+                   }
+                photo_7.draw();
+                text.drawSimpleText(market['descript8'], m.v2f(265,265));
+                if (io.onNode(photo_8) && io.isMousePress('LEFT')) {
+                    window.open(url[8]);
+                   }
+                photo_8.setPosition(m.v2f(225,280));
+                photo_8.draw();
+                
+                if (io.onNode(text_2) && io.isMousePress('LEFT')) {
+                    scene.setGameState('game');
+                   }
+                text_2.draw();
+                
+                if (io.onNode(text_3) && io.isMousePress('LEFT')) {
+                    scene.setGameState('tomorrow');
+                   }
+                text_3.draw();
+                if (io.onNode(week) && io.isMousePress('LEFT')) {
+                    scene.setGameState('week');
+                   }
+                week.draw();
+                if (io.onNode(reloadButton.reloadGame) && io.isMousePress('LEFT')) {
+                    scene.setGameState('gamepreloading');
+                   }
+                   reloadButton.reloadGame.draw();
+            });
+            
+            gs.add('game', function() {
+            	 
+                text.drawSimpleText('Утро: ', m.v2f(125, 115));
+ //						if (io.onNode(market_url1.url1) && io.isMousePress('LEFT')) {
+ //                   window.location.href = url[1];
+ //                  }
+ //                  market_url1.url1.draw();
+            		
+                text.drawSimpleText('День: ', m.v2f(125,165));
+                text.drawSimpleText('Вечер: ', m.v2f(125,215));
+                text.drawSimpleText('Ночь: ', m.v2f(125,265));
+                text.drawSimpleText(user['name'] + ', твой чайный прогноз от ' + group['groupname'] + ':', m.v2f(55,10));
+                avatar.draw();
+                text.drawSimpleText(market['descript1'], m.v2f(265,115));
+                                if (io.onNode(photo_1) && io.isMousePress('LEFT')) {
+                    window.open(url[1]);
+                   }
+                photo_1.draw();
+                
+                text.drawSimpleText(market['descript2'], m.v2f(265,165));
+                if (io.onNode(photo_2) && io.isMousePress('LEFT')) {
+                    window.open(url[2]);
+                   }
+ //                  photo_2.moveTo(m.v2f(225, 180));
+ 					 photo_2.setPosition(m.v2f(225,180));
+                photo_2.draw();
+                text.drawSimpleText(market['descript3'], m.v2f(265,215));
+                if (io.onNode(photo_3) && io.isMousePress('LEFT')) {
+                    window.open(url[3]);
+                   }
+                photo_3.draw();
+                text.drawSimpleText(market['descript4'], m.v2f(265,265));
+                if (io.onNode(photo_4) && io.isMousePress('LEFT')) {
+                    window.open(url[4]);
+                   }
+                photo_4.setPosition(m.v2f(225,280));
+                photo_4.draw();
+                
+                if (io.onNode(text_2) && io.isMousePress('LEFT')) {
+                    scene.setGameState('game');
+                   }
+                text_2.draw();
+                
+                if (io.onNode(text_3) && io.isMousePress('LEFT')) {
+                    scene.setGameState('tomorrow');
+                   }
+                text_3.draw();
+                if (io.onNode(week) && io.isMousePress('LEFT')) {
+                    scene.setGameState('week');
+                   }
+                week.draw();
+//                if (io.onNode(reloadButton.reloadGame))
+//                    menuItems.tmp = reloadButton.reloadGame;
+                
+                if (io.onNode(reloadButton.reloadGame) && io.isMousePress('LEFT')) {
+                    scene.setGameState('gamepreloading');
+                   }
+                   reloadButton.reloadGame.draw();
+            });
+
+                gs.add('mainMenu', function() {
+
+                if (io.onNode(menuItems.newGame))
+                    menuItems.tmp = menuItems.newGame;
+                if (io.onNode(menuItems.exit))
+                    menuItems.tmp = menuItems.exit;
+
+                if (menuItems.tmp) {
+                    menuItems.teacup.moveTo(m.v2f(-70 + menuItems.tmp.getPosition().x, menuItems.tmp.getPosition().y), 4);
+                    menuItems.teacup.draw();
+                }
+
+                if (io.onNode(menuItems.exit) && io.isMousePress('LEFT')) {
+ //                   err.show('Выход');
+ 							parent.window.location.href = 'http://vk.com/';
+                }
+
+                if (io.onNode(menuItems.newGame) && io.isMousePress('LEFT')) {
+                    scene.setGameState('gameloading');
+                    loadGame();
+                }
+
+                text.drawSimpleText('Привет, ' + user['name'] + ', хочешь получить свой чайный прогноз от ' + group['groupname'] + '?', m.v2f(55, 10));
+                avatar.draw();
+                menuItems.newGame.draw(),
+                menuItems.exit.draw();
+                //text.drawSimpleText('Сообщество: ' + group['groupname'], m.v2f(110,90));
+                //group_avatar.draw();
+            });
+
+            gs.add('connect', function() {
+                if (user['loaded']) {
+                    imageMap.avatar = tm.loadImageMap(user['avatar']);
+                    imageMap.sprite = tm.loadImageMap('res/teacup.png');
+                    VK.callMethod("showSettingsBox", 134217728); 
+                    scene.setGameState('loader');
+                }
+                text.drawSimpleText('Соединение...');
+            });
+
+            gs.add('loader', function() {
+                if (res.show().added == res.show().loaded) {
+                    avatar = scene.addSpriteNode(m.v2f(0, 0), m.v2f(50, 50), imageMap.avatar.getAnimation(0, 0, 50, 50, 1));
+                    menuItems.teacup = scene.addSpriteNode(m.v2f(0, 150), m.v2f(286 / 7, 164 / 7), imageMap.sprite.getAnimation(7, 57, 286, 164, 1));
+                    teacup = scene.addSpriteNode(m.v2f(0, 150), m.v2f(286, 164), imageMap.sprite.getAnimation(7, 57, 286, 164, 1));
+
+                    scene.setGameState('mainMenu');
+                }
+                text.drawSimpleText('Загрузка... (' + res.getProgress() + '%)');
+            });
+        </script>
+    </body>
+
+</html>
