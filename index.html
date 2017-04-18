@@ -339,11 +339,12 @@ gs.add('gameloading2', function() {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
-		if (io.onNode(menuItems.newGame) && touch.isTapPress()) {
+			//тачскрин
+		if (menuItems.tmp = menuItems.newGame && touch.isTapPress()) {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
-
+			//конец тачскрина
                 text.drawSimpleText('Привет, ' + user['name'] + ', хочешь получить свой чайный прогноз от ' + group['groupname'] + '?', m.v2f(55, 10));
                 avatar.draw();
                 menuItems.newGame.draw(),
