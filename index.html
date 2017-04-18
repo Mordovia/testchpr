@@ -193,6 +193,11 @@ gs.add('gameloading2', function() {
                     scene.setGameState('game');
                    }
                 text_2.draw();
+		    
+		 if (io.onNode(text_2) && io.isTouchPress) {
+                    scene.setGameState('game');
+                   }
+                text_2.draw();    
                 
                 if (io.onNode(text_3) && io.isMousePress('LEFT')) {
                     scene.setGameState('tomorrow');
