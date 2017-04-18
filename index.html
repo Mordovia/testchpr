@@ -339,7 +339,7 @@ gs.add('gameloading2', function() {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
-		if (touch.Node(menuItems.newGame) && touch.isTapPress()) {
+		if (io.onNode(menuItems.newGame) && touch.isTapPress()) {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
