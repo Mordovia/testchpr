@@ -6,7 +6,8 @@ var 	err = j2Ds.getErrorManager(),
 		res = j2Ds.getResourceManager(),
 		lr = j2Ds.getLayerManager(),
 		dom = j2Ds.getDOMManager(),
-		io = 	j2Ds.getIO();	
+		io = 	j2Ds.getIO(),
+		touch = j2Ds.getTouchIO();
 		
 err.setMode('stopAndShow');
 
