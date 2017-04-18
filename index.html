@@ -193,12 +193,7 @@ gs.add('gameloading2', function() {
                     scene.setGameState('game');
                    }
                 text_2.draw();
-		    // тачскрин
-		if (touch.onNode(text_2) && touch.isTapPress()) {
-                    scene.setGameState('game');
-                   }
-                text_2.draw();    
-		    //конец тачскрина
+		   
                 if (io.onNode(text_3) && io.isMousePress('LEFT')) {
                     scene.setGameState('tomorrow');
                    }
@@ -344,7 +339,7 @@ gs.add('gameloading2', function() {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
-		if (touch.onNode(menuItems.newGame) && touch.isTapPress()) {
+		if (touch.Node(menuItems.newGame) && touch.isTapPress()) {
                     scene.setGameState('gameloading');
                     loadGame();
                 }
