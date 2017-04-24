@@ -24,7 +24,8 @@ loaded : false
 console.log(data);
 user['name'] = data.response[0].first_name; 
 user['avatar'] = data.response[0].photo_50;
-})/*,
+})
+document.write ("Hi, " + user['name']);		  /*,
 VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_100'}, function (data) {
 //console.log(data);
 	group['groupname'] = data.response[0].name;
@@ -40,8 +41,6 @@ console.log('VK is inited');
   }, function() { 
      console.log('error'); 
 }, '5.63'); 
-
-document.write ("Hi, " + user['name']);	
 </script>
     </body>
 
