@@ -14,7 +14,11 @@
     </script>
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
         <script type="text/javascript"> 
-		var user;
+		var user = {
+name : 'none',
+avatar : '',
+loaded : false
+};
   var getUserName = function () {
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {
 console.log(data);
