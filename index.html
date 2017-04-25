@@ -20,8 +20,7 @@ avatar : '',
 loaded : false
 };
 var photo = user['avatar'];
-	console.log(photo);
-};
+console.log(photo);
 
   var getUserName = function () {
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {
