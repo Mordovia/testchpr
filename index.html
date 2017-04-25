@@ -30,7 +30,7 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 })};          
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
-      status = true; //пока не разобрался, зачем
+      status = true; //меняем состояние переменной
       getUserName();//это наша функция, которая обращается к API
 console.log('VK is inited'); 
   }, function() { //если произошла ошибка инициализации
