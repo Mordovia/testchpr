@@ -19,7 +19,7 @@ name : 'none',
 avatar : '',
 loaded : false
 };
-document.teacup.src= "/testchpr/res/teacup2.png";
+document.getElementById().src= "/testchpr/res/teacup2.png";
 
   var getUserName = function () {//описываем функцию, которая обращается к API
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то %(
@@ -36,8 +36,22 @@ console.log('VK is inited');
   }, function() { //если произошла ошибка инициализации
      console.log('error'); 
 }, '5.63'); //версия API
+  var flag = 0;
+  function changeImage() {
+    if (flag == 0) {
+      document.img.src = '/testchpr/res/teacup.png';
+      flag = 1;
+    }
+    else {
+      document.img.src = 'image2.jpg';
+      flag = 0;
+    }
+  }
 </script>
-<img name = 'teacup' src = "/testchpr/res/teacup.png" />	
+<img name = 'teacup' src = "/testchpr/res/teacup.png" />
+<form>
+  <input type = 'button' value = 'Сменить изображение' onClick = 'changeImage()' />
+</form>
     </body>
 
 </html>
