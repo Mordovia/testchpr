@@ -19,7 +19,7 @@ name : 'none',
 avatar : '',
 loaded : false
 };
-document.img.src= "/testchpr/res/teacup2.png";
+document.teacup.src= "/testchpr/res/teacup2.png";
 
   var getUserName = function () {//описываем функцию, которая обращается к API
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то %(
@@ -37,7 +37,7 @@ console.log('VK is inited');
      console.log('error'); 
 }, '5.63'); //версия API
 </script>
-<img name = 'img' src = "/testchpr/res/teacup.png" />	
+<img name = 'teacup' src = "/testchpr/res/teacup.png" />	
     </body>
 
 </html>
