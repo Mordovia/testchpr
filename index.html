@@ -19,7 +19,11 @@ name : 'none',
 avatar : '',
 loaded : false
 };
-var getImg = user['avatar'];		
+var getImg = function (x) {
+	user['avatar'];
+	console.log(x);
+};
+
   var getUserName = function () {
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {
 console.log(data);
@@ -47,7 +51,7 @@ console.log('VK is inited');
      console.log('error'); 
 }, '5.63'); 
 </script>
-	    <img name = 'img' src = getImg />	
+	    <img name = 'img' src = "getImg()" />	
     </body>
 
 </html>
