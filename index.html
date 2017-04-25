@@ -19,32 +19,24 @@ name : 'none',
 avatar : '',
 loaded : false
 };
-var photo = user['avatar'];
-console.log(photo);
+newSrc = user['avatar'];
 
-  var getUserName = function () {
-  VK.api('users.get', {"fields" : "photo_50"}, function (data) {
+
+  var getUserName = function () {//описываем функцию, которая обращается к API
+  VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то %(
 console.log(data);
-user['name'] = data.response[0].first_name; 
-user['avatar'] = data.response[0].photo_50;
+user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
+user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 //	  document.write ("Hi, " + user['name']);
-})
-	  /*,
-VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_100'}, function (data) {
-//console.log(data);
-	group['groupname'] = data.response[0].name;
-//	group['group_avatar'] = data.response[0].photo_100;
-	user['loaded'] = true;
-	});*/
-};          
+})};          
   var status = false;
-  VK.init(function() {
-      status = true;
-      getUserName();
+  VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
+      status = true; //пока не разобрался, зачем
+      getUserName();//это наша функция, которая обращается к API
 console.log('VK is inited'); 
-  }, function() { 
+  }, function() { //если произошла ошибка инициализации
      console.log('error'); 
-}, '5.63'); 
+}, '5.63'); //версия API
 </script>
 <!--<img name = 'img' src = "/testchpr/res/teacup.png" />-->	
     </body>
