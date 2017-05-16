@@ -9,9 +9,9 @@
 
     <body>
    
-    <script>
+//    <script>
    // document.write('Переделать всё!');
-    </script>
+//    </script>
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
             <script type="text/javascript"> 
 var user = {
@@ -27,7 +27,7 @@ user['name'] = data.response[0].first_name;//обратились к ВК API - 
 user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 
  document.img.src = user['avatar'];   
- document.write ("Привет, " + user['name']);
+// document.write ("Привет, " + user['name']);
 })};          
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
