@@ -42,11 +42,16 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
-function clearDiv() {//функция очистки дива
+function clearDiv() {//функция очистки дива (точнее, двух дивов)
 //document.img.src = group['group_avatar'];
 //}
 		    document.getElementById('button').innerHTML = '';
-		    document.getElementById('hello').innerHTML = '';}
+		    document.getElementById('hello').innerHTML = '';
+}
+		    
+function exit() {
+		    parent.window.location.href = 'http://vk.com/';
+}
 		    
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
@@ -67,7 +72,14 @@ console.log('VK is inited');
 	   <div id='button'>
 		   <center>
 			   <form>
- <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива -->
+ <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
+</form>
+			   </center>
+		   </div>
+	    <div id='exit'>
+		   <center>
+			   <form>
+ <input type = 'button' value = 'Нет' onClick = 'exit()' /> <!-- кнопка для выхода -->
 </form>
 			   </center>
 		   </div>
