@@ -43,13 +43,11 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
    	})
   };
 function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
-//document.img.src = group['group_avatar'];
-//}
 		    document.getElementById('button').innerHTML = '';
 		    document.getElementById('hello').innerHTML = '';
 }
 		    
-function exit() {
+function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
 		    
