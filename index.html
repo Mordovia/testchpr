@@ -46,7 +46,7 @@ function clearDiv() {//функция очистки дива (точнее, д�
 //document.img.src = group['group_avatar'];
 //}
 //		    document.getElementById('button').innerHTML = '';
-//		    document.getElementById('hello').innerHTML = '';
+		    document.getElementById('hello').innerHTML = '';
 }
 		    
 function exit() {
@@ -66,15 +66,16 @@ console.log('VK is inited');
   
 </script>
 <img name = 'img' src = "" />
-<div>
-   <div name='button'><center><form>
+<div id='hello'></div>
+<p>
+   <div id='button'><center><form>
  <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
-</form></center>
+</form></center><p>
    	<div name='exit'>  <center><form>
  <input type = 'button' value = 'Нет/Выход' onClick = 'exit()' /> <!-- кнопка для выхода -->
 </form></center>
 	</div>
    </div>
-</div>
+
 </body>
 </html>
