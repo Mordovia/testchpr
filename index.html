@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width,user-scalable=no" />
         <title>Чайный Прогноз</title>
     </head>
-
     <body>
-   
-    <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-            <script type="text/javascript"> 
+       <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
+       <script type="text/javascript"> 
 var user = {
 name : 'none',
 avatar : '',
@@ -35,7 +32,6 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 // document.write ("Привет, " + user['name']);
 }),
  VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
-//console.log(data);
 	group['groupname'] = data.response[0].name;
 //	group['group_avatar'] = data.response[0].photo_50;
 	user['loaded'] = true;
@@ -46,25 +42,20 @@ function clearDiv() {//функция очистки дива (точнее, д�
 		    document.getElementById('button').innerHTML = '';
 		    document.getElementById('hello').innerHTML = '';
 }
-		    
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
 		    
-  var status = false;
-  VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
+var status = false;
+VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
       getUserName();//это наша функция, которая обращается к API
 console.log('VK is inited'); 
   }, function() { //если произошла ошибка инициализации
      console.log('error'); 
 }, '5.63'); //версия API
-
-//id='hello'
-  
 </script>
-<img name = 'avatar' src = "" />
-<div id='hello'></div>
+<div id='hello'><img name = 'avatar' src = "" /></div>
 <p>
    <div id='button'><center><form>
  <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
