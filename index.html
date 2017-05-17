@@ -38,6 +38,21 @@ function clearDiv() {//функция очистки дива (точнее, д�
 	document.getElementById('button').innerHTML = '';
 	document.getElementById('hello').innerHTML = '';
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+	function drawTable() {
+		var element = document.createElement('table');
+		element.setAttribute('border', '1');
+		element.setAttribute('id', 'tab');
+		element.addEventListener('click', onClickCell, false);
+		for (var i=0; i<2; i++){
+			var row = element.insertRow(i);
+			for(var j=0; j<3; j++){
+				var cell = row.insertCell(j);
+				cell.width = "100";
+				cell.height = "100";
+				cell['id'] = "".concat(i,j);
+			}
+		}
+	document.table.appendChild(element);	
 }
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
@@ -63,6 +78,9 @@ console.log('VK is inited');
 </form></center>
 	</div>
    </div>
-<div id='prognoz' align=center></div>
+<div id='prognoz' align=center>
+	<div id='table'>
+	</div>
+</div>
 </body>
 </html>
