@@ -51,12 +51,12 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 			}
 		}
 		document.body.appendChild(element);
+		document.getElementById('button').innerHTML = '';
+		document.getElementById('hello').innerHTML = '';
+		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	}
 	function onClickCell(event){
     	alert(event.target.id);
-	document.getElementById('button').innerHTML = '';
-	document.getElementById('hello').innerHTML = '';
-	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	}
 //}
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
