@@ -42,10 +42,10 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
-function clearDiv() {//функция очистки дива (точнее, двух дивов)
+function clearDiv() {//функция очистки дива (точнее, двух дивов) !!! ПИСАТЬ РУЧКАМИ - ОТСТОЙ, НУЖНО ДРУГОЕ РЕШЕНИЕ
 //document.img.src = group['group_avatar'];
 //}
-		    document.getElementById('button').innerHTML = '';
+//		    document.getElementById('button').innerHTML = '';
 		    document.getElementById('hello').innerHTML = '';
 }
 		    
@@ -66,10 +66,10 @@ console.log('VK is inited');
   
 </script>
 <img name = 'img' src = "" />
-         <div id='hello'></div>
+<div id='hello'>
 <p>
 	
-	   <div id='button'>
+	   <div name='button'>
 		   <center>
 			   <form>
  <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
@@ -77,13 +77,14 @@ console.log('VK is inited');
 			   </center>
 		   </div>
 <p>
-	    <div id='exit'>
+	    <div name='exit'>
 		   <center>
 			   <form>
  <input type = 'button' value = 'Нет/Выход' onClick = 'exit()' /> <!-- кнопка для выхода -->
 </form>
 			   </center>
 		   </div>
+</div>
 </body>
 
 </html>
