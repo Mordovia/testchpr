@@ -51,14 +51,17 @@ console.log('VK is inited');
   }, function() { //если произошла ошибка инициализации
      console.log('error'); 
 }, '5.63'); //версия API
- // function changeImage() {
- //   document.img.src = user['avatar'];
-//          }
+function changeImage() {
+document.img.src = user['avatar'];
+}
 
   
 </script>
 <img name = 'img' src = "" />
          <div id='hello'></div>
+<form>
+ <input type = 'button' value = 'Да' onClick = 'changeImage()' />
+</form>
 </body>
 
 </html>
