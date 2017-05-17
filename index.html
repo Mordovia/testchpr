@@ -34,10 +34,10 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
-function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
-	document.getElementById('button').innerHTML = '';
-	document.getElementById('hello').innerHTML = '';
-	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+//function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
+//	document.getElementById('button').innerHTML = '';
+//	document.getElementById('hello').innerHTML = '';
+//	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	function drawTable() {
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
@@ -57,7 +57,7 @@ function clearDiv() {//функция очистки дива (точнее, д�
 }
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
-}
+//}
 		    
 var status = false;
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
@@ -72,7 +72,7 @@ console.log('VK is inited');
 <div id='hello'></div>
 <p>
    <div id='button'><center><form>
- <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
+ <input type = 'button' value = 'Да' onClick = 'darwTable()' /> <!-- кнопка с очисткой дива, точнее двух дивов -->
 </form></center><p>
    	<div name='exit'>  <center><form>
  <input type = 'button' value = 'Нет/Выход' onClick = 'exit()' /> <!-- кнопка для выхода -->
