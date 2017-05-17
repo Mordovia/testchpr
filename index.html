@@ -32,7 +32,7 @@ user['name'] = data.response[0].first_name;//обратились к ВК API - 
 user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 
  document.img.src = user['avatar'] 
- 
+document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
 // document.write ("Привет, " + user['name']);
 }),
       VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_100'}, function (data) {
@@ -41,7 +41,7 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 //	group['group_avatar'] = data.response[0].photo_100;
 	user['loaded'] = true;
    	})  };
-document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст
+		    
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
