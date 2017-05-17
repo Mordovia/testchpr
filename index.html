@@ -34,7 +34,7 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
  document.img.src = user['avatar'] 
 // document.write ("Привет, " + user['name']);
 }),
- VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_100'}, function (data) {
+ VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
 //console.log(data);
 	group['groupname'] = data.response[0].name;
 	group['group_avatar'] = data.response[0].photo_50;
