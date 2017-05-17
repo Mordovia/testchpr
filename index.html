@@ -31,18 +31,18 @@ console.log(data);
 user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
 user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 
- document.img.src = user['avatar'] 
+ document.img2.src = user['avatar'] //определили картинку с именем img и ссылкой из ВК Апи, которую потом выводим в HTML по имени
 // document.write ("Привет, " + user['name']);
 }),
  VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
 //console.log(data);
 	group['groupname'] = data.response[0].name;
-	group['group_avatar'] = data.response[0].photo_50;
+//	group['group_avatar'] = data.response[0].photo_50;
 	user['loaded'] = true;
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
-function clearDiv() {//функция очистки дива (точнее, двух дивов) !!! ПИСАТЬ РУЧКАМИ - ОТСТОЙ, НУЖНО ДРУГОЕ РЕШЕНИЕ
+function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
 //document.img.src = group['group_avatar'];
 //}
 		    document.getElementById('button').innerHTML = '';
@@ -65,7 +65,7 @@ console.log('VK is inited');
 //id='hello'
   
 </script>
-<img name = 'img' src = "" />
+<img name = 'img2' src = "" />
 <div id='hello'></div>
 <p>
    <div id='button'><center><form>
