@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width,user-scalable=no" />
-        <title>html5 page</title>
+        <title>Чайный Прогноз</title>
     </head>
 
     <body>
@@ -42,6 +42,10 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
+function clearDiv() {//функция очистки дива
+//document.img.src = group['group_avatar'];
+//}
+		    document.getElementById('hello').innerHTML = '';}
 		    
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
@@ -51,10 +55,7 @@ console.log('VK is inited');
   }, function() { //если произошла ошибка инициализации
      console.log('error'); 
 }, '5.63'); //версия API
-function clearAll() {
-//document.img.src = group['group_avatar'];
-//}
-		    document.getElementById('hello').innerHTML = '';}
+
 
   
 </script>
@@ -65,7 +66,7 @@ function clearAll() {
 	   <div>
 		   <center>
 			   <form>
- <input type = 'button' value = 'Да' onClick = 'clearAll()' />
+ <input type = 'button' value = 'Да' onClick = 'clearDiv()' />//кнопка с очисткой дива
 </form>
 			   </center>
 		   </div>
