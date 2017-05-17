@@ -35,10 +35,9 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
    	})
   };
 function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
-		    document.getElementById('button').innerHTML = '';
-		    document.getElementById('hello').innerHTML = '';
-var startPrognoz = '<div id="prognoz">';
-var endPrognoz = '</div>';
+	document.getElementById('button').innerHTML = '';
+	document.getElementById('hello').innerHTML = '';
+	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 }
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
@@ -64,6 +63,6 @@ console.log('VK is inited');
 </form></center>
 	</div>
    </div>
-
+<div id='prognoz'></div>
 </body>
 </html>
