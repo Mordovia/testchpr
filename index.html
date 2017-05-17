@@ -45,7 +45,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 function clearDiv() {//функция очистки дива
 //document.img.src = group['group_avatar'];
 //}
-		    document.getElementById('hello').innerHTML = '';}
+		    document.getElementById('button').innerHTML = '';}
 		    
   var status = false;
   VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
@@ -63,7 +63,7 @@ console.log('VK is inited');
          <div id='hello'></div>
 <p>
 	
-	   <div>
+	   <div id='button'>
 		   <center>
 			   <form>
  <input type = 'button' value = 'Да' onClick = 'clearDiv()' /> <!-- кнопка с очисткой дива -->
