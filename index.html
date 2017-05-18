@@ -63,8 +63,8 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 			var row = element.insertRow(i);
 			for(var j=0; j<3; j++){
 				var cell = row.insertCell(j);
-				cell.width = "100";
-				cell.height = "100";
+				cell.width = "auto";
+				cell.height = "auto";
 				cell['id'] = "".concat(i,j);
 			}
 		}
@@ -73,7 +73,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + now.toLocaleString("ru", options) + ')';
+		document.getElementById('00').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';
 			
 	}
 	function onClickCell(event){//функция события
