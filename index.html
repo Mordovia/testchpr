@@ -59,9 +59,9 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		element.setAttribute('border', '1');
 		element.setAttribute('id', 'tab');
 		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-		for (var i=0; i<2; i++){
+		for (var i=0; i<4; i++){
 			var row = element.insertRow(i);
-			for(var j=0; j<3; j++){
+			for(var j=0; j<4; j++){
 				var cell = row.insertCell(j);
 				cell.width = "auto";
 				cell.height = "auto";
@@ -73,7 +73,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		document.getElementById('00').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';
+		document.getElementById('01').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';
 			
 	}
 	function onClickCell(event){//функция события
