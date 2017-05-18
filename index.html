@@ -59,13 +59,13 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		element.setAttribute('border', '1');
 		element.setAttribute('id', 'tab');
 		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-		for (var i=0; i<4; i++){
+		for (var i=0; i<6; i++){
 			var row = element.insertRow(i);
 			for(var j=0; j<4; j++){
 				var cell = row.insertCell(j);
 				cell.width = "auto";
 				cell.height = "auto";
-				cell['id'] = "".concat(i,j);
+				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, цифрами i и j
 			}
 		}
 		objTo.appendChild(element);
