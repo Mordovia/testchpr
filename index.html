@@ -73,7 +73,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + now + ')';
+		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + now.toLocaleString("ru", options) + ')';
 			
 	}
 	function onClickCell(event){//функция события
