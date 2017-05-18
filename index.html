@@ -73,8 +73,12 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		document.getElementById('01').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';
-			
+		document.getElementById('01').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+		document.getElementById('02').innerHTML = 'Завтра (' + tomorrow.toLocaleString("ru", options) + ')';
+		document.getElementById('03').innerHTML = 'На неделю';
+		document.getElementById('10').innerHTML = 'Утро';
+		document.getElementById('20').innerHTML = 'День';
+		document.getElementById('30').innerHTML = 'Вечер';
 	}
 	function onClickCell(event){//функция события
     	console.log(event.target.id);//эвент.таргет - ссылка на конкретный элемент, где клик
