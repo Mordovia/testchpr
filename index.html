@@ -17,6 +17,23 @@ var group = {
  groupname: 'none',
  loaded : false
 };
+var now = new Date();
+var tomorrow = new Date();
+tomorrow.setDate(tomorrow.getDate() + 1);
+var day3 = new Date();
+day3.setDate(day3.getDate() + 2);
+var day4 = new Date();
+day4.setDate(day4.getDate() + 3);
+var day5 = new Date();
+day5.setDate(day5.getDate() + 4);
+var day6 = new Date();
+day6.setDate(day6.getDate() + 5);
+var day7 = new Date();
+day7.setDate(day7.getDate() + 6);
+var options = {
+  month: 'short',
+  day: 'numeric',
+  };
            
   var getUserName = function () {//описываем функцию, которая обращается к API
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
@@ -56,7 +73,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + new Date() + ')';
+		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + now + ')';
 			
 	}
 	function onClickCell(event){//функция события
