@@ -8,7 +8,7 @@
     <body>
        <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
        <script type="text/javascript"> 
-var user = {
+var user = {//описываем переменные
 name : 'none',
 avatar : '',
 loaded : false
@@ -36,7 +36,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
   };
 //function clearDiv() {//функция очистки дива (точнее, двух дивов) в одном диве под одним id объединил 2 кнопки
 
-	function drawTable() {
+	function drawTable() {//рисуем таблицу, предварительно очистив прошлые записи в диве
 		var objTo = document.getElementById('table')
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
@@ -55,6 +55,9 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('button').innerHTML = '';
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+		
+		console.log('element[0].id');
+			
 	}
 	function onClickCell(event){
     	alert(event.target.id);
