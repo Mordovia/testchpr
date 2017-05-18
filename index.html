@@ -41,7 +41,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
 		element.setAttribute('id', 'tab');
-		element.addEventListener('click', onClickCell, false);
+		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 		for (var i=0; i<2; i++){
 			var row = element.insertRow(i);
 			for(var j=0; j<3; j++){
@@ -56,12 +56,11 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		
-		console.log(element);
-		document.getElementById('00').innerHTML = 'Hi';
+		document.getElementById('00').innerHTML = 'Прогноз на сегодня (' + new Data() + ')';
 			
 	}
-	function onClickCell(event){
-    	alert(event.target.id);
+	function onClickCell(event){//функция события
+    	console.log(event.target.id);//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 //}
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
