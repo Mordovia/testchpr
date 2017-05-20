@@ -87,6 +87,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
+		document.getElementById('11').innerHTML =  market['descript0'];
 	}
 	function onClickCell(event){//функция события
     	console.log(event.target.id);//эвент.таргет - ссылка на конкретный элемент, где клик
@@ -112,7 +113,6 @@ console.log(a[0], a[1], a[2], a[3]);
 console.log(url['0']);
  //                      http://vk.com/market-121807904?w=product-121807904_238721%2Fquery
                        market['loaded'] = true;
-	document.getElementById('11').innerHTML =  'descript0';
 });
 
 		    
