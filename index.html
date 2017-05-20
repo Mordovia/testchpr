@@ -34,6 +34,11 @@ var options = {
   month: 'short',
   day: 'numeric',
   };
+var market = {
+descript1: 'none',
+photo_1: '',
+loaded: false
+};
            
   var getUserName = function () {//описываем функцию, которая обращается к API
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
@@ -87,6 +92,30 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
+VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '16',
+                    }, function(data) {
+console.log(data);                        
+var a = data.response.items;
+//function compareRandom(a, b) {
+//  return Math.random() - 0.5;
+//}
+//a.sort(compareRandom);
+//console.log(a[0], a[1], a[2], a[3]);
+                       market['descript1'] = a[0].title;
+                       market['photo_1'] = a[0].thumb_photo;
+                                   
+                       
+                       url['1'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
+                                           
+console.log(url['1']);
+                       
+ //                      http://vk.com/market-121807904?w=product-121807904_238721%2Fquery
+                       
+                       market['loaded'] = true;
+                                        });
+};
 		    
 var status = false;
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
