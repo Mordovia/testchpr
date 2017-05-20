@@ -39,6 +39,9 @@ descript1: 'none',
 photo_1: '',
 loaded: false
 };
+var url = {
+loaded: false
+};
            
   var getUserName = function () {//описываем функцию, которая обращается к API
   VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
@@ -103,13 +106,13 @@ var a = data.response.items;
 //}
 //a.sort(compareRandom);
 //console.log(a[0], a[1], a[2], a[3]);
-                       market['descript1'] = a[0].title;
-                       market['photo_1'] = a[0].thumb_photo;
+                       market['descript0'] = a[0].title;
+                       market['photo_0'] = a[0].thumb_photo;
                                    
                        
-                       url['1'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
+                       url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
                                            
-console.log(url['1']);
+console.log(url['0']);
                        
  //                      http://vk.com/market-121807904?w=product-121807904_238721%2Fquery
                        
