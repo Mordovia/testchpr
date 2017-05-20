@@ -87,7 +87,7 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
-		document.getElementById('11').src = market['photo_0'];
+		document.getElementsById('11').src = market['photo_0'];
 		document.getElementById('12').innerHTML =  market['descript0'];
 	}
 	function onClickCell(event){//функция события
@@ -107,11 +107,11 @@ var a = data.response.items;
 	return Math.random() - 0.5;
 	}
 a.sort(compareRandom);
-console.log(a[0], a[1], a[2], a[3]);
+//console.log(a[0], a[1], a[2], a[3]);
                        market['descript0'] = a[0].title;
                        market['photo_0'] = a[0].thumb_photo;
                        url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
-console.log(url['0']);
+//console.log(url['0']);
                        market['loaded'] = true;
 });
 	       
