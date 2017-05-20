@@ -87,7 +87,8 @@ document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', �
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
-		document.getElementById('11').innerHTML =  market['descript0'];
+		document.getElementById('11').innerHTML =  market['photo_0'];
+		document.getElementById('12').innerHTML =  market['descript0'];
 	}
 	function onClickCell(event){//функция события
     	console.log(event.target.id);//эвент.таргет - ссылка на конкретный элемент, где клик
@@ -102,21 +103,19 @@ VK.api('market.get', {
                     }, function(data) {
 console.log(data);                        
 var a = data.response.items;
-//function compareRandom(a, b) {
-//  return Math.random() - 0.5;
-//}
-//a.sort(compareRandom);
+	function compareRandom(a, b) {
+	return Math.random() - 0.5;
+	}
+a.sort(compareRandom);
 console.log(a[0], a[1], a[2], a[3]);
                        market['descript0'] = a[0].title;
                        market['photo_0'] = a[0].thumb_photo;
                        url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
 console.log(url['0']);
- //                      http://vk.com/market-121807904?w=product-121807904_238721%2Fquery
                        market['loaded'] = true;
 });
-
-		    
-var status = false;
+	       
+var status = false;	       
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
       getUserName();//это наша функция, которая обращается к API
