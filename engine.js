@@ -64,7 +64,7 @@ var a = data.response.items;
 a.sort(compareRandom);
 //console.log(a[0], a[1], a[2], a[3]);
                        market['descript0'] = a[0].title;
-                       market['photo_0'] = a[0].photo_50;
+                       market['photo_0'] = a[0].thumb_photo;
                        url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
 //console.log(url['0']);
                        market['loaded'] = true;
