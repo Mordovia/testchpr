@@ -52,6 +52,57 @@ var getUserName = function () {//описываем функцию, котора
   function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
+function drawTable() {//рисуем таблицу
+		VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '16',
+                    }, function(data) {
+					//console.log(data);                        
+					var a = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;
+					}
+		a.sort(compareRandom);
+		//console.log(a[0], a[1], a[2], a[3]);
+                       market['descript0'] = a[0].title;
+                       market['photo_0'] = a[0].thumb_photo;
+                       url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
+		//console.log(url['0']);
+		//console.log(market['descript0']);
+                       market['loaded'] = true;
+					
+		var objTo = document.getElementById('table');
+		var element = document.createElement('table');
+		element.setAttribute('border', '1');
+		element.setAttribute('id', 'tab');
+		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
+		for (var i=0; i<6; i++){
+			var row = element.insertRow(i);
+			for(var j=0; j<4; j++){
+				var cell = row.insertCell(j);
+				cell.width = "auto";
+				cell.height = "auto";
+				cell.align = "center";
+				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
+						}
+					}
+		objTo.appendChild(element);
+		document.getElementById('button').innerHTML = '';
+		document.getElementById('hello').innerHTML = '';
+		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+		document.getElementById('01').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+		document.getElementById('02').innerHTML = 'Завтра (' + tomorrow.toLocaleString("ru", options) + ')';
+		document.getElementById('03').innerHTML = 'На неделю';
+		document.getElementById('10').innerHTML = 'Утро';
+		document.getElementById('20').innerHTML = 'День';
+		document.getElementById('30').innerHTML = 'Вечер';
+		var img = new Image;
+		img.width = 100;
+		img.height = 100;
+		img.src = market['photo_0'];
+		document.getElementById('11').appendChild(img);
+		document.getElementById('12').innerHTML =  market['descript0'];
+})};
   var status = false;	       
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
