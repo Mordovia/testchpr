@@ -66,7 +66,7 @@ a.sort(compareRandom);
                        market['descript0'] = a[0].title;
                        market['photo_0'] = a[0].thumb_photo;
                        url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
-//console.log(url['0']);
+console.log(url['0']);
                        market['loaded'] = true;
 });
   var status = false;	       
