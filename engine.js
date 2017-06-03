@@ -11,7 +11,7 @@ for (n=0; n<7; n++){
 var day = [];
 day[n] = new Date();
 day[n].setDate(day[n].getDate() + n);
-console.log(day);
+console.log(day[2]);
 //var day7 = new Date();
 //day7.setDate(day7.getDate() + 6);
 };
