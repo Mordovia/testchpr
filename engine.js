@@ -49,3 +49,11 @@ user['avatar'] = data.response[0].photo_50;//обратились к ВК API - 
 document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
+  var status = false;	       
+VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
+      status = true; //меняем состояние переменной
+      getUserName();//это наша функция, которая обращается к API
+//console.log('VK is inited'); 
+  }, function() { //если произошла ошибка инициализации
+     console.log('error'); 
+}, '5.63'); //версия API
