@@ -24,9 +24,10 @@ var options = {
   month: 'short',
   day: 'numeric',
   };
+var n;
 var market = {
-['descript'+i]: 'none',
-['photo_'+i]: '',
+['descript'+n]: 'none',
+['photo_'+n]: '',
 loaded: false
 };
 var url = {
@@ -64,12 +65,12 @@ function drawTable() {//рисуем таблицу
 					}
 		a.sort(compareRandom);
 		//console.log(a[0], a[1], a[2], a[3]);
-		for (var i=0; i<6; i++){
-                       market['descript'+i] = a[i].title;
-                       market['photo_'+i] = a[i].thumb_photo;
-                       url['i'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[i].id + '%2Fquery';
+		for (var n=0; n<6; n++){
+                       market['descript'+n] = a[n].title;
+                       market['photo_'+n] = a[n].thumb_photo;
+                       url['n'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		       
-			//console.log(url['i']);
+			//console.log(url['n']);
 			console.log(market);
 			}
                 market['loaded'] = true;
