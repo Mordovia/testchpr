@@ -104,7 +104,7 @@ function drawTable() {//рисуем таблицу
 		img.width = 100;
 		img.height = 100;
 		for (n=1;n<4;n++){
-		img.src = market['photo_'+n];
+		img[n].src = market['photo_'+n];
 		document.getElementById(n+'1').appendChild(img);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		}
