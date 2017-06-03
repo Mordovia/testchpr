@@ -69,8 +69,8 @@ function drawTable() {//рисуем таблицу
                        market['photo_'+'i'] = a[i].thumb_photo;
                        url['i'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[i].id + '%2Fquery';
 		       }
-			console.log(url['5']);
-			console.log(market['descript'+'5']);
+			console.log(url['1']);
+			console.log(market['descript'+'1']);
 			
                 market['loaded'] = true;
 		       
