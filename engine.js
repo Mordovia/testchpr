@@ -24,15 +24,7 @@ var options = {
   month: 'short',
   day: 'numeric',
   };
-var n;
-var market = {
-['descript'+n]: 'none',
-['photo_'+n]: '',
-loaded: false
-};
-var url = {
-loaded: false
-};
+
 
 var getUserName = function () {//описываем функцию, которая обращается к API
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
@@ -54,6 +46,15 @@ var getUserName = function () {//описываем функцию, котора
 		    parent.window.location.href = 'http://vk.com/';
 }
 function drawTable() {//рисуем таблицу
+var n;
+var market = {
+['descript'+n]: 'none',
+['photo_'+n]: '',
+loaded: false
+};
+var url = {
+loaded: false
+};
 		VK.api('market.get', {
 							'owner_id': '-121807904', 
 							'album_id': '16',
