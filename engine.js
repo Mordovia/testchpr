@@ -100,9 +100,9 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
-		var img = new Image;
-		img = [];
+		var img = [];
 		for (n=1; n<4; n++){
+		img[n] = new Image;
 		img[n].width = 100;
 		img[n].height = 100;
 		img[n].src = market['photo_'+n];
