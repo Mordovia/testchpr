@@ -25,8 +25,8 @@ var options = {
   day: 'numeric',
   };
 var market = {
-descript0: 'none',
-photo_0: '',
+descript[i]: 'none',
+photo_[i]: '',
 loaded: false
 };
 var url = {
@@ -64,12 +64,15 @@ function drawTable() {//рисуем таблицу
 					}
 		a.sort(compareRandom);
 		//console.log(a[0], a[1], a[2], a[3]);
-                       market['descript0'] = a[0].title;
-                       market['photo_0'] = a[0].thumb_photo;
-                       url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
-		//console.log(url['0']);
-		//console.log(market['descript0']);
-                       market['loaded'] = true;
+		for (var i=0; i<6; i++){
+                       market['descript[i]'] = a[i].title;
+                       market['photo_[i]'] = a[i].thumb_photo;
+                       url['i'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[i].id + '%2Fquery';
+			console.log(url['0']);
+			console.log(market['descript0']);
+			}
+                market['loaded'] = true;
+		       
 					
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
