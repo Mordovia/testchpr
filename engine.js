@@ -92,8 +92,8 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('button').innerHTML = '';
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-		document.getElementById('01').innerHTML = 'Сегодня (' + day[n].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
-		document.getElementById('02').innerHTML = 'Завтра (' + day[n+1].toLocaleString("ru", options) + ')';
+		document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+		document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 		document.getElementById('03').innerHTML = 'На неделю';
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
