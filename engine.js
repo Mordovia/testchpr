@@ -32,3 +32,20 @@ loaded: false
 var url = {
 loaded: false
 };
+
+var getUserName = function () {//описываем функцию, которая обращается к API
+  VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
+//console.log(data);
+user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
+user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
+
+ document.avatar.src = user['avatar'] //определили картинку с именем avatar и ссылкой из ВК Апи, которую потом выводим в HTML по имени
+// document.write ("Привет, " + user['name']);
+}),
+ VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
+	group['groupname'] = data.response[0].name;
+//	group['group_avatar'] = data.response[0].photo_50;
+	user['loaded'] = true;
+document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
+   	})
+  };
