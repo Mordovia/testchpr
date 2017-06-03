@@ -7,19 +7,12 @@ var group = {
  groupname: 'none',
  loaded : false
 };
-var now = new Date();
-var tomorrow = new Date();
-tomorrow.setDate(tomorrow.getDate() + 1);
-var day3 = new Date();
-day3.setDate(day3.getDate() + 2);
-var day4 = new Date();
-day4.setDate(day4.getDate() + 3);
-var day5 = new Date();
-day5.setDate(day5.getDate() + 4);
-var day6 = new Date();
-day6.setDate(day6.getDate() + 5);
-var day7 = new Date();
-day7.setDate(day7.getDate() + 6);
+var day[n] = new Date();
+for (n=0;n<7;n++){
+var day[n] = new Date();
+day[n].setDate(day[n].getDate() + n);
+//var day7 = new Date();
+//day7.setDate(day7.getDate() + 6);
 var options = {
   month: 'short',
   day: 'numeric',
@@ -98,8 +91,8 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('button').innerHTML = '';
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-		document.getElementById('01').innerHTML = 'Сегодня (' + now.toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
-		document.getElementById('02').innerHTML = 'Завтра (' + tomorrow.toLocaleString("ru", options) + ')';
+		document.getElementById('01').innerHTML = 'Сегодня (' + day[n].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+		document.getElementById('02').innerHTML = 'Завтра (' + day[n+1].toLocaleString("ru", options) + ')';
 		document.getElementById('03').innerHTML = 'На неделю';
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
