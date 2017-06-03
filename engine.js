@@ -25,8 +25,9 @@ var options = {
   day: 'numeric',
   };
 var market = {
-'descript'+'i': 'none',
-'photo_'+'i': '',
+
+['descript'+'i']: 'none',
+['photo_'+'i']: '',
 loaded: false
 };
 var url = {
