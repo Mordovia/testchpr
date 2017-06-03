@@ -101,13 +101,13 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
 		var img = new Image;
-		img.width = 100;
-		img.height = 100;
-		img.src = [];
+		img = [];
 		for (n=1; n<4; n++){
-		img.src[n] = market['photo_'+n];
-		console.log(img.src);
-		document.getElementById(n+'1').appendChild(img);
+		img[n].width = 100;
+		img[n].height = 100;
+		img[n].src = market['photo_'+n];
+		console.log(img[n].src);
+		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		}
 })};
