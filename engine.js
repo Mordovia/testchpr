@@ -65,8 +65,8 @@ function drawTable() {//рисуем таблицу
 		a.sort(compareRandom);
 		//console.log(a[0], a[1], a[2], a[3]);
 		for (var i=0; i<6; i++){
-                       market['descript'+'i'] = a[i].title;
-                       market['photo_'+'i'] = a[i].thumb_photo;
+                       market['descript'+i] = a[i].title;
+                       market['photo_'+i] = a[i].thumb_photo;
                        url['i'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[i].id + '%2Fquery';
 		       
 			//console.log(url['i']);
