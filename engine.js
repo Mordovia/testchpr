@@ -7,8 +7,9 @@ var group = {
  groupname: 'none',
  loaded : false
 };
-for (n=0; n<7; n++){
+
 var day = [];
+for (n=0; n<7; n++){
 day[n] = new Date();
 day[n].setDate(day[n].getDate() + n);
 };
