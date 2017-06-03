@@ -23,7 +23,7 @@
 				var cell = row.insertCell(j);
 				cell.width = "auto";
 				cell.height = "auto";
-				cell.allign = "center";
+				cell.allign = "middle";
 				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, цифрами i и j
 			}
 		}
@@ -41,7 +41,8 @@ a.sort(compareRandom);
                        market['descript0'] = a[0].title;
                        market['photo_0'] = a[0].thumb_photo;
                        url['0'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[0].id + '%2Fquery';
-console.log(url['0']);
+//console.log(url['0']);
+console.log(market['descript0']);
                        market['loaded'] = true;
 });
 		objTo.appendChild(element);
