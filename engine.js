@@ -106,9 +106,11 @@ function drawTable() {//рисуем таблицу
 		var img = new Image;
 		img.width = 100;
 		img.height = 100;
-		img.src = market['photo_n'];
-		document.getElementById('11').appendChild(img);
-		document.getElementById('12').innerHTML =  market['descript0'];
+		for (n=0;n<6;n++){
+		img.src = market['photo_'+n];
+		document.getElementById(n+'1').appendChild(img);
+		document.getElementById(n+'2').innerHTML =  market['descript0'];
+		}
 })};
   var status = false;	       
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
