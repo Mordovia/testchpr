@@ -24,6 +24,15 @@ var options = {
   month: 'short',
   day: 'numeric',
   };
+var n=0;
+var market = {
+['descript'+n]: 'none',
+['photo_'+n]: '',
+loaded: false
+};
+var url = {
+loaded: false
+};  
 
 
 var getUserName = function () {//описываем функцию, которая обращается к API
@@ -46,15 +55,7 @@ var getUserName = function () {//описываем функцию, котора
 		    parent.window.location.href = 'http://vk.com/';
 }
 function drawTable() {//рисуем таблицу
-var n;
-var market = {
-['descript'+n]: 'none',
-['photo_'+n]: '',
-loaded: false
-};
-var url = {
-loaded: false
-};
+
 		VK.api('market.get', {
 							'owner_id': '-121807904', 
 							'album_id': '16',
@@ -105,7 +106,7 @@ loaded: false
 		var img = new Image;
 		img.width = 100;
 		img.height = 100;
-		img.src = market['photo_0'];
+		img.src = market['photo_n'];
 		document.getElementById('11').appendChild(img);
 		document.getElementById('12').innerHTML =  market['descript0'];
 })};
