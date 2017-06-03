@@ -29,7 +29,7 @@ function drawTable() {//рисуем таблицу, предварительн�
 		//console.log(url['0']);
 		console.log(market['descript0']);
                        market['loaded'] = true;
-		})			
+					
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
@@ -61,7 +61,7 @@ function drawTable() {//рисуем таблицу, предварительн�
 		img.src = market['photo_0'];
 		document.getElementById('11').appendChild(img);
 		document.getElementById('12').innerHTML =  market['descript0'];
-};
+})};
 
 function onClickCell(event){//функция события
 console.log(event.target.id);//эвент.таргет - ссылка на конкретный элемент, где клик
