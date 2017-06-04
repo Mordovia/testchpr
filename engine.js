@@ -45,9 +45,7 @@ var getUserName = function () {//описываем функцию, котора
 	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
   };
-  function exit() {//функция выхода - перебрасывает на главную страницу ВК
-		    parent.window.location.href = 'http://vk.com/';
-}
+ 
 function drawTable() {//рисуем таблицу
 
 		VK.api('market.get', {
@@ -109,9 +107,12 @@ function drawTable() {//рисуем таблицу
 		//console.log(img[n].src);
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		document.getElementById(n+'2').link = url['n'];
+		document.getElementById(n+'2').href = url['n'];
 		}
 })};
+ function exit() {//функция выхода - перебрасывает на главную страницу ВК
+		    parent.window.location.href = 'http://vk.com/';
+}
   var status = false;	       
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
