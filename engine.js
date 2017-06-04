@@ -63,13 +63,8 @@ function drawTable() {//рисуем таблицу
                        market['descript'+n] = a[n].title;
                        market['photo_'+n] = a[n].thumb_photo;
                        url['n'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
-		       
-			//console.log(url['n']);
-			}
-			//console.log(market);
-			
-                market['loaded'] = true;
-		       
+		}
+		market['loaded'] = true;		       
 					
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
@@ -84,8 +79,6 @@ function drawTable() {//рисуем таблицу
 				cell.height = "auto";
 				cell.align = "center";
 				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-				cell['link'] = [];
-				//console.log(cell['link']);
 			}
 		}
 		objTo.appendChild(element);
