@@ -9,13 +9,11 @@ var group = {
 };
 
 var day = [];
-for (n=0; n<7; n++){
+for (n=0; n<7; n++){//цикл для дней
 day[n] = new Date();
 day[n].setDate(day[n].getDate() + n);
 };
-console.log(day[2]);
-//var day7 = new Date();
-//day7.setDate(day7.getDate() + 6);
+//console.log(day[2]);
 var options = {
   month: 'short',
   day: 'numeric',
