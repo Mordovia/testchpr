@@ -89,7 +89,7 @@ function drawTable() {//рисуем таблицу
 				cell.align = "center";
 				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
 				cell['link'] = url['n'];
-				console.log(cell['link']);
+				//console.log(cell['link']);
 			}
 		}
 		objTo.appendChild(element);
