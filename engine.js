@@ -68,9 +68,9 @@ function drawTable() {//рисуем таблицу
                        market['photo_'+n] = a[n].thumb_photo;
                        url['n'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		       
-			//console.log(url['n']);
+			console.log(url['n']);
 			}
-			console.log(market);
+			//console.log(market);
 			
                 market['loaded'] = true;
 		       
@@ -78,7 +78,7 @@ function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
-		element.setAttribute('id', 'tab');
+		element.setAttribute('id', 'tab', 'link');
 		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 		for (var i=0; i<6; i++){
 			var row = element.insertRow(i);
@@ -88,8 +88,10 @@ function drawTable() {//рисуем таблицу
 				cell.height = "auto";
 				cell.align = "center";
 				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-						}
-					}
+				cell['link'] = url['n'];
+				console.log(cell['link']);
+			}
+		}
 		objTo.appendChild(element);
 		document.getElementById('button').innerHTML = '';
 		document.getElementById('hello').innerHTML = '';
@@ -106,7 +108,7 @@ function drawTable() {//рисуем таблицу
 		img[n].width = 100;
 		img[n].height = 100;
 		img[n].src = market['photo_'+n];
-		console.log(img[n].src);
+		//console.log(img[n].src);
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		}
