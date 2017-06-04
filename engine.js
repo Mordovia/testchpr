@@ -103,7 +103,7 @@ function drawTable() {//рисуем таблицу
 		//console.log(img[n].src);
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		document.getElementById(n+'2').href = url['n'];
+		document.getElementById(n+'2').href = url[n];
 		}
 })};
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
