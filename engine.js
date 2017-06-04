@@ -64,7 +64,10 @@ function drawTable() {//рисуем таблицу
                        market['photo_'+n] = a[n].thumb_photo;
                        url['n'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-		market['loaded'] = true;		       
+		console.log(market['descript2']);
+		console.log(url['2']);
+		market['loaded'] = true;
+		url['loaded'] = true;
 					
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
