@@ -68,7 +68,7 @@ function drawTable() {//рисуем таблицу
                        market['photo_'+n] = a[n].thumb_photo;
                        url['n'] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		       
-			console.log(url['n']);
+			//console.log(url['n']);
 			}
 			//console.log(market);
 			
@@ -88,7 +88,7 @@ function drawTable() {//рисуем таблицу
 				cell.height = "auto";
 				cell.align = "center";
 				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-				cell['link'] = url['n'];
+				cell['link'] = [];
 				//console.log(cell['link']);
 			}
 		}
@@ -111,6 +111,7 @@ function drawTable() {//рисуем таблицу
 		//console.log(img[n].src);
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		document.getElementById(n+'2').cell['link'] = url['n'];
 		}
 })};
   var status = false;	       
