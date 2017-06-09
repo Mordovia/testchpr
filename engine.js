@@ -44,6 +44,13 @@ var getUserName = function () {//описываем функцию, котора
 	
 	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
+	var btn = document.getElementById('button');
+	btn = document.createElement('input')
+	btn.id = 'b1'
+	btn.type = 'button'
+	btn.value = 'button 1'
+	btn.setAttribute('onclick', 'obj.HandleClick1();')
+	document.body.appendChild(btn)
   };
  
 function drawTable() {//рисуем таблицу
