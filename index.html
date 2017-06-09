@@ -16,7 +16,7 @@ function onClickCell(event){//функция события
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}}
 	if (event.target.id =='02'){
-	document.removeChild(table);
+	element.parentNode.removeChild(table);
 	//drawTable();
 	}
 }
