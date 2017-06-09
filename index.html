@@ -16,9 +16,12 @@ function onClickCell(event){//функция события
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}}
 	if (event.target.id =='02'){
-	var el = document.getElementById('table');
-	el.parentNode.removeChild(table);
-	drawTable();
+//	var el = document.getElementById('table');
+//	el.parentNode.removeChild(table);
+	var t = n+3;
+	document.getElementById(n+'1').appendChild(img[t]);
+	document.getElementById(n+'2').innerHTML =  market['descript'+t];
+	document.getElementById(n+'2').href = url[t];
 	}
 }
 </script>
