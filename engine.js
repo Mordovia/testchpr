@@ -27,7 +27,7 @@ loaded: false
 var url = {
 loaded: false
 };  
-
+var img = [];
 
 var getUserName = function () {//описываем функцию, которая обращается к API
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
@@ -94,7 +94,6 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
-		var img = [];
 		for (n=1; n<4; n++){
 		img[n] = new Image;
 		img[n].width = 100;
