@@ -48,7 +48,7 @@ var getUserName = function () {//описываем функцию, котора
 	btn.id = 'yes'
 	btn.type = 'button'
 	btn.value = 'Да'
-	btn.setAttribute('onclick', 'drawTable();')
+	btn.setAttribute('onclick', 'marketGet();')
 	buttonYes.appendChild(btn);
 	var buttonExit = document.getElementById('exit');
 	var btn2 = document.createElement('input')
