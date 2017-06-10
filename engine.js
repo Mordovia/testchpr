@@ -29,7 +29,7 @@ loaded: false
 };  
 var img = [];
 
-var buttonCreation = fuction(){
+var buttonCreation = function(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
