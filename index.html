@@ -39,8 +39,8 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'1').appendChild(img[n]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+n];
 	document.getElementById(n+'2').href = url[n];
+	parent.window.location.href = document.getElementById(n+'2').href;
 	}
-	parent.window.location.href = event.target.href;	
 	break;
 	}
 }
