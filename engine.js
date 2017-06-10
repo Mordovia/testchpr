@@ -60,10 +60,8 @@ var getUserName = function () {//описываем функцию, котора
 	})
 	
   };
- 
-function drawTable() {//рисуем таблицу
-
-		VK.api('market.get', {
+function marketGet(){
+	VK.api('market.get', {
 							'owner_id': '-121807904', 
 							'album_id': '16',
                     }, function(data) {
@@ -83,7 +81,8 @@ function drawTable() {//рисуем таблицу
 		console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
-					
+}
+function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '1');
