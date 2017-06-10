@@ -92,7 +92,7 @@ function marketGet(){
 function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
-		element.setAttribute('border', '1');
+		element.setAttribute('border', '0');
 		element.setAttribute('id', 'tab', 'link');
 		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 		for (var i=0; i<8; i++){
