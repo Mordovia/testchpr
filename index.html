@@ -14,7 +14,8 @@ function onClickCell(event){//функция события
 	switch (event.target.id) {
 		case '12' || '22' || '32':
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-			break;
+	console.log(event.target.id);		
+	break;
 	case '02':
 	document.getElementById('table').innerHTML = '';
 	drawTable();
@@ -25,10 +26,12 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'2').innerHTML =  market['descript'+t];
 	document.getElementById(n+'2').href = url[t];
 	}
+	console.log(event.target.id);
 	break;
 	case '01':
 	document.getElementById('table').innerHTML = '';
 	drawTable();
+	console.log(event.target.id);
 	break;
 	case '03':
 	for (n=1; n<8; n++){
