@@ -87,7 +87,7 @@ function marketGet(){
 		console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
-				for (n=1; n<10; n++){
+		for (n=1; n<10; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
@@ -100,7 +100,7 @@ function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '0');
-		element.setAttribute('id', 'tab', 'link');
+		element.setAttribute('id', 'tab');
 		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 		for (var i=0; i<8; i++){
 			var row = element.insertRow(i);
