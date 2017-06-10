@@ -24,7 +24,11 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'1').appendChild(img[t]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+t];
 	document.getElementById(n+'2').href = url[t];
-	}}
+	}
+	if (event.target.id =='02'){
+		drawTable();
+	}
+	}
 }
 </script>
 <img name = 'avatar' src = "" />
