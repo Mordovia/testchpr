@@ -11,22 +11,20 @@
        	<script type="text/javascript"> 
 
 function onClickCell(event){//функция события
-	if ((event.target.id =='12') || (event.target.id =='22') || (event.target.id =='32')){
+	switch (event.target.id) {
+		case '12' || '22' || '32':
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
+			break;
+	case '02':
+	for (n=1; n<4; n++){
+	var t = n+3;
+	document.getElementById(n+'1').innerHTML = '';
+	document.getElementById(n+'1').appendChild(img[t]);
+	document.getElementById(n+'2').innerHTML =  market['descript'+t];
+	document.getElementById(n+'2').href = url[t];
 	}
-		
-//}
-//	if (event.target.id =='02'){
-//	var el = document.getElementById('table');
-//	el.parentNode.removeChild(table);
-//	for (n=1; n<4; n++){
-//		var t = n+3;
-//	document.getElementById(n+'1').innerHTML = '';
-//	document.getElementById(n+'1').appendChild(img[t]);
-//	document.getElementById(n+'2').innerHTML =  market['descript'+t];
-//	document.getElementById(n+'2').href = url[t];
-//	}
-//	}
+	break;
+	}
 }
 </script>
 <img name = 'avatar' src = "" />
