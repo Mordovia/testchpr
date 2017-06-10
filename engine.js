@@ -51,13 +51,13 @@ var getUserName = function () {//описываем функцию, котора
 	btn.value = 'Да'
 	btn.setAttribute('onclick', 'drawTable();')
 	buttonYes.appendChild(btn);
-	
+	var buttonExit = document.getElementById('exit');
 	var btn2 = document.createElement('input')
 	btn2.id = 'exit'
 	btn2.type = 'button'
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
-	buttonYes.appendChild(btn2);
+	buttonExit.appendChild(btn2);
   };
  
 function drawTable() {//рисуем таблицу
