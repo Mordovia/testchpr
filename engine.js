@@ -112,8 +112,8 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('30').innerHTML = 'Вечер';
 		for (n=1; n<10; n++){
 		img[n] = new Image;
-		img[n].width = 100;
-		img[n].height = 100;
+		img[n].width = 50;
+		img[n].height = 50;
 		img[n].src = market['photo_'+n];
 		//console.log(img[n].src);
 		}
