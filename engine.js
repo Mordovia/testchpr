@@ -66,7 +66,7 @@ function drawTable() {//рисуем таблицу
 					}
 		a.sort(compareRandom);
 		//console.log(a[0], a[1], a[2], a[3]);
-		for (var n=0; n<7; n++){
+		for (var n=0; n<10; n++){
                        market['descript'+n] = a[n].title;
                        market['photo_'+n] = a[n].thumb_photo;
                        url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
