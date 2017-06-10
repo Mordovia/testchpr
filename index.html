@@ -12,8 +12,9 @@
 
 function onClickCell(event){//функция события
 	console.log(event.target.id);
-	//parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-	console.log(event.target.href);
+	if (event.target.href !== 'undefined'){
+	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
+	}
 	/*	switch (event.target.id) {
 	case '02'://завтра
 	document.getElementById('table').innerHTML = '';
