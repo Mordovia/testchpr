@@ -29,6 +29,23 @@ loaded: false
 };  
 var img = [];
 
+var buttonCreation = fuction(){
+	var buttonYes = document.getElementById('button');
+	var btn = document.createElement('input')
+	btn.id = 'yes'
+	btn.type = 'button'
+	btn.value = 'Да'
+	btn.setAttribute('onclick', 'marketGet();')
+	buttonYes.appendChild(btn);
+	var buttonExit = document.getElementById('exit');
+	var btn2 = document.createElement('input')
+	btn2.id = 'no'
+	btn2.type = 'button'
+	btn2.value = 'Выход'
+	btn2.setAttribute('onclick', 'exit();')
+	buttonExit.appendChild(btn2);
+};
+
 var getUserName = function () {//описываем функцию, которая обращается к API
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	//console.log(data);
@@ -48,22 +65,7 @@ var getUserName = function () {//описываем функцию, котора
 	else getUserName();
 	})	
   };
-var buttonCreation = fuction(){
-	var buttonYes = document.getElementById('button');
-	var btn = document.createElement('input')
-	btn.id = 'yes'
-	btn.type = 'button'
-	btn.value = 'Да'
-	btn.setAttribute('onclick', 'marketGet();')
-	buttonYes.appendChild(btn);
-	var buttonExit = document.getElementById('exit');
-	var btn2 = document.createElement('input')
-	btn2.id = 'no'
-	btn2.type = 'button'
-	btn2.value = 'Выход'
-	btn2.setAttribute('onclick', 'exit();')
-	buttonExit.appendChild(btn2);
-};
+
 function marketGet(){
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
