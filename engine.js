@@ -101,6 +101,7 @@ function drawTable() {//рисуем таблицу
 		}
 		objTo.appendChild(element);
 		document.getElementById('button').innerHTML = '';
+		document.getElementById('exit').innerHTML = '';
 		document.getElementById('hello').innerHTML = '';
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
