@@ -11,11 +11,10 @@
        	<script type="text/javascript"> 
 
 function onClickCell(event){//функция события
-	console.log(event.target.id);	
+	console.log(event.target.id);
+	for (n=1; n<8; n++){
 	switch (event.target.id) {
-		for (n=1; n<8; n++){
 		case n+'2'://дефолтный случай
-		}
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	break;
 	case '02'://завтра
@@ -43,7 +42,7 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'2').href = url[n];
 	}
 	break;
-	}
+	}}
 }
 </script>
 <img name = 'avatar' src = "" />
