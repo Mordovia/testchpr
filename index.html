@@ -16,6 +16,7 @@ function onClickCell(event){//функция события
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 			break;
 	case '02':
+	drawTable();
 	for (n=1; n<4; n++){
 	var t = n+3;
 	document.getElementById(n+'1').innerHTML = '';
