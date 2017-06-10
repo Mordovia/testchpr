@@ -45,8 +45,8 @@ var getUserName = function () {//описываем функцию, котора
 	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
    	})
 	var buttonYes = document.getElementById('button');
-	var btn = document.createElement('input')
-	btn.id = 'b1'
+	var btn = document.createElement('button')
+	btn.id = 'button'
 	btn.type = 'button'
 	btn.value = 'Да'
 	btn.setAttribute('onclick', 'drawTable();')
