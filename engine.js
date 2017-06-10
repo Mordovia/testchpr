@@ -81,7 +81,7 @@ function marketGet(){
 		console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
-}
+})}
 function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
@@ -122,7 +122,7 @@ function drawTable() {//рисуем таблицу
 		document.getElementById(n+'2').href = url[n];
 		}
 		
-})};
+}
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
