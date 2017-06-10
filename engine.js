@@ -47,8 +47,8 @@ var getUserName = function () {//описываем функцию, котора
 	}
 	else getUserName();
 	})	
-  }
-var buttonCreation = fuction(){
+  };
+fuction buttonCreation(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
