@@ -87,11 +87,7 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		//console.log(img[n].src);
 		}
-		for (n=1; n<4; n++){
-		document.getElementById(n+'1').appendChild(img[n]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		document.getElementById(n+'2').href = url[n];
-		}
+		drawTable();
 })}
 function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
@@ -120,8 +116,11 @@ function drawTable() {//рисуем таблицу
 		document.getElementById('10').innerHTML = 'Утро';
 		document.getElementById('20').innerHTML = 'День';
 		document.getElementById('30').innerHTML = 'Вечер';
-		marketGet();
-}
+		for (n=1; n<4; n++){
+		document.getElementById(n+'1').appendChild(img[n]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		document.getElementById(n+'2').href = url[n];
+		}}
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
