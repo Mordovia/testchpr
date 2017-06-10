@@ -48,7 +48,7 @@ var getUserName = function () {//описываем функцию, котора
 	else getUserName();
 	})	
   };
-fuction buttonCreation(){
+var buttonCreation = fuction(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
@@ -63,7 +63,7 @@ fuction buttonCreation(){
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
-}
+};
 function marketGet(){
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
