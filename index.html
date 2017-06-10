@@ -13,7 +13,9 @@
 function onClickCell(event){//функция события
 	console.log(event.target.id);	
 	switch (event.target.id) {
-		case '22' || '12' || '32'://дефолтный случай
+		for (n=1; n<8; n++){
+		case n+'2'://дефолтный случай
+		}
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	break;
 	case '02'://завтра
