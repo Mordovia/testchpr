@@ -41,9 +41,11 @@ var getUserName = function () {//описываем функцию, котора
  	VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
 	group['groupname'] = data.response[0].name;
 //	group['group_avatar'] = data.response[0].photo_50;
-	
+	if (user['name'] !== 'none'){
 	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
-   	var buttonYes = document.getElementById('button');
+	}
+	else getUserName();
+	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
 	btn.type = 'button'
