@@ -37,7 +37,7 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'1').appendChild(img[n]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+n];
 	document.getElementById(n+'2').href = url[n];
-	if ((event.target.id == '42' || (event.target.id =='52') || (event.target.id =='62') || (event.target.id =='72')){
+	if ((event.target.id == '42') || (event.target.id =='52') || (event.target.id =='62') || (event.target.id =='72')){
 	parent.window.location.href = event.target.href;	
 	}}
 	break;
