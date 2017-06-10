@@ -11,11 +11,8 @@
        	<script type="text/javascript"> 
 
 function onClickCell(event){//функция события
-	if (event.target.id =='12'){
-	console.log(event.target.id);
-	console.log(n);
-	console.log(event.target.href);
-	//parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
+	if ((event.target.id =='12') || (event.target.id =='22') || (event.target.id =='32')){
+	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 		
 //}
