@@ -107,10 +107,13 @@ function drawTable() {//рисуем таблицу
 		img[n].height = 100;
 		img[n].src = market['photo_'+n];
 		//console.log(img[n].src);
+		}
+		for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		document.getElementById(n+'2').href = url[n];
 		}
+		
 })};
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
