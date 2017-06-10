@@ -12,11 +12,9 @@
 
 function onClickCell(event){//функция события
 	console.log(event.target.id);
-	for (n=1; n<8; n++){
-	if (event.target.id = n+'2'){//дефолтный случай
-	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-	}}
-/*	switch (event.target.id) {
+	//parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
+	console.log(event.target.href);
+	/*	switch (event.target.id) {
 	case '02'://завтра
 	document.getElementById('table').innerHTML = '';
 	drawTable();
