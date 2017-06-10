@@ -53,7 +53,7 @@ var getUserName = function () {//описываем функцию, котора
 	buttonYes.appendChild(btn);
 	var buttonExit = document.getElementById('exit');
 	var btn2 = document.createElement('input')
-	btn2.id = 'exit'
+	btn2.id = 'no'
 	btn2.type = 'button'
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
