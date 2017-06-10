@@ -58,8 +58,7 @@ var getUserName = function () {//описываем функцию, котора
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
 	})
-	
-  };
+  }
 function marketGet(){
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
