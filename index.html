@@ -13,7 +13,7 @@
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	console.log(event.target.href);
-	if (event.target.href == ''){
+	if (typeof event.target.href == 'undefined'){
 	//parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	console.log('Wow');
 	}
