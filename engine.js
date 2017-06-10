@@ -46,11 +46,11 @@ var getUserName = function () {//описываем функцию, котора
    	})
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('button')
-	//btn.id = 'button'
+	btn.id = 'button'
 	btn.type = 'button'
 	btn.value = 'Да'
 	btn.setAttribute('onclick', 'drawTable();')
-	document.body.appendChild(btn)
+	buttonYes.appendChild(btn)
   };
  
 function drawTable() {//рисуем таблицу
