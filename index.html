@@ -17,6 +17,8 @@ function onClickCell(event){//функция события
 		case n+'2'://дефолтный случай
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	break;
+				       }
+	switch (event.target.id) {
 	case '02'://завтра
 	document.getElementById('table').innerHTML = '';
 	drawTable();
