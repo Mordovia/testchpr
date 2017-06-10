@@ -45,6 +45,10 @@ var getUserName = function () {//описываем функцию, котора
 	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
 	}
 	else getUserName();
+	})
+	buttonCreation();
+  }
+fuction buttonCreation(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
@@ -59,8 +63,7 @@ var getUserName = function () {//описываем функцию, котора
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
-	})
-  }
+}
 function marketGet(){
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
