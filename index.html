@@ -13,12 +13,8 @@
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	console.log(event.target.href);
-	if (typeof event.target.href == 'undefined'){
-	//parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-	console.log('Wow');
-	}
-	else {
-	console.log('Good');
+	if (typeof event.target.href !== 'undefined'){
+	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 	/*	switch (event.target.id) {
 	case '02'://завтра
