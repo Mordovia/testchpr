@@ -34,7 +34,7 @@ function onClickCell(event){//функция события
 	break;
 	case '03':
 	for (n=1; n<8; n++){
-	document.getElementById(n+'1').innerHTML = '';
+	//document.getElementById(n+'1').innerHTML = '';
 	document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 	document.getElementById(n+'1').appendChild(img[n]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+n];
