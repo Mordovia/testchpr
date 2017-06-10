@@ -13,10 +13,10 @@
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	for (n=1; n<8; n++){
-	event.target.id = n+'2';//дефолтный случай
+	if (event.target.id = n+'2'){//дефолтный случай
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-	}
-	switch (event.target.id) {
+	}}
+/*	switch (event.target.id) {
 	case '02'://завтра
 	document.getElementById('table').innerHTML = '';
 	drawTable();
@@ -42,7 +42,7 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'2').href = url[n];
 	}
 	break;
-	}
+	}*/
 }
 </script>
 <img name = 'avatar' src = "" />
