@@ -106,7 +106,10 @@ function marketGet(){
 		drawTable();
 		})}
 function clearScreen(){
-	document.getElementsByTagName('*').innerHTML = '';
+	var tagName = document.getElementsByTagName('*');
+	for(i = 0; i < tagName.length; i++){
+	console.log(tagName);
+	}
 }
 function drawTable() {//рисуем таблицу
 		document.getElementById('table').innerHTML = '';
