@@ -1,6 +1,6 @@
 var albums = {
-name: '',
-id: '',
+name: 'none',
+id: 'none'
 };
 function albumsGet(){
 	clearScreen();
