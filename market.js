@@ -14,11 +14,11 @@ function albumsGet(){
 		for (var n=0; n<a.length; n++){
                        	albums['name'] = a[n].title;
                        	albums['id'] = a[n].id;
-			console.log(albums);
+			
 			//var text = id+':	'+name+'<br>'
-			document.getElementById('exit').innerHTML= '<p>'+albums+'</p>';
+			
 			//console.log(name+': '+id);
 			}
-		
-		
+		console.log(albums);
+		document.getElementById('exit').innerHTML= '<p>'+albums['name']+'</p>';
 })}
