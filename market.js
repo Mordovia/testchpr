@@ -1,6 +1,6 @@
 var name = [];
 var id = [];
-};
+
 function albumsGet(){
 	clearScreen();
 	document.getElementById('button').innerHTML = "ID группы:	Имя группы";
