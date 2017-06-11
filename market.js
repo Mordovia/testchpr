@@ -16,7 +16,7 @@ function albumsGet(){
                        	albums['id'] = a[n].id;
 			console.log(albums);
 			//var text = id+':	'+name+'<br>'
-			document.getElementById('exit').innerHTML= '<p>'+albums['name']+'</p>';
+			document.getElementById('exit').innerHTML= '<p>'+albums+'</p>';
 			//console.log(name+': '+id);
 			}
 		
