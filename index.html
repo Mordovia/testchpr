@@ -18,7 +18,7 @@ function onClickCell(event){//функция события
 	}
 	switch (event.target.id) {
 	case '02'://завтра
-	document.getElementById('table').innerHTML = '';
+	//document.getElementById('table').innerHTML = '';
 	drawTable();
 	for (n=1; n<4; n++){
 	var t = n+3;
@@ -29,7 +29,7 @@ function onClickCell(event){//функция события
 	}
 	break;
 	case '01'://если возвращаемся на сегодня
-	document.getElementById('table').innerHTML = '';
+	//document.getElementById('table').innerHTML = '';
 	drawTable();
 	console.log(event.target.id);
 	break;
