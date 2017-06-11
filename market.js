@@ -19,7 +19,7 @@ function albumsGet(){
 			
 			//console.log(name+': '+id);
 			}
-		console.log(albums);
-		document.getElementById('exit').innerHTML= '<p>'+albums+'</p>';
+		console.log(albums['name'+n]);
+		document.getElementById('exit').innerHTML= '<p>'+albums['name'+n]+'</p>';
 		
 })}
