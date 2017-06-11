@@ -105,6 +105,9 @@ function marketGet(){
 		}
 		drawTable();
 		})}
+function clearScreen(){
+	ocument.getElementById('*').innerHTML = '';
+}
 function drawTable() {//рисуем таблицу
 		document.getElementById('table').innerHTML = '';
 		document.getElementById('newPrognoz').innerHTML = '';
