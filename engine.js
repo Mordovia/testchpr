@@ -107,6 +107,7 @@ function marketGet(){
 		})}
 function drawTable() {//рисуем таблицу
 		document.getElementById('table').innerHTML = '';
+		document.getElementById('newPrognoz').innerHTML = '';
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '0');
