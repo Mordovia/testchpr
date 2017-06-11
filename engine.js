@@ -114,8 +114,7 @@ function clearScreen(){
 	
 }
 function drawTable() {//рисуем таблицу
-		document.getElementById('table').innerHTML = '';
-		document.getElementById('newPrognoz').innerHTML = '';
+		clearScreen();
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
 		element.setAttribute('border', '0');
@@ -132,9 +131,7 @@ function drawTable() {//рисуем таблицу
 			}
 		}
 		objTo.appendChild(element);
-		document.getElementById('button').innerHTML = '';
-		document.getElementById('exit').innerHTML = '';
-		document.getElementById('hello').innerHTML = '';
+		
 		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 		document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 		document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
