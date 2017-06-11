@@ -87,7 +87,7 @@ function marketGet(){
 		//console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
-		for (n=1; n<10; n++){
+		for (n=0; n<11; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
