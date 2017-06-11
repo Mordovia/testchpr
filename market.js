@@ -20,6 +20,6 @@ function albumsGet(){
 			//console.log(name+': '+id);
 			}
 		console.log(albums);
-		document.getElementById('exit').innerHTML= '<p>'+albums['name'+n]+'</p>';
+		document.getElementById('exit').innerHTML= '<p>'+albums+'</p>';
 		
 })}
