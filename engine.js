@@ -108,7 +108,8 @@ function marketGet(){
 function clearScreen(){
 	var tagName = document.getElementsByTagName('div');
 	for(i = 0; i < tagName.length; i++){
-	console.log(tagName[i].id);	
+	document.getElementById(tagName[i].id).innerHTML = ''	
+	//console.log(tagName[i].id);	
 	}
 	
 }
