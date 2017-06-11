@@ -106,10 +106,10 @@ function marketGet(){
 		drawTable();
 		})}
 function clearScreen(){
-	var tagName = document.getElementsByTagName('div');
-	for(i = 0; i < tagName.length; i++){
-	console.log(tagName);
-	}
+	var tagName = document.getElementsByTagName('div').innerHTML = '';
+	//for(i = 0; i < tagName.length; i++){
+	//console.log(tagName);
+	//}
 }
 function drawTable() {//рисуем таблицу
 		document.getElementById('table').innerHTML = '';
