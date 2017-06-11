@@ -106,7 +106,7 @@ function marketGet(){
 		drawTable();
 		})}
 function clearScreen(){
-	var tagName = document.getElementsByTagName('*');
+	var tagName = document.getElementsByTagName('name');
 	for(i = 0; i < tagName.length; i++){
 	console.log(tagName);
 	}
