@@ -14,7 +14,7 @@ function albumsGet(){
 		for (var n=0; n<a.length; n++){
                        	name = a[n].title;
                        	id = a[n].id;
-			document.getElementById('exit').innerHTML = id[n]+":	"+name[n];
+			document.getElementById('exit').innerHTML = a[n].id+":	"+a[n].title;
 		//	console.log(name);
 		//	console.log(id);
 			
