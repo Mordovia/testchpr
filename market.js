@@ -1,6 +1,6 @@
 var albums = {
-name[n]: '',
-id[n]: ''
+['name'+n]: 'none',
+['id'+n]: '',
 };
 function albumsGet(){
 	clearScreen();
@@ -12,13 +12,13 @@ function albumsGet(){
 		var a = data.response.items;
 		//console.log(a);
 		for (var n=0; n<a.length; n++){
-                       	albums['name'] = a[n].title;
-                       	albums['id'] = a[n].id;
+                       	albums['name'+n] = a[n].title;
+                       	albums['id'+n] = a[n].id;
 			
 			//var text = id+':	'+name+'<br>'
-			
+			document.getElementById('exit').innerHTML= '<p>'+albums['name'+n]+'</p>';
 			//console.log(name+': '+id);
 			}
 		console.log(albums);
-		document.getElementById('exit').innerHTML= '<p>'+albums['name']+'</p>';
+		
 })}
