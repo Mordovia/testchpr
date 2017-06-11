@@ -44,6 +44,14 @@ var buttonCreation = function(){
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
+
+	var newPrognoz = document.getElementById('newPrognoz');
+	var nprg = document.createElement('input')
+	nprg.id = 'nprg'
+	nprg.type = 'button'
+	nprg.value = 'Получить новый прогноз'
+	nprg.setAttribute('onclick', 'marketGet();')
+	newPrognoz.appendChild(nprg);
 };
 
 var getUserName = function () {//описываем функцию, которая обращается к API
@@ -95,7 +103,7 @@ function marketGet(){
 		//console.log(img[n].src);
 		}
 		drawTable();
-})}
+		})}
 function drawTable() {//рисуем таблицу
 		var objTo = document.getElementById('table');
 		var element = document.createElement('table');
