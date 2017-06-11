@@ -9,12 +9,12 @@ function albumsGet(){
 							}, function(data) {
 					console.log(data);
 		var a = data.response.items;
-		console.log(a);
+		//console.log(a);
 		for (var n=0; n<a.length; n++){
                        	name = a[n].title;
                        	id = a[n].id;
-			console.log(name);
-			console.log(id);
+		//	console.log(name);
+		//	console.log(id);
 			
               }
 })}
