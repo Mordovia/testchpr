@@ -44,7 +44,8 @@ var buttonCreation = function(){
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
-
+};
+var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
@@ -135,7 +136,9 @@ function drawTable() {//рисуем таблицу
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		document.getElementById(n+'2').href = url[n];
-		}}
+		}
+		buttonCreation2();
+}
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
