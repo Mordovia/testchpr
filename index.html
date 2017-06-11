@@ -37,9 +37,21 @@ function onClickCell(event){//функция события
 	for (n=1; n<8; n++){
 	document.getElementById(n+'1').innerHTML = '';
 	document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
-	document.getElementById(n+'1').appendChild(img[n]);
-	document.getElementById(n+'2').innerHTML =  market['descript'+n];
-	document.getElementById(n+'2').href = url[n];
+	}
+	document.getElementById('11').appendChild(img[1]);
+	document.getElementById('11').innerHTML =  market['descript1'];
+	document.getElementById('11').href = url[1];
+	document.getElementById('21').appendChild(img[4]);
+	document.getElementById('21').innerHTML =  market['descript4'];
+	document.getElementById('21').href = url[4];		
+	document.getElementById('31').appendChild(img[0]);
+	document.getElementById('31').innerHTML =  market['descript0'];
+	document.getElementById('31').href = url[0];
+	for (n=4; n<8; n++){
+	var w = n+2;
+	document.getElementById(n+'1').appendChild(img[w]);
+	document.getElementById(n+'2').innerHTML =  market['descript'+w];
+	document.getElementById(n+'2').href = url[w];
 	}
 	break;
 	}
