@@ -92,7 +92,7 @@ function marketGet(){
                        market['photo_'+n] = a[n].thumb_photo;
                        url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-		console.log(market);
+		//console.log(market);
 		//console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
