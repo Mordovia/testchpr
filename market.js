@@ -17,7 +17,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 			//document.getElementById('exit').innerHTML= '<p>'+albums['name']+'</p>';
 			//console.log(name+': '+id);
-			console.log(albums);
-		}
+			}
+		console.log(albums);
 		
 })}
