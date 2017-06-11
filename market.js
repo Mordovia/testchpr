@@ -10,8 +10,8 @@ function albumsGet(){
 		var a = data.response.items;
 		console.log(a);
 		for (var n=0; n<a.length; n++){
-                       	name = a.title;
-                       	id = a.id;
+                       	name = a[n].title;
+                       	id = a[n].id;
 			console.log(name);
 			console.log(id);
 			
