@@ -3,6 +3,7 @@ name: '',
 id: '',
 };
 function albumsGet(){
+	clearScreen();
 	VK.api('market.getAlbums', {
 							'owner_id': '-121807904', 
 							}, function(data) {
