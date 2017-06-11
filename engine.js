@@ -106,7 +106,7 @@ function marketGet(){
 		drawTable();
 		})}
 function clearScreen(){
-	document.getElementById('*').innerHTML = '';
+	document.getElementsByTagName('*').innerHTML = '';
 }
 function drawTable() {//рисуем таблицу
 		document.getElementById('table').innerHTML = '';
