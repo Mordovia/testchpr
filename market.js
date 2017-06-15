@@ -29,9 +29,10 @@ VK.api('market.get', {
 							'owner_id': '-121807904', 
 							'album_id': '22',
                     }, function(data) {
-					//console.log(data);                        
+					                        
 					var b = data.response.items;
-	for (var n=0; n<b.length -2; n++){
+					console.log(b);
+	for (var n=0; n<b.length; n++){
                        VK.api('market.addToAlbum', {
 			       'owner_id': '-121807904', 
 				'album_ids': '16',
