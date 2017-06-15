@@ -49,7 +49,7 @@ VK.api('market.get', {
 					var b = data.response.items;
 					console.log(b);
 	for (var n=0; n<b.length; n++){
-                       VK.api('market.addToAlbum', {
+                       VK.api('market.removeFromAlbum', {
 			       'owner_id': '-121807904', 
 				'album_ids': '16',
 			       'item_id': b[n].id,
