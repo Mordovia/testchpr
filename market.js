@@ -17,23 +17,27 @@ function albumsGet(){
 		//console.log(a);
 		//console.log(name);
 		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox" type="checkbox">'+id+': '+name+'<br></p>';
-			if (document.getElementById('checkbox').checked)
-			{
-				document.getElementById('table').innerHTML += id+',';
-				document.getElementById('table').value += id+',';
-			}
+		buttonCreation3();	
 			
 			}
 
 		
 })
+var checking = function(){
+if (document.getElementById('checkbox').checked)
+			{
+				document.getElementById('table').innerHTML += id+',';
+				document.getElementById('table').value += id+',';
+			}
+	addToAlbum16();
+}
 var buttonCreation3 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'button'
 	nprg.value = 'Перенести в группу Чай'
-	nprg.setAttribute('onclick', 'addToAlbum16();')
+	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
 }
 }
