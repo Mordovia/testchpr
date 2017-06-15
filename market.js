@@ -30,13 +30,14 @@ VK.api('market.get', {
 							'album_id': '22',
                     }, function(data) {
 					//console.log(data);                        
-					var a = data.response.items;
-	for (var n=0; n<a.length -2; n++){
+					var b = data.response.items;
+	for (var n=0; n<b.length -2; n++){
                        VK.api('market.addToAlbum', {
 			       'owner_id': '-121807904', 
 				'album_id': '16',
-			       'item_id': a[n].id,
+			       'item_id': b[n].id,
 		       }, 
 			     )		
 			}
+	console.log(b[n].id);
 })}
