@@ -6,10 +6,10 @@ function albumsGet(){
 							}, function(data) {
 					//console.log(data);
 		var a = data.response.items;
-		console.log(a.title);
+		console.log(a);
 		for (var n=0; n<a.length; n++){
                        	var name = [];
-			name = a.title;
+			name = a[n].title;
                        	var id = [];
 			id[n] = a[n].id;
 			
