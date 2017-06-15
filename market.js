@@ -16,7 +16,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
 		//console.log(name);
-		document.getElementById('exit').innerHTML += '<p>'+name+': '+id+'<br></p>';
+		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;">'+name+': '+id+'<br></p>';
 			//console.log(name+': '+id);
 			}
 
