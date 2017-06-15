@@ -36,7 +36,10 @@ VK.api('market.get', {
 			       'owner_id': '-121807904', 
 				'album_id': '16',
 			       'item_id': b[n].id,
-		       }, 
+		       }, function(data) {
+		       console.log(data.response);
+			      
+		       }
 			     )		
 			}
 	console.log(b[n].id);
