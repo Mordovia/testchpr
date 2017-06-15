@@ -9,7 +9,7 @@ function albumsGet(){
 		console.log(a.title);
 		for (var n=0; n<a.length; n++){
                        	var name = [];
-			name[n] = a[n].title;
+			name = a.title;
                        	var id = [];
 			id[n] = a[n].id;
 			
