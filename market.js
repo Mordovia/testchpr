@@ -1,3 +1,4 @@
+var a;
 function albumsGet(){
 	clearScreen();
 	document.getElementById('button').innerHTML = "ID группы:	Имя группы";
@@ -5,7 +6,7 @@ function albumsGet(){
 							'owner_id': '-121807904', 
 							}, function(data) {
 					//console.log(data);
-		var a = data.response.items;
+		a = data.response.items;
 		//console.log(a);
 		for (var n=0; n<a.length -1; n++){
                        	var name = [];
