@@ -22,14 +22,7 @@ function albumsGet(){
 
 		
 })
-var checking = function(){
-if (document.getElementById('checkbox').checked)
-			{
-				document.getElementById('table').innerHTML += id+',';
-				document.getElementById('table').value += id+',';
-			}
-	addToAlbum16();
-}
+
 var buttonCreation3 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
 	var nprg = document.createElement('input')
@@ -39,6 +32,14 @@ var buttonCreation3 = function(){
 	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
 }
+}
+var checking = function(){
+if (document.getElementById('checkbox').checked)
+			{
+				document.getElementById('table').innerHTML += id+',';
+				document.getElementById('table').value += id+',';
+			}
+	addToAlbum16();
 }
 function addToAlbum16(){
 VK.api('market.get', {
