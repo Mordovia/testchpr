@@ -35,11 +35,13 @@ var buttonCreation3 = function(){
 }
 var checking = function(){
 	for (n=0; n<a.length -1; n++){
-		if (document.getElementById('checkbox'+n).checked)
-			{
-				document.getElementById('table').innerHTML = id+',';
-				document.getElementById('table').value = id+',';
+		if (document.getElementById('checkbox'+n).checked){
+				document.getElementById('table').innerHTML += id+',';
+				document.getElementById('table').value += id+',';
 			}
+		else{
+			console.log('Flag '+id+'is not checked');
+		}
 //	addToAlbum16();
 }}
 function addToAlbum16(){
