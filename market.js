@@ -35,10 +35,10 @@ var buttonCreation3 = function(){
 }
 var checking = function(){
 	for (n=0; n<a.length -1; n++){
-if (document.getElementById('checkbox'+n).checked)
+		if (document.getElementById('checkbox'+n).checked)
 			{
-				document.getElementById('table').innerHTML += id+',';
-				document.getElementById('table').value += id+',';
+				document.getElementById('table').innerHTML = id+',';
+				document.getElementById('table').value = id+',';
 			}
 //	addToAlbum16();
 }}
