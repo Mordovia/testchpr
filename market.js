@@ -39,7 +39,7 @@ var checking = function(){
 		if (document.getElementById('checkbox'+n).checked){
 			console.log('YES');
 				document.getElementById('table').innerHTML += a[n].id+',';
-				document.getElementById('table').value += a[n].id+',';
+				document.getElementById('table').value = a[n].id+',';
 				console.log(document.getElementById('table').value);
 			}
 		else{
