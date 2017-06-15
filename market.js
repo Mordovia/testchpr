@@ -37,7 +37,8 @@ VK.api('market.get', {
 				'album_id': '16',
 			       'item_id': b[n].id,
 		       }, function(data) {
-		       console.log(data.response);
+			       var c = data.response;
+		       console.log(c);
 			      
 		       }
 			     )		
