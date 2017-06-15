@@ -18,11 +18,11 @@ function albumsGet(){
 		//console.log(name);
 		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox" type="checkbox">'+id+': '+name+'<br></p>';
 			if (document.getElementById('checkbox').checked)
+			{
 				document.getElementById('table').innerHTML += id+',';
 				document.getElementById('table').value += id+',';
-			 
-			else
-				console.log("Флажок не установлен"); 
+			}
+			
 			}
 
 		
