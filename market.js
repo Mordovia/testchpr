@@ -7,7 +7,7 @@ function albumsGet(){
 					//console.log(data);
 		var a = data.response.items;
 		//console.log(a);
-		for (var n=0; n<a.length -2; n++){
+		for (var n=0; n<a.length -1; n++){
                        	var name = [];
 			name = a[n].title;
                        	var id = [];
@@ -17,17 +17,25 @@ function albumsGet(){
 		//console.log(a);
 		//console.log(name);
 		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input type="checkbox">'+id+': '+name+'<br></p>';
-			//console.log(name+': '+id);
+			 
 			}
 
 		
 })
-//addToAlbum16();
+var buttonCreation3 = function(){
+	var newPrognoz = document.getElementById('newPrognoz');
+	var nprg = document.createElement('input')
+	nprg.id = 'nprg'
+	nprg.type = 'button'
+	nprg.value = 'Перенести в группу Чай'
+	nprg.setAttribute('onclick', 'addToAlbum16();')
+	newPrognoz.appendChild(nprg);
+};
 }
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
-							'album_id': '20',
+							'album_id': 
                     }, function(data) {
 					                        
 					var b = data.response.items;
