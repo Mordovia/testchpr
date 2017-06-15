@@ -22,7 +22,7 @@ function albumsGet(){
 
 		
 })
-addToAlbum16();
+//addToAlbum16();
 }
 function addToAlbum16(){
 VK.api('market.get', {
