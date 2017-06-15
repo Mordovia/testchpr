@@ -35,7 +35,7 @@ var buttonCreation3 = function(){
 }
 var checking = function(){
 	console.log(a);
-	for (n=0; n<a.length -1; n++){
+	for (n=1; n<a.length -1; n++){
 		if (document.getElementById('checkbox'+n).checked){
 			console.log('YES');
 				document.getElementById('table').innerHTML += a[n].id+',';
