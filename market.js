@@ -40,6 +40,7 @@ var checking = function(){
 			console.log('YES');
 				document.getElementById('table').innerHTML += a[n].id+',';
 				document.getElementById('table').value += a[n].id+',';
+				console.log(document.getElementById('table').value);
 			}
 		else{
 			console.log('Flag '+a[n].id+'is not checked');
