@@ -6,7 +6,7 @@ function albumsGet(){
 							}, function(data) {
 					//console.log(data);
 		var a = data.response.items;
-		//console.log(a);
+		console.log(a.title);
 		for (var n=0; n<a.length; n++){
                        	var name = [];
 			name[n] = a[n].title;
