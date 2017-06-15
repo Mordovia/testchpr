@@ -7,7 +7,7 @@ function albumsGet(){
 					//console.log(data);
 		var a = data.response.items;
 		//console.log(a);
-		for (var n=0; n<a.length; n++){
+		for (var n=0; n<a.length -2; n++){
                        	var name = [];
 			name = a[n].title;
                        	var id = [];
@@ -16,7 +16,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
 		//console.log(name);
-		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;">'+name+': '+id+'<br></p>';
+		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;">'+id+': '+name+'<br></p>';
 			//console.log(name+': '+id);
 			}
 
