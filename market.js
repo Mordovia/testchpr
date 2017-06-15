@@ -22,3 +22,19 @@ function albumsGet(){
 
 		
 })}
+function addToAlbum16(){
+VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '2',
+                    }, function(data) {
+					//console.log(data);                        
+					var a = data.response.items;
+	for (var n=0; n<a.length -2; n++){
+                       VK.api('market.addToAlbum', {
+			       'owner_id': '-121807904', 
+				'album_id': '16',
+			       'item_id': a[n].id,
+		       }, 
+			     )		
+			}
+})}
