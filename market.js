@@ -44,7 +44,7 @@ var checking = function(){
 		else{
 			console.log('Flag '+a[n].id+'is not checked');
 		}
-//	addToAlbum16();
+	addToAlbum16();
 }}
 function addToAlbum16(){
 VK.api('market.get', {
