@@ -19,8 +19,9 @@ function albumsGet(){
 		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox" type="checkbox">'+id+': '+name+'<br></p>';
 			if (document.getElementById('checkbox').checked)
 				var x += id;
+			console.log(x); 
 			else
-				conole.log("Флажок не установлен"); 
+				console.log("Флажок не установлен"); 
 			}
 
 		
