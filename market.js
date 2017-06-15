@@ -18,7 +18,7 @@ function albumsGet(){
 		//console.log(name);
 		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox" type="checkbox">'+id+': '+name+'<br></p>';
 			if (document.getElementById('checkbox').checked)
-				var x += id;
+				document.getElementById('table').innerHTML += id+',';
 			console.log(x); 
 			else
 				console.log("Флажок не установлен"); 
@@ -39,7 +39,7 @@ var buttonCreation3 = function(){
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
-							'album_id': x,
+							'album_id': '',
                     }, function(data) {
 					                        
 					var b = data.response.items;
