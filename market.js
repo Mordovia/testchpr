@@ -27,7 +27,7 @@ addToAlbum16();
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
-							'album_id': '22',
+							'album_id': '20',
                     }, function(data) {
 					                        
 					var b = data.response.items;
