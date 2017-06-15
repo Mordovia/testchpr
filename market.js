@@ -17,7 +17,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
 		//console.log(name);
-		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox'+n+'" type="checkbox" checked>'+id+': '+name+'<br></p>';
+		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox'+n+'" type="checkbox" onchange="checked">'+id+': '+name+'<br></p>';
 		}
 		buttonCreation3();	
 
