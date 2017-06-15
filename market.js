@@ -1,4 +1,5 @@
-var a;
+var a=[];
+var id=[];
 function albumsGet(){
 	clearScreen();
 	document.getElementById('button').innerHTML = "ID группы:	Имя группы";
@@ -11,8 +12,7 @@ function albumsGet(){
 		for (var n=0; n<a.length -1; n++){
                        	var name = [];
 			name = a[n].title;
-                       	var id = [];
-			id = a[n].id;
+                       	id = a[n].id;
 			
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
