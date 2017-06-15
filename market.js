@@ -21,7 +21,7 @@ function albumsGet(){
 		buttonCreation3();	
 
 		
-})
+})}
 
 var buttonCreation3 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
@@ -31,7 +31,6 @@ var buttonCreation3 = function(){
 	nprg.value = 'Перенести в группу Чай'
 	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
-}
 }
 var checking = function(){
 if (document.getElementById('checkbox').checked)
