@@ -38,11 +38,11 @@ var checking = function(){
 	for (n=0; n<a.length -1; n++){
 		if (document.getElementById('checkbox'+n).checked){
 			console.log('YES');
-				document.getElementById('table').innerHTML += id+',';
-				document.getElementById('table').value += id+',';
+				document.getElementById('table').innerHTML += a[n].id+',';
+				document.getElementById('table').value += a[n].id+',';
 			}
 		else{
-			console.log('Flag '+id+'is not checked');
+			console.log('Flag '+a[n].id+'is not checked');
 		}
 //	addToAlbum16();
 }}
