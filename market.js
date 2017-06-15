@@ -34,7 +34,7 @@ VK.api('market.get', {
 	for (var n=0; n<b.length -2; n++){
                        VK.api('market.addToAlbum', {
 			       'owner_id': '-121807904', 
-				'album_id': '16',
+				'album_ids': '16',
 			       'item_id': b[n].id,
 		       }, function(data) {
 			       var c = data.response;
