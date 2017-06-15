@@ -50,7 +50,7 @@ var checking = function(){
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
-							'album_id': document.getElementById('table').value
+							'album_id': document.getElementById('table').innerHTML,
                     }, function(data) {
 					                        
 					var b = data.response.items;
