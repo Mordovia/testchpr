@@ -21,8 +21,6 @@ function albumsGet(){
 				conole.log("Флажок установлен"); 
 			else
 				conole.log("Флажок не установлен"); 
-		
-			
 			}
 
 		
@@ -35,7 +33,7 @@ var buttonCreation3 = function(){
 	nprg.value = 'Перенести в группу Чай'
 	nprg.setAttribute('onclick', 'addToAlbum16();')
 	newPrognoz.appendChild(nprg);
-};
+}
 }
 function addToAlbum16(){
 VK.api('market.get', {
