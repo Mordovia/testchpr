@@ -41,18 +41,19 @@ var checking = function(){
 				document.getElementById('table').innerHTML += a[n].id+',';
 				document.getElementById('table').value = a[n].id+',';
 				console.log(document.getElementById('table').value);
+				addToAlbum16();
 			}
 		else{
 			console.log('Flag '+a[n].id+'is not checked');
 		}
-	addToAlbum16();
+//	addToAlbum16();
 }}
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
-							'album_id': document.getElementById('table').innerHTML,
+							'album_id': document.getElementById('table').value,
                     }, function(data) {
-					                        
+					                    
 					var b = data.response.items;
 					console.log(b);
 			for (var n=0; n<b.length; n++){
