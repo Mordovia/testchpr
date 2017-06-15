@@ -16,7 +16,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
 		//console.log(name);
-		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox" type="checkbox" checked>'+id+': '+name+'<br></p>';
+		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox'+n+'" type="checkbox" checked>'+id+': '+name+'<br></p>';
 		}
 		buttonCreation3();	
 
@@ -33,13 +33,14 @@ var buttonCreation3 = function(){
 	newPrognoz.appendChild(nprg);
 }
 var checking = function(){
-if (document.getElementById('checkbox').checked)
+	for (n=0; n<a.length -1; n++){
+if (document.getElementById('checkbox'+n).checked)
 			{
 				document.getElementById('table').innerHTML += id+',';
 				document.getElementById('table').value += id+',';
 			}
 	addToAlbum16();
-}
+}}
 function addToAlbum16(){
 VK.api('market.get', {
 							'owner_id': '-121807904', 
@@ -48,8 +49,8 @@ VK.api('market.get', {
 					                        
 					var b = data.response.items;
 					console.log(b);
-	for (var n=0; n<b.length; n++){
-                       VK.api('market.removeFromAlbum', {
+			for (var n=0; n<b.length; n++){
+                       VK.api('market.addToAlbum', {
 			       'owner_id': '-121807904', 
 				'album_ids': '16',
 			       'item_id': b[n].id,
@@ -60,5 +61,4 @@ VK.api('market.get', {
 		       }
 			     )		
 			}
-	console.log(b[n].id);
 })}
