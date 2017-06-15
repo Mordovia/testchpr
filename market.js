@@ -39,7 +39,7 @@ if (document.getElementById('checkbox'+n).checked)
 				document.getElementById('table').innerHTML += id+',';
 				document.getElementById('table').value += id+',';
 			}
-	addToAlbum16();
+//	addToAlbum16();
 }}
 function addToAlbum16(){
 VK.api('market.get', {
