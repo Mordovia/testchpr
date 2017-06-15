@@ -17,7 +17,7 @@ function albumsGet(){
 			//var text = id+':	'+name+'<br>'
 		//console.log(a);
 		//console.log(name);
-		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox'+n+'" type="checkbox" onchange="checked">'+id+': '+name+'<br></p>';
+		document.getElementById('exit').innerHTML += '<p style=" margin-top: 0px; margin-bottom: 0px;"><input id="checkbox'+n+'" type="checkbox" checked>'+id+': '+name+'<br></p>';
 		}
 		buttonCreation3();	
 
@@ -34,8 +34,10 @@ var buttonCreation3 = function(){
 	newPrognoz.appendChild(nprg);
 }
 var checking = function(){
+	console.log(a);
 	for (n=0; n<a.length -1; n++){
 		if (document.getElementById('checkbox'+n).checked){
+			console.log('YES');
 				document.getElementById('table').innerHTML += id+',';
 				document.getElementById('table').value += id+',';
 			}
