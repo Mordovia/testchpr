@@ -46,12 +46,13 @@ var buttonCreation = function(){
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
 	if (user['id']==10368288 || user['id']==5513350){
-		var buttonExit = document.getElementById('market');
+/*		var buttonAlbumMove = document.getElementById('market');
 		var btn3 = document.createElement('input')
 		btn3.type = 'button'
 		btn3.value = 'Перенос товаров в подборку'
 		btn3.setAttribute('onclick', 'albumsGet();')
-		buttonExit.appendChild(btn3);
+		buttonExit.appendChild(btn3);*/
+		document.getElementById('market') = '<input value = 'Перенос товаров в подборку' type = 'button' onclick = 'albumsGet();'>'
 	}
 };
 var buttonCreation2 = function(){
