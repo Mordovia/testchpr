@@ -26,6 +26,7 @@ function wallGet(){
 		console.log(data);
 		x = data.response.items;
 		document.getElementById('hello').innerText = x[0].text;
+		document.getElementById("hello").style.maxHeight = '500';
 		var a = x[0].attachments;
 		if (a !== 'undefined'){
 		console.log(a[0].type);
@@ -34,7 +35,7 @@ function wallGet(){
 				console.log('картинка');				
 			   img[n] = new Image;
 			   img[n] = a[n].photo_75;
-			   document.getElementById('button').innerText = a[0].photo_75;
+			   document.getElementById('button') = a[0].photo_75;
 				}
 			else if(a[0].type == 'market'){
 				console.log('url');
