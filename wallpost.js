@@ -8,10 +8,10 @@ function wallGet(){
 					console.log(data);
 			var a = 0;
 			var b = data.response.count;
-			console.log(a);
+			console.log(b);
 			function getRandomInt(a,b)
 								{
 									return Math.floor(Math.random() * (b + 1));
 								}
-			conole.log(getRandomInt);
+			console.log(getRandomInt);
 		})}
