@@ -3,7 +3,7 @@ function wallGet(){
 		VK.api('wall.get', {
 							'owner_id': '-121807904',
 							'count': '1',
-							'offset': '3',
+							'offset': getRandomInt(a,b),
 							}, function(data) {
 					console.log(data);
 			var a = 0;
