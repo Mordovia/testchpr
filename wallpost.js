@@ -25,7 +25,7 @@ function wallGet(){
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
-		document.getElementById('hello').textContent = <p><small>+x[0].text+</p></small>;
+		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</p></small>';
 		var a = x[0].attachments;
 		if (a !== 'undefined'){
 		console.log(a[0].type);
