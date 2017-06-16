@@ -26,5 +26,9 @@ function wallGet(){
 		x = data.response.items;
 		console.log(x[0].text);
 		document.getElementById('button').innerHTML = '<p>'+x[0].text+'</p>';
-		})});	
+		})});
+	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
+}
+function newPost(){
+wallGet();
 }
