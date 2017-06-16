@@ -45,7 +45,7 @@ var buttonCreation = function(){
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
-	if (user['id']==10368288 || user['id']=5513350){//user['id']=5513350
+	if (user['id']==10368288 || user['id']==5513350){
 		var buttonExit = document.getElementById('market');
 		var btn3 = document.createElement('input')
 		btn3.type = 'button'
