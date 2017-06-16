@@ -8,7 +8,7 @@ function wallGet(){
 					console.log(data);
 			var a = data.response.count;
 			console.log(a);
-			function getRandomInt(0, data.response.count)
+			function getRandomInt(0, a)
 								{
 									return Math.floor(Math.random() * (data.count + 1));
 								}
