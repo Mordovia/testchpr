@@ -1,4 +1,4 @@
-var x='';
+var x;
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
@@ -23,6 +23,7 @@ function wallGet(){
 							'offset': x,
 							}, function(data) {
 		console.log(data);
-		
+		x = data.response.items;
 		})});
+	document.getElementById('button').innerHTML = x[0].text;
 }
