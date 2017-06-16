@@ -13,5 +13,5 @@ function wallGet(){
 								{
 									return Math.floor(Math.random() * (b + 1));
 								}
-
+			conole.log(getRandomInt);
 		})}
