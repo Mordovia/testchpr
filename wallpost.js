@@ -1,4 +1,5 @@
 var x;
+var img =[];
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
@@ -24,9 +25,14 @@ function wallGet(){
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
-		console.log(x[0].text);
 		document.getElementById('hello').innerText = x[0].text;
-		
+		var a = x[0].attacments
+		for (n=0;n<a.length, n++){
+		img[n] = new Image;
+		img[n] = a[n].photo_75;
+		document.getElementById('button').innerText = a[0].photo_75;
+		}
+			
 		})});
 	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
 }
