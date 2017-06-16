@@ -51,8 +51,8 @@ var buttonCreation = function(){
 };
 var administration = function(){
 clearScreen();
-	document.getElementById('hello').innerHTML = '<input value = "Перенос товаров в подборку" type = "button" onclick = "albumsGet();">';
-	document.getElementById('button').innerHTML = '<input value = "Запись на стену" type = "button" onclick = "wallGet();">';
+	document.getElementById('button').innerHTML = '<input value = "Перенос товаров в подборку" type = "button" onclick = "albumsGet();">';
+	document.getElementById('exit').innerHTML = '<input value = "Запись на стену" type = "button" onclick = "wallGet();">';
 }
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
