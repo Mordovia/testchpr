@@ -1,5 +1,6 @@
 var user = {//описываем переменные
 name : 'none',
+id : '',
 avatar : '',
 loaded : false
 };
@@ -44,6 +45,14 @@ var buttonCreation = function(){
 	btn2.value = 'Выход'
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
+	if (user['id']=5513350 || user['id']=10368288){
+		var buttonExit = document.getElementById('market');
+		var btn3 = document.createElement('input')
+		btn3.type = 'button'
+		btn3.value = 'Перенос товаров в подборку'
+		btn3.setAttribute('onclick', 'albumsGet();')
+		buttonExit.appendChild(btn3);
+	}
 };
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
@@ -59,6 +68,7 @@ var getUserName = function () {//описываем функцию, котора
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	//console.log(data);
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
+	user['id'] = data.response[0].id;
 	user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 	user['loaded'] = true;
  	document.avatar.src = user['avatar'] //определили картинку с именем avatar и ссылкой из ВК Апи, которую потом выводим в HTML по имени
