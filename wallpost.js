@@ -1,9 +1,9 @@
+var x;
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
 							'owner_id': '-121807904',
 							'count': '1',
-							'offset': getRandomInt(a,b),
 							}, function(data) {
 					console.log(data);
 			var a = 0;
@@ -14,4 +14,13 @@ function wallGet(){
 									return Math.floor(Math.random() * (b + 1));
 								}
 			console.log(getRandomInt(a,b));
-		})}
+			x = getRandomInt(a,b);
+		})
+	VK.api('wall.get', {
+							'owner_id': '-121807904',
+							'count': '1',
+							'offset': x,
+							}, function(data) {
+		console.log(data);
+		})
+}
