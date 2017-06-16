@@ -46,15 +46,14 @@ var buttonCreation = function(){
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
 	if (user['id']==10368288 || user['id']==5513350){
-/*		var buttonAlbumMove = document.getElementById('market');
-		var btn3 = document.createElement('input')
-		btn3.type = 'button'
-		btn3.value = 'Перенос товаров в подборку'
-		btn3.setAttribute('onclick', 'albumsGet();')
-		buttonExit.appendChild(btn3);*/
-		document.getElementById('market').innerHTML = '<input value = "Перенос товаров в подборку" type = "button" onclick = "albumsGet();">';
+		document.getElementById('market').innerHTML = '<input value = "Управление группой" type = "button" onclick = "administration();">';
 	}
 };
+var administration = function(){
+clearScreen();
+	document.getElementById('hello').innerHTML = '<input value = "Перенос товаров в подборку" type = "button" onclick = "albumsGet();">';
+	document.getElementById('button').innerHTML = '<input value = "Запись на стену" type = "button" onclick = "wallGet();">';
+}
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
 	var nprg = document.createElement('input')
