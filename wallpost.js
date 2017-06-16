@@ -22,6 +22,7 @@ function wallGet(){
 							'count': '1',
 							'offset': x,
 							}, function(data) {
-		console.log(data);
+		//console.log(data);
+		console.log(x);
 		})
 }
