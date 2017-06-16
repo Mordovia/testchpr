@@ -25,14 +25,22 @@ function wallGet(){
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
-		document.getElementById('hello').innerText = x[0].text;
+		document.getElementById('hello').innerText = '<p><small>'+x[0].text+'</small></p>';
 		var a = x[0].attachments;
 		console.log(a);
-		/*for (n=0;n<a.length; n++){
-		img[n] = new Image;
-		img[n] = a[n].photo_75;
-		document.getElementById('button').innerText = a[0].photo_75;
-		}*/
+		for (n=0;n<a.length; n++){
+			if(a[0].type == 'photo'){
+			   img[n] = new Image;
+			   img[n] = a[n].photo_75;
+			   document.getElementById('button').innerText = a[0].photo_75;
+				}
+			else if(a[0].type == 'market'){
+				console.log('url');
+				}
+			else {
+				console.log('что-то другое');
+			}
+		}
 			
 		})});
 	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
