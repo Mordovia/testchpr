@@ -31,7 +31,7 @@ function wallGet(){
 		
 		var a = x[0].attachments;
 		console.log(a);
-		for (n=0;n<a.length; n++){
+		for (n=0;n<a[0].length; n++){
 			if(a[0].type == 'photo'){
 				console.log('картинка');				
 			   img[n] = new Image;
