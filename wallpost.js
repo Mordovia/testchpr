@@ -6,7 +6,8 @@ function wallGet(){
 							'offset': getRandomInt,
 							}, function(data) {
 					console.log(data);
-								function getRandomInt(0, data.count)
+			
+			function getRandomInt(0, data.respone.count)
 								{
 									return Math.floor(Math.random() * (data.count + 1));
 								}
