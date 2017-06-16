@@ -13,5 +13,5 @@ function wallGet(){
 								{
 									return Math.floor(Math.random() * (b + 1));
 								}
-			console.log(getRandomInt);
+			console.log(getRandomInt(a,b));
 		})}
