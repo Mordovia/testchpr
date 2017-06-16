@@ -25,7 +25,7 @@ function wallGet(){
 		console.log(data);
 		x = data.response.items;
 		console.log(x[0].text);
-		document.getElementById('button').innerText = x[0].text;
+		document.getElementById('hello').innerText = x[0].text;
 		
 		})});
 	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
