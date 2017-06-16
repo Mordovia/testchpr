@@ -7,7 +7,7 @@ function wallGet(){
 							}, function(data) {
 					console.log(data);
 			
-			function getRandomInt(0, data.respone.count)
+			function getRandomInt(0, data.response.count)
 								{
 									return Math.floor(Math.random() * (data.count + 1));
 								}
