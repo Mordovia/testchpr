@@ -15,7 +15,8 @@ function wallGet(){
 								}
 			//console.log(getRandomInt(a,b));
 			x = getRandomInt(a,b);
-		})
+			console.log(x);
+		});
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
 							'count': '1',
