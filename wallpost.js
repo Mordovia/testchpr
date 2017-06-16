@@ -25,11 +25,14 @@ function wallGet(){
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
-		document.getElementById('hello').innerText = '<p><small>'+x[0].text+'</small></p>';
+		var b = document.getElementById('hello').innerText = x[0].text;
+		document.getElementById('hello').innerHTML = '<p><small>'+b+'</p></small>';
+		
 		var a = x[0].attachments;
 		console.log(a);
 		for (n=0;n<a.length; n++){
 			if(a[0].type == 'photo'){
+				console.log('картинка');				
 			   img[n] = new Image;
 			   img[n] = a[n].photo_75;
 			   document.getElementById('button').innerText = a[0].photo_75;
