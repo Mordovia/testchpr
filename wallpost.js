@@ -25,6 +25,6 @@ function wallGet(){
 		console.log(data);
 		x = data.response.items;
 		console.log(x[0].text);
-		document.getElementById('button').innerHTML = x[0].text;
+		document.getElementById('button').innerHTML = '<p>'+x[0].text+'</p>';
 		})});	
 }
