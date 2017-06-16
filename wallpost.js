@@ -1,4 +1,3 @@
-var x;
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
@@ -14,7 +13,7 @@ function wallGet(){
 									return Math.floor(Math.random() * (b + 1));
 								}
 			//console.log(getRandomInt(a,b));
-			x = getRandomInt(a,b);
+			var x = getRandomInt(a,b);
 		})
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
