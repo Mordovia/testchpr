@@ -6,11 +6,12 @@ function wallGet(){
 							'offset': getRandomInt,
 							}, function(data) {
 					console.log(data);
-			var a = data.response.count;
+			var a = 0;
+			var b = data.response.count;
 			console.log(a);
-			function getRandomInt(0, a)
+			function getRandomInt(a,b)
 								{
-									return Math.floor(Math.random() * (data.count + 1));
+									return Math.floor(Math.random() * (b + 1));
 								}
 
 		})}
