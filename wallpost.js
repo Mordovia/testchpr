@@ -24,6 +24,6 @@ function wallGet(){
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
-		})});
-	document.getElementById('button').innerHTML = x[0].text;
+		document.getElementById('button').innerHTML = x[0].text;
+		})});	
 }
