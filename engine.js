@@ -52,7 +52,7 @@ var buttonCreation = function(){
 		btn3.value = 'Перенос товаров в подборку'
 		btn3.setAttribute('onclick', 'albumsGet();')
 		buttonExit.appendChild(btn3);*/
-		document.getElementById('market') = '<input value = 'Перенос товаров в подборку' type = 'button' onclick = 'albumsGet();'>'
+		document.getElementById('market') = '<input value = 'Перенос товаров в подборку' type = 'button' onclick = 'albumsGet();'>';
 	}
 };
 var buttonCreation2 = function(){
