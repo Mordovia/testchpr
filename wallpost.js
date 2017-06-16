@@ -27,7 +27,7 @@ function wallGet(){
 		x = data.response.items;
 		document.getElementById('hello').innerText = x[0].text;
 		var a = x[0].attachments;
-		if (a != ''){
+		if (a !== 'undefined'){
 		console.log(a[0].type);
 		for (n=0;n<a[0].length; n++){
 			if(a[0].type == 'photo'){
