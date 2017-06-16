@@ -27,6 +27,7 @@ function wallGet(){
 		x = data.response.items;
 		document.getElementById('hello').innerText = x[0].text;
 		var a = x[0].attachments;
+		if (a != ''){
 		console.log(a);
 		for (n=0;n<a[0].length; n++){
 			if(a[0].type == 'photo'){
@@ -41,7 +42,7 @@ function wallGet(){
 			else {
 				console.log('что-то другое');
 			}
-		}
+		}}
 			
 		})});
 	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
