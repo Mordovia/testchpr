@@ -36,7 +36,7 @@ function wallGet(){
 				console.log('картинка');				
 			   img[n] = new Image;
 			   img[n].src = a[n].photo.photo_130;				
-			   document.getElementById('button').appendChild(img[n]+' ');
+			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(a[0].type == 'market'){
 				console.log('url');
