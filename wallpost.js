@@ -33,7 +33,7 @@ function wallGet(){
 			if(a[0].type == "photo"){
 				console.log('картинка');				
 			   img[0] = new Image;
-			   img[0].src = a[0].photo_75;
+			   img[0].src = a[0].photo.photo_75;
 				console.log(img[0].src);
 			   document.getElementById('button').appendChild(img[0]);
 				}
