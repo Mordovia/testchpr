@@ -27,14 +27,14 @@ function wallGet(){
 		x = data.response.items;
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		var a = x[0].attachments;
-		if (a !== 'undefined'){
+		if (a != 'undefined'){
 		console.log(a[0].type);
 		for (n=0;n<a[0].length; n++){
-			if(a[0].type == 'photo'){
+			if(a[0].type = 'photo'){
 				console.log('картинка');				
 			   img[n] = new Image;
-			   img[n] = a[n].photo_75;
-			   document.getElementById('button') = a[0].photo_75;
+			   img[n].src = a[n].photo_75;
+			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(a[0].type == 'market'){
 				console.log('url');
