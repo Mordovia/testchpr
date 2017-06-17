@@ -29,22 +29,7 @@ function wallGet(){
 		cutLongText();
 		var a = x[0].attachments;
 		if (typeof a !== 'undefined'){
-		//console.log(a[0].type);
-		console.log(a.length);
-		for (n=0;n<a.length; n++){
-			if(a[n].type == "photo"){
-				console.log('картинка');				
-			   img[n] = new Image;
-			   img[n].src = a[n].photo.photo_130;				
-			   document.getElementById('button').appendChild(img[n]);
-				}
-			else if(a[0].type == 'market'){
-				console.log('url');
-				}
-			else {
-				console.log('что-то другое');
-			}
-		}
+		attachment();
 	}
 			
 		})});
@@ -62,4 +47,20 @@ function cutLongText() {
 		text = text.slice(0, 500);
 		elem.innerHTML = text + '...';
 	}	
+}
+function attachment(){
+for (n=0;n<a.length; n++){
+			if(a[n].type == "photo"){
+				console.log('картинка');				
+			   img[n] = new Image;
+			   img[n].src = a[n].photo.photo_130;				
+			   document.getElementById('button').appendChild(img[n]);
+				}
+			else if(a[0].type == 'market'){
+				console.log('url');
+				}
+			else {
+				console.log('что-то другое');
+			}
+		}
 }
