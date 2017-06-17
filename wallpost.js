@@ -90,7 +90,7 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 function postIt(){
 	for (var n=0; n<attach.length -1; n++){
 		path = attach[0].type+owner_id+'_'+attchId;
-		var z += path+',';
+		document.getElementById('exit').value += path+',';
 	}
 	conole.log(z);
 	function time(){
@@ -103,7 +103,7 @@ VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
-	'attachments': path,
+	'attachments': document.getElementById('exit').value,
 	'from_group': '1'
 })
 }
