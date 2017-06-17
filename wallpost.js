@@ -58,8 +58,11 @@ for (n=0;n<attach.length; n++){
 				}
 			else if(attach[0].type == 'market'){
 				console.log('url');				 
-				img[n] = new Image;			   
-				img[n].src = attach[n].market.thumb_photo;			   
+				img[n] = new Image;
+				img[n].width = 50;
+				img[n].height = 50;
+				img[n].src = attach[n].market.thumb_photo;
+				document.getElementById('button').innerHTML = attach[n].market.title;
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else {
