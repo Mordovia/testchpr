@@ -36,6 +36,7 @@ function wallGet(){
 		document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = look();></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
 }
 function newPost(){
+path = '';
 wallGet();
 }
 function cutLongText() {
@@ -105,5 +106,4 @@ VK.api('wall.post', {
 	'attachments': document.getElementById('exit').value,
 	'from_group': '1'
 })
-	path = 0;
 }
