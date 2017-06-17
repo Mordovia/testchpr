@@ -46,6 +46,8 @@ function wallGet(){
 		<td>
 		<input value = "Получить другую запись" type = "button" onclick = "newPost();">
 		</td>
+		</tr>
+	</table>
 	';
 }
 function newPost(){
