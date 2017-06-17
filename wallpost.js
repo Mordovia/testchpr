@@ -55,16 +55,17 @@ for (n=0;n<attach.length; n++){
 				img[n] = new Image;
 				img[n].src = attach[n].photo.photo_130;
 				attchId[n] = attach[n].photo.id;
-				console.log(attchId);
+				//console.log(attchId);
 				owner_id = attach[n].photo.owner_id;
-				console.log(owner_id);
-			 	document.getElementById('button').appendChild(img[n]);
+				document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
 				img[n] = new Image;
 				img[n].width = 50;
 				img[n].height = 50;
 				img[n].src = attach[n].market.thumb_photo;
+				owner_id = attach[n].market.owner_id;
+				attchId[n] = attach[n].market.id;
 				document.getElementById('button').innerHTML = '<p><small>Товар: '+attach[n].market.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
@@ -73,11 +74,13 @@ for (n=0;n<attach.length; n++){
 				img[n].width = 50;
 				img[n].height = 50;
 				img[n].src = attach[n].market_album.photo.photo_75;
+				owner_id = attach[n].market_album.owner_id;
+				attchId[n] = attach[n].market_album.id;
 				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else if(attach[0].type == 'video'){
-				attchId = attach[n].video.id;
+				attchId[n] = attach[n].video.id;
 				owner_id = attach[n].video.owner_id;
 				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'" target="_blank">Видео по ссылке</a><p>';				}
 			else {
