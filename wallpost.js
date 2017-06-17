@@ -91,7 +91,7 @@ function postIt(){
 	function time(){
 		return parseInt(new Date('Mon, 25 Dec 1995 13:30:00 GMT').getTime()/1000);
 }
-console.log(postIt());//1300051970
+console.log(time());//1300051970
 	/*
 VK.api('wall.post', {
 	'owner_id': '-121807904',
