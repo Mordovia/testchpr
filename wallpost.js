@@ -4,6 +4,7 @@ var attach;
 var owner_id;
 var id;
 var text;
+var path = attach[0].type+owner_id+id;
 
 function wallGet(){
 	clearScreen();
@@ -91,12 +92,12 @@ function postIt(){
 		return parseInt(new Date(day[r]).getTime()/1000);
 }
 //console.log(time());
-console.log(attach[0].type+owner_id+id);
+console.log(path);
 VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
-	'attachments': attach[0].type+owner_id+id,
+	'attachments': path,
 	'from_group': '1'
 })
 }
