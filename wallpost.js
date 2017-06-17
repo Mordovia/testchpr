@@ -88,10 +88,12 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
+	var parsedUnixTime = new Date('18 Jun 2017 13:30:00 GMT').getUnixTime();
+	console.log(parsedUnixTime);/*
 VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': 'Test',
 	//'publish_date': '18.06.2017 17:00'
 	'from_group': '1'
-})
+})*/
 }
