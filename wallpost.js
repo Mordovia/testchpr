@@ -105,4 +105,5 @@ VK.api('wall.post', {
 	'attachments': document.getElementById('exit').value,
 	'from_group': '1'
 })
+	path = 0;
 }
