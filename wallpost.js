@@ -74,6 +74,13 @@ for (n=0;n<attach.length; n++){
 				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
+			else if(attach[0].type == 'video'){
+				console.log('видео');				 
+				var id = attach[n].video.id;
+				var owner_id = attach[n].video.owner_id;
+				document.getElementById('button').innerHTML = '<video> src='+owner_id+'_'+id+'</video>';
+				//document.getElementById('button').appendChild(img[n]);				
+				}
 			else {
 				console.log('что-то другое');
 			}
