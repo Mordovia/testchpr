@@ -89,5 +89,5 @@ for (n=0;n<attach.length; n++){
 		}
 }
 function look(){
-window.open("https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id+'" target="_blank");
+window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
