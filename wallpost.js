@@ -62,7 +62,7 @@ for (n=0;n<attach.length; n++){
 				img[n].width = 50;
 				img[n].height = 50;
 				img[n].src = attach[n].market.thumb_photo;
-				document.getElementById('button').innerHTML = attach[n].market.title;
+				document.getElementById('button').innerHTML = '<p><small>'+attach[n].market.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else {
