@@ -1,5 +1,6 @@
 var x;
 var img =[];
+var attach;
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
@@ -27,8 +28,8 @@ function wallGet(){
 		x = data.response.items;
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		cutLongText();
-		var a = x[0].attachments;
-		if (typeof a !== 'undefined'){
+		attach = x[0].attachments;
+		if (typeof attach !== 'undefined'){
 		attachment();
 	}
 			
@@ -49,14 +50,14 @@ function cutLongText() {
 	}	
 }
 function attachment(){
-for (n=0;n<a.length; n++){
-			if(a[n].type == "photo"){
+for (n=0;n<attach.length; n++){
+			if(attach[n].type == "photo"){
 				console.log('картинка');				
 			   img[n] = new Image;
-			   img[n].src = a[n].photo.photo_130;				
+			   img[n].src = attach[n].photo.photo_130;				
 			   document.getElementById('button').appendChild(img[n]);
 				}
-			else if(a[0].type == 'market'){
+			else if(attach[0].type == 'market'){
 				console.log('url');
 				}
 			else {
