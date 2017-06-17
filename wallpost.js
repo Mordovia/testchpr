@@ -30,13 +30,12 @@ function wallGet(){
 		if (a !== 'undefined'){
 		//console.log(a[0].type);
 		console.log(a.length);
-		//for (n=0;n<a[0].length; n++){
-			if(a[0].type == "photo"){
+		for (n=0;n<a.length; n++){
+			if(a[n].type == "photo"){
 				console.log('картинка');				
-			   img[0] = new Image;
-			   img[0].src = a[0].photo.photo_130;
-				console.log(img[0].src);
-			   document.getElementById('button').appendChild(img[0]);
+			   img[n] = new Image;
+			   img[n].src = a[n].photo.photo_130;				
+			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(a[0].type == 'market'){
 				console.log('url');
@@ -44,7 +43,7 @@ function wallGet(){
 			else {
 				console.log('что-то другое');
 			}
-		//}
+		}
 	}
 			
 		})});
