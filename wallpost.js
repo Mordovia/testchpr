@@ -3,6 +3,7 @@ var img =[];
 var attach;
 var owner_id;
 var id;
+var text;
 
 function wallGet(){
 	clearScreen();
@@ -43,7 +44,7 @@ function newPost(){
 wallGet();
 }
 function cutLongText() {
-	var elem, size, text;
+	var elem, size;
 	elem = document.getElementById('hello');
 	text = elem.innerHTML;
 	size = 500;
@@ -91,12 +92,11 @@ function postIt(){
 	function time(){
 		return parseInt(new Date(day[1]).getTime()/1000);
 }
-console.log(time());//1300051970
-	/*
+console.log(time());
 VK.api('wall.post', {
 	'owner_id': '-121807904',
-	'message': 'Test',
-	//'publish_date': '18.06.2017 17:00'
+	'message': text,
+	'publish_date': time(),
 	'from_group': '1'
-})*/
+})
 }
