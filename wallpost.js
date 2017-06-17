@@ -4,6 +4,9 @@ var attach;
 var owner_id;
 var id;
 var text;
+function getRandomInt(min,max){
+	return Math.floor(min + Math.random() * (max + 1 - min);
+}
 
 function wallGet(){
 	clearScreen();
@@ -12,16 +15,10 @@ function wallGet(){
 							'count': '1',
 							}, function(data) {
 					//console.log(data);
-			var a = 0;
+			//var a = 0;
 			var b = data.response.count;
-			//console.log(b);
-			function getRandomInt(a,b)
-								{
-									return Math.floor(Math.random() * (b + 1));
-								}
-			//console.log(getRandomInt(a,b));
-			x = getRandomInt(a,b);
-			//console.log(x);
+			x = getRandomInt(0,b);
+			console.log(x);
 		
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
@@ -95,7 +92,7 @@ function postIt(){
 console.log(time());
 VK.api('wall.post', {
 	'owner_id': '-121807904',
-	'message': text,
+	'message': x[0].text,
 	'publish_date': time(),
 	'from_group': '1'
 })
