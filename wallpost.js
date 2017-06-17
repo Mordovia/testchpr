@@ -26,6 +26,7 @@ function wallGet(){
 		console.log(data);
 		x = data.response.items;
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
+		cutLongText();
 		var a = x[0].attachments;
 		if (a !== 'undefined'){
 		//console.log(a[0].type);
@@ -51,4 +52,14 @@ function wallGet(){
 }
 function newPost(){
 wallGet();
+}
+function cutLongText() {
+	var elem, size, text;
+	elem = document.getElementById('hello');
+	text = elem.innerHTML;
+	size = 100;
+	if (text.length > size) {
+		text = text.slice(0, 100);
+	}
+	elem.innerHTML = text + '...';
 }
