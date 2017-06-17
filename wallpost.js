@@ -109,7 +109,7 @@ VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
-	'attachments': str,
-	'from_group': '1'
+	'from_group': '1',
+	'attachments': str
 })
 }
