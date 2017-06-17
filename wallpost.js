@@ -70,7 +70,7 @@ for (n=0;n<attach.length; n++){
 				img[n] = new Image;
 				img[n].width = 50;
 				img[n].height = 50;
-				img[n].src = attach[n].market_album.photo_75;
+				img[n].src = attach[n].market_album.photo.photo_75;
 				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
