@@ -78,10 +78,7 @@ for (n=0;n<attach.length; n++){
 				console.log('видео');				 
 				var id = attach[n].video.id;
 				var owner_id = attach[n].video.owner_id;
-				document.getElementById('button').innerHTML = '<video controls="controls"><source src="http://cs12669.vkontakte.ru/upload_video.php?act=add_video&mid=66748&oid=66748&vid=165042743&fid=0&tag=122517f2&hash=8bf2ea7bb66ca67d58fb&swfupload=1" ></video>'
-				//document.getElementById('button').innerHTML = '<video controls="controls"><source src="https://vk.com/video'+owner_id+'_'+id+'"></video>';
-				//document.getElementById('button').appendChild(img[n]);				
-				}
+				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'">Видео по ссылке</a><p>';				}
 			else {
 				console.log('что-то другое');
 			}
