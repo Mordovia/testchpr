@@ -88,7 +88,7 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
-	for (var n=0; n<attach.length -1; n++){
+	for (var n=0; n<attach.length; n++){
 		path = attach[0].type+owner_id+'_'+attchId;
 		document.getElementById('exit').value += path+',';
 	}
