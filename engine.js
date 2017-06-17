@@ -30,6 +30,10 @@ loaded: false
 };  
 var img = [];
 
+function getRandomInt(min,max){
+	return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
 var buttonCreation = function(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
