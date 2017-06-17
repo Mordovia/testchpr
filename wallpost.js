@@ -57,12 +57,21 @@ for (n=0;n<attach.length; n++){
 			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
-				console.log('url');				 
+				console.log('товар');				 
 				img[n] = new Image;
 				img[n].width = 50;
 				img[n].height = 50;
 				img[n].src = attach[n].market.thumb_photo;
-				document.getElementById('button').innerHTML = '<p><small>'+attach[n].market.title+'</small></p>';
+				document.getElementById('button').innerHTML = '<p><small>Товар: '+attach[n].market.title+'</small></p>';
+				document.getElementById('button').appendChild(img[n]);				
+				}
+			else if(attach[0].type == 'market_album'){
+				console.log('подборка');				 
+				img[n] = new Image;
+				img[n].width = 50;
+				img[n].height = 50;
+				img[n].src = attach[n].market_album.photo_75;
+				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else {
