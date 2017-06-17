@@ -3,7 +3,7 @@ var x;
 var attach;
 var owner_id;
 var id;
-var attchId;
+var attchId = [];
 var text;
 var path;
 
@@ -54,7 +54,7 @@ for (n=0;n<attach.length; n++){
 			if(attach[n].type == "photo"){
 				img[n] = new Image;
 				img[n].src = attach[n].photo.photo_130;
-				attchId = attach[n].photo.id;
+				attchId[n] = attach[n].photo.id;
 				console.log(attchId);
 				owner_id = attach[n].photo.owner_id;
 				console.log(owner_id);
@@ -91,7 +91,7 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 function postIt(){
 	var str = new String;
 	for (var n=0; n<attach.length; n++){
-		path = attach[0].type+owner_id+'_'+attchId;
+		path = attach[0].type+owner_id+'_'+attchId[n];
 		//document.getElementById('exit').value += path+',';
 		str += path+',';
 	}
