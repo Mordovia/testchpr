@@ -51,7 +51,8 @@ for (n=0;n<attach.length; n++){
 			if(attach[n].type == "photo"){
 				img[n] = new Image;
 				img[n].src = attach[n].photo.photo_130;
-				img[n].id = attach[n].photo.id;
+				id = attach[n].photo.id;
+				owner_id = attach[n].photo.owner_id;
 			 	document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
@@ -93,7 +94,7 @@ VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
-	'attachments': attach[0].type+owner_id+img[0].id,
+	'attachments': attach[0].type+owner_id+id,
 	'from_group': '1'
 })
 }
