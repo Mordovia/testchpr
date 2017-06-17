@@ -79,8 +79,7 @@ for (n=0;n<attach.length; n++){
 				attchId[n] = '?section=album_'+attach[n].market_album.id;
 				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
 				document.getElementById('button').appendChild(img[n]);
-				attach[0].type == 'market';
-				}
+			}
 			else if(attach[0].type == 'video'){
 				attchId[n] = attach[n].video.id;
 				owner_id = attach[n].video.owner_id;
@@ -96,8 +95,12 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 function postIt(){
 	var str = new String;
 	for (var n=0; n<attach.length; n++){
-		path = attach[0].type+owner_id+'_'+attchId[n];
-		//document.getElementById('exit').value += path+',';
+		if (attach[0].type == 'market_album'){
+			path = market+owner_id+'_'+attchId[n];
+		}
+		else{
+			path = attach[0].type+owner_id+'_'+attchId[n];
+		}
 		str += path+',';
 	}
 	function time(){
