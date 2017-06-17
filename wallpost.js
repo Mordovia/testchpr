@@ -32,8 +32,8 @@ function wallGet(){
 		//for (n=0;n<a[0].length; n++){
 			if(a[0].type == "photo"){
 				console.log('картинка');				
-			   img[n] = new Image;
-			   img[n].src = a[n].photo_75;
+			   img[0] = new Image;
+			   img[0].src = a[0].photo_75;
 			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(a[0].type == 'market'){
