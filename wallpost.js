@@ -34,21 +34,7 @@ function wallGet(){
 	}
 			
 		})});
-	document.getElementById('market').innerHTML = '
-	<table>
-		<tr>
-		<td>
-		<input value = "Перейти к записи" type = "button" onclick = "newPost();">
-		</td>
-		<td>
-		<input value = "Опубликовать" type = "button" onclick = "newPost();">
-		</td>
-		<td>
-		<input value = "Получить другую запись" type = "button" onclick = "newPost();">
-		</td>
-		</tr>
-	</table>
-	';
+	document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = "newPost();"></td><td><input value = "Опубликовать" type = "button" onclick = "newPost();"></td><td><input value = "Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
 }
 function newPost(){
 wallGet();
