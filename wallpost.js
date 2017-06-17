@@ -29,7 +29,7 @@ function wallGet(){
 		var a = x[0].attachments;
 		if (a !== 'undefined'){
 		//console.log(a[0].type);
-		console.log(a[0].length);
+		console.log(a.length);
 		//for (n=0;n<a[0].length; n++){
 			if(a[0].type == "photo"){
 				console.log('картинка');				
