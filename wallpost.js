@@ -49,9 +49,10 @@ function cutLongText() {
 function attachment(){
 for (n=0;n<attach.length; n++){
 			if(attach[n].type == "photo"){
-			   img[n] = new Image;
-			   img[n].src = attach[n].photo.photo_130;				
-			   document.getElementById('button').appendChild(img[n]);
+				img[n] = new Image;
+				img[n].src = attach[n].photo.photo_130;
+				img[n].id = attach[n].photo.id;
+			 	document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
 				img[n] = new Image;
@@ -91,6 +92,7 @@ VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
+	'attachments': attach[0].type+img[0].id;
 	'from_group': '1'
 })
 }
