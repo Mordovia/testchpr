@@ -22,7 +22,7 @@ function wallGet(){
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
 							'count': '1',
-							'offset': 273,
+							'offset': x,
 							}, function(data) {
 		console.log(data);
 		x = data.response.items;
