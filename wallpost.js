@@ -76,9 +76,10 @@ for (n=0;n<attach.length; n++){
 				img[n].height = 50;
 				img[n].src = attach[n].market_album.photo.photo_75;
 				owner_id = attach[n].market_album.owner_id;
-				attchId[n] = attach[n].market_album.id;
+				attchId[n] = '?section=album_'+attach[n].market_album.id;
 				document.getElementById('button').innerHTML = '<p><small>Подборка: '+attach[n].market_album.title+'</small></p>';
-				document.getElementById('button').appendChild(img[n]);				
+				document.getElementById('button').appendChild(img[n]);
+				attach[0].type == 'market'
 				}
 			else if(attach[0].type == 'video'){
 				attchId[n] = attach[n].video.id;
