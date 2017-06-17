@@ -3,6 +3,7 @@ var x;
 var attach;
 var owner_id;
 var id;
+var attchId;
 var text;
 var path;
 
@@ -52,8 +53,8 @@ for (n=0;n<attach.length; n++){
 			if(attach[n].type == "photo"){
 				img[n] = new Image;
 				img[n].src = attach[n].photo.photo_130;
-				id = attach[n].photo.id;
-				console.log(id);
+				attchId = attach[n].photo.id;
+				console.log(attchId);
 				owner_id = attach[n].photo.owner_id;
 				console.log(owner_id);
 			 	document.getElementById('button').appendChild(img[n]);
@@ -75,8 +76,8 @@ for (n=0;n<attach.length; n++){
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else if(attach[0].type == 'video'){
-				var id = attach[n].video.id;
-				var owner_id = attach[n].video.owner_id;
+				attchId = attach[n].video.id;
+				owner_id = attach[n].video.owner_id;
 				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'" target="_blank">Видео по ссылке</a><p>';				}
 			else {
 				console.log('что-то другое');
@@ -87,7 +88,7 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
-	path = attach[0].type+owner_id+id;
+	path = attach[0].type+owner_id+'_'+attchId;
 	function time(){
 		var r = getRandomInt(0,7);
 		return parseInt(new Date(day[r]).getTime()/1000);
