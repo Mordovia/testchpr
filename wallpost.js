@@ -52,7 +52,9 @@ for (n=0;n<attach.length; n++){
 				img[n] = new Image;
 				img[n].src = attach[n].photo.photo_130;
 				id = attach[n].photo.id;
+				console.log(id);
 				owner_id = attach[n].photo.owner_id;
+				console.log(owner_id);
 			 	document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
@@ -89,7 +91,7 @@ function postIt(){
 		return parseInt(new Date(day[r]).getTime()/1000);
 }
 //console.log(time());
-console.log(attach[0].type+img[0].id);
+console.log(attach[0].type+owner_id+id);
 VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
