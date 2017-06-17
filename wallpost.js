@@ -30,7 +30,7 @@ function wallGet(){
 		if (a != 'undefined'){
 		console.log(a[0].type);
 		for (n=0;n<a[0].length; n++){
-			if(a[0].type = 'photo'){
+			if(a[0].type == "photo"){
 				console.log('картинка');				
 			   img[n] = new Image;
 			   img[n].src = a[n].photo_75;
