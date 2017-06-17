@@ -27,6 +27,7 @@ function wallGet(){
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		cutLongText();
 		attach = x[0].attachments;
+		console.log(attach);
 		if (typeof attach !== 'undefined'){
 		attachment();
 		id = x[0].id;
