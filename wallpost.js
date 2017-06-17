@@ -89,9 +89,11 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
+	var str = new String;
 	for (var n=0; n<attach.length; n++){
 		path = attach[0].type+owner_id+'_'+attchId;
-		document.getElementById('exit').value += path+',';
+		//document.getElementById('exit').value += path+',';
+		str += path+',';
 	}
 	function time(){
 		var r = getRandomInt(0,7);
@@ -99,11 +101,12 @@ function postIt(){
 }
 //console.log(time());
 console.log(path);
+console.log(str);	
 VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
-	'attachments': document.getElementById('exit').value,
+	'attachments': str,
 	'from_group': '1'
 })
 }
