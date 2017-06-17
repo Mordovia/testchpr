@@ -89,7 +89,8 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
 return parseInt(new Date().getTime()/1000);
-console.log(time());//1300051970
+}
+console.log(postIt());//1300051970
 	/*
 VK.api('wall.post', {
 	'owner_id': '-121807904',
@@ -97,5 +98,3 @@ VK.api('wall.post', {
 	//'publish_date': '18.06.2017 17:00'
 	'from_group': '1'
 })*/
-}
-
