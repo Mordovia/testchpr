@@ -52,13 +52,15 @@ function cutLongText() {
 function attachment(){
 for (n=0;n<attach.length; n++){
 			if(attach[n].type == "photo"){
-				console.log('картинка');				
 			   img[n] = new Image;
 			   img[n].src = attach[n].photo.photo_130;				
 			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
-				console.log('url');
+				console.log('url');				 
+				img[n] = new Image;			   
+				img[n].src = attach[n].market.thumb_photo;			   
+				document.getElementById('button').appendChild(img[n]);				
 				}
 			else {
 				console.log('что-то другое');
