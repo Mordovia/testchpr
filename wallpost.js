@@ -28,7 +28,8 @@ function wallGet(){
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		var a = x[0].attachments;
 		if (a !== 'undefined'){
-		console.log(a[0].type);
+		//console.log(a[0].type);
+		console.log(a[0].length);
 		//for (n=0;n<a[0].length; n++){
 			if(a[0].type == "photo"){
 				console.log('картинка');				
