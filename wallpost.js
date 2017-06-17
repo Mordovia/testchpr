@@ -90,6 +90,8 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 function postIt(){
 	function time(){
 		return parseInt(new Date('Mon, 25 Dec 1995 13:30:00 GMT').getTime()/1000);
+		var date = new Date();
+		console.log(date.getDay());
 }
 console.log(time());//1300051970
 	/*
