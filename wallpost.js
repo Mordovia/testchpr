@@ -20,14 +20,13 @@ function wallGet(){
 								}
 			//console.log(getRandomInt(a,b));
 			x = getRandomInt(a,b);
-			console.log(x);
+			//console.log(x);
 		
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
 							'count': '1',
 							'offset': x,
 							}, function(data) {
-		console.log(data);
 		x = data.response.items;
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		cutLongText();
@@ -61,7 +60,6 @@ for (n=0;n<attach.length; n++){
 			   document.getElementById('button').appendChild(img[n]);
 				}
 			else if(attach[0].type == 'market'){
-				console.log('товар');				 
 				img[n] = new Image;
 				img[n].width = 50;
 				img[n].height = 50;
@@ -70,7 +68,6 @@ for (n=0;n<attach.length; n++){
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else if(attach[0].type == 'market_album'){
-				console.log('подборка');				 
 				img[n] = new Image;
 				img[n].width = 50;
 				img[n].height = 50;
@@ -79,7 +76,6 @@ for (n=0;n<attach.length; n++){
 				document.getElementById('button').appendChild(img[n]);				
 				}
 			else if(attach[0].type == 'video'){
-				console.log('видео');				 
 				var id = attach[n].video.id;
 				var owner_id = attach[n].video.owner_id;
 				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'" target="_blank">Видео по ссылке</a><p>';				}
@@ -90,4 +86,7 @@ for (n=0;n<attach.length; n++){
 }
 function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
+}
+function postIt(){
+
 }
