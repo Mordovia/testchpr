@@ -92,7 +92,6 @@ function postIt(){
 		path = attach[0].type+owner_id+'_'+attchId;
 		document.getElementById('exit').value += path+',';
 	}
-	conole.log(z);
 	function time(){
 		var r = getRandomInt(0,7);
 		return parseInt(new Date(day[r]).getTime()/1000);
