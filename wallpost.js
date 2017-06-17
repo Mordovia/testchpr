@@ -96,7 +96,7 @@ function postIt(){
 	var str = new String;
 	for (var n=0; n<attach.length; n++){
 		if (attach[0].type == 'market_album'){
-			path = market+owner_id+'_'+attchId[n];
+			path = 'market'+owner_id+'_'+attchId[n];
 		}
 		else{
 			path = attach[0].type+owner_id+'_'+attchId[n];
