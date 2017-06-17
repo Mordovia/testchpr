@@ -29,7 +29,7 @@ function wallGet(){
 		var a = x[0].attachments;
 		if (a != 'undefined'){
 		console.log(a[0].type);
-		for (n=0;n<a[0].length; n++){
+		//for (n=0;n<a[0].length; n++){
 			if(a[0].type == "photo"){
 				console.log('картинка');				
 			   img[n] = new Image;
@@ -42,7 +42,8 @@ function wallGet(){
 			else {
 				console.log('что-то другое');
 			}
-		}}
+		//}
+	}
 			
 		})});
 	document.getElementById('market').innerHTML = '<input value = "Получить другую запись" type = "button" onclick = "newPost();">';
