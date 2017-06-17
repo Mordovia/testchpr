@@ -88,7 +88,8 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
-return parseInt(new Date().getTime()/1000);
+	function time(){
+		return parseInt(new Date('Mon, 25 Dec 1995 13:30:00 GMT').getTime()/1000);
 }
 console.log(postIt());//1300051970
 	/*
@@ -98,3 +99,4 @@ VK.api('wall.post', {
 	//'publish_date': '18.06.2017 17:00'
 	'from_group': '1'
 })*/
+}
