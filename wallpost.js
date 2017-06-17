@@ -78,7 +78,7 @@ for (n=0;n<attach.length; n++){
 				console.log('видео');				 
 				var id = attach[n].video.id;
 				var owner_id = attach[n].video.owner_id;
-				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'">Видео по ссылке</a><p>';				}
+				document.getElementById('button').innerHTML = '<p><a href = "https://vk.com/video'+owner_id+'_'+id+'" target="_blank">Видео по ссылке</a><p>';				}
 			else {
 				console.log('что-то другое');
 			}
