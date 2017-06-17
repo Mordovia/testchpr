@@ -31,12 +31,13 @@ function wallGet(){
 		attach = x[0].attachments;
 		if (typeof attach !== 'undefined'){
 		attachment();
+		var id = x[0].id;
+	var owner_id = x[0].owner_id;
+	document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = "https://vk.com/vintagesbor?w=wall-'+owner_id+'_'+id+'" target="_blank"></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
+
 	}
 			
 		})});
-	var id = x[0].id;
-	var owner_id = x[0].owner_id;
-	document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = "https://vk.com/vintagesbor?w=wall-'+owner_id+'_'+id+'" target="_blank"></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
 }
 function newPost(){
 wallGet();
