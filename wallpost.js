@@ -28,7 +28,7 @@ function wallGet(){
 		document.getElementById('hello').innerHTML = '<p><small>'+x[0].text+'</small></p>';
 		cutLongText();
 		var a = x[0].attachments;
-		if (a !== 'undefined'){
+		if (typeof a !== 'undefined'){
 		//console.log(a[0].type);
 		console.log(a.length);
 		for (n=0;n<a.length; n++){
