@@ -1,6 +1,9 @@
 var x;
 var img =[];
 var attach;
+var owner_id;
+var id;
+
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
@@ -31,11 +34,11 @@ function wallGet(){
 		attach = x[0].attachments;
 		if (typeof attach !== 'undefined'){
 		attachment();
-		var id = x[0].id;
-	var owner_id = x[0].owner_id;
-	document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = "https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id+'" target="_blank"></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
+		id = x[0].id;
+	 	owner_id = x[0].owner_id;
 	}
 		})});
+		document.getElementById('market').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = look();></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
 }
 function newPost(){
 wallGet();
@@ -84,4 +87,7 @@ for (n=0;n<attach.length; n++){
 				console.log('что-то другое');
 			}
 		}
+}
+function look(){
+window.open("https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id+'" target="_blank");
 }
