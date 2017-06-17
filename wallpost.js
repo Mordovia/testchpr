@@ -1,12 +1,9 @@
 var x;
-var img =[];
+//var img =[];
 var attach;
 var owner_id;
 var id;
 var text;
-function getRandomInt(min,max){
-	return Math.floor(min + Math.random() * (max + 1 - min));
-}
 
 function wallGet(){
 	clearScreen();
@@ -15,10 +12,9 @@ function wallGet(){
 							'count': '1',
 							}, function(data) {
 					//console.log(data);
-			//var a = 0;
 			var b = data.response.count;
 			x = getRandomInt(0,b);
-			console.log(x);
+			//console.log(x);
 		
 	VK.api('wall.get', {
 							'owner_id': '-121807904',
@@ -87,7 +83,8 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function postIt(){
 	function time(){
-		return parseInt(new Date(day[1]).getTime()/1000);
+		var r = getRandomInt(0,7);
+		return parseInt(new Date(day[r]).getTime()/1000);
 }
 console.log(time());
 VK.api('wall.post', {
