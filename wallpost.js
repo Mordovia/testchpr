@@ -57,9 +57,9 @@ function cutLongText() {
 	var elem, size, text;
 	elem = document.getElementById('hello');
 	text = elem.innerHTML;
-	size = 100;
+	size = 500;
 	if (text.length > size) {
-		text = text.slice(0, 100);
-	}
-	elem.innerHTML = text + '...';
+		text = text.slice(0, 500);
+		elem.innerHTML = text + '...';
+	}	
 }
