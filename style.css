@@ -1,19 +1,4 @@
 @font-face {
- font-family: 'PF DinDisplay Pro Light';
- src:url('assets/fonts/PFDinDisplayPro-Light.eot?#iefix') format('embedded-opentype'),
-     url('assets/fonts/PFDinDisplayPro-Light.ttf') ;
-     font-weight: normal;
-     font-style: normal;
-}
-
-@font-face {
- font-family: 'PF DinDisplay Pro';
- src: url('http://develop1.okkapi-art.ru/assets/fonts/PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
-  url('assets/fonts/PFDinDisplayPro-Bold.ttf') ;
-  font-weight: bold;
-    font-style: normal;
-}
-@font-face {
  font-family: 'Antiqua';
  url('assets/fonts/antiqua.ttf') ;
  font-weight: normal;
@@ -34,32 +19,6 @@ padding:0;
 /*min-width:1007px;*/
 font:normal 16px 'Antiqua', Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
-}
-
-img
-{
--webkit-backface-visibility: hidden;    
-}
-
-
-h1, h2, .h1, .h2, h3, h4, .h3, .h4
-{
-font-family:'PF DinDisplay Pro', sans-serif; 
-font-weight:bold;
-margin-top:0;
-color:#333;    
-text-transform:uppercase;
-letter-spacing:2px;
-}
-
-h1, .h1
-{
-font-size:24px;    
-}
-
-h2, .h2
-{
-font-size:18px;    
 }
 
 input[type=button]
