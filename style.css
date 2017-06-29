@@ -15,8 +15,15 @@
 }
 @font-face {
  font-family: 'Antiqua';
- url('assets/fonts/Antiqua.ttf') ;
+ url('assets/fonts/antiqua.ttf') ;
  font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+ font-family: 'Antiqua Bold';
+ url('assets/fonts/antiqua-bold.ttf') ;
+ font-weight: bold;
     font-style: normal;
 }
 
@@ -57,7 +64,7 @@ font-size:18px;
 
 input[type=button]
 {
-font: 12px 'Antiqua', sans-serif;   
+font: 12px 'Antiqua Bold', sans-serif;   
 text-transform:uppercase;
 background-color: #a06f7e;
 color:#fff;
