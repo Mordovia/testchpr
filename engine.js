@@ -60,7 +60,7 @@ clearScreen();
 	backToMainMenu();
 	}
 var backToMainMenu = function(){
-document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "wallGet();">';
+document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "buttonCreation();">';
 }
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
