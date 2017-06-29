@@ -70,6 +70,7 @@ var buttonCreation2 = function(){
 	nprg.value = 'Получить новый прогноз'
 	nprg.setAttribute('onclick', 'marketGet();')
 	newPrognoz.appendChild(nprg);
+	backToMainMenu();
 };
 
 var getUserName = function () {//описываем функцию, которая обращается к API
