@@ -35,6 +35,7 @@ function getRandomInt(min,max){
 }
 
 var buttonCreation = function(){
+	clearScreen();
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
@@ -60,8 +61,7 @@ clearScreen();
 	backToMainMenu();
 	}
 var backToMainMenu = function(){
-	clearScreen();
-document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "buttonCreation();">';
+	document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "buttonCreation();">';
 }
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
