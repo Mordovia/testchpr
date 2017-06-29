@@ -27,6 +27,7 @@ padding:0;
 /*min-width:1007px;*/
 font:normal 16px 'Antiqua', Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
+ background:#e8d7cc;
 }
 
 img
@@ -55,36 +56,11 @@ h2, .h2
 font-size:18px;    
 }
 
-.btn
-{
-font: bold 12px 'PF DinDisplay Pro', sans-serif;   
-text-transform:uppercase;
-background:#63b2df;
-color:#fff;
-border:0;
-border-radius:0;
-padding:12px 40px;
-outline:none;
-
--webkit-transition: all 200ms ease;
--moz-transition: all 200ms ease;
--ms-transition: all 200ms ease;
--o-transition: all 200ms ease;
-transition: all 200ms ease;
-}
-
-.btn:hover, .btn:focus
-{
-background:#559ec7;
-color:#fff;   
-outline:none;
-}
-
 input[type=button]
 {
-font: bold 12px 'Antiqua', sans-serif;   
+font: 12px 'Antiqua', sans-serif;   
 text-transform:uppercase;
-background:#63b2df;
+background:#efcdb8;
 color:#fff;
 border:0;
 border-radius:0;
