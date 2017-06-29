@@ -30,6 +30,7 @@ var buttonCreation3 = function(){
 	nprg.id = 'nprg'
 	nprg.type = 'button'
 	nprg.value = 'Перенести в группу Чай'
+	nprg.align = 'center'
 	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
 	backToMainMenu();
