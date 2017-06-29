@@ -25,12 +25,12 @@ function albumsGet(){
 })}
 
 var buttonCreation3 = function(){
-	var newPrognoz = document.getElementById('newPrognoz');
+	var newPrognoz = document.getElementById('newPrognoz')
+	nprg.align = 'center';
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'button'
 	nprg.value = 'Перенести в группу Чай'
-	nprg.align = 'center'
 	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
 	backToMainMenu();
