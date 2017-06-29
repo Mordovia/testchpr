@@ -32,6 +32,7 @@ var buttonCreation3 = function(){
 	nprg.value = 'Перенести в группу Чай'
 	nprg.setAttribute('onclick', 'checking();')
 	newPrognoz.appendChild(nprg);
+	backToMainMenu();
 }
 var checking = function(){
 	console.log(a);
@@ -69,4 +70,3 @@ VK.api('market.get', {
 			     )		
 			}
 })}
-backToMainMenu();
