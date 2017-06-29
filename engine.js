@@ -35,7 +35,6 @@ function getRandomInt(min,max){
 }
 
 var buttonCreation = function(){
-	clearScreen();
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
@@ -61,7 +60,7 @@ clearScreen();
 	backToMainMenu();
 	}
 var backToMainMenu = function(){
-	document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "buttonCreation();">';
+	document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "getUserName();">';
 }
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
@@ -74,6 +73,7 @@ var buttonCreation2 = function(){
 };
 
 var getUserName = function () {//описываем функцию, которая обращается к API
+	clearScreen();
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	//console.log(data);
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
