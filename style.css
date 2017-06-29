@@ -1,0 +1,1447 @@
+@font-face {
+ font-family: 'PF DinDisplay Pro Light';
+ src:url('/assets/fonts/PFDinDisplayPro-Light.eot?#iefix') format('embedded-opentype'),
+     url('/assets/fonts/PFDinDisplayPro-Light.ttf') ;
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
+ font-family: 'PF DinDisplay Pro';
+ src: url('http://develop1.okkapi-art.ru/assets/fonts/PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/PFDinDisplayPro-Bold.ttf') ;
+  font-weight: bold;
+    font-style: normal;
+}
+
+body
+{
+margin:0;
+padding:0;
+min-width:1007px;
+font:normal 16px 'PF DinDisplay Pro Light', Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+}
+
+img
+{
+-webkit-backface-visibility: hidden;    
+}
+
+svg
+{
+position:relative;
+display:block;
+margin:0 auto;    
+}
+
+ul 
+{
+margin:0;
+padding:0;    
+list-style-type:none;
+}
+
+h1, h2, .h1, .h2, h3, h4, .h3, .h4
+{
+font-family:'PF DinDisplay Pro', sans-serif; 
+font-weight:bold;
+margin-top:0;
+color:#333;    
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+h1, .h1
+{
+font-size:24px;    
+}
+
+h2, .h2
+{
+font-size:18px;    
+}
+
+a
+{
+color:#63b2df;    
+}
+
+a:hover
+{
+color:#559ec7;    
+}
+
+a:active, a:focus
+{
+outline:none;    
+}
+
+.w
+{
+color:#fff;    
+}
+
+.g
+{
+color:#999;    
+}
+
+.b
+{
+color:#4782b0;    
+}
+
+.btn
+{
+font: bold 12px 'PF DinDisplay Pro', sans-serif;   
+text-transform:uppercase;
+background:#63b2df;
+color:#fff;
+border:0;
+border-radius:0;
+padding:12px 40px;
+outline:none;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.btn:hover, .btn:focus
+{
+background:#559ec7;
+color:#fff;   
+outline:none;
+}
+
+.top
+{
+position:absolute;   
+z-index:1;
+min-width:1007px;
+top:0;
+left:0;
+right:0;
+}
+
+.short_top
+{
+position: relative;
+width: 100%;
+left: 0;
+right: 0;
+height: 180px;
+background: url('/assets/images/top.jpg') no-repeat top;
+background-size: cover;
+-ms-behavior: url('/assets/css/backgroundsize.min.htc');
+z-index: 0;
+}
+
+.nav
+{
+position:relative;   
+background:#fff;
+background:rgba(255,255,255,.97);
+text-align:center;
+z-index:100;
+
+-webkit-box-shadow: 0 0 5px 0 #888;
+box-shadow: 0 0 5px 0 #888;
+
+behavior: url(assets/css/pie.htc);
+}
+
+.nav ul, .nav li
+{
+position:relative;       
+display:inline-block;    
+vertical-align:middle;
+margin:0 -4px 0 0;
+}
+
+.nav ul>li >a
+{
+position:relative;       
+display:block;        
+padding:18px 20px;   
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#000;
+text-decoration:none;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.nav ul>li:hover> a
+{
+background:#f8f8f8;
+background:rgba(255,255,255, 1);
+text-decoration:none;
+
+-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0, .1);
+box-shadow: 0 0 5px 0 rgba(0,0,0, .1);
+}
+
+.nonavclick
+{
+cursor:default;    
+}
+
+.nav .active>a
+{
+background:#63b2df;    
+color:#fff;
+}
+
+.nav .active:hover>a
+{
+background:#509fcc;    
+color:#fff;
+}
+
+.nav li ul
+{
+position:absolute;   
+display:block;
+height:0;
+opacity:0;
+width:auto;
+background:#fafafa;
+background:rgba(255,255,255,.98);
+overflow:hidden;
+
+-webkit-box-shadow: 0 0 5px 0 #ddd;
+box-shadow: 0 0 5px 0 #ddd;
+-webkit-box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2);
+box-shadow: 0 0 5px 0 rgba(0,0,0, 0.2);
+
+-webkit-transition: all 300ms ease;
+-moz-transition: all 300ms ease;
+-ms-transition: all 300ms ease;
+-o-transition: all 300ms ease;
+transition: all 300ms ease;
+}
+
+.nav ul li:hover ul, .nav ul li ul:hover
+{
+height:auto;
+opacity:1;    
+}
+
+.nav li ul li
+{
+position:relative;   
+display:block; 
+width:auto;
+}
+
+.nav li ul li a
+{
+display:block;    
+padding:18px 30px;   
+width:300px;
+color:#333;
+text-decoration:none;
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.nav li ul li:hover a
+{
+background:#fff;
+-webkit-box-shadow: 0 0 5px 0 #eee;
+box-shadow: 0 0 5px 0 #eee;
+}
+
+.logo, .logo img
+{
+position:relative;
+display:inline-block;
+}
+
+.logo
+{
+margin:60px 0 0 0;    
+}
+
+.contact
+{
+margin:60px 0 0 0;  
+font:normal 24px 'PF DinDisplay Pro Light', sans-serif;
+color:#fff;
+text-align:right;
+}
+
+/**ROYAL SLIDER**/
+#full-width-slider {
+  width: 100%;
+  height:700px;
+  z-index:1;
+}
+
+.sl_over
+{
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+right:0;
+background:url(/assets/images/sl_cover.png) no-repeat center;
+/*
+background-size:cover;
+behavior: url(assets/css/backgroundsize.min.htc);
+*/
+content:" ";    
+opacity:.8;
+z-index:1;
+}
+
+#full-width-slider .container
+{
+position:relative; 
+margin-top:-350px;  
+z-index:2;
+}
+
+.rsABlock
+{
+padding:20px 80px 20px 50px;
+margin-left:50px;
+font: normal 32px 'PF DinDisplay Pro Light', sans-serif;
+color: #fff;
+border:2px solid #fff; 
+background:url(/assets/images/sl_a.png) no-repeat right transparent;
+z-index:1000;
+
+-webkit-transition: background 200ms ease;
+-moz-transition: background 200ms ease;
+-ms-transition: background 200ms ease;
+-o-transition: background 200ms ease;
+transition: background 200ms ease;
+}
+
+.rsABlock:hover
+{
+text-decoration:none;
+color: #fff;
+border:2px solid #63b2df; 
+background-color: #63b2df;
+}
+
+.rsBullet
+{
+cursor:pointer;    
+}
+/*
+@media (max-width:1100px)
+{
+    .rsABlock
+    {
+    margin-left:200px;
+    }    
+}
+*/
+
+@media (max-width:1300px)
+{
+#full-width-slider .container
+    {
+    max-width:900px;    
+    }
+}
+/* Map */
+
+#map {
+float:left;
+clear:both;
+width:1440px;
+height:820px;
+}
+
+.title
+{
+text-align:center;
+margin-bottom:60px;
+/*color:#4782b0;*/
+}
+
+.title:after
+{
+position:relative;
+display:block;
+height:20px;
+margin:0 auto;
+margin-top:20px;
+content:"";
+background:url(/assets/images/feature.png) no-repeat bottom;    
+}
+
+.service
+{
+padding:60px 0 0;    
+}
+
+.tabNavigation
+{
+padding:0 0 40px;    
+}
+
+.tabNavigation li
+{
+position:relative;    
+text-align:center;
+}
+
+.tabNavigation li a
+{
+position:relative;    
+text-align:center;
+display:inline-block;
+width:270px;
+padding:10px 0;
+
+color:#aaa;
+font:bold 16px 'PF DinDisplay Pro', sans-serif;
+letter-spacing:2px;
+text-transform: uppercase;
+}
+
+.tabNavigation li a:hover
+{
+color:#63b2df;
+}
+
+.tabNavigation li a.selected
+{
+    background:url(/assets/images/crn_l.png) no-repeat left bottom;
+}
+
+.tabNavigation li a.selected:after
+{
+position:absolute;
+height:20px;
+width:20px;
+top:0;
+right:0;
+content:"";
+background:url(/assets/images/crn_r.png) no-repeat right top;
+}
+
+.tabNavigation li a.selected:before
+{
+position:absolute;
+content:"";
+top:107px;
+left:50%;
+background:#fff;
+height:20px;
+width:20px;
+z-index:1;
+-moz-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+
+-webkit-box-shadow: 2px 2px 4px 0 rgba(0,0,0, .1);
+box-shadow: 4px 4px 4px 0 rgba(0,0,0, .1);
+}
+
+.tabNavigation li a:hover, .tabNavigation li a:focus, .tabNavigation li a:active
+{
+text-decoration:none;    
+}
+
+.tabNavigation li .selected
+{
+color:#63b2df;
+}
+
+.tabNavigation li .selected:hover
+{
+color:#428bca;
+}
+
+.tab_cont
+{
+position:relative;    
+padding:80px 0 200px;   
+background:url(/assets/images/bg1.jpg) no-repeat;
+background-size:cover;
+behavior: url(assets/css/backgroundsize.min.htc);
+}
+
+.tab_cont .container
+{
+position:relative;    
+}
+
+.x
+{
+position:absolute;
+top:-20px;
+right:10px;
+width:20px;
+height:20px;
+background:url(/assets/images/x.png) no-repeat center;
+cursor:pointer;
+}
+
+.main_tab_links a, .serv_links a
+{
+position:relative;    
+display:block;
+padding:5px 0 3px 30px;
+margin:0 0 20px 0;
+font: bold 14px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #000;    
+text-decoration:none;
+background:url(/assets/images/li_main.png) no-repeat left;
+}
+
+.serv_links a
+{
+display:inline-block;    
+}
+
+.project_main
+{
+position:relative;
+display:inline-block;
+vertical-align:top;
+width:185px;
+height:210px;
+margin:0 -93px 0 0;
+}
+
+.project_main a, .project_main img
+{
+position:relative;
+display:block;
+margin:10px 0;
+}
+
+.project_main a
+{
+height:44px;    
+text-align:center;
+font:normal 12px Arial;
+overflow:hidden;
+}
+
+.project_main.even
+{
+top:67px;    
+}
+
+.tab_links
+{
+display:none;    
+position:relative;
+margin:-130px 0 130px 0;
+}
+
+.tab_links a, .tab_links img
+{
+position:relative;
+display:inline-block;
+}
+
+.tab_links a
+{
+position:relative;
+display:inline-block; 
+vertical-align:top;
+padding:0 0 10px;  
+margin:0 0 0 20px;
+text-align:center;
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+text-decoration:none;
+border:0;
+border-bottom:2px dotted  #63b2df;
+background:none;
+outline:none;
+color:#63b2df;
+cursor:pointer;
+}
+
+.tab_links a:active
+{
+top:2px;    
+}
+
+.company
+{
+position:relative;
+padding:60px 0;
+text-align:center;
+}
+
+.activity img
+{
+position:relative;
+display:inline-block;
+margin:20px 0;
+}
+
+.activity p
+{
+padding:20px;
+text-align:justify; 
+}
+
+.facts
+{
+position:relative;
+padding:60px 0;    
+background:url(/assets/images/bg2.jpg);
+background-size:cover;
+behavior: url(assets/css/backgroundsize.min.htc);
+}
+
+.facts .h2, .geo_facts .h2
+{
+font-size:16px;
+letter-spacing:0;
+padding-left:40px;
+}
+
+.geo_facts
+{
+position:relative;
+padding: 0;     
+}
+
+.geo_facts .odometer-value
+{
+color:#63b2df;    
+}
+
+.geo_facts .h2
+{
+color:#000;    
+}
+
+.geo_facts .odometer-inside {
+padding-left: 45px;
+background: url(/assets/images/slash_l.png) no-repeat left;
+}
+
+.news_main
+{
+ position:relative;
+padding:60px 0;  
+}
+
+.news_item
+{
+position:relative;
+display:block;    
+margin-bottom:40px;    
+padding:0 15px;
+}
+
+.news_item p
+{
+position:relative;
+display:block;
+padding:25px 0 15px;
+margin-bottom:15px;
+border-bottom:3px solid #f1f1f1;
+font: bold 14px 'PF DinDisplay Pro', sans-serif;
+color:#555;
+letter-spacing: 1px;
+line-height:18px;    
+}
+
+.news_item img
+{
+position:relative;
+display:block;
+width:100%;
+
+ -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); */ /* Firefox 3.5+ */
+  filter: gray; /* IE 6-9 */
+}
+
+.news_item:hover img
+{
+position:relative;
+display:block;
+width:100%;
+
+ -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: none;
+}
+
+.news_item a:hover p
+{
+text-decoration:none;
+color:#63b2df;
+}
+
+.news_item a:hover
+{
+text-decoration:none;
+}
+
+.date
+{
+position:relative;
+display:inline-block;    
+font:italic 12px Arial;
+color:#888;
+}
+
+.moar
+{
+position:relative;
+display:block;
+float:right;
+margin:5px 0 0 0;
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+padding:0 20px 0 0;
+background:url(/assets/images/moar.png) no-repeat right;
+}
+
+.footer
+{
+position:relative;
+padding:60px 0 0;
+background:#313743;
+color:#fff;
+
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+line-height:24px;
+}
+
+.dev
+{
+position:relative;
+display:block;
+padding:60px 0 20px;
+font: normal 14px 'PF DinDisplay Pro Light', sans-serif;
+text-transform:none;
+}
+
+.f_nav
+{
+padding-bottom:30px;    
+}
+
+.f_nav ul
+{
+border-top:1px solid #888;  
+display:inline-block;
+padding:10px 0;
+}
+
+.f_nav a
+{
+color:#fff;
+font: normal 10px 'Arial';
+text-transform: uppercase;
+letter-spacing: 1px;
+line-height: 24px;
+text-decoration:underline;
+}
+
+.top_bg
+{
+position:relative;
+height:250px;
+width:100%;
+background-size:cover;
+background-position:center;
+behavior: url(assets/css/backgroundsize.min.htc);
+}
+
+.top_bg:after {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: url(/assets/images/sl_cover.png);
+background-size: cover;
+behavior: url(assets/css/backgroundsize.min.htc);
+content: " ";
+opacity: .8;
+}
+
+.main
+{
+position:relative;
+padding:60px 0;
+color:#555;
+line-height:24px;
+}
+
+.serv_links
+{
+position:relative;    
+padding:40px 0 0 0;    
+}
+
+.serv_pic
+{
+position:relative; 
+display:block;
+margin:0 30px 0 0;
+}
+
+.serv_pic img
+{
+position:relative; 
+display:block;
+width:100%;
+}
+
+.crumbs
+{
+position:relative;
+padding:20px 0 0;    
+}
+
+.crumbs li
+{
+position:relative;
+display:inline-block;
+padding:0 10px; 
+font:normal 12px Arial;
+}
+
+.complete
+{
+position:relative;
+padding:60px 0 120px;
+background:url(/assets/images/bg3.jpg);
+background-size:cover;
+behavior: url(assets/css/backgroundsize.min.htc);
+}
+
+.complete:after, .tab_cont:after
+{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:20px;
+background:url(/assets/images/shad.png) no-repeat top;
+content:" ";    
+}
+
+.complete .item,  .complete .item img
+{
+position:relative; 
+display:inline-block;
+width:100%;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.complete .item span
+{
+position:absolute; 
+display:block;
+top:40%;
+left:10%;
+width:80%;
+padding:10px 20px;
+color:#fff;
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+border:3px solid #63b2df;
+text-decoration:none;
+text-align:center;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.complete .item:hover
+{
+background:#fff;    
+}
+
+.complete .item:hover img
+{
+opacity:0.9;  
+}
+
+.complete .item:hover span
+{
+background: #63b2df; 
+}
+.proektplanirovki
+{
+position:relative;
+padding:60px 0 0px;
+/*background:#ffffff;
+background-size:cover;
+behavior: url(assets/css/backgroundsize.min.htc);*/
+}
+.proektplanirovki:after, .tab_cont:after
+{
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:20px;
+/*background:url(/assets/images/shad.png) no-repeat top;*/
+content:" ";    
+}
+
+.proektplanirovki .item,  .proektplanirovki .item img
+{
+position:relative; 
+display:inline-block;
+width:100%;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.proektplanirovki .item span
+{
+position:absolute; 
+display:block;
+top:40%;
+left:10%;
+width:80%;
+padding:10px 20px;
+color:#fff;
+background: #63b2df; 
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+border:3px solid #63b2df;
+text-decoration:none;
+text-align:center;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.proektplanirovki .item:hover
+{
+background:#fff;
+}
+
+.proektplanirovki .item:hover img
+{
+opacity:1;  
+}
+
+.proektplanirovki .item:hover span
+{
+background: #63b2df; 
+}
+
+/*PAGES*/
+
+.paginator
+{
+padding:40px 0;   
+position:relative;
+display:block;
+float:left;
+width:100%;
+text-align:center;
+}
+
+.paginator li
+{
+display:inline-block;
+vertical-align:top;
+margin:0 4px;
+cursor:pointer;   
+padding:4px 0 0 0;
+}
+
+.paginator li a
+{
+display:block;
+margin:0;
+padding: 10px 17px;
+color:#333;
+
+text-decoration:none;
+background:#f5f5f5;
+opacity:1;
+font:bold 14px 'PF DinDisplay Pro', sans-serif;
+letter-spacing: 0.5px; 
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.paginator .active,.paginator .active:hover
+{
+background:#63b2df;
+color:#fff;
+}   
+
+.paginator li:hover a
+{
+background:#ddd;
+} 
+
+.news_date
+{
+margin:20px 0 30px;    
+color:#1d7aae;
+font:italic 12px Arial;
+}
+
+.select
+{
+position:relative;
+margin:0 auto;
+width:250px;
+height:40px;
+border:2px solid #e3e7ed;
+padding:5px 15px;
+border-radius:4px;
+behavior: url(assets/css/pie.htc);
+}
+
+.select:after
+{
+content:" ";    
+position:absolute;
+top:0;
+bottom:0;
+right:0;
+width:35px;
+border-left:1px solid #e3e7ed;
+background:url(/assets/images/select.png) no-repeat center;
+}
+
+.reg_list
+{
+position:absolute;
+display:none;
+top:38px;
+left:-350px;
+width:960px;
+background:#fff;
+z-index:1000;
+padding: 40px;
+
+-webkit-box-shadow: 0 0 5px 0 #aaa;
+box-shadow: 0 0 5px 0 #aaa;
+border-radius:5px;
+behavior: url(assets/css/pie.htc);
+}
+
+.reg_list li
+{
+position:relative;     
+display:inline-block;
+}
+
+.reg_list li a
+{
+position:relative;     
+display:block;
+width:290px;
+font:normal 14px Arial;
+}
+
+.select:hover .reg_list
+{
+display:block;    
+z-index:1000;
+}
+
+.license, .license img
+{
+position:relative;     
+display:block;
+width:100%;
+padding:0 0 10px 0;
+
+ -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");*/  /* Firefox 3.5+ */
+  filter: gray; /* IE 6-9 */
+ 
+ -webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;  
+}
+
+.license:hover, .license img:hover
+{
+ -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter:none;
+}
+
+.mat
+{
+padding-bottom:40px;
+background:url(/assets/images/mat.png) no-repeat top left;
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.mat:hover
+{
+background-image:url(/assets/images/mat_h.png);
+}
+
+.mat:hover .file_type
+{
+color:#fff;
+}
+
+.file_type
+{
+position:absolute;
+top:15px;
+left:15px;
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #777; 
+
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.file_name
+{
+position: relative;
+display: block;
+padding: 0 0 0 60px;
+font: bold 14px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #000;  
+}
+
+.dnld
+{
+position: relative;
+display: inline-block;
+margin: 10px 0 0 60px;  
+padding:0 0 0 25px;
+font: normal 14px Arial;
+background:url(/assets/images/dnld.png) no-repeat left;
+}
+
+.file_size
+{
+font: normal 14px Arial;
+color:#777;
+}
+
+.appr
+{
+padding-bottom:40px;  
+height:340px;
+}
+
+.cl_logo
+{
+position: relative;
+display: block; 
+width:100%;
+border:3px solid #ebeef2;
+
+ -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  /*filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");*/ /* Firefox 3.5+ */
+  filter: gray; /* IE 6-9 */
+ 
+ -webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease;
+}
+
+.appr span
+{
+position: relative;
+display: block;
+margin:10px 0 0 0;
+text-align:center;
+padding:5px 0;
+width:100%;
+border-bottom:2px dotted #63b2df;
+
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.cl_name
+{
+font: bold 14px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;  
+}
+
+.appr:hover .cl_logo
+{
+ -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter:none;
+}
+
+.appr p
+{
+position: relative;
+display: block;
+font-size:16px;
+line-height:16px;
+padding:15px 0 5px 30px;
+background:url(/assets/images/line.jpg) no-repeat 0 20px;
+color:#777;
+}
+
+.sign
+{
+position: relative;
+display: block;
+height:48px;
+font-size:14px;
+font-style:italic;
+text-align:right;
+color:#777;
+}
+
+.contact_full
+{
+padding:60px 0;
+
+font: normal 14px 'PF DinDisplay Pro Light', sans-serif;
+letter-spacing: 1px;
+}
+
+.contact_full span
+{
+display:inline-block;
+vertical-align:top;
+padding: 0 0 20px 15px;
+}
+
+.rekv .row
+{
+padding-bottom:10px;    
+}
+
+.region object, .region svg, .region img
+{
+position:relative;
+float:left;
+}
+
+.region .obj
+{
+position:absolute;
+display:block;
+width:44px;
+height:30px;
+z-index:100;
+background:url(/assets/images/object.png);
+}
+
+.project
+{
+position:relative;    
+clear:both;
+
+padding:60px 0 0 0;
+}
+
+.project .pr_img img
+{
+position:relative; 
+display:block;
+width:100%;
+}
+
+.pr_title
+{
+padding:0 0 20px 5px;    
+}
+
+.pr_title:after
+{
+position:relative;
+display:block;
+height:1px;
+width:30px;
+margin:20px 0 0 5px;
+content:"";
+background:#b8d1e4;    
+}
+
+.param
+{
+padding:60px 0 0 0;  
+font: normal 40px 'PF DinDisplay Pro Light', sans-serif;
+color:#333;
+}
+
+.param .item
+{
+position:relative;
+display:inline-block;
+vertical-align:top;
+padding:0 30px 20px 0;
+height:90px;    
+}
+
+.param img
+{
+position:relative;
+display:inline-block;   
+margin:0 20px 10px 0;
+}
+
+.param_title
+{
+font: bold 11px 'PF DinDisplay Pro', sans-serif;    
+text-transform:uppercase;
+color:#999;
+}
+
+.tip
+{
+position:absolute;  
+display:none;
+text-align:center;
+width: 200px;
+background: #fff;
+z-index: 1000;
+padding: 20px;
+-webkit-box-shadow: 0 0 5px 0 #aaa;
+box-shadow: 0 0 5px 0 #aaa;
+border-radius: 5px;
+behavior: url(assets/css/pie.htc);
+
+font: bold 12px 'PF DinDisplay Pro', sans-serif;
+text-transform: uppercase;
+letter-spacing: 1px;
+}
+
+.tip:hover
+{
+display:block;    
+}
+
+.tip span
+{
+position:relative;
+display:inline-block;
+padding:5px 0;
+color:#63b2df;
+border-bottom:2px dotted #63b2df;
+}
+
+.tip:before {
+position: absolute;
+content: "";
+bottom: -5px;
+left: 50%;
+background: #fff;
+height: 10px;
+width: 10px;
+z-index: 10;
+
+-moz-transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-o-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
+
+-webkit-box-shadow: 3px 2px 3px 0 rgba(0,0,0, .1);
+box-shadow: 3px 2px 3px 0 rgba(0,0,0, .1);
+}
+
+svg path
+{
+cursor:pointer;    
+}
+
+svg .noclick
+{
+cursor:default;    
+}
+
+.tl
+{
+position:relative; 
+display:block;
+}
