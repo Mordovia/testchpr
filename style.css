@@ -18,8 +18,8 @@ body
 {
 margin:0;
 padding:0;
-min-width:1007px;
-font:normal 16px 'PF DinDisplay Pro Light', Arial, sans-serif;
+/*min-width:1007px;*/
+font:normal 16px 'antiqua.ttf', Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 
