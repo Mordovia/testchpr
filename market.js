@@ -69,3 +69,4 @@ VK.api('market.get', {
 			     )		
 			}
 })}
+backToMainMenu();
