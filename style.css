@@ -55,36 +55,6 @@ h2, .h2
 font-size:18px;    
 }
 
-a
-{
-color:#63b2df;    
-}
-
-a:hover
-{
-color:#559ec7;    
-}
-
-a:active, a:focus
-{
-outline:none;    
-}
-
-.w
-{
-color:#fff;    
-}
-
-.g
-{
-color:#999;    
-}
-
-.b
-{
-color:#4782b0;    
-}
-
 .btn
 {
 font: bold 12px 'PF DinDisplay Pro', sans-serif;   
