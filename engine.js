@@ -60,6 +60,7 @@ clearScreen();
 	backToMainMenu();
 	}
 var backToMainMenu = function(){
+	clearScreen();
 document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "buttonCreation();">';
 }
 var buttonCreation2 = function(){
