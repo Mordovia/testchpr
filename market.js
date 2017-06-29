@@ -26,7 +26,7 @@ function albumsGet(){
 
 var buttonCreation3 = function(){
 	var newPrognoz = document.getElementById('newPrognoz')
-	nprg.align = 'center';
+	newPrognoz.align = 'center';
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'button'
