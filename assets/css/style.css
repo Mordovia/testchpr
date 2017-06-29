@@ -1,7 +1,7 @@
 @font-face {
  font-family: 'PF DinDisplay Pro Light';
- src:url('/assets/fonts/PFDinDisplayPro-Light.eot?#iefix') format('embedded-opentype'),
-     url('/assets/fonts/PFDinDisplayPro-Light.ttf') ;
+ src:url('assets/fonts/PFDinDisplayPro-Light.eot?#iefix') format('embedded-opentype'),
+     url('assets/fonts/PFDinDisplayPro-Light.ttf') ;
      font-weight: normal;
      font-style: normal;
 }
@@ -9,7 +9,7 @@
 @font-face {
  font-family: 'PF DinDisplay Pro';
  src: url('http://develop1.okkapi-art.ru/assets/fonts/PFDinDisplayPro-Bold.eot?#iefix') format('embedded-opentype'),
-  url('/assets/fonts/PFDinDisplayPro-Bold.ttf') ;
+  url('assets/fonts/PFDinDisplayPro-Bold.ttf') ;
   font-weight: bold;
     font-style: normal;
 }
@@ -134,9 +134,9 @@ width: 100%;
 left: 0;
 right: 0;
 height: 180px;
-background: url('/assets/images/top.jpg') no-repeat top;
+background: url('assets/images/top.jpg') no-repeat top;
 background-size: cover;
--ms-behavior: url('/assets/css/backgroundsize.min.htc');
+-ms-behavior: url('assets/css/backgroundsize.min.htc');
 z-index: 0;
 }
 
@@ -321,7 +321,7 @@ margin-left:50px;
 font: normal 32px 'PF DinDisplay Pro Light', sans-serif;
 color: #fff;
 border:2px solid #fff; 
-background:url(/assets/images/sl_a.png) no-repeat right transparent;
+background:url(assets/images/sl_a.png) no-repeat right transparent;
 z-index:1000;
 
 -webkit-transition: background 200ms ease;
@@ -435,7 +435,7 @@ width:20px;
 top:0;
 right:0;
 content:"";
-background:url(/assets/images/crn_r.png) no-repeat right top;
+background:url(assets/images/crn_r.png) no-repeat right top;
 }
 
 .tabNavigation li a.selected:before
@@ -494,7 +494,7 @@ top:-20px;
 right:10px;
 width:20px;
 height:20px;
-background:url(/assets/images/x.png) no-repeat center;
+background:url(assets/images/x.png) no-repeat center;
 cursor:pointer;
 }
 
@@ -609,7 +609,7 @@ text-align:justify;
 {
 position:relative;
 padding:60px 0;    
-background:url(/assets/images/bg2.jpg);
+background:url(assets/images/bg2.jpg);
 background-size:cover;
 behavior: url(assets/css/backgroundsize.min.htc);
 }
