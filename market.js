@@ -9,7 +9,7 @@ function albumsGet(){
 					//console.log(data);
 		a = data.response.items;
 		//console.log(a);
-		for (var n=0; n<a.length -1; n++){
+		for (var n=0; n<a.length -3; n++){
                        	var name = [];
 			name = a[n].title;
                        	id = a[n].id;
