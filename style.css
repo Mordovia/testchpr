@@ -13,13 +13,19 @@
   font-weight: bold;
     font-style: normal;
 }
+@font-face {
+ font-family: 'Antiqua';
+ url('assets/fonts/Antiqua.ttf') ;
+ font-weight: normal;
+    font-style: normal;
+}
 
 body
 {
 margin:0;
 padding:0;
 /*min-width:1007px;*/
-font:normal 16px 'antiqua.ttf', Arial, sans-serif;
+font:normal 16px 'Antiqua', Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 
