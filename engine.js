@@ -129,8 +129,8 @@ function clearScreen(){
 	//var tagName = document.getElementsByTagName('div');
 	var tagName = document.getElementsByClassName('main');
 	for(i = 0; i < tagName.length; i++){
-	document.getElementById(tagName[i].id).innerHTML = ''	
-	//console.log(tagName[i].id);	
+	//document.getElementById(tagName[i].id).innerHTML = ''	
+	console.log(tagName[i].id);	
 	}
 	
 }
