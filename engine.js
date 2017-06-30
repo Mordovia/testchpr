@@ -130,8 +130,8 @@ function clearScreen(){
 	var className = document.getElementsByClassName('main');
 	//alert(tagName.length);
 	for(i = 0; i < className.length; i++){
-	document.getElementById(className[i].id).innerHTML = ''	
-	//console.log(tagName[i].id);	
+	//document.getElementById(className[i].id).innerHTML = ''	
+	console.log(tagName[i].id);	
 	}
 	
 }
