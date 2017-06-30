@@ -12,7 +12,22 @@ padding:0;
 font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
-
+.logo {
+	background: url(sprite.png) no-repeat;
+	width: 380px;
+	height: 94px;
+	float: left;
+	margin: 0 38px 0 0;
+}
+h1, h2, .h1, .h2, h3, h4, .h3, .h4
+{
+font-family:Antiqua, sans-serif; 
+font-weight:bold;
+margin-top:0;
+color:#333;    
+text-transform:uppercase;
+letter-spacing:2px;
+}
 input[type=button]
 {
 font: 12px Antiqua, sans-serif;
