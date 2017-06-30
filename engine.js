@@ -129,12 +129,9 @@ function clearScreen(){
 	//var tagName = document.getElementsByTagName('div');
 	var className = document.getElementsByClassName('main');
 	//alert(tagName.length);
-	for(i = 0; i < className.length; i++){
-	//document.getElementById(className[0].id).innerHTML = '';
-		document.getElementById(className[1].id).innerHTML = '';
-		document.getElementById(className[2].id).innerHTML = '';
-		document.getElementById(className[3].id).innerHTML = '';
-	console.log(className[i].id);	
+	for(i = 1; i < className.length; i++){//почему-то не работает в div 'hello', но он первый, и его мы исключили
+	document.getElementById(className[i].id).innerHTML = '';
+	//console.log(className[i].id);	
 	}
 	
 }
