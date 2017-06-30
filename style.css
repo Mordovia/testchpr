@@ -23,6 +23,11 @@ font:normal 16px Antiqua, Arial, sans-serif;
 #avatar
 {
 float:left;
+margin-right:10px;
+}
+#hello
+{
+	
 }
 h1, h2, .h1, .h2, h3, h4, .h3, .h4
 {
