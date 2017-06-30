@@ -15,9 +15,9 @@ font:normal 16px Antiqua, Arial, sans-serif;
 #header {
 	position: relative; top: 0%; left: 25%;
 	background: url(sprite.png) no-repeat;
-	background-position: -95px 0;
+	background-position: -95px -15px;
 	width: 280px;
-	height: 94px;
+	height: 85px;
 	margin: 0;
 }
 .main
