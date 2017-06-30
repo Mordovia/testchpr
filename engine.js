@@ -162,7 +162,7 @@ function drawTable() {//рисуем таблицу
 		}
 		buttonCreation2();
 }
- function clesrStyle() {
+ function clearStyle() {
 	 for (n=1; n<4; n++){
 		 document.getElementById(0+'n').style.fontWeight = "normal";
 	 }
