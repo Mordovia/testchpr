@@ -22,7 +22,7 @@ font:normal 16px Antiqua, Arial, sans-serif;
 }
 .main
 {
-margin: 10px;
+margin: 15px;
 }
 #avatar
 {
@@ -32,7 +32,6 @@ margin-right:10px;
 #hello
 {
 font:normal 18px Antiqua, Arial, sans-serif;
-margin-bottom:20;	
 }
 h1, h2, .h1, .h2, h3, h4, .h3, .h4
 {
