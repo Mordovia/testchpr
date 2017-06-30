@@ -19,8 +19,6 @@
 <div class = 'container'>
 <script type="text/javascript"> 	
 function onClickCell(event){//функция события
-	//console.log(event.target.id);
-	//console.log(event.target.href);
 	if (typeof event.target.href !== 'undefined'){
 	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
@@ -40,7 +38,6 @@ function onClickCell(event){//функция события
 	case '01'://если возвращаемся на сегодня
 	//document.getElementById('table').innerHTML = '';
 	drawTable();
-	console.log(event.target.id);
 	break;
 	case '03':
 	for (n=1; n<8; n++){
