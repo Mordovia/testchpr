@@ -5,25 +5,17 @@
     font-style: normal;
 }
 
-@font-face {
- font-family: 'Antiqua Bold';
- url('antiqua-bold.ttf') ;
- font-weight: bold;
-    font-style: normal;
-}
-
 body
 {
 margin:0;
 padding:0;
-/*min-width:1007px;*/
-font:normal 16px 'Antiqua', Arial, sans-serif;
+font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 
 input[type=button]
 {
-font: 12px 'Antiqua Bold', Antiqua, sans-serif;   
+font: 12px Antiqua, sans-serif;
 text-transform:uppercase;
 background-color: #a06f7e;
 color:#fff;
@@ -38,4 +30,9 @@ cursor:pointer;
 -ms-transition: all 200ms ease;
 -o-transition: all 200ms ease;
 transition: all 200ms ease;
+}
+
+.prognoz
+{
+font:bold 18px Antiqua, Arial, sans-serif;
 }
