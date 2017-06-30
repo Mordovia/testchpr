@@ -131,7 +131,7 @@ function clearScreen(){
 	//alert(tagName.length);
 	for(i = 0; i < className.length; i++){
 	//document.getElementById(className[i].id).innerHTML = ''	
-	console.log(tagName[i].id);	
+	console.log(className[i].id);	
 	}
 	
 }
