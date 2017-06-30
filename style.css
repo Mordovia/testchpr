@@ -12,13 +12,12 @@ padding:0;
 font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
-header {
+#header {
 	align: center;
 	background: url(sprite.png) no-repeat;
 	background-position: -95px 0;
 	width: 280px;
 	height: 94px;
-
 	margin: 0 38px 0 0;
 }
 h1, h2, .h1, .h2, h3, h4, .h3, .h4
