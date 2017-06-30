@@ -34,6 +34,7 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'1').appendChild(img[t]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+t];
 	document.getElementById(n+'2').href = url[t];
+	document.getElementById(n+'2').style.cursor='pointer';
 	}
 	break;
 	case '01'://если возвращаемся на сегодня
@@ -49,6 +50,7 @@ function onClickCell(event){//функция события
 	document.getElementById('11').appendChild(img[1]);
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('12').href = url[1];
+			//document.getElementById(n+'2').style.cursor='pointer';
 	document.getElementById('21').appendChild(img[4]);
 	document.getElementById('22').innerHTML =  market['descript4'];
 	document.getElementById('22').href = url[4];		
@@ -60,8 +62,8 @@ function onClickCell(event){//функция события
 	document.getElementById(n+'1').appendChild(img[w]);
 	document.getElementById(n+'2').innerHTML =  market['descript'+w];
 	document.getElementById(n+'2').href = url[w];
-	var stl = document.getElementById(n+'2');
-	stl.style.cursor='pointer';
+	//var stl = document.getElementById(n+'2');
+	document.getElementById(n+'2').style.cursor='pointer';
 	}
 	break;
 	}
