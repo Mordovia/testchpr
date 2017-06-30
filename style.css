@@ -20,6 +20,10 @@ font:normal 16px Antiqua, Arial, sans-serif;
 	height: 94px;
 	margin: 0 38px 0 0;
 }
+#avatar
+{
+float:left;
+}
 h1, h2, .h1, .h2, h3, h4, .h3, .h4
 {
 font-family:Antiqua, sans-serif; 
