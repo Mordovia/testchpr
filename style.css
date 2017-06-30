@@ -13,7 +13,6 @@ font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 #header {
-	align: center;
 	background: url(sprite.png) no-repeat;
 	background-position: -95px 0;
 	width: 280px;
