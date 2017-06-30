@@ -166,6 +166,12 @@ function drawTable() {//рисуем таблицу
 	 for (n=1; n<4; n++){
 		 document.getElementById('0'+n).style.fontWeight = "normal";
 	 }
+	 
+}
+function joke() {
+	
+	 }
+	 
 }
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
