@@ -164,7 +164,7 @@ function drawTable() {//рисуем таблицу
 }
  function clearStyle() {
 	 for (n=1; n<4; n++){
-		 document.getElementById(0+'n').style.fontWeight = "normal";
+		 document.getElementById('0'+n).style.fontWeight = "normal";
 	 }
 }
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
