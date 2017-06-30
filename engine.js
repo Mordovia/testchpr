@@ -127,11 +127,11 @@ function marketGet(){
 		})}
 function clearScreen(){
 	//var tagName = document.getElementsByTagName('div');
-	var tagName = document.getElementsByClassName('main');
-	alert(tagName.length);
-	for(i = 0; i < tagName.length; i++){
-	//document.getElementById(tagName[i].id).innerHTML = ''	
-	console.log(tagName[i].id);	
+	var className = document.getElementsByClassName('main');
+	//alert(tagName.length);
+	for(i = 0; i < className.length; i++){
+	document.getElementById(className[i].id).innerHTML = ''	
+	//console.log(tagName[i].id);	
 	}
 	
 }
