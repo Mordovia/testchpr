@@ -50,13 +50,15 @@ function onClickCell(event){//функция события
 	document.getElementById('11').appendChild(img[1]);
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('12').href = url[1];
-			//document.getElementById(n+'2').style.cursor='pointer';
+	document.getElementById('12').style.cursor='pointer';
 	document.getElementById('21').appendChild(img[4]);
 	document.getElementById('22').innerHTML =  market['descript4'];
-	document.getElementById('22').href = url[4];		
+	document.getElementById('22').href = url[4];
+	document.getElementById('22').style.cursor='pointer';
 	document.getElementById('31').appendChild(img[0]);
 	document.getElementById('32').innerHTML =  market['descript0'];
 	document.getElementById('32').href = url[0];
+	document.getElementById('32').style.cursor='pointer';
 	for (n=4; n<8; n++){
 	var w = n+2;
 	document.getElementById(n+'1').appendChild(img[w]);
