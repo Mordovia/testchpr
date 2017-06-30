@@ -141,7 +141,8 @@ function drawTable() {//рисуем таблицу
 		var element = document.createElement('table');
 		element.setAttribute('border', '0');
 		element.setAttribute('id', 'tab');
-		element.innerHTML.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
+		var textInCell = element.innerHTML;
+		textInCell.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 		for (var i=0; i<8; i++){
 			var row = element.insertRow(i);
 			for(var j=0; j<4; j++){
