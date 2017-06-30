@@ -14,8 +14,8 @@ font:normal 16px Antiqua, Arial, sans-serif;
 }
 .logo {
 	background: url(sprite.png) no-repeat;
-	background-position: -16px 0;
-	width: 380px;
+	background-position: -95px 0;
+	width: 280px;
 	height: 94px;
 	float: left;
 	margin: 0 38px 0 0;
