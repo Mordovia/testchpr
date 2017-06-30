@@ -14,7 +14,6 @@ for (n=0; n<7; n++){//цикл для дней
 day[n] = new Date();
 day[n].setDate(day[n].getDate() + n);
 };
-//console.log(day[2]);
 var options = {
   month: 'short',
   day: 'numeric',
@@ -76,13 +75,11 @@ var buttonCreation2 = function(){
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
-	//console.log(data);
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
 	user['id'] = data.response[0].id;
 	user['avatar'] = data.response[0].photo_50;//обратились к ВК API - получили ответ, который записали в параметр avatar переменной user
 	user['loaded'] = true;
  	document.avatar.src = user['avatar'] //определили картинку с именем avatar и ссылкой из ВК Апи, которую потом выводим в HTML по имени
-	// document.write ("Привет, " + user['name']);
 	}),
  	VK.api('groups.getById', {'group_ids': '121807904', 'fields' : 'photo_50'}, function (data) {
 	group['groupname'] = data.response[0].name;
@@ -100,20 +97,17 @@ function marketGet(){
 							'owner_id': '-121807904', 
 							'album_id': '16',
                     }, function(data) {
-					//console.log(data);                        
+					                   
 					var a = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
 		a.sort(compareRandom);
-		//console.log(a[0], a[1], a[2], a[3]);
 		for (var n=0; n<11; n++){
                        market['descript'+n] = a[n].title;
                        market['photo_'+n] = a[n].thumb_photo;
                        url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-		console.log(market);
-		//console.log(url);
 		market['loaded'] = true;
 		url['loaded'] = true;
 		for (n=0; n<11; n++){
@@ -121,7 +115,6 @@ function marketGet(){
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
-		//console.log(img[n].src);
 		}
 		drawTable();
 		})}
@@ -131,7 +124,6 @@ function clearScreen(){
 	//alert(tagName.length);
 	for(i = 0; i < className.length; i++){
 	document.getElementById(className[i].id).innerHTML = '';
-	//console.log(className[i].id);	
 	}
 	
 }
