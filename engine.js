@@ -157,8 +157,8 @@ function drawTable() {//рисуем таблицу
 		for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		document.getElementById(n+'2').href = url[n];
-		document.getElementById(n+'2').style.cursor='pointer';
+		document.getElementById(n+'1').href = url[n];
+		document.getElementById(n+'1').style.cursor='pointer';
 		}
 		buttonCreation2();
 }
