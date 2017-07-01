@@ -180,7 +180,7 @@ function joke() {
 	}, function(data) {
 		var a = data.response.items;
 		console.log(a);
-		var albumId = a[0].album_ids;
+		var albumId = a[0].albums_ids;
 		console.log(albumId);
 	})
 	
