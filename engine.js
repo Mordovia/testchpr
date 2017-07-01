@@ -175,15 +175,13 @@ function drawTable() {//рисуем таблицу
 	 
 }
 function joke() {
-	VK.api('market.get', {
-		item_ids: market['id3'],
+	VK.api('market.getById', {
+		'item_ids': market['id3'],
 	}function(data) {
-					                   
-					var a = data.response.items;
-					}
-		console.log(a);
-	       )
-//	if ()
+		var a = data.response.items;
+	}
+	console.log(a);)
+	//	if ()
 //	console.log(market['id3']);
 }
 	 
