@@ -118,6 +118,7 @@ function marketGet(){
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
+		img[n].href = url[n];
 		}
 		drawTable();
 		})}
