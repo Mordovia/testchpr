@@ -174,6 +174,7 @@ function drawTable() {//рисуем таблицу
 	 
 }
 function joke() {
+	var albumId;
 	VK.api('market.getById', {
 		'item_ids': market['id3'],
 		'extended': '1',
@@ -181,11 +182,13 @@ function joke() {
 		var a = data.response.items;
 		console.log(a);
 		var albumId = a[0].albums_ids;
-		console.log(albumId);
 	})
-	
-	//	if ()
-	
+	console.log(albumId[0]);
+	for (i=0;i<albumId.length; i++){
+		if (albumId[i]='3'){
+		document.getElementById('33').innerHTML = 'Шутка';
+		}
+	}
 }
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
