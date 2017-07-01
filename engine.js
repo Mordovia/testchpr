@@ -184,7 +184,7 @@ function joke() {
 		albumId = a[0].albums_ids;
 		console.log(albumId);
 		for (i=0;i<albumId.length; i++){
-		if (albumId[i]='3'){
+		if (albumId[i]=='3'){
 		document.getElementById('33').innerHTML = 'Шутка';
 		}
 	}
