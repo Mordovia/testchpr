@@ -63,7 +63,10 @@ cursor:pointer;
 -o-transition: all 200ms ease;
 transition: all 200ms ease;
 }
-
+#01, #02, #03{
+cursor:pointer;
+}
+	
 #prognoz
 {
 font:bold 18px Antiqua, Arial, sans-serif;
