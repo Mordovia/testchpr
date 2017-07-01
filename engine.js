@@ -181,8 +181,9 @@ function joke() {
 		var a = data.response.items;
 		console.log(a);
 	})
+	var albumId = a[0].album_ids;
 	//	if ()
-//	console.log(market['id3']);
+	console.log(albumId);
 }
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
