@@ -175,8 +175,16 @@ function drawTable() {//рисуем таблицу
 	 
 }
 function joke() {
+	VK.api('market.get', {
+		item_ids: market['id3']
+	}function(data) {
+					                   
+					var a = data.response.items;
+					}
+		console.log(a);
+	       )
 //	if ()
-	console.log(market['id3']);
+//	console.log(market['id3']);
 }
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
