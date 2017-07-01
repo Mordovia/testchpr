@@ -107,7 +107,8 @@ function marketGet(){
 		for (var n=0; n<11; n++){
                        	market['descript'+n] = a[n].title;
                        	market['photo_'+n] = a[n].thumb_photo;
-			market['id'+n] = a[n].owner_id+'_'+a[n].id;	
+			market['id'+n] = a[n].owner_id+'_'+a[n].id;
+			console.log(market['id'+n]);
                        	url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
 		market['loaded'] = true;
@@ -171,7 +172,7 @@ function drawTable() {//рисуем таблицу
 	 
 }
 function joke() {
-	if ()
+//	if ()
 }
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
