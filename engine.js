@@ -182,14 +182,13 @@ function joke() {
 		var a = data.response.items;
 		console.log(a);
 		albumId = a[0].albums_ids;
-	})
-	console.log(albumId);
-	for (i=0;i<albumId.length; i++){
+		console.log(albumId);
+		for (i=0;i<albumId.length; i++){
 		if (albumId[i]='3'){
 		document.getElementById('33').innerHTML = 'Шутка';
 		}
 	}
-}
+	})}
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
