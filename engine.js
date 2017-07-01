@@ -180,10 +180,12 @@ function joke() {
 	}, function(data) {
 		var a = data.response.items;
 		console.log(a);
+		var albumId = a[0].album_ids;
+		console.log(albumId);
 	})
-	var albumId = a[0].album_ids;
+	
 	//	if ()
-	console.log(albumId);
+	
 }
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
