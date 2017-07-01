@@ -164,6 +164,7 @@ function drawTable() {//рисуем таблицу
 		document.getElementById(n+'1').style.cursor='pointer';
 		}
 		buttonCreation2();
+		joke();
 }
  function clearStyle() {
 	 for (n=1; n<4; n++){
