@@ -169,10 +169,8 @@ function drawTable() {//рисуем таблицу
 	 
 }
 function joke() {
-	
-	 }
-	 
 }
+	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
