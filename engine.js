@@ -181,7 +181,7 @@ function joke() {
 	}, function(data) {
 		var a = data.response.items;
 		console.log(a);
-		var albumId = a[0].albums_ids;
+		albumId = a[0].albums_ids;
 	})
 	console.log(albumId);
 	for (i=0;i<albumId.length; i++){
