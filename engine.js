@@ -179,8 +179,8 @@ function joke() {
 		'item_ids': market['id3'],
 	}, function(data) {
 		var a = data.response.items;
-	}
-	console.log(a);)
+		console.log(a);
+	})
 	//	if ()
 //	console.log(market['id3']);
 }
