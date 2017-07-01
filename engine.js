@@ -176,7 +176,7 @@ function drawTable() {//рисуем таблицу
 }
 function joke() {
 	VK.api('market.get', {
-		item_ids: market['id3']
+		item_ids: market['id3'],
 	}function(data) {
 					                   
 					var a = data.response.items;
