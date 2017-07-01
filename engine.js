@@ -162,8 +162,7 @@ function drawTable() {//рисуем таблицу
 		for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		document.getElementById(n+'1').href = url[n];
-		
+		//document.getElementById(n+'1').href = url[n];
 		}
 		buttonCreation2();
 		joke();
@@ -177,6 +176,7 @@ function drawTable() {//рисуем таблицу
 function joke() {
 	VK.api('market.getById', {
 		'item_ids': market['id3'],
+		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
 		console.log(a);
