@@ -63,7 +63,8 @@ cursor:pointer;
 -o-transition: all 200ms ease;
 transition: all 200ms ease;
 }
-#01, #02, #03{
+#01, #02, #03, 01, 02, 03
+{
 cursor:pointer;
 }
 	
