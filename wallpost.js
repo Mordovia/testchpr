@@ -34,7 +34,7 @@ function wallGet(){
 	 	owner_id = x[0].owner_id;
 	}
 		})});
-		document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = look();></td><td><input value = "Опубликовать" type = "button" onclick = "postIt();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
+		document.getElementById('prognoz').innerHTML = '<table><tr><td><input value = "Перейти к записи" type = "button" onclick = look();></td><td><input value = "Опубликовать" type = "button" onclick = "selectData();"></td><td><input value = " >> Получить другую запись" type = "button" onclick = "newPost();"></td></tr></table>';
 		backToMainMenu();
 }
 function newPost(){
@@ -93,7 +93,11 @@ for (n=0;n<attach.length; n++){
 function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
-function postIt(){
+function selectData(){
+document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input value = "Опубликковать сейчас" type = "button" onclick = postItNow();></td><td><input type="datetime-local"></td><td><input value = "Опубликовать в случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
+
+}
+function postItRandom(){
 	var str = new String;
 	for (var n=0; n<attach.length; n++){
 		if (attach[0].type == 'market_album'){
@@ -109,12 +113,34 @@ function postIt(){
 		return parseInt(new Date(day[r]).getTime()/1000);
 }
 //console.log(time());
-console.log(path);
-console.log(str);	
+//console.log(path);
+//console.log(str);	
 VK.api('wall.post', {
 	'owner_id': '-121807904',
 	'message': x[0].text,
 	'publish_date': time(),
+	'from_group': '1',
+	'attachments': str
+})
+}
+function postItNow(){
+	var str = new String;
+	for (var n=0; n<attach.length; n++){
+		if (attach[0].type == 'market_album'){
+			path = 'market'+owner_id+'_'+attchId[n];
+		}
+		else{
+			path = attach[0].type+owner_id+'_'+attchId[n];
+		}
+		str += path+',';
+	}	
+//console.log(time());
+//console.log(path);
+//console.log(str);	
+VK.api('wall.post', {
+	'owner_id': '-121807904',
+	'message': x[0].text,
+//	'publish_date': time(),
 	'from_group': '1',
 	'attachments': str
 })
