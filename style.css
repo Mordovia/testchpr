@@ -1,6 +1,6 @@
 @font-face {
  font-family: Antiqua;
- src: url(antiqua.ttf);
+ src: url('assets/fonts/antiqua.ttf');
  font-weight: normal;
     font-style: normal;
 }
