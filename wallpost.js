@@ -94,7 +94,7 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function selectData(){
-document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input value = "Опубликковать сейчас" type = "button" onclick = postItNow();></td><td><input type="datetime-local"></td><td><input value = "Опубликовать в случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
+document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input value = "Сейчас" type = "button" onclick = postItNow();></td><td><input value = "Выбрать время" type="datetime-local"></td><td><input value = "В случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
 
 }
 function postItRandom(){
