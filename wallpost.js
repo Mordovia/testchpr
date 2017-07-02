@@ -109,6 +109,7 @@ function postItSelected(){
 	}
 	function time(){
 		var r = document.getElementById('dataSelect').value;
+		console.log(r);
 		return parseInt(new Date(day[r]).getTime()/1000);
 }
 //console.log(time());
