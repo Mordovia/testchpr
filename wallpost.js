@@ -108,7 +108,7 @@ function postItSelected(){
 		str += path+',';
 	}
 	function time(){
-		var r = document.getElementById('dataSelect').value;
+		var r = Date.parse(document.getElementById('dataSelect').value);
 		console.log(r);
 		return parseInt(new Date(day[r]).getTime()/1000);
 }
