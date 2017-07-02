@@ -110,7 +110,7 @@ function postItSelected(){
 	function time(){
 		var r = Date.parse(document.getElementById('dataSelect').value);
 		console.log(r);
-		return parseInt(new Date(day[r]).getTime()/1000);
+		return r;
 }
 //console.log(time());
 //console.log(path);
