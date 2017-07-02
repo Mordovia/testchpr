@@ -94,8 +94,33 @@ function look(){
 window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function selectData(){
-document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input type="datetime-local"></td><td><input value = "Опубликовать в выбранное время" type="button"></td></tr><tr><td><input value = "Опубликовать сейчас" type = "button" onclick = postItNow();></td><td><input value = "Опубликовать в случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
-
+document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input type="datetime-local" id = "dataSelect"></td><td><input value = "Опубликовать в выбранное время" type="button" onclick = postItSelected();></td></tr><tr><td><input value = "Опубликовать сейчас" type = "button" onclick = postItNow();></td><td><input value = "Опубликовать в случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
+}
+function postItSelected(){
+	var str = new String;
+	for (var n=0; n<attach.length; n++){
+		if (attach[0].type == 'market_album'){
+			path = 'market'+owner_id+'_'+attchId[n];
+		}
+		else{
+			path = attach[0].type+owner_id+'_'+attchId[n];
+		}
+		str += path+',';
+	}
+	function time(){
+		var r = document.getElementById('dataSelect').value;
+		return parseInt(new Date(day[r]).getTime()/1000);
+}
+//console.log(time());
+//console.log(path);
+//console.log(str);	
+VK.api('wall.post', {
+	'owner_id': '-121807904',
+	'message': x[0].text,
+	'publish_date': time(),
+	'from_group': '1',
+	'attachments': str
+})
 }
 function postItRandom(){
 	var str = new String;
