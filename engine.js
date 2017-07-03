@@ -190,7 +190,7 @@ function drawTable() {//рисуем таблицу
 	for (var i=0; i<1; i++){
 		var header = element.createTHead(i);
 		for(var j=0; j<4; j++){
-			var cell = row.insertCell(j);
+			var cell = header.insertCell(j);
 			cell.width = "auto";
 			cell.height = "auto";
 			cell.align = "center";
