@@ -178,42 +178,43 @@ function clearScreen(){
 	
 }
 function drawTable() {//рисуем таблицу
-		clearScreen();
-		var objTo = document.getElementById('table');
-		var element = document.createElement('table');
-		element.setAttribute('border', '0');
-		element.setAttribute('id', 'tab');
-		element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-		for (var i=0; i<8; i++){
-			var row = element.insertRow(i);
-			for(var j=0; j<4; j++){
-				var cell = row.insertCell(j);
-				cell.width = "auto";
-				cell.height = "auto";
-				cell.align = "center";
-				cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-			}
+	clearScreen();
+	var objTo = document.getElementById('table');
+	var element = document.createElement('table');
+	element.setAttribute('border', '0');
+	element.setAttribute('id', 'tab');
+	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
+	var thead = createTHead();	
+	for (var i=0; i<8; i++){
+		var row = element.insertRow(i);
+		for(var j=0; j<4; j++){
+			var cell = row.insertCell(j);
+			cell.width = "auto";
+			cell.height = "auto";
+			cell.align = "center";
+			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
 		}
-		objTo.appendChild(element);
-		
-		document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-		document.getElementById('01').innerHTML = '<th>Сегодня (' + day[0].toLocaleString("ru", options) + ')</th>';//дата отформатированная с учетом переменной опции
-		document.getElementById("01").style.fontWeight = "bold";
-		//document.getElementById('01').style.cursor='pointer';
-		document.getElementById('02').innerHTML = '<th>Завтра (' + day[1].toLocaleString("ru", options) + ')</th>';
-		document.getElementById('03').innerHTML = '<th>На неделю</th>';
-		document.getElementById('10').innerHTML = 'Утро';
-		document.getElementById('20').innerHTML = 'День';
-		document.getElementById('30').innerHTML = 'Вечер';
-		for (n=1; n<4; n++){
+	}
+	objTo.appendChild(element);
+	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById("01").style.fontWeight = "bold";
+	//document.getElementById('01').style.cursor='pointer';
+	document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	document.getElementById('03').innerHTML = 'На неделю';
+	document.getElementById('10').innerHTML = 'Утро';
+	document.getElementById('20').innerHTML = 'День';
+	document.getElementById('30').innerHTML = 'Вечер';
+	for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		//document.getElementById(n+'1').href = url[n];
-		}
+	}
 	buttonCreation2();
 	joke();
 }
- function clearStyle() {
+
+function clearStyle() {
 	 for (n=1; n<4; n++){
 		 document.getElementById('0'+n).style.fontWeight = "normal";
 	 }
