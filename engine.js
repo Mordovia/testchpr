@@ -54,6 +54,7 @@ function onClickCell(event){//функция события
 			break;
 		case '03'://на неделю
 			clearStyle();
+			document.getElementById('33').innerHTML = '';
 			document.getElementById("03").style.fontWeight = "bold";
 			for (n=1; n<8; n++){
 				document.getElementById(n+'1').innerHTML = '';
