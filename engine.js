@@ -240,6 +240,7 @@ function joke2() {
 		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
+		console.log(a);
 		albumId = a[0].albums_ids;
 		for (i=0;i<albumId.length; i++){
 			if (albumId[i]=='3'){
