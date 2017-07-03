@@ -187,7 +187,7 @@ function drawTable() {//рисуем таблицу
 	for (var i=0; i<1; i++){
 		var thead = element.createTHead();
 		var row = element.insertRow(i);
-		for(var j=0; j<4; j++){
+		for(var j=0; j<1; j++){
 			var cell = row.insertCell(j);
 			cell.width = "auto";
 			cell.height = "auto";
