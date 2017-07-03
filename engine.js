@@ -32,57 +32,47 @@ var img = [];
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
-	parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
+		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 	switch (event.target.id) {
-	case '02'://завтра
-	//document.getElementById('table').innerHTML = '';
-	drawTable();
-	clearStyle();
-	document.getElementById("02").style.fontWeight = "bold";		
-	for (n=1; n<4; n++){
-	var t = n+3;
-	document.getElementById(n+'1').innerHTML = '';
-	document.getElementById(n+'1').appendChild(img[t]);
-	document.getElementById(n+'2').innerHTML =  market['descript'+t];
-	//document.getElementById(n+'1').href = url[t];
-	//document.getElementById(n+'1').style.cursor='pointer';
-	}
-	joke2();
-	break;
-	case '01'://если возвращаемся на сегодня
-	//document.getElementById('table').innerHTML = '';
-	drawTable();
-	clearStyle();
-	document.getElementById("01").style.fontWeight = "bold";		
-	break;
-	case '03'://на неделю
-	clearStyle();
-	document.getElementById("03").style.fontWeight = "bold";		
-	for (n=1; n<8; n++){
-	document.getElementById(n+'1').innerHTML = '';
-	document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
-	//document.getElementById(n+'1').style.cursor='pointer';
-	}
-	document.getElementById('11').appendChild(img[1]);
-	document.getElementById('12').innerHTML =  market['descript1'];
-	//document.getElementById('11').href = url[1];
-	document.getElementById('21').appendChild(img[4]);
-	document.getElementById('22').innerHTML =  market['descript4'];
-	//document.getElementById('21').href = url[4];
-	document.getElementById('31').appendChild(img[0]);
-	document.getElementById('32').innerHTML =  market['descript0'];
-	//document.getElementById('31').href = url[0];
-	for (n=4; n<8; n++){
-	var w = n+2;
-	document.getElementById(n+'1').appendChild(img[w]);
-	document.getElementById(n+'2').innerHTML =  market['descript'+w];
-	//document.getElementById(n+'1').href = url[w];
-	}
-	break;
-	}
+		case '02'://завтра
+			drawTable();
+			clearStyle();
+			document.getElementById("02").style.fontWeight = "bold";
+			for (n=1; n<4; n++){
+				var t = n+3;
+				document.getElementById(n+'1').innerHTML = '';
+				document.getElementById(n+'1').appendChild(img[t]);
+				document.getElementById(n+'2').innerHTML =  market['descript'+t];
+			}
+			joke2();
+			break;
+		case '01'://если возвращаемся на сегодня
+			drawTable();
+			clearStyle();
+			document.getElementById("01").style.fontWeight = "bold";
+			break;
+		case '03'://на неделю
+			clearStyle();
+			document.getElementById("03").style.fontWeight = "bold";
+			for (n=1; n<8; n++){
+				document.getElementById(n+'1').innerHTML = '';
+				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
+			}
+			document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
+			document.getElementById('12').innerHTML =  market['descript1'];
+			document.getElementById('21').appendChild(img[4]);//"день" из завтра
+			document.getElementById('22').innerHTML =  market['descript4'];
+			document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
+			document.getElementById('32').innerHTML =  market['descript0'];
+			for (n=4; n<8; n++){//остальные задаем через цикл
+				var w = n+2;
+				document.getElementById(n+'1').appendChild(img[w]);
+				document.getElementById(n+'2').innerHTML =  market['descript'+w];
+			}
+			break;
+			       }
 }
-		//<input value = 'Перейти в товары' type = 'button' onclick = 'albumsGet();'>
 
 function getRandomInt(min,max){
 	return Math.floor(min + Math.random() * (max + 1 - min));
