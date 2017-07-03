@@ -184,21 +184,10 @@ function drawTable() {//рисуем таблицу
 	clearScreen();
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
-	var header = document.createElement("TH");
 	element.setAttribute('border', '0');
 	element.setAttribute('id', 'tab');
 	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-	for (var i=0; i<1; i++){
-		var row = header.insertRow(i);	
-		for(var j=0; j<4; j++){
-			var cell = row.insertCell(j);
-			cell.width = "auto";
-			cell.height = "auto";
-			cell.align = "center";
-			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-		}
-	}
-	for (var i=1; i<8; i++){
+	for (var i=0; i<8; i++){
 		var row = element.insertRow(i);	
 		for(var j=0; j<4; j++){
 			var cell = row.insertCell(j);
@@ -208,11 +197,11 @@ function drawTable() {//рисуем таблицу
 			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
 		}
 	}
-	objTo.appendChild(element, header);
+	objTo.appendChild(element);
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
-	//document.getElementById('01').style.cursor='pointer';
+	document.getElementById('01','02','03').style.cursor='pointer';
 	document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	document.getElementById('03').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
