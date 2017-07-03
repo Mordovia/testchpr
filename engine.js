@@ -188,8 +188,7 @@ function drawTable() {//рисуем таблицу
 	element.setAttribute('id', 'tab');
 	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 	for (var i=0; i<1; i++){
-		var tHead = element.createTHead();
-		var row = tHead.insertRow(i);
+		var header = element.createTHead(i);
 		for(var j=0; j<4; j++){
 			var cell = row.insertCell(j);
 			cell.width = "auto";
