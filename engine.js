@@ -38,8 +38,8 @@ function onClickCell(event){//функция события
 	switch (event.target.id) {
 		case '02'://завтра
 			drawTable();
-			daySelected = '6';
 			document.getElementById('33').innerHTML = '';
+			daySelected = '6';
 			clearStyle();
 			document.getElementById("02").style.fontWeight = "bold";
 			for (n=1; n<4; n++){
