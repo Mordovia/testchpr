@@ -48,6 +48,7 @@ function onClickCell(event){//функция события
 	//document.getElementById(n+'1').href = url[t];
 	//document.getElementById(n+'1').style.cursor='pointer';
 	}
+	joke2();
 	break;
 	case '01'://если возвращаемся на сегодня
 	//document.getElementById('table').innerHTML = '';
@@ -217,8 +218,8 @@ function drawTable() {//рисуем таблицу
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 		//document.getElementById(n+'1').href = url[n];
 		}
-		buttonCreation2();
-		joke();
+	buttonCreation2();
+	joke();
 }
  function clearStyle() {
 	 for (n=1; n<4; n++){
@@ -233,15 +234,30 @@ function joke() {
 		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
-		console.log(a);
 		albumId = a[0].albums_ids;
-		console.log(albumId);
 		for (i=0;i<albumId.length; i++){
 		if (albumId[i]=='3'){
 		document.getElementById('33').innerHTML = 'Шутка';
 		}
 	}
-	})}
+})}
+function joke2() {
+	var albumId = [];
+	VK.api('market.getById', {
+		'item_ids': market['id3'],
+		'extended': '1',
+	}, function(data) {
+		var a = data.response.items;
+		albumId = a[0].albums_ids;
+		for (i=0;i<albumId.length; i++){
+		if (albumId[i]=='3'){
+		document.getElementById('33').innerHTML = 'Шутка';
+		}
+			else {
+			document.getElementById('33').innerHTML = '';
+			}
+	}
+})}
 	 
  function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
