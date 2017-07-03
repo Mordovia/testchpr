@@ -189,7 +189,7 @@ function drawTable() {//рисуем таблицу
     		table.appendChild(tr);
     		for (var i=0;i<3;i++)
 		{
-			tr.appendChild(td);
+			tr.appendChild(document.createElement('td'));
 		}
 	}
 	objTo.appendChild(element);
