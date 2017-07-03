@@ -68,7 +68,7 @@ function onClickCell(event){//функция события
 			document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
 			document.getElementById('32').innerHTML =  market['descript0'];
 			for (n=4; n<8; n++){//остальные задаем через цикл
-				var w = n+2;
+				var w = n+3;
 				document.getElementById(n+'1').appendChild(img[w]);
 				document.getElementById(n+'2').innerHTML =  market['descript'+w];
 			}
