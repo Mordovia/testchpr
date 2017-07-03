@@ -234,22 +234,22 @@ function joke() {
 function joke2() {
 	var albumId = [];
 	VK.api('market.getById', {
-		'item_ids': market['id3'],
+		'item_ids': market['id6'],
 		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
 		albumId = a[0].albums_ids;
 		for (i=0;i<albumId.length; i++){
-		if (albumId[i]=='3'){
-		document.getElementById('33').innerHTML = 'Шутка';
-		}
+			if (albumId[i]=='3'){
+				document.getElementById('33').innerHTML = 'Шутка';
+			}
 			else {
-			document.getElementById('33').innerHTML = '';
+				document.getElementById('33').innerHTML = '';
 			}
 	}
 })}
 	 
- function exit() {//функция выхода - перебрасывает на главную страницу ВК
+function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
   var status = false;	       
