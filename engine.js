@@ -192,7 +192,7 @@ function drawTable() {//рисуем таблицу
 			tr.appendChild(document.createElement('td'));
 		}
 	}
-	objTo.appendChild(element);
+	
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
 	element.setAttribute('border', '0');
