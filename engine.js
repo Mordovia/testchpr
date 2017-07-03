@@ -184,9 +184,19 @@ function drawTable() {//рисуем таблицу
 	element.setAttribute('border', '0');
 	element.setAttribute('id', 'tab');
 	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-	var thead = element.createTHead();	
-	for (var i=0; i<8; i++){
+	for (var i=0; i<1; i++){
+		var thead = element.createTHead();
 		var row = element.insertRow(i);
+		for(var j=0; j<4; j++){
+			var cell = row.insertCell(j);
+			cell.width = "auto";
+			cell.height = "auto";
+			cell.align = "center";
+			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
+		}
+	}
+	for (var i=1; i<8; i++){
+		var row = element.insertRow(i);	
 		for(var j=0; j<4; j++){
 			var cell = row.insertCell(j);
 			cell.width = "auto";
