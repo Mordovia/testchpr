@@ -184,7 +184,7 @@ function drawTable() {//рисуем таблицу
 	clearScreen();
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
-	var header = element.createElement("TH");
+	var header = document.createElement("TH");
 	element.setAttribute('border', '0');
 	element.setAttribute('id', 'tab');
 	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
@@ -208,7 +208,7 @@ function drawTable() {//рисуем таблицу
 			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
 		}
 	}
-	objTo.appendChild(element);
+	objTo.appendChild(element, header);
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
