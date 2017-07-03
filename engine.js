@@ -200,7 +200,7 @@ function drawTable() {//рисуем таблицу
 	}
 	for (var i=0; i<8; i++){
 		var row = element.insertRow(i);	
-		for(var j=1; j<4; j++){
+		for(var j=0; j<4; j++){
 			var cell = row.insertCell(j);
 			cell.width = "auto";
 			cell.height = "auto";
