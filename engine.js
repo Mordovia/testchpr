@@ -29,6 +29,7 @@ var url = {
 loaded: false
 };  
 var img = [];
+var daySelected = '';
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
@@ -37,6 +38,7 @@ function onClickCell(event){//функция события
 	switch (event.target.id) {
 		case '02'://завтра
 			drawTable();
+			daySelected = '1';
 			document.getElementById('33').innerHTML = '';
 			clearStyle();
 			document.getElementById("02").style.fontWeight = "bold";
@@ -46,7 +48,7 @@ function onClickCell(event){//функция события
 				document.getElementById(n+'1').appendChild(img[t]);
 				document.getElementById(n+'2').innerHTML =  market['descript'+t];
 			}
-			joke2();
+			joke();
 			break;
 		case '01'://если возвращаемся на сегодня
 			drawTable();
@@ -55,6 +57,7 @@ function onClickCell(event){//функция события
 			break;
 		case '03'://на неделю
 			clearStyle();
+			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
 			document.getElementById("03").style.fontWeight = "bold";
 			for (n=1; n<8; n++){
@@ -221,7 +224,8 @@ function drawTable() {//рисуем таблицу
 		//document.getElementById(n+'1').href = url[n];
 	}
 	buttonCreation2();
-	joke();
+	daySelected = '0';
+	joke();	
 }
 
 function clearStyle() {
@@ -233,7 +237,12 @@ function clearStyle() {
 function joke() {
 	var albumId = [];
 	VK.api('market.getById', {
-		'item_ids': market['id3'],
+		if (daySelected = '0'){
+		'item_ids': market['id3']
+		},
+		elseif (daySelected = '2';){
+		'item_ids': market['id6']
+		},
 		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
