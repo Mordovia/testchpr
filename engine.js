@@ -184,13 +184,14 @@ function drawTable() {//рисуем таблицу
 	clearScreen();
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
+	var header = element.createElement("TH");
 	element.setAttribute('border', '0');
 	element.setAttribute('id', 'tab');
 	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
 	for (var i=0; i<1; i++){
-		var header = element.createTHead(i);
+		var row = header.insertRow(i);	
 		for(var j=0; j<4; j++){
-			var cell = header.insertCell(j);
+			var cell = row.insertCell(j);
 			cell.width = "auto";
 			cell.height = "auto";
 			cell.align = "center";
