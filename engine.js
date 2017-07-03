@@ -29,7 +29,7 @@ var url = {
 loaded: false
 };  
 var img = [];
-var daySelected = '';
+var daySelected;
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
@@ -38,7 +38,7 @@ function onClickCell(event){//функция события
 	switch (event.target.id) {
 		case '02'://завтра
 			drawTable();
-			daySelected = '1';
+			daySelected = '6';
 			document.getElementById('33').innerHTML = '';
 			clearStyle();
 			document.getElementById("02").style.fontWeight = "bold";
@@ -224,7 +224,7 @@ function drawTable() {//рисуем таблицу
 		//document.getElementById(n+'1').href = url[n];
 	}
 	buttonCreation2();
-	daySelected = '0';
+	daySelected = 3;
 	joke();	
 }
 
@@ -237,12 +237,7 @@ function clearStyle() {
 function joke() {
 	var albumId = [];
 	VK.api('market.getById', {
-		if (daySelected = '0'){
-		'item_ids': market['id3']
-		},
-		elseif (daySelected = '2';){
-		'item_ids': market['id6']
-		},
+		'item_ids': market['id'+daySelected],
 		'extended': '1',
 	}, function(data) {
 		var a = data.response.items;
