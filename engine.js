@@ -37,6 +37,7 @@ function onClickCell(event){//функция события
 	switch (event.target.id) {
 		case '02'://завтра
 			drawTable();
+			document.getElementById('33').innerHTML = '';
 			clearStyle();
 			document.getElementById("02").style.fontWeight = "bold";
 			for (n=1; n<4; n++){
@@ -243,10 +244,7 @@ function joke2() {
 		for (i=0;i<albumId.length; i++){
 			if (albumId[i]=='3'){
 				document.getElementById('33').innerHTML = 'Шутка';
-			}
-			else {
-				document.getElementById('33').innerHTML = '';
-			}
+			}			
 	}
 })}
 	 
