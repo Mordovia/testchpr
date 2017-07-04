@@ -26,6 +26,9 @@ border-collapse: collapse;
 padding: 10px;
 font-weight: normal;
 }
+th:hover{
+opacity: 1;
+}
 td, th{
 	width: auto;
 	height: auto;
