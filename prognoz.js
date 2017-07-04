@@ -101,7 +101,7 @@ function marketGet(){
 		}
 		drawTable();
 		})}
-}
+
 function drawTable() {//рисуем таблицу
 	clearScreen();
 	function createTable(){
