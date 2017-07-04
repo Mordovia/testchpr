@@ -12,8 +12,9 @@ padding:0;
 font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
-table{
-border-width: 2 px;
+table {
+border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
 }
 th
 {
