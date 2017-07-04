@@ -20,12 +20,14 @@ th
 cursor:pointer;
 border: 3px solid grey;
 border-collapse: collapse;
+font-weight: normal;
 }
 td, th{
 	width: auto;
 	height: auto;
 	text-align: center;
 	vertical-align: middle;
+	   
 }
 img{
 cursor:pointer;
