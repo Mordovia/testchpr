@@ -25,7 +25,7 @@ function onClickCell(event){//функция события
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 	switch (event.target.id) {
-		case '02'://завтра
+		case '01'://завтра
 			clearScreen();
 			createTable();
 			document.getElementById('33').innerHTML = '';
@@ -41,13 +41,13 @@ function onClickCell(event){//функция события
 			}
 			joke();
 			break;
-		case '01'://если возвращаемся на сегодня
+		case '00'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
 			document.getElementById("00").style.fontWeight = "bold";
 			document.getElementById("00").style.border = "white";
 			break;
-		case '03'://на неделю
+		case '02'://на неделю
 			clearStyle();
 			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
