@@ -19,6 +19,7 @@ th
 {
 cursor:pointer;
 border: 3px solid grey;
+border-collapse: collapse;
 }
 td, th{
 	width: auto;
