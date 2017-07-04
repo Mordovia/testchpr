@@ -106,18 +106,23 @@ function createTable(){//тестовая таблица
 	var table = document.getElementById('tHead');
 	var tr = document.createElement('TR');
     	var th = document.createElement('TH'); 
-	var td = document.createElement('TD'); 
-    	table.appendChild(tr);
-	for (var i=0;i<1;i++)
+	var td = document.createElement('TD');
+	for (var i=0; i<1; i++){
+		table.appendChild(tr);
+		for (var j=0;j<4;j++)
 		{
 			tr.appendChild(document.createElement('th'));
 			th.innerHTML = 'Head'
 		}
-    	for (var i=1;i<4;i++)
+	}
+	for (var i=0; i<1; i++){
+		table.appendChild(tr);
+    	for (var j=0;j<4;j++)
 		{
 			tr.appendChild(document.createElement('td'));
 			td.innerHTML = 'Body'
 		}
+	}
 }
 
 function drawTable() {//рисуем таблицу
