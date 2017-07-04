@@ -12,6 +12,9 @@ padding:0;
 font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
+table{
+border: 2 px;
+}
 img{
 cursor:pointer;
 }
