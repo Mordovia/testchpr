@@ -31,7 +31,8 @@ function onClickCell(event){//функция события
 			document.getElementById('33').innerHTML = '';
 			daySelected = '6';
 			clearStyle();
-			document.getElementById("02").style.fontWeight = "bold";
+			document.getElementById("01").style.fontWeight = "bold";
+			document.getElementById("01").style.border = "white";
 			for (n=1; n<4; n++){
 				var t = n+3;
 				document.getElementById(n+'1').innerHTML = '';
@@ -43,13 +44,15 @@ function onClickCell(event){//функция события
 		case '01'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
-			document.getElementById("01").style.fontWeight = "bold";
+			document.getElementById("00").style.fontWeight = "bold";
+			document.getElementById("00").style.border = "white";
 			break;
 		case '03'://на неделю
 			clearStyle();
 			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
-			document.getElementById("03").style.fontWeight = "bold";
+			document.getElementById("02").style.fontWeight = "bold";
+			document.getElementById("02").style.border = "white";
 			for (n=1; n<8; n++){
 				document.getElementById(n+'1').innerHTML = '';
 				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
@@ -154,7 +157,7 @@ function drawTable() {//рисуем таблицу
 
 function clearStyle() {
 	 for (n=1; n<4; n++){
-		 document.getElementById('0'+n).style.fontWeight = "normal";
+		 document.getElementById('0'+n).style = "";
 	 }
 	 
 }
