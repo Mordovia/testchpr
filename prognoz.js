@@ -44,8 +44,8 @@ function onClickCell(event){//функция события
 		case '00'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
-			document.getElementById("00").style.fontWeight = "";
-			document.getElementById("00").style.border = "";
+			document.getElementById("00").style.fontWeight = "bold";
+			document.getElementById("00").style.border = "white";
 			break;
 		case '02'://на неделю
 			clearStyle();
@@ -156,9 +156,9 @@ function drawTable() {//рисуем таблицу
 }
 
 function clearStyle() {
-	 for (n=1; n<4; n++){
-		document.getElementById('0'+n).style.fontWeight = "bold";
-		document.getElementById('0'+n).style.border = "white";
+	 for (n=0; n<3; n++){
+		document.getElementById('0'+n).style.fontWeight = "";
+		document.getElementById('0'+n).style.border = "";
 	 }
 	 
 }
