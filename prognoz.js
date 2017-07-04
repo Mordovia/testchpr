@@ -113,7 +113,7 @@ function createTable(){//тестовая таблица
 			tr.appendChild(document.createElement('th'));
 			th.innerHTML = 'Head'
 		}
-    	for (var i=1;i<8;i++)
+    	for (var i=1;i<4;i++)
 		{
 			tr.appendChild(document.createElement('td'));
 			td.innerHTML = 'Body'
