@@ -102,9 +102,7 @@ function marketGet(){
 		drawTable();
 		})}
 
-function drawTable() {//рисуем таблицу
-	clearScreen();
-	function createTable(){
+function createTable(){//тестовая таблица
 		var table = document.getElementById('tHead');
 		var tr    = document.createElement('TR');
     		var td   = document.createElement('TD'); 
@@ -113,8 +111,10 @@ function drawTable() {//рисуем таблицу
 		{
 			tr.appendChild(document.createElement('td'));
 		}
-	}
-	
+}
+
+function drawTable() {//рисуем таблицу
+	clearScreen();
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
 	element.setAttribute('border', '0');
