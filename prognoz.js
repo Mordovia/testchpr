@@ -31,8 +31,7 @@ function onClickCell(event){//функция события
 			document.getElementById('33').innerHTML = '';
 			daySelected = '6';
 			clearStyle();
-			document.getElementById("01").style.fontWeight = "bold";
-			document.getElementById("01").style.border = "10px solid #fff";
+			formatStyle()
 			for (n=1; n<4; n++){
 				var t = n+3;
 				document.getElementById(n+'1').innerHTML = '';
@@ -44,15 +43,13 @@ function onClickCell(event){//функция события
 		case '00'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
-			document.getElementById("00").style.fontWeight = "bold";
-			document.getElementById("00").style.border = "10px solid #fff";
+			formatStyle()
 			break;
 		case '02'://на неделю
 			clearStyle();
 			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
-			document.getElementById("02").style.fontWeight = "bold";
-			document.getElementById("02").style.border = "10px solid #fff";
+			formatStyle()
 			for (n=1; n<8; n++){
 				document.getElementById(n+'1').innerHTML = '';
 				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
@@ -159,8 +156,14 @@ function clearStyle() {
 	 for (n=0; n<3; n++){
 		document.getElementById('0'+n).style.fontWeight = "";
 		document.getElementById('0'+n).style.border = "";
+		document.getElementById(event.target.id).style.opacity = "";
 	 }
 	 
+}
+function formatStyle() {
+	document.getElementById(event.target.id).style.fontWeight = "bold";
+	document.getElementById(event.target.id).style.border = "10px solid #fff";
+	document.getElementById(event.target.id).style.opacity = "1";
 }
 function joke() {
 	var albumId = [];
