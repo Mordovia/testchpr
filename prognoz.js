@@ -144,8 +144,9 @@ function createTable(){//тестовая таблица
 function drawTable() {//рисуем таблицу
 	clearScreen();
 	createTable();
-	event.target.id = "00";
-	formatStyle()
+	document.getElementById("00").style.fontWeight = "bold";
+	document.getElementById("00").style.border = "10px solid #fff";
+	document.getElementById("00").style.opacity = "1";
 	for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
