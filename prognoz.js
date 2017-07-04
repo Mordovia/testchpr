@@ -132,6 +132,7 @@ function createTable(){//тестовая таблица
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("00").style.fontWeight = "bold";
+	document.getElementById("00").style.border = "white";
 	document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	document.getElementById('02').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
