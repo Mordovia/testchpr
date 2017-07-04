@@ -26,7 +26,8 @@ function onClickCell(event){//функция события
 	}
 	switch (event.target.id) {
 		case '02'://завтра
-			drawTable();
+			clearScreen();
+			createTable();
 			document.getElementById('33').innerHTML = '';
 			daySelected = '6';
 			clearStyle();
