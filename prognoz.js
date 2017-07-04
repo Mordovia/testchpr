@@ -104,9 +104,9 @@ function marketGet(){
 		})}
 
 function createTable(){//тестовая таблица
-	var table = document.getElementById('table');
-	var element =  document.createElement('table'); 
-	table.addEventListener('click', onClickCell, false);
+	var element = document.getElementById('table');
+	var table =  document.createElement('table'); 
+	element.addEventListener('click', onClickCell, false);
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<4;j++)
@@ -126,8 +126,8 @@ function createTable(){//тестовая таблица
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
-		table.appendChild(element);
 	}
+	element.appendChild(table);
 	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
