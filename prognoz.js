@@ -159,7 +159,7 @@ function clearStyle() {
 	 for (n=0; n<3; n++){
 		document.getElementById('0'+n).style.fontWeight = "";
 		document.getElementById('0'+n).style.border = "";
-		document.getElementById(event.target.id).style.opacity = "";
+		document.getElementById('0'+n).style.opacity = "";
 	 }
 	 
 }
