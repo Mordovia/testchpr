@@ -72,7 +72,6 @@ function getRandomInt(min,max){
 	return Math.floor(min + Math.random() * (max + 1 - min));
 }
 
-
 function marketGet(){
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
