@@ -44,8 +44,8 @@ function onClickCell(event){//функция события
 		case '00'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
-			document.getElementById("00").style.fontWeight = "bold";
-			document.getElementById("00").style.border = "white";
+			document.getElementById("00").style.fontWeight = "";
+			document.getElementById("00").style.border = "";
 			break;
 		case '02'://на неделю
 			clearStyle();
