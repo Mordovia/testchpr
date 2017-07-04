@@ -157,7 +157,8 @@ function drawTable() {//рисуем таблицу
 
 function clearStyle() {
 	 for (n=1; n<4; n++){
-		 document.getElementById('0'+n).style = "";
+		document.getElementById('0'+n).style.fontWeight = "bold";
+		document.getElementById('0'+n).style.border = "white";
 	 }
 	 
 }
