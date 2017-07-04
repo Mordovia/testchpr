@@ -108,9 +108,9 @@ function createTable(){//тестовая таблица
 		var tr = document.createElement('TR');
 		for (var j=0;j<4;j++)
 		{
-			var th = document.createElement('td'); //создаем td-шку
+			var th = document.createElement('TH'); //создаем th-шку
 			th.innerHTML = j; //пишем в нее текст
-			th.appendChild(td);
+			tr.appendChild(th);
 		}
 			table.appendChild(tr);
 	}
@@ -118,7 +118,7 @@ function createTable(){//тестовая таблица
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
-			var td = document.createElement('td'); //создаем td-шку
+			var td = document.createElement('TD'); //создаем td-шку
 			td.innerHTML = j; //пишем в нее текст
 			tr.appendChild(td);
 		}
