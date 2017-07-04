@@ -109,7 +109,6 @@ function createTable(){//тестовая таблица
 		for (var j=0;j<4;j++)
 		{
 			var th = document.createElement('TH'); //создаем th-шку
-			th.innerHTML = j; //пишем в нее текст
 			th.id = "".concat(i,j);
 			tr.appendChild(th);
 		}
@@ -120,7 +119,6 @@ function createTable(){//тестовая таблица
     	for (var j=0;j<4;j++)
 		{
 			var td = document.createElement('TD'); //создаем td-шку
-			td.innerHTML = j; //пишем в нее текст
 			td.id = "".concat(i,j);
 			tr.appendChild(td);
 		}
@@ -131,22 +129,6 @@ function createTable(){//тестовая таблица
 function drawTable() {//рисуем таблицу
 	clearScreen();
 	createTable();
-	var objTo = document.getElementById('table');
-	var element = document.createElement('table');
-	element.setAttribute('border', '0');
-	element.setAttribute('id', 'tab');
-	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
-	for (var i=0; i<8; i++){
-		var row = element.insertRow(i);	
-		for(var j=0; j<4; j++){
-			var cell = row.insertCell(j);
-			cell.width = "auto";
-			cell.height = "auto";
-			cell.align = "center";
-			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
-		}
-	}
-	objTo.appendChild(element);
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
