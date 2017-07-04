@@ -110,6 +110,7 @@ function createTable(){//тестовая таблица
 		{
 			var th = document.createElement('TH'); //создаем th-шку
 			th.innerHTML = j; //пишем в нее текст
+			th.id = "".concat(i,j);
 			tr.appendChild(th);
 		}
 			table.appendChild(tr);
@@ -120,6 +121,7 @@ function createTable(){//тестовая таблица
 		{
 			var td = document.createElement('TD'); //создаем td-шку
 			td.innerHTML = j; //пишем в нее текст
+			td.id = "".concat(i,j);
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
