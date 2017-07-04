@@ -1,0 +1,130 @@
+var day = [];
+for (n=0; n<7; n++){//цикл для дней
+day[n] = new Date();
+day[n].setDate(day[n].getDate() + n);
+};
+var options = {
+  month: 'short',
+  day: 'numeric',
+  };
+var n=0;
+var market = {
+['id'+n]: 'none',
+['descript'+n]: 'none',
+['photo_'+n]: '',
+loaded: false
+};
+var url = {
+loaded: false
+};  
+var img = [];
+var daySelected;
+
+function marketGet(){
+	VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '16',
+                    }, function(data) {
+					                   
+					var a = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;
+					}
+		a.sort(compareRandom);
+		for (var n=0; n<11; n++){
+                       	market['descript'+n] = a[n].title;
+                       	market['photo_'+n] = a[n].thumb_photo;
+			market['id'+n] = a[n].owner_id+'_'+a[n].id;
+			//console.log(market['id'+n]);
+                       	url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
+		}
+		market['loaded'] = true;
+		url['loaded'] = true;
+		for (n=0; n<11; n++){
+		img[n] = new Image;
+		img[n].width = 50;
+		img[n].height = 50;
+		img[n].src = market['photo_'+n];
+		img[n].href = url[n];
+		}
+		drawTable();
+		})}
+function clearScreen(){
+	//var tagName = document.getElementsByTagName('div');
+	var className = document.getElementsByClassName('main');
+	//alert(tagName.length);
+	for(i = 0; i < className.length; i++){
+	document.getElementById(className[i].id).innerHTML = '';
+	}
+	
+}
+function drawTable() {//рисуем таблицу
+	clearScreen();
+	function createTable(){
+		var table = document.getElementById('tHead');
+		var tr    = document.createElement('TR');
+    		var td   = document.createElement('TD'); 
+    		table.appendChild(tr);
+    		for (var i=0;i<3;i++)
+		{
+			tr.appendChild(document.createElement('td'));
+		}
+	}
+	
+	var objTo = document.getElementById('table');
+	var element = document.createElement('table');
+	element.setAttribute('border', '0');
+	element.setAttribute('id', 'tab');
+	element.addEventListener('click', onClickCell, false);//ссылка на функцию события. addEventListener - это обработчик события
+	for (var i=0; i<8; i++){
+		var row = element.insertRow(i);	
+		for(var j=0; j<4; j++){
+			var cell = row.insertCell(j);
+			cell.width = "auto";
+			cell.height = "auto";
+			cell.align = "center";
+			cell['id'] = "".concat(i,j);//метод для объединения массивов, теперь id - это текст, c цифрами i и j
+		}
+	}
+	objTo.appendChild(element);
+	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
+	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById("01").style.fontWeight = "bold";
+	document.getElementById('01').style.cursor='pointer';
+	document.getElementById('02').style.cursor='pointer';
+	document.getElementById('03').style.cursor='pointer';
+	document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	document.getElementById('03').innerHTML = 'На неделю';
+	document.getElementById('10').innerHTML = 'Утро';
+	document.getElementById('20').innerHTML = 'День';
+	document.getElementById('30').innerHTML = 'Вечер';
+	for (n=1; n<4; n++){
+		document.getElementById(n+'1').appendChild(img[n]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		//document.getElementById(n+'1').href = url[n];
+	}
+	buttonCreation2();
+	daySelected = 3;
+	joke();	
+}
+
+function clearStyle() {
+	 for (n=1; n<4; n++){
+		 document.getElementById('0'+n).style.fontWeight = "normal";
+	 }
+	 
+}
+function joke() {
+	var albumId = [];
+	VK.api('market.getById', {
+		'item_ids': market['id'+daySelected],
+		'extended': '1',
+	}, function(data) {
+		var a = data.response.items;
+		albumId = a[0].albums_ids;
+		for (i=0;i<albumId.length; i++){
+		if (albumId[i]=='3'){
+		document.getElementById('33').innerHTML = 'Шутка';
+		}
+	}
+})}
