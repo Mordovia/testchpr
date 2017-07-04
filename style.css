@@ -70,7 +70,8 @@ cursor:pointer;
 td, th{
 	width: auto;
 	height: auto;
-	text-align: center
+	text-align: center;
+	vertical-align: center;
 }
 	
 #prognoz
