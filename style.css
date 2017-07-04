@@ -20,7 +20,7 @@ th
 cursor:pointer;
 border: 10px solid #edeef0;
 border-collapse: collapse;
-border-spacing: 5px;
+padding: 10px;
 font-weight: normal;
 }
 td, th{
