@@ -126,8 +126,9 @@ function createTable(){//тестовая таблица
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
+		table.appendChild(element);
 	}
-	table.appendChild(element);
+	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
