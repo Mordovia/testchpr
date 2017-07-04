@@ -18,7 +18,7 @@ border-collapse: collapse; /*убираем пустые промежутки м
 th
 {
 cursor:pointer;
-border: 20px solid #edeef0;
+border: 10px solid #edeef0;
 border-collapse: collapse;
 font-weight: normal;
 }
