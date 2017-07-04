@@ -109,7 +109,7 @@ function createTable(){//тестовая таблица
 	element.addEventListener('click', onClickCell, false);
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
-		for (var j=0;j<4;j++)
+		for (var j=0;j<3;j++)
 		{
 			var th = document.createElement('TH'); //создаем th-шку
 			th.id = "".concat(i,j);
@@ -130,10 +130,10 @@ function createTable(){//тестовая таблица
 	element.appendChild(table);
 	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
-	document.getElementById("01").style.fontWeight = "bold";
-	document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
-	document.getElementById('03').innerHTML = 'На неделю';
+	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById("00").style.fontWeight = "bold";
+	document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	document.getElementById('02').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
 	document.getElementById('20').innerHTML = 'День';
 	document.getElementById('30').innerHTML = 'Вечер';
