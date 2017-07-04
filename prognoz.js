@@ -115,7 +115,7 @@ function createTable(){//тестовая таблица
 			th.innerHTML = 'Head'
 		}
 	}
-	for (var i=0; i<1; i++){
+	for (var i=1; i<8; i++){
 		table.appendChild(tr);
     	for (var j=0;j<4;j++)
 		{
