@@ -14,11 +14,11 @@ font:normal 16px Antiqua, Arial, sans-serif;
 }
 table {
 border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
-border: 1px solid grey; /*устанавливаем для таблицы внешнюю границу серого цвета толщиной 1px*/
 }
 th
 {
 cursor:pointer;
+border: 3px solid grey;
 }
 td, th{
 	width: auto;
