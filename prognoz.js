@@ -18,7 +18,7 @@ var url = {
 loaded: false
 };  
 var img = [];
-var daySelected;
+var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
@@ -134,9 +134,6 @@ function drawTable() {//рисуем таблицу
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
-	document.getElementById('01').style.cursor='pointer';
-	document.getElementById('02').style.cursor='pointer';
-	document.getElementById('03').style.cursor='pointer';
 	document.getElementById('02').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	document.getElementById('03').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
@@ -145,6 +142,7 @@ function drawTable() {//рисуем таблицу
 	for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		document.getElementById('0'+n).style.cursor='pointer';
 		//document.getElementById(n+'1').href = url[n];
 	}
 	buttonCreation2();
