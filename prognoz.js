@@ -110,6 +110,7 @@ function createTable(){//тестовая таблица
 		{
 			var th = document.createElement('td'); //создаем td-шку
 			th.innerHTML = j; //пишем в нее текст
+			th.appendChild(td);
 		}
 			table.appendChild(tr);
 	}
@@ -119,7 +120,9 @@ function createTable(){//тестовая таблица
 		{
 			var td = document.createElement('td'); //создаем td-шку
 			td.innerHTML = j; //пишем в нее текст
+			tr.appendChild(td);
 		}
+		table.appendChild(tr);
 	}
 }
 
