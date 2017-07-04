@@ -126,11 +126,6 @@ function createTable(){//тестовая таблица
 		}
 		table.appendChild(tr);
 	}
-}
-
-function drawTable() {//рисуем таблицу
-	clearScreen();
-	createTable();
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('01').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("01").style.fontWeight = "bold";
@@ -139,13 +134,16 @@ function drawTable() {//рисуем таблицу
 	document.getElementById('10').innerHTML = 'Утро';
 	document.getElementById('20').innerHTML = 'День';
 	document.getElementById('30').innerHTML = 'Вечер';
+	buttonCreation2();
+}
+
+function drawTable() {//рисуем таблицу
+	clearScreen();
+	createTable();
 	for (n=1; n<4; n++){
 		document.getElementById(n+'1').appendChild(img[n]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+n];
-		//document.getElementById('0'+n).style.cursor='pointer';
-		//document.getElementById(n+'1').href = url[n];
 	}
-	buttonCreation2();
 	daySelected = 3;
 	joke();	
 }
