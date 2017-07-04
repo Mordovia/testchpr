@@ -18,7 +18,10 @@ border-collapse: collapse; /*убираем пустые промежутки м
 th
 {
 cursor:pointer;
-border: 11px solid #edeef0;
+background: #a06f7e;
+opacity: 0.5;
+color:#fff;
+border: 11px solid #fff;
 border-collapse: collapse;
 padding: 10px;
 font-weight: normal;
