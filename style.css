@@ -68,7 +68,9 @@ th
 cursor:pointer;
 }
 td, th{
-align: center;
+	width: auto;
+	height: auto;
+	text-align: center
 }
 	
 #prognoz
