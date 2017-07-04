@@ -115,6 +115,7 @@ function createTable(){//тестовая таблица
 
 function drawTable() {//рисуем таблицу
 	clearScreen();
+	createTable();
 	var objTo = document.getElementById('table');
 	var element = document.createElement('table');
 	element.setAttribute('border', '0');
