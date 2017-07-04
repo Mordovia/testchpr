@@ -11,6 +11,15 @@ var group = {
  loaded : false
 };
 
+function clearScreen(){
+	//var tagName = document.getElementsByTagName('div');
+	var className = document.getElementsByClassName('main');
+	//alert(tagName.length);
+	for(i = 0; i < className.length; i++){
+	document.getElementById(className[i].id).innerHTML = '';
+	}
+}
+	
 var buttonCreation = function(){
 	var buttonYes = document.getElementById('button');
 	var btn = document.createElement('input')
