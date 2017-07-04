@@ -104,6 +104,7 @@ function marketGet(){
 
 function createTable(){//тестовая таблица
 	var table = document.getElementById('tHead');
+	table.addEventListener('click', onClickCell, false);
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<4;j++)
