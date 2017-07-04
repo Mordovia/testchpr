@@ -102,14 +102,6 @@ function marketGet(){
 		}
 		drawTable();
 		})}
-function clearScreen(){
-	//var tagName = document.getElementsByTagName('div');
-	var className = document.getElementsByClassName('main');
-	//alert(tagName.length);
-	for(i = 0; i < className.length; i++){
-	document.getElementById(className[i].id).innerHTML = '';
-	}
-	
 }
 function drawTable() {//рисуем таблицу
 	clearScreen();
