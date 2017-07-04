@@ -111,10 +111,12 @@ function createTable(){//тестовая таблица
 	for (var i=0;i<1;i++)
 		{
 			tr.appendChild(document.createElement('th'));
+			th.innerHTML = 'Head'
 		}
     	for (var i=1;i<8;i++)
 		{
 			tr.appendChild(document.createElement('td'));
+			td.innerHTML = 'Body'
 		}
 }
 
