@@ -67,6 +67,9 @@ th
 {
 cursor:pointer;
 }
+td, th{
+align: center;
+}
 	
 #prognoz
 {
