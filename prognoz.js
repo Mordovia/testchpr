@@ -103,11 +103,16 @@ function marketGet(){
 		})}
 
 function createTable(){//тестовая таблица
-		var table = document.getElementById('tHead');
-		var tr    = document.createElement('TR');
-    		var td   = document.createElement('TD'); 
-    		table.appendChild(tr);
-    		for (var i=0;i<3;i++)
+	var table = document.getElementById('tHead');
+	var tr = document.createElement('TR');
+    	var th = document.createElement('TH'); 
+	var td = document.createElement('TD'); 
+    	table.appendChild(tr);
+	for (var i=0;i<1;i++)
+		{
+			tr.appendChild(document.createElement('th'));
+		}
+    	for (var i=1;i<8;i++)
 		{
 			tr.appendChild(document.createElement('td'));
 		}
