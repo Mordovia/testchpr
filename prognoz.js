@@ -32,7 +32,7 @@ function onClickCell(event){//функция события
 			daySelected = '6';
 			clearStyle();
 			document.getElementById("01").style.fontWeight = "bold";
-			document.getElementById("01").style.border = "white";
+			document.getElementById("01").style.border = "10px solid #fff";
 			for (n=1; n<4; n++){
 				var t = n+3;
 				document.getElementById(n+'1').innerHTML = '';
@@ -45,14 +45,14 @@ function onClickCell(event){//функция события
 			drawTable();
 			clearStyle();
 			document.getElementById("00").style.fontWeight = "bold";
-			document.getElementById("00").style.border = "white";
+			document.getElementById("00").style.border = "10px solid #fff";
 			break;
 		case '02'://на неделю
 			clearStyle();
 			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
 			document.getElementById("02").style.fontWeight = "bold";
-			document.getElementById("02").style.border = "white";
+			document.getElementById("02").style.border = "10px solid #fff";
 			for (n=1; n<8; n++){
 				document.getElementById(n+'1').innerHTML = '';
 				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
@@ -135,7 +135,7 @@ function createTable(){//тестовая таблица
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("00").style.fontWeight = "bold";
-	document.getElementById("00").style.border = "white";
+	document.getElementById("00").style.border = "10px solid #fff";
 	document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	document.getElementById('02').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
