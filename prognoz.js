@@ -104,23 +104,21 @@ function marketGet(){
 
 function createTable(){//тестовая таблица
 	var table = document.getElementById('tHead');
-	var tr = document.createElement('TR');
-    	var th = document.createElement('TH'); 
-	var td = document.createElement('TD');
 	for (var i=0; i<1; i++){
-		table.appendChild(tr);
+		var tr = document.createElement('TR');
 		for (var j=0;j<4;j++)
 		{
-			tr.appendChild(document.createElement('th'));
-			th.innerHTML = 'Head'
+			var th = document.createElement('td'); //создаем td-шку
+			th.innerHTML = j; //пишем в нее текст
 		}
+			table.appendChild(tr);
 	}
 	for (var i=1; i<8; i++){
-		table.appendChild(tr);
+		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
-			tr.appendChild(document.createElement('td'));
-			td.innerHTML = 'Body'
+			var td = document.createElement('td'); //создаем td-шку
+			td.innerHTML = j; //пишем в нее текст
 		}
 	}
 }
