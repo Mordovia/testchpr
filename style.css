@@ -13,7 +13,17 @@ font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 table{
-border: 2 px;
+border-width: 2 px;
+}
+th
+{
+cursor:pointer;
+}
+td, th{
+	width: auto;
+	height: auto;
+	text-align: center;
+	vertical-align: middle;
 }
 img{
 cursor:pointer;
@@ -65,16 +75,6 @@ cursor:pointer;
 -ms-transition: all 200ms ease;
 -o-transition: all 200ms ease;
 transition: all 200ms ease;
-}
-th
-{
-cursor:pointer;
-}
-td, th{
-	width: auto;
-	height: auto;
-	text-align: center;
-	vertical-align: middle;
 }
 	
 #prognoz
