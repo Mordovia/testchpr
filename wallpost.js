@@ -7,7 +7,9 @@ var attchId = [];
 var text;
 var path;
 $(function(){
-$('#datep').datepicker();
+$('#datep').datepicker({
+ timeFormat: 'hh:mm tt'
+});
 });
 function wallGet(){
 	clearScreen();
