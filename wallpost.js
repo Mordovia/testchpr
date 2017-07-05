@@ -6,7 +6,9 @@ var id;
 var attchId = [];
 var text;
 var path;
-
+$(function(){
+$( "#date" ).datepicker();
+});
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
