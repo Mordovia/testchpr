@@ -7,8 +7,8 @@ var attchId = [];
 var text;
 var path;
 $('#datep').datetimepicker({
-datepicker== true,
-	timepicker== true
+datepicker:true,
+timepicker: true
 });
 function wallGet(){
 	clearScreen();
