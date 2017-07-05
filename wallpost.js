@@ -8,8 +8,8 @@ var text;
 var path;
 $(function(){
 $('#datep').datepicker({
-dateFormat: 'dd.mm.yyyy', 
-timeFormat: 'hh:mm', 
+dateFormat: 'dd.mm.yy', 
+timeFormat: 'hh:mm' 
 });
 });
 function wallGet(){
