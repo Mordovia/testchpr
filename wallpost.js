@@ -7,7 +7,7 @@ var attchId = [];
 var text;
 var path;
 $(function(){
-$( "#exit" ).datepicker();
+$('#datep').datepicker();
 });
 function wallGet(){
 	clearScreen();
