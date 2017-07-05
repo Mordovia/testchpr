@@ -8,7 +8,9 @@ var text;
 var path;
 $(function(){
 $('#datep').datepicker({
- timeFormat: 'hh:mm tt'
+dateFormat: '', 
+timeFormat: 'hh:mm tt', 
+timeOnly: true        
 });
 });
 function wallGet(){
