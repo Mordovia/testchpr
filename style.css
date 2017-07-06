@@ -40,8 +40,8 @@ img{
 cursor:pointer;
 }
 .container{
-	border: 80px solid transparent;
-	border-image: url('border.jpg') 230 round round;
+	border: 20px solid transparent;
+	border-image: url('border.jpg') 50 round round;
 }
 #header {
 	position: relative; top: 0%; left: 25%;
