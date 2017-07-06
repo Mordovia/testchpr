@@ -39,6 +39,9 @@ td, th{
 img{
 cursor:pointer;
 }
+.container{
+	border-image: url('border.jpg') 30 round round;
+}
 #header {
 	position: relative; top: 0%; left: 25%;
 	background: url(sprite.png) no-repeat;
