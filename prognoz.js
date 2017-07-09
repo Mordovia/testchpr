@@ -142,7 +142,6 @@ function createTable(){
 	document.getElementById('20').innerHTML = 'День';
 	document.getElementById('30').innerHTML = 'Вечер';
 	buttonCreation2();
-	formatStyle();
 }
 
 function drawTable() {//заполняем таблицу для исходного случая "сегодня"
