@@ -104,9 +104,9 @@ function marketGet(){
 		}
 		drawTable();
 		})}
-
+var element;
 function element(){
-var element = document.getElementById('table');
+element = document.getElementById('table');
 element.addEventListener('click', onClickCell, false);
 }
 	
