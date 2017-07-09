@@ -19,8 +19,8 @@ loaded: false
 };  
 var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
-var event;
-console.log(event);
+
+
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
@@ -105,10 +105,15 @@ function marketGet(){
 		drawTable();
 		})}
 
-function createTable(){//тестовая таблица
-	var element = document.getElementById('table');
+function element(){
+var element = document.getElementById('table');
+element.addEventListener('click', onClickCell, false);
+}
+	
+function createTable(){
+	element();
 	var table =  document.createElement('table'); 
-	element.addEventListener('click', onClickCell, false);
+	
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<3;j++)
@@ -143,7 +148,7 @@ function createTable(){//тестовая таблица
 	buttonCreation2();
 }
 
-function drawTable() {//рисуем таблицу
+function drawTable() {//заполняем таблицу для исходного случая "сегодня"
 	clearScreen();
 	createTable();
 	document.getElementById("00").style.fontWeight = "bold";
