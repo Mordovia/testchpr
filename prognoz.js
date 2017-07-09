@@ -22,6 +22,7 @@ var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 
 function onClickCell(event){//функция события
+	console.log(event.target.id);
 	if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
@@ -29,11 +30,11 @@ function onClickCell(event){//функция события
 		case '01'://завтра
 			clearScreen();
 			createTable();
-			formatStyle();
 			document.getElementById('33').innerHTML = '';
 			daySelected = '6';
 			clearStyle();
-			formatStyle()
+			formatStyle();
+			
 			for (n=1; n<4; n++){
 				var t = n+3;
 				document.getElementById(n+'1').innerHTML = '';
