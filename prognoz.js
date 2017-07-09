@@ -105,13 +105,13 @@ function marketGet(){
 		drawTable();
 		})}
 var element;
-function element(){
+function elementf(){
 element = document.getElementById('table');
 element.addEventListener('click', onClickCell, false);
 }
 	
 function createTable(){
-	element();
+	elementf();
 	var table =  document.createElement('table'); 
 	
 	for (var i=0; i<1; i++){
