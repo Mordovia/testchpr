@@ -21,7 +21,6 @@ var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 
-
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
@@ -30,6 +29,7 @@ function onClickCell(event){//функция события
 		case '01'://завтра
 			clearScreen();
 			createTable();
+			formatStyle();
 			document.getElementById('33').innerHTML = '';
 			daySelected = '6';
 			clearStyle();
@@ -45,13 +45,13 @@ function onClickCell(event){//функция события
 		case '00'://если возвращаемся на сегодня
 			drawTable();
 			clearStyle();
-			formatStyle()
+			formatStyle();
 			break;
 		case '02'://на неделю
 			clearStyle();
 			daySelected = '2';
 			document.getElementById('33').innerHTML = '';
-			formatStyle()
+			formatStyle();
 			for (n=1; n<8; n++){
 				document.getElementById(n+'1').innerHTML = '';
 				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
@@ -69,7 +69,6 @@ function onClickCell(event){//функция события
 			}
 			break;
 			       }
-	formatStyle();
 }
 
 function getRandomInt(min,max){
