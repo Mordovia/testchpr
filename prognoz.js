@@ -22,7 +22,6 @@ var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 
 function onClickCell(event){//функция события
-	console.log(event.target.id);
 	if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
