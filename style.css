@@ -26,6 +26,7 @@ color:#fff;
 border-width: 11px;
 border-style: solid;
 border-color: #fff;
+border-collapse: collapse;
 padding: 10px;
 font-weight: normal;
 }
