@@ -104,16 +104,11 @@ function marketGet(){
 		}
 		drawTable();
 		})}
-var element;
-function elementf(){
-element = document.getElementById('table');
-element.addEventListener('click', onClickCell, false);
-}
-	
+
 function createTable(){
-	elementf();
+	var element = document.getElementById('table');
 	var table =  document.createElement('table'); 
-	
+	element.addEventListener('click', onClickCell, false);
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<3;j++)
