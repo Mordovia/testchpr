@@ -20,6 +20,7 @@ loaded: false
 var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var event;
+console.log(event);
 
 function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
