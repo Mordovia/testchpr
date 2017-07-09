@@ -13,7 +13,7 @@ font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 table {
-/*border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
 }
 th
 {
@@ -24,7 +24,7 @@ color:#fff;
 border-width: 11px;
 border-style: solid;
 border-color: #fff;
-border-collapse: collapse;
+/*border-collapse: collapse;*/
 padding: 10px;
 font-weight: normal;
 }
