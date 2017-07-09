@@ -13,7 +13,7 @@ font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 table {
-border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+/*border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
 }
 th
 {
