@@ -70,6 +70,11 @@ function onClickCell(event){//функция события
 			}
 			break;
 			       }
+	function formatStyle() {
+	document.getElementById(event.target.id).style.fontWeight = "bold";
+	document.getElementById(event.target.id).style.border = "10px solid #fff";
+	document.getElementById(event.target.id).style.opacity = "1";
+	}
 }
 
 function getRandomInt(min,max){
@@ -166,11 +171,7 @@ function clearStyle() {
 	 }
 	 
 }
-function formatStyle() {
-	document.getElementById(event.target.id).style.fontWeight = "bold";
-	document.getElementById(event.target.id).style.border = "10px solid #fff";
-	document.getElementById(event.target.id).style.opacity = "1";
-}
+
 function joke() {
 	var albumId = [];
 	VK.api('market.getById', {
