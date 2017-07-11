@@ -44,12 +44,12 @@ img{
 cursor:pointer;
 }
 .container{
-/*height: 650px;*/
+/*height: 650px;
 border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
-border-image-repeat: round;
+border-image-repeat: round;*/
 }
 #header {
 	position: relative; top: 0%; left: 25%;
