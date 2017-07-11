@@ -169,7 +169,7 @@ function createTableWeek(){
 }
 
 function drawTableToday() {//заполняем таблицу для исходного случая "сегодня"
-	clearScreen();
+	//clearScreen();
 	createTableToday();
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
