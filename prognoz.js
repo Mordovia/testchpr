@@ -183,8 +183,9 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.opacity = "1";
 	document.getElementById('t11').appendChild(todayImage);
 	for (n=1; n<4; n++){
-		document.getElementById('t3'+n-1).appendChild(img[n]);
-		document.getElementById('t4'+n-1).innerHTML =  market['descript'+n];
+		var t = n-1;
+		document.getElementById('t3'+t).appendChild(img[n]);
+		document.getElementById('t4'+t).innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	//joke();	
