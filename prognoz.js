@@ -182,9 +182,9 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
 	document.getElementById('t11').appendChild(todayImage);
-	for (n=0; n<4; n++){
-		document.getElementById('t3'+n).appendChild(img[n]);
-		document.getElementById('t4'+n).innerHTML =  market['descript'+n];
+	for (n=1; n<4; n++){
+		document.getElementById('t3'+n-1).appendChild(img[n]);
+		document.getElementById('t4'+n-1).innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	//joke();	
