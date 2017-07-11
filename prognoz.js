@@ -107,8 +107,8 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
-		drawTableToday();
 		drawTableWeek();
+		drawTableToday();
 		})}
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
