@@ -129,7 +129,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 	}
 	
-	document.getElementById('11').appendChild(todayImage);//нужно взять "день" из сегодня
+	document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('21').appendChild(img[4]);//"день" из завтра
 	document.getElementById('22').innerHTML =  market['descript4'];
@@ -181,9 +181,9 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
-	for (n=1; n<4; n++){
-		document.getElementById('t'+n+'1').appendChild(img[n]);
-		document.getElementById('t'+n+'2').innerHTML =  market['descript'+n];
+	for (n=1; n<5; n++){
+		document.getElementById('t3'+n).appendChild(img[n]);
+		document.getElementById('t4'+n).innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	//joke();	
@@ -192,7 +192,7 @@ function createTableToday(){
 	var element = document.getElementById('table');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
-	for (var i=0; i<1; i++){
+	/*for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<3;j++)
 		{
@@ -201,7 +201,10 @@ function createTableToday(){
 			tr.appendChild(th);
 		}
 			table.appendChild(tr);
-	}
+	}*/
+	var caption = document.createElement('caption');
+	caption.id = "t00";
+	table.appendChild(caption);
 	for (var i=1; i<8; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
@@ -216,11 +219,11 @@ function createTableToday(){
 	document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
-	document.getElementById('t01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
-	document.getElementById('t02').innerHTML = 'На неделю';
-	document.getElementById('t10').innerHTML = 'Утро';
-	document.getElementById('t20').innerHTML = 'День';
-	document.getElementById('t30').innerHTML = 'Вечер';
+	//document.getElementById('t01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	//document.getElementById('t02').innerHTML = 'На неделю';
+	document.getElementById('t20').innerHTML = 'Утро';
+	document.getElementById('t21').innerHTML = 'День';
+	document.getElementById('t22').innerHTML = 'Вечер';
 	buttonCreation2();
 }
 function clearStyle() {
