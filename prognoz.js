@@ -19,6 +19,7 @@ loaded: false
 };  
 var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
+var todayImage;
 
 
 function onClickCell(event){//функция события
@@ -107,6 +108,8 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
+		todayImage.src = market['photo_1'];
+		todayImage.href = url[1];
 		drawTableWeek();
 		drawTableToday();
 		})}
@@ -122,11 +125,8 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		document.getElementById(n+'1').innerHTML = '';
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 	}
-	var todayImage;
-	todayImage.src = market['photo_1'];
-	todayImage.href = url[1];
+	
 	document.getElementById('11').appendChild(todayImage);//нужно взять "день" из сегодня
-	document.getElementById('11').appendChild(original);
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('21').appendChild(img[4]);//"день" из завтра
 	document.getElementById('22').innerHTML =  market['descript4'];
