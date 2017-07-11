@@ -122,9 +122,10 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		document.getElementById(n+'1').innerHTML = '';
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 	}
-	//document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
-	var original = document.getElementById('t11');
-	//var clone = original.cloneNode(true);
+	var todayImage;
+	todayImage.src = market['photo_1'];
+	todayImage.href = url[1];
+	document.getElementById('11').appendChild(todayImage]);//нужно взять "день" из сегодня
 	document.getElementById('11').appendChild(original);
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('21').appendChild(img[4]);//"день" из завтра
