@@ -114,7 +114,7 @@ function createTable(){
 	var element = document.getElementById('table2');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
-	for (var i=0; i<1; i++){
+	/*for (var i=0; i<3; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<1;j++)
 		{
@@ -123,7 +123,9 @@ function createTable(){
 			tr.appendChild(th);
 		}
 			table.appendChild(tr);
-	}
+	}*/
+	var caption = document.createElement('caption');
+	table.appendChild(caption);
 	for (var i=1; i<8; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
