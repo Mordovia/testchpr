@@ -18,6 +18,7 @@ var url = {
 loaded: false
 };  
 var img = [];
+var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
 
@@ -107,6 +108,11 @@ function marketGet(){
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
+		imgWeek[n] = new Image;
+		imgWeek[n].width = 50;
+		imgWeek[n].height = 50;
+		imgWeek[n].src = market['photo_'+n];
+		imgWeek[n].href = url[n];
 		}
 		todayImage = new Image;
 		todayImage.width = 75;
@@ -129,15 +135,15 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 	}
 	
-	document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
+	document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
 	document.getElementById('12').innerHTML =  market['descript1'];
-	document.getElementById('21').appendChild(img[4]);//"день" из завтра
+	document.getElementById('21').appendChild(imgWeek[4]);//"день" из завтра
 	document.getElementById('22').innerHTML =  market['descript4'];
-	document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
+	document.getElementById('31').appendChild(imgWeek[0]);//и просто у меня [0] из массива где 'market.get' не использовался
 	document.getElementById('32').innerHTML =  market['descript0'];
 	for (n=4; n<8; n++){//остальные задаем через цикл
 		var w = n+3;
-		document.getElementById(n+'1').appendChild(img[w]);
+		document.getElementById(n+'1').appendChild(imgWeek[w]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+w];
 	}
 }
