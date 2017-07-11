@@ -61,14 +61,15 @@ cursor:pointer;
 .container1{
 width: 45%;
 float: left;
-/*height: 650px;
-border-style: solid;
+height: 470px;
+/*border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
 border-image-repeat: round;*/
 }
 .container2{
+height: 470px;
 width: 45%;
 float: right;
 }
