@@ -6,6 +6,7 @@
 }
 
 body{
+border-radius: 10px;
 background: rgba(128, 128, 128, 0.27);
 margin:0;
 padding:0;
@@ -63,11 +64,11 @@ cursor:pointer;
 }
 .container1{
 background: white;	
-margin:5px;
+margin:0px;
 width: 48%;
 float: left;
-height: 470px;
-/*border-style: solid;
+/*height: 470px;
+border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
@@ -75,8 +76,8 @@ border-image-repeat: round;*/
 }
 .container2{
 background: white;		
-margin:5px;
-height: 470px;
+margin:0px;
+/*height: 470px;*/
 width: 48%;
 float: right;
 }
