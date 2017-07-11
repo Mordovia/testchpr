@@ -134,7 +134,7 @@ function createTable(){
 		}
 		table.appendChild(tr);
 	}
-	element.appendChild(table);
+	element.appendChild(table2);//выводим таблицу в див "table2"
 	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
@@ -148,7 +148,7 @@ function createTable(){
 	buttonCreation2();
 }
 
-function drawTable() {//заполняем таблицу для исходного случая "сегодня"
+/*function drawTable() {//заполняем таблицу для исходного случая "сегодня"
 	clearScreen();
 	createTable();
 	document.getElementById("00").style.fontWeight = "bold";
@@ -160,6 +160,29 @@ function drawTable() {//заполняем таблицу для исходно�
 	}
 	daySelected = 3;
 	joke();	
+}*/
+function drawTable() {//заполняем таблицу для исходного случая "на неделю" - в правый див
+	clearScreen();
+	createTable();
+	clearStyle();
+	daySelected = '2';
+	document.getElementById('33').innerHTML = '';
+	formatStyle();
+	for (n=1; n<8; n++){
+		document.getElementById(n+'1').innerHTML = '';
+		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
+	}
+	document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
+	document.getElementById('12').innerHTML =  market['descript1'];
+	document.getElementById('21').appendChild(img[4]);//"день" из завтра
+	document.getElementById('22').innerHTML =  market['descript4'];
+	document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
+	document.getElementById('32').innerHTML =  market['descript0'];
+	for (n=4; n<8; n++){//остальные задаем через цикл
+		var w = n+3;
+		document.getElementById(n+'1').appendChild(img[w]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+w];
+	}
 }
 
 function clearStyle() {
