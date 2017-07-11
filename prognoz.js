@@ -138,8 +138,8 @@ function createTable(){
 	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
 	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
-	document.getElementById("00").style.fontWeight = "bold";
-	document.getElementById("00").style.border = "10px solid #fff";
+	//document.getElementById("00").style.fontWeight = "bold";
+	//document.getElementById("00").style.border = "10px solid #fff";
 	document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	document.getElementById('02').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
@@ -169,7 +169,6 @@ function drawTable() {//заполняем таблицу для исходно�
 	document.getElementById("02").style.opacity = "1";	
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
-	formatStyle();
 	for (n=1; n<8; n++){
 		document.getElementById(n+'1').innerHTML = '';
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
