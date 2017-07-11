@@ -65,7 +65,7 @@ cursor:pointer;
 border: 1px solid white;	
 border-radius: 10px;
 background: white;	
-margin:0px;
+margin:5px;
 width: 48%;
 float: left;
 /*height: 470px;
@@ -79,7 +79,7 @@ border-image-repeat: round;*/
 border: 1px solid white;	
 border-radius: 10px;
 background: white;		
-margin:0px;
+margin:5px;
 /*height: 470px;*/
 width: 48%;
 float: right;
