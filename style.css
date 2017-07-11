@@ -18,6 +18,21 @@ table {
 
 font:normal 14px Antiqua, Arial, sans-serif;
 }
+caption
+{
+cursor:pointer;
+background: #a06f7e;
+opacity: 0.7;
+color:#fff;
+border-style: solid;
+border-color: #fff;
+border-collapse: collapse;
+padding: 10px;
+font-weight: normal;
+}
+caption:hover{
+opacity: 1;
+}
 th
 {
 cursor:pointer;
