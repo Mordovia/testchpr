@@ -59,7 +59,8 @@ img{
 cursor:pointer;
 }
 .container1{
-width: 45%;
+margin:5px;
+width: 48%;
 float: left;
 height: 470px;
 /*border-style: solid;
@@ -69,8 +70,9 @@ border-image-slice: 40;
 border-image-repeat: round;*/
 }
 .container2{
+margin:5px;
 height: 470px;
-width: 45%;
+width: 48%;
 float: right;
 }
 #header {
