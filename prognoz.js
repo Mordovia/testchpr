@@ -107,10 +107,35 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
-		drawTable();
+		drawTableToday();
+		drawTableWeek();
 		})}
+function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
+	clearScreen();
+	createTableWeek();
+	document.getElementById("00").style.fontWeight = "bold";
+	document.getElementById("00").style.border = "10px solid #fff";
+	document.getElementById("00").style.opacity = "1";	
+	daySelected = '2';
+	document.getElementById('33').innerHTML = '';
+	for (n=1; n<8; n++){
+		document.getElementById(n+'1').innerHTML = '';
+		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
+	}
+	document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
+	document.getElementById('12').innerHTML =  market['descript1'];
+	document.getElementById('21').appendChild(img[4]);//"день" из завтра
+	document.getElementById('22').innerHTML =  market['descript4'];
+	document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
+	document.getElementById('32').innerHTML =  market['descript0'];
+	for (n=4; n<8; n++){//остальные задаем через цикл
+		var w = n+3;
+		document.getElementById(n+'1').appendChild(img[w]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+w];
+	}
+}
 
-function createTable(){
+function createTableWeek(){
 	var element = document.getElementById('table2');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
@@ -141,60 +166,61 @@ function createTable(){
 	
 	document.getElementById('prognoz').innerHTML = 'Ваш чайный прогноз:';
 	document.getElementById('00').innerHTML = 'Прогноз на неделю';
-	//document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
-	//document.getElementById("00").style.fontWeight = "bold";
-	//document.getElementById("00").style.border = "10px solid #fff";
-	//document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
-	//document.getElementById('02').innerHTML = 'На неделю';
-	//document.getElementById('10').innerHTML = 'Утро';
-	//document.getElementById('20').innerHTML = 'День';
-	//document.getElementById('30').innerHTML = 'Вечер';
-	buttonCreation2();
 }
 
-/*function drawTable() {//заполняем таблицу для исходного случая "сегодня"
+function drawTableToday() {//заполняем таблицу для исходного случая "сегодня"
 	clearScreen();
-	createTable();
-	document.getElementById("00").style.fontWeight = "bold";
-	document.getElementById("00").style.border = "10px solid #fff";
-	document.getElementById("00").style.opacity = "1";
+	createTableToday();
+	document.getElementById("t00").style.fontWeight = "bold";
+	document.getElementById("t00").style.border = "10px solid #fff";
+	document.getElementById("t00").style.opacity = "1";
 	for (n=1; n<4; n++){
-		document.getElementById(n+'1').appendChild(img[n]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		document.getElementById('t'+n+'1').appendChild(img[n]);
+		document.getElementById('t'+n+'2').innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	joke();	
-}*/
-function drawTable() {//заполняем таблицу для исходного случая "на неделю" - в правый див
-	clearScreen();
-	createTable();
-	document.getElementById("00").style.fontWeight = "bold";
-	document.getElementById("00").style.border = "10px solid #fff";
-	document.getElementById("00").style.opacity = "1";	
-	daySelected = '2';
-	document.getElementById('33').innerHTML = '';
-	for (n=1; n<8; n++){
-		document.getElementById(n+'1').innerHTML = '';
-		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
-	}
-	document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
-	document.getElementById('12').innerHTML =  market['descript1'];
-	document.getElementById('21').appendChild(img[4]);//"день" из завтра
-	document.getElementById('22').innerHTML =  market['descript4'];
-	document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
-	document.getElementById('32').innerHTML =  market['descript0'];
-	for (n=4; n<8; n++){//остальные задаем через цикл
-		var w = n+3;
-		document.getElementById(n+'1').appendChild(img[w]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+w];
-	}
 }
-
+function createTableToday(){
+	var element = document.getElementById('table');
+	var table =  document.createElement('table'); 
+	element.addEventListener('click', onClickCell, false);
+	for (var i=0; i<3; i++){
+		var tr = document.createElement('TR');
+		for (var j=0;j<1;j++)
+		{
+			var th = document.createElement('TH'); //создаем th-шку
+			th.id = 't'+"".concat(i,j);
+			tr.appendChild(th);
+		}
+			table.appendChild(tr);
+	}
+	for (var i=1; i<8; i++){
+		var tr = document.createElement('TR');
+    	for (var j=0;j<4;j++)
+		{
+			var td = document.createElement('TD'); //создаем td-шку
+			td.id = 't'+"".concat(i,j);
+			tr.appendChild(td);
+		}
+		table.appendChild(tr);
+	}
+	element.appendChild(table);
+	document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById("t00").style.fontWeight = "bold";
+	document.getElementById("t00").style.border = "10px solid #fff";
+	document.getElementById('t01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	document.getElementById('t02').innerHTML = 'На неделю';
+	document.getElementById('t10').innerHTML = 'Утро';
+	document.getElementById('t20').innerHTML = 'День';
+	document.getElementById('t30').innerHTML = 'Вечер';
+	buttonCreation2();
+}
 function clearStyle() {
 	 for (n=0; n<3; n++){
-		document.getElementById('0'+n).style.fontWeight = "";
-		document.getElementById('0'+n).style.border = "";
-		document.getElementById('0'+n).style.opacity = "";
+		document.getElementById('t0'+n).style.fontWeight = "";
+		document.getElementById('t0'+n).style.border = "";
+		document.getElementById('t0'+n).style.opacity = "";
 	 }
 	 
 }
@@ -209,7 +235,7 @@ function joke() {
 		albumId = a[0].albums_ids;
 		for (i=0;i<albumId.length; i++){
 		if (albumId[i]=='3'){
-		document.getElementById('33').innerHTML = 'Шутка';
+		document.getElementById('t33').innerHTML = 'Шутка';
 		}
 	}
 })}
