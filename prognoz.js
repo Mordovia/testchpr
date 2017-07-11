@@ -108,6 +108,7 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
+		todayImage = new Image;
 		todayImage.src = market['photo_1'];
 		todayImage.href = url[1];
 		drawTableWeek();
