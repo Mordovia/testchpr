@@ -125,6 +125,7 @@ function createTable(){
 			table.appendChild(tr);
 	}*/
 	var caption = document.createElement('caption');
+	caption.id = "00";
 	table.appendChild(caption);
 	for (var i=1; i<8; i++){
 		var tr = document.createElement('TR');
