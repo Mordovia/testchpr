@@ -43,13 +43,19 @@ td, th{
 img{
 cursor:pointer;
 }
-.container{
+.container1{
+width: 45%;
+float: left;
 /*height: 650px;
 border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
 border-image-repeat: round;*/
+}
+.container1{
+width: 45%;
+float: right;
 }
 #header {
 	position: relative; top: 0%; left: 25%;
