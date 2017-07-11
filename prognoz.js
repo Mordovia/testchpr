@@ -143,9 +143,9 @@ function createTable(){
 	//document.getElementById("00").style.border = "10px solid #fff";
 	//document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	//document.getElementById('02').innerHTML = 'На неделю';
-	document.getElementById('10').innerHTML = 'Утро';
-	document.getElementById('20').innerHTML = 'День';
-	document.getElementById('30').innerHTML = 'Вечер';
+	//document.getElementById('10').innerHTML = 'Утро';
+	//document.getElementById('20').innerHTML = 'День';
+	//document.getElementById('30').innerHTML = 'Вечер';
 	buttonCreation2();
 }
 
@@ -165,9 +165,9 @@ function createTable(){
 function drawTable() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
 	createTable();
-	document.getElementById("02").style.fontWeight = "bold";
-	document.getElementById("02").style.border = "10px solid #fff";
-	document.getElementById("02").style.opacity = "1";	
+	document.getElementById("00").style.fontWeight = "bold";
+	document.getElementById("00").style.border = "10px solid #fff";
+	document.getElementById("00").style.opacity = "1";	
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=1; n<8; n++){
