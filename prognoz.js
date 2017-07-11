@@ -187,7 +187,7 @@ function createTableToday(){
 	element.addEventListener('click', onClickCell, false);
 	for (var i=0; i<3; i++){
 		var tr = document.createElement('TR');
-		for (var j=0;j<1;j++)
+		for (var j=0;j<3;j++)
 		{
 			var th = document.createElement('TH'); //создаем th-шку
 			th.id = 't'+"".concat(i,j);
