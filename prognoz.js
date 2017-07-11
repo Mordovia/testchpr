@@ -179,7 +179,7 @@ function drawTableToday() {//заполняем таблицу для исход
 		document.getElementById('t'+n+'2').innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
-	joke();	
+	//joke();	
 }
 function createTableToday(){
 	var element = document.getElementById('table');
