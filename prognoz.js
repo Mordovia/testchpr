@@ -116,7 +116,7 @@ function createTable(){
 	element.addEventListener('click', onClickCell, false);
 	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
-		for (var j=0;j<3;j++)
+		for (var j=0;j<1;j++)
 		{
 			var th = document.createElement('TH'); //создаем th-шку
 			th.id = "".concat(i,j);
