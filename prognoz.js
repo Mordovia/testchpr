@@ -185,7 +185,7 @@ function createTableToday(){
 	var element = document.getElementById('table');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
-	for (var i=0; i<3; i++){
+	for (var i=0; i<1; i++){
 		var tr = document.createElement('TR');
 		for (var j=0;j<3;j++)
 		{
