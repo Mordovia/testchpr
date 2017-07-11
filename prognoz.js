@@ -164,7 +164,9 @@ function createTable(){
 function drawTable() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
 	createTable();
-	clearStyle();
+	document.getElementById("02").style.fontWeight = "bold";
+	document.getElementById("02").style.border = "10px solid #fff";
+	document.getElementById("02").style.opacity = "1";	
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	formatStyle();
