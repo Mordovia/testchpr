@@ -21,8 +21,8 @@ var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 
-/*function onClickCell(event){//функция события
-	if (typeof event.target.href !== 'undefined'){
+function onClickCell(event){//функция события
+	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
 	switch (event.target.id) {
@@ -73,8 +73,8 @@ var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 	document.getElementById(event.target.id).style.fontWeight = "bold";
 	document.getElementById(event.target.id).style.border = "10px solid #fff";
 	document.getElementById(event.target.id).style.opacity = "1";
-	}
-}*/
+	}*/
+}
 
 function getRandomInt(min,max){
 	return Math.floor(min + Math.random() * (max + 1 - min));
