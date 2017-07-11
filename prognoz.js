@@ -125,7 +125,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	var todayImage;
 	todayImage.src = market['photo_1'];
 	todayImage.href = url[1];
-	document.getElementById('11').appendChild(todayImage]);//нужно взять "день" из сегодня
+	document.getElementById('11').appendChild(todayImage);//нужно взять "день" из сегодня
 	document.getElementById('11').appendChild(original);
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('21').appendChild(img[4]);//"день" из завтра
