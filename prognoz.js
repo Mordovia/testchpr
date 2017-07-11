@@ -21,7 +21,7 @@ var img = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 
 
-function onClickCell(event){//функция события
+/*function onClickCell(event){//функция события
 	if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
@@ -74,7 +74,7 @@ function onClickCell(event){//функция события
 	document.getElementById(event.target.id).style.border = "10px solid #fff";
 	document.getElementById(event.target.id).style.opacity = "1";
 	}
-}
+}*/
 
 function getRandomInt(min,max){
 	return Math.floor(min + Math.random() * (max + 1 - min));
@@ -137,11 +137,12 @@ function createTable(){
 	element.appendChild(table);
 	
 	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-	document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById('00').innerHTML = 'На неделю';
+	//document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	//document.getElementById("00").style.fontWeight = "bold";
 	//document.getElementById("00").style.border = "10px solid #fff";
-	document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
-	document.getElementById('02').innerHTML = 'На неделю';
+	//document.getElementById('01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
+	//document.getElementById('02').innerHTML = 'На неделю';
 	document.getElementById('10').innerHTML = 'Утро';
 	document.getElementById('20').innerHTML = 'День';
 	document.getElementById('30').innerHTML = 'Вечер';
