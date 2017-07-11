@@ -139,8 +139,8 @@ function createTable(){
 	}
 	element.appendChild(table);
 	
-	document.getElementById('prognoz').innerHTML = 'Твой чайный прогноз:';
-	document.getElementById('00').innerHTML = 'На неделю';
+	document.getElementById('prognoz').innerHTML = 'Ваш чайный прогноз:';
+	document.getElementById('00').innerHTML = 'Прогноз на неделю';
 	//document.getElementById('00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	//document.getElementById("00").style.fontWeight = "bold";
 	//document.getElementById("00").style.border = "10px solid #fff";
