@@ -12,11 +12,6 @@ padding:0;
 font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
-body:empty{
-background: rgba(128, 128, 128, 0.27);
-margin:0;
-padding:0;
-}
 header{
 background: white;
 }
@@ -100,6 +95,11 @@ float: right;
 .main
 {
 margin: 15px;
+}
+.main:empty{
+background: rgba(128, 128, 128, 0.27);
+margin:0;
+padding:0;
 }
 #avatar
 {
