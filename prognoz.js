@@ -219,7 +219,7 @@ function createTableToday(){
 		{
 			var td = document.createElement('TD'); //создаем td-шку
 			td.id = 't'+"".concat(i,j);
-			td.rowspan="2";
+			td[0].colspan="2";
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
