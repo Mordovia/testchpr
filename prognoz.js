@@ -118,6 +118,7 @@ function marketGet(){
 		todayImage.width = 100;
 		todayImage.height = 100;
 		todayImage.src = market['photo_1'];
+		todayImage.title = market['descript1'];
 		todayImage.href = url['1'];
 		drawTableWeek();
 		drawTableToday();
@@ -187,8 +188,10 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
-	document.getElementById('t10').appendChild(todayImage);
+	document.getElementById('t10').innerHTML =  todayImage.title;
 	document.getElementById('t10').colSpan = 2;
+	document.getElementById('t20').appendChild(todayImage);
+	document.getElementById('t20').colSpan = 2;
 	for (n=1; n<4; n++){
 		var t = n-1;
 		document.getElementById('t3'+t).appendChild(img[n]);
