@@ -188,7 +188,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
 	document.getElementById('t10').appendChild(todayImage);
-	document.getElementById('t10').colspan="2";
+	document.getElementById('t10').colSpan = 2;
 	for (n=1; n<4; n++){
 		var t = n-1;
 		document.getElementById('t3'+t).appendChild(img[n]);
