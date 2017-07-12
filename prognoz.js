@@ -137,8 +137,8 @@ var buttonCreation2 = function(){
 	var pprg = document.createElement('input')
 	pprg.id = 'pprg'
 	pprg.type = 'button'
-	pprg.value = 'Получить новый прогноз'
-	pprg.setAttribute('onclick', 'postIt();')
+	pprg.value = 'Опубликовать прогноз'
+	pprg.setAttribute('onclick', 'postItRandom();')
 	postPrognoz.appendChild(pprg);
 	backToMainMenu();
 };
