@@ -192,10 +192,10 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById('t10').colSpan = 2;
 	document.getElementById('t20').appendChild(todayImage);
 	document.getElementById('t20').colSpan = 2;
-	for (n=1; n<4; n++){
+	for (n=1; n<5; n++){
 		var t = n-1;
-		document.getElementById('t3'+t).appendChild(img[n]);
-		document.getElementById('t4'+t).innerHTML =  market['descript'+n];
+		document.getElementById('t4'+t).appendChild(img[n]);
+		document.getElementById('t5'+t).innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	//joke();	
@@ -243,9 +243,9 @@ function createTableToday(){
 	document.getElementById("t00").style.border = "10px solid #fff";
 	//document.getElementById('t01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
 	//document.getElementById('t02').innerHTML = 'На неделю';
-	document.getElementById('t20').innerHTML = 'Утро';
-	document.getElementById('t21').innerHTML = 'День';
-	document.getElementById('t22').innerHTML = 'Вечер';
+	document.getElementById('t30').innerHTML = 'Утро';
+	document.getElementById('t31').innerHTML = 'День';
+	document.getElementById('t32').innerHTML = 'Вечер';
 	buttonCreation2();
 }
 function clearStyle() {
