@@ -59,6 +59,7 @@ td, th{
 	vertical-align: middle;
 	   
 }
+tr:hover td {background: #ccddff;}
 img{
 cursor:pointer;
 }
