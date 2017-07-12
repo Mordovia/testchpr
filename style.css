@@ -61,8 +61,8 @@ td, th{
 img{
 cursor:pointer;
 }
-/*.container1{
-border: 1px solid white;	
+.container1{
+/*border: 1px solid white;*/	
 border-radius: 10px;
 background: white;	
 margin:5px;
@@ -73,7 +73,7 @@ border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
-border-image-repeat: round;
+border-image-repeat: round;*/
 }
 .container1:empty{
 background: rgba(128, 128, 128, 0.27);
@@ -82,11 +82,11 @@ padding:0;
 border:0;	
 }
 .container2{
-border: 1px solid white;	
+/*border: 1px solid white;*/
 border-radius: 10px;
 background: white;		
 margin:5px;
-/*height: 470px;
+/*height: 470px;*/
 width: 48%;
 float: right;
 }
