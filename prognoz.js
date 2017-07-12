@@ -123,11 +123,10 @@ function marketGet(){
 		drawTableWeek();
 		drawTableToday();
 		var className = document.getElementsByClassName('container');
-	//alert(tagName.length);
-	for(i = 0; i < className.length; i++){
-	document.getElementById(className[i].id).style.height = '480';
-	}
-		})}
+		for(i = 0; i < className.length; i++){
+			document.getElementById(className[i].id).style.height = "480px";
+		}
+	})}
 
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
