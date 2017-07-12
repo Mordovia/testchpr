@@ -123,6 +123,26 @@ function marketGet(){
 		drawTableWeek();
 		drawTableToday();
 		})}
+
+var buttonCreation2 = function(){
+	var newPrognoz = document.getElementById('newPrognoz');
+	var nprg = document.createElement('input')
+	nprg.id = 'nprg'
+	nprg.type = 'button'
+	nprg.value = 'Получить новый прогноз'
+	nprg.setAttribute('onclick', 'marketGet();')
+	newPrognoz.appendChild(nprg);
+	
+	var postPrognoz = document.getElementById('postPrognoz');
+	var pprg = document.createElement('input')
+	pprg.id = 'pprg'
+	pprg.type = 'button'
+	pprg.value = 'Получить новый прогноз'
+	pprg.setAttribute('onclick', 'postIt();')
+	postPrognoz.appendChild(pprg);
+	backToMainMenu();
+};
+
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
 	createTableWeek();
