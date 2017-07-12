@@ -122,7 +122,11 @@ function marketGet(){
 		todayImage.href = url['1'];
 		drawTableWeek();
 		drawTableToday();
-		
+		var className = document.getElementsByClassName('container');
+	//alert(tagName.length);
+	for(i = 0; i < className.length; i++){
+	document.getElementById(className[i].id).style.height = '480';
+	}
 		})}
 
 var buttonCreation2 = function(){
