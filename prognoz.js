@@ -220,7 +220,7 @@ function createTableToday(){
 			var td = document.createElement('TD'); //создаем td-шку
 			td.id = 't'+"".concat(i,j);
 			tr.appendChild(td);
-			td[0].colspan="2";
+			td.colspan="2";
 		}
 		table.appendChild(tr);
 	}
