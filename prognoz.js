@@ -122,6 +122,7 @@ function marketGet(){
 		todayImage.href = url['1'];
 		drawTableWeek();
 		drawTableToday();
+		
 		})}
 
 var buttonCreation2 = function(){
