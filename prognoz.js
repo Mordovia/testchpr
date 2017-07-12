@@ -124,7 +124,7 @@ function marketGet(){
 		drawTableToday();
 		var className = document.getElementsByClassName('container');
 		for(i = 0; i < className.length; i++){
-			document.getElementById(className[i].id).style.height = "470px";
+			document.getElementById(className[i].id).style.height = "450px";
 		}
 	})}
 
