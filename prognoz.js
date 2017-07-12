@@ -228,7 +228,7 @@ function createTableToday(){
 		}
 		table.appendChild(tr);
 	}
-	for (var i=1; i<5; i++){
+	for (var i=1; i<6; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
