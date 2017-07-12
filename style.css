@@ -16,6 +16,7 @@ header{
 background: white;
 }
 table {
+border-spacing: 0px;
 -webkit-border-collapse: collapse;
 -moz-border-collapse: separate;
 
