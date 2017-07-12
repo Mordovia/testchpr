@@ -48,16 +48,6 @@ clearScreen();
 var backToMainMenu = function(){
 	document.getElementById('market').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "getUserName();">';
 }
-var buttonCreation2 = function(){
-	var newPrognoz = document.getElementById('newPrognoz');
-	var nprg = document.createElement('input')
-	nprg.id = 'nprg'
-	nprg.type = 'button'
-	nprg.value = 'Получить новый прогноз'
-	nprg.setAttribute('onclick', 'marketGet();')
-	newPrognoz.appendChild(nprg);
-	backToMainMenu();
-};
 
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
