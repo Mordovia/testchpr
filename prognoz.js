@@ -115,8 +115,8 @@ function marketGet(){
 		imgWeek[n].href = url[n];
 		}
 		todayImage = new Image;
-		todayImage.width = 75;
-		todayImage.height = 75;
+		todayImage.width = 100;
+		todayImage.height = 100;
 		todayImage.src = market['photo_1'];
 		todayImage.href = url['1'];
 		drawTableWeek();
@@ -187,7 +187,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
-	document.getElementById('t11').appendChild(todayImage);
+	document.getElementById('t10').appendChild(todayImage);
 	for (n=1; n<4; n++){
 		var t = n-1;
 		document.getElementById('t3'+t).appendChild(img[n]);
@@ -213,7 +213,17 @@ function createTableToday(){
 	var caption = document.createElement('caption');
 	caption.id = "t00";
 	table.appendChild(caption);
-	for (var i=1; i<8; i++){
+	for (var i=1; i<2; i++){
+		var tr = document.createElement('TR');
+    	for (var j=0;j<1;j++)
+		{
+			var td = document.createElement('TD'); //создаем td-шку
+			td.id = 't'+"".concat(i,j);
+			tr.appendChild(td);
+		}
+		table.appendChild(tr);
+	}
+	for (var i=1; i<5; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
