@@ -61,7 +61,7 @@ td, th{
 img{
 cursor:pointer;
 }
-.container1{
+/*.container1{
 border: 1px solid white;	
 border-radius: 10px;
 background: white;	
@@ -73,7 +73,7 @@ border-style: solid;
 border-image-width: 10px;
 border-image-source: url(border.jpg);
 border-image-slice: 40;
-border-image-repeat: round;*/
+border-image-repeat: round;
 }
 .container1:empty{
 background: rgba(128, 128, 128, 0.27);
@@ -86,7 +86,7 @@ border: 1px solid white;
 border-radius: 10px;
 background: white;		
 margin:5px;
-/*height: 470px;*/
+/*height: 470px;
 width: 48%;
 float: right;
 }
@@ -95,7 +95,7 @@ background: rgba(128, 128, 128, 0.27);
 margin:0;
 padding:0;
 border:0;	
-}
+}*/
 #header {
 	position: relative; top: 0%; left: 25%;
 	background: url(sprite.png) no-repeat;
