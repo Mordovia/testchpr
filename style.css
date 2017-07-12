@@ -69,13 +69,15 @@ border-radius: 10px;
 background: white;		
 margin:5px;
 /*height: 470px;*/
-width: 48%;
+width: 45%;
 }
 #container1{
 float: left;
+margin-left: 20px;
 }
 #container2{
 float: right;
+margin-right: 20px;
 }
 #header {
 	position: relative; top: 0%; left: 25%;
