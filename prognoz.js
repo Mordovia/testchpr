@@ -125,7 +125,7 @@ function marketGet(){
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
 	createTableWeek();
-	document.getElementsByClassName('container2').style.border = "1px solid white";
+	//document.getElementsByClassName('container2').style.border = "1px solid white";
 	document.getElementById("00").style.fontWeight = "bold";
 	document.getElementById("00").style.border = "10px solid #fff";
 	document.getElementById("00").style.opacity = "1";	
