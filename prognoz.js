@@ -215,10 +215,11 @@ function createTableToday(){
 	table.appendChild(caption);
 	for (var i=1; i<2; i++){
 		var tr = document.createElement('TR');
-    	for (var j=0;j<1;j++)
+    	for (var j=0;j<2;j++)
 		{
 			var td = document.createElement('TD'); //создаем td-шку
 			td.id = 't'+"".concat(i,j);
+			td.rowspan="2";
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
