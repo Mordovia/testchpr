@@ -63,40 +63,19 @@ tr:hover td {background: #ccddff;}
 img{
 cursor:pointer;
 }
-.container1{
-/*border: 1px solid white;*/	
-border-radius: 10px;
-background: white;	
-margin:5px;
-width: 48%;
-float: left;
-/*height: 470px;
-border-style: solid;
-border-image-width: 10px;
-border-image-source: url(border.jpg);
-border-image-slice: 40;
-border-image-repeat: round;*/
-}
-.container1:empty{
-background: rgba(128, 128, 128, 0.27);
-margin:0;
-padding:0;
-border:0;	
-}
-.container2{
+.container{
 /*border: 1px solid white;*/
 border-radius: 10px;
 background: white;		
 margin:5px;
 /*height: 470px;*/
 width: 48%;
-float: right;
 }
-.container2:empty{
-background: rgba(128, 128, 128, 0.27);
-margin:0;
-padding:0;
-border:0;	
+#container1{
+float: left;
+}
+#container2{
+float: right;
 }
 #header {
 	position: relative; top: 0%; left: 25%;
