@@ -193,7 +193,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
 	document.getElementById('t20').appendChild(todayImage);
 	document.getElementById('t20').colSpan = 2;
-	for (n=1; n<5; n++){
+	for (n=1; n<4; n++){
 		var t = n-1;
 		document.getElementById('t4'+t).appendChild(img[n]);
 		document.getElementById('t5'+t).innerHTML =  market['descript'+n];
