@@ -109,8 +109,8 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		imgWeek[n] = new Image;
-		imgWeek[n].width = 50;
-		imgWeek[n].height = 50;
+		imgWeek[n].width = 40;
+		imgWeek[n].height = 40;
 		imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 		}
