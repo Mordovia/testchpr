@@ -59,7 +59,7 @@ td, th{
 	vertical-align: middle;
 	   
 }
-tr:hover td {background: #ccddff;}
+#table2 tr:hover td {background: rgba(188, 154, 164, 0.61);}
 img{
 cursor:pointer;
 }
