@@ -168,6 +168,7 @@ function prognozWeek(){
 		//imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 	}
+		console.log(imgWeek);
 	})
 }
 
