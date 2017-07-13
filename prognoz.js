@@ -165,8 +165,8 @@ function prognozWeek(){
 		imgWeek[n] = new Image;
 		imgWeek[n].width = 40;
 		imgWeek[n].height = 40;
-		//imgWeek[n].src = market['photo_'+n];
-		imgWeek[n].href = url[n];
+		imgWeek[n].src = market['photo_'+n];
+		//imgWeek[n].href = url[n];
 	}
 		console.log(imgWeek);
 	})
