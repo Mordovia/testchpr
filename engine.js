@@ -18,6 +18,10 @@ function clearScreen(){
 	for(i = 0; i < className.length; i++){
 	document.getElementById(className[i].id).innerHTML = '';
 	}
+	var className2 = document.getElementsByClassName('container');
+		for(i = 0; i < className2.length; i++){
+			document.getElementById(className2[i].id).style.height = "";
+		}
 }
 	
 var buttonCreation = function(){
