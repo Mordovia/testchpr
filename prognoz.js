@@ -145,7 +145,7 @@ var buttonCreation2 = function(){
 
 function prognozWeek(){
 	
-	for (n=0; n<7; n++){
+	for (n=1; n<8; n++){
 		imgWeek[n] = new Image;
 		imgWeek[n].width = 40;
 		imgWeek[n].height = 40;
