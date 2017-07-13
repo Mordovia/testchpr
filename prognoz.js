@@ -144,13 +144,31 @@ var buttonCreation2 = function(){
 };
 
 function prognozWeek(){
+	VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '16',
+                    }, function(data) {
+					                   
+					var a = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;
+					}
+		a.sort(compareRandom);
+		for (var n=0; n<11; n++){
+                       	market['descript'+n] = a[n].title;
+                       	market['photo_'+n] = a[n].thumb_photo;
+			market['id'+n] = a[n].owner_id+'_'+a[n].id;
+			url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
+		}
+		market['loaded'] = true;
+		url['loaded'] = true;
 	for (n=0; n<7; n++){
 		imgWeek[n] = new Image;
 		imgWeek[n].width = 40;
 		imgWeek[n].height = 40;
 		//imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
-	}
+	})
 }
 
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
