@@ -152,7 +152,7 @@ function prognozWeek(){
 		imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 	}
-		console.log(imgWeek);
+		console.log(imgWeek[1]);
 }
 
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
