@@ -145,14 +145,13 @@ var buttonCreation2 = function(){
 
 function prognozWeek(){
 	VK.api('market.get', {
-							'owner_id': '-121807904', 
-							'album_id': '16',
-                    }, function(data) {
-					                   
-					var a = data.response.items;
-					function compareRandom(a, b) {
-					return Math.random() - 0.5;
-					}
+		'owner_id': '-121807904',
+		'album_id': '16',
+	}, function(data) {
+		var a = data.response.items;
+		function compareRandom(a, b) {
+			return Math.random() - 0.5;
+		}
 		a.sort(compareRandom);
 		for (var n=0; n<11; n++){
                        	market['descript'+n] = a[n].title;
@@ -168,6 +167,7 @@ function prognozWeek(){
 		imgWeek[n].height = 40;
 		//imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
+	}
 	})
 }
 
