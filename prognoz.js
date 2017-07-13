@@ -108,11 +108,6 @@ function marketGet(){
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
-		imgWeek[n] = new Image;
-		imgWeek[n].width = 40;
-		imgWeek[n].height = 40;
-		imgWeek[n].src = market['photo_'+n];
-		imgWeek[n].href = url[n];
 		}
 		todayImage = new Image;
 		todayImage.width = 100;
@@ -120,6 +115,7 @@ function marketGet(){
 		todayImage.src = market['photo_1'];
 		todayImage.title = market['descript1'];
 		todayImage.href = url['1'];
+		prognozWeek();
 		drawTableWeek();
 		drawTableToday();
 		var className = document.getElementsByClassName('container');
@@ -147,6 +143,16 @@ var buttonCreation2 = function(){
 	backToMainMenu();
 };
 
+function prognozWeek(){
+	for (n=0; n<7; n++){
+		imgWeek[n] = new Image;
+		imgWeek[n].width = 40;
+		imgWeek[n].height = 40;
+		//imgWeek[n].src = market['photo_'+n];
+		imgWeek[n].href = url[n];
+	}
+}
+
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
 	clearScreen();
 	createTableWeek();
@@ -158,9 +164,10 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	for (n=1; n<8; n++){
 		document.getElementById(n+'1').innerHTML = '';
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
+		document.getElementById(n+'1').appendChild(imgWeek[n]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 	}
-	
-	document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
+	/*document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
 	document.getElementById('12').innerHTML =  market['descript1'];
 	document.getElementById('21').appendChild(imgWeek[4]);//"день" из завтра
 	document.getElementById('22').innerHTML =  market['descript4'];
@@ -170,7 +177,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		var w = n+3;
 		document.getElementById(n+'1').appendChild(imgWeek[w]);
 		document.getElementById(n+'2').innerHTML =  market['descript'+w];
-	}
+	}*/
 }
 
 function createTableWeek(){
