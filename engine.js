@@ -73,6 +73,9 @@ var getUserName = function () {//описываем функцию, котора
 	document.getElementById('container1').style.width = "94%";
 	document.getElementById('container1').style.height = "565px";
 	document.getElementById('container2').style.width = "0";
+		var img = new Image;
+		img.src = 'image006.png';
+		document.getElementById('wiseMan').appendChild(img);
 	}
 	else getUserName();
 	})	
