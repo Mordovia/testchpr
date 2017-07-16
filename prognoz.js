@@ -263,7 +263,7 @@ function createTableToday(){
 	}
 	for (var i=1; i<6; i++){
 		var tr = document.createElement('TR');
-    	for (var j=0;j<4;j++)
+    	for (var j=0;j<3;j++)
 		{
 			var td = document.createElement('TD');
 			td.id = 't'+"".concat(i,j);
