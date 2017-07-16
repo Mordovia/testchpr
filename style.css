@@ -13,6 +13,8 @@ font:normal 16px Antiqua, Arial, sans-serif;
 -webkit-font-smoothing: antialiased;
 }
 header{
+/*border: 1px solid white;*/
+border-radius: 10px;
 background: white;
 margin-left: 20px;
 margin-right: 20px;
@@ -147,10 +149,12 @@ font:bold 18px Antiqua, Arial, sans-serif;
 #footer {
 margin-left: 20px;
 margin-right: 20px;
-background: white;	
+background: white;
+/*border: 1px solid white;*/
+border-radius: 10px;
 position: absolute;
 left: 0;
 bottom: 0;
-width: 100%;
+/*width: 100%;*/
 text-align: center;
 }
