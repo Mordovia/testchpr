@@ -164,11 +164,10 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=0; n<7; n++){
-		var c = n+1;
-		document.getElementById(c+'1').innerHTML = '';
-		document.getElementById(c+'0').innerHTML = day[n].toLocaleString("ru", options);
-		document.getElementById(c+'1').appendChild(imgWeek[n]);
-		document.getElementById(c+'2').innerHTML =  market['descript'+n];
+		document.getElementById(n+'1').innerHTML = '';
+		document.getElementById(n+'0').innerHTML = day[n].toLocaleString("ru", options);
+		document.getElementById(n+'1').appendChild(imgWeek[n]);
+		document.getElementById(n+'2').innerHTML =  market['descript'+n];
 	}
 	/*document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
 	document.getElementById('12').innerHTML =  market['descript1'];
@@ -200,7 +199,7 @@ function createTableWeek(){
 	var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
-	for (var i=1; i<8; i++){
+	for (var 0=1; i<7; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
@@ -227,10 +226,9 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
 	document.getElementById('t20').appendChild(todayImage);
 	document.getElementById('t20').colSpan = 2;
-	for (n=1; n<4; n++){
-		var t = n-1;
-		document.getElementById('t4'+t).appendChild(img[n]);
-		document.getElementById('t5'+t).innerHTML =  market['descript'+n];
+	for (n=0; n<3; n++){
+		document.getElementById('t4'+n).appendChild(img[n]);
+		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
 	}
 	daySelected = 3;
 	//joke();	
