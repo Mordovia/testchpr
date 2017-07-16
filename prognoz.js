@@ -93,7 +93,7 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 		a.sort(compareRandom);
-		for (var n=0; n<11; n++){
+		for (var n=0; n<7; n++){
                        	market['descript'+n] = a[n].title;
                        	market['photo_'+n] = a[n].thumb_photo;
 			market['id'+n] = a[n].owner_id+'_'+a[n].id;
