@@ -21,6 +21,7 @@ function clearScreen(){
 	var className2 = document.getElementsByClassName('container');
 		for(i = 0; i < className2.length; i++){
 			document.getElementById(className2[i].id).style.height = "";
+			document.getElementById(className2[i].id).style.width = "45%";
 		}
 }
 	
