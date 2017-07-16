@@ -14,6 +14,8 @@ font:normal 16px Antiqua, Arial, sans-serif;
 }
 header{
 background: white;
+margin-left: 20px;
+margin-right: 20px;
 }
 table {
 border-spacing: 0px;
@@ -143,6 +145,8 @@ opacity: 1;
 font:bold 18px Antiqua, Arial, sans-serif;
 }
 #footer {
+margin-left: 20px;
+margin-right: 20px;
 background: white;	
 position: absolute;
 left: 0;
