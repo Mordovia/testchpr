@@ -164,7 +164,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=1; n<8; n++){
-		var w = n-1;
+		var w = n+1;
 		document.getElementById(n+'1').innerHTML = '';
 		document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
 		document.getElementById(n+'1').appendChild(imgWeek[w]);
