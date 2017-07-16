@@ -95,6 +95,7 @@ window.open('https://vk.com/vintagesbor?w=wall'+owner_id+'_'+id);
 }
 function selectData(){
 	document.getElementById('container1').style.width = "94%";
+	document.getElementById('container2').style.width = "0";
 	document.getElementById('newPrognoz').innerHTML = '<table><tr><td><input type="datetime-local" id = "dataSelect"></td><td><input value = "Опубликовать в выбранное время" type="button" onclick = postItSelected();></td></tr><tr><td><input value = "Опубликовать сейчас" type = "button" onclick = postItNow();></td><td><input value = "Опубликовать в случайное время" type = "button" onclick = "postItRandom();"></td></tr></table>';
 }
 function postItSelected(){
