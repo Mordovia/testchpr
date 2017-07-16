@@ -147,8 +147,8 @@ function prognozWeek(){
 	
 	for (n=1; n<8; n++){
 		imgWeek[n] = new Image;
-		imgWeek[n].width = 42;
-		imgWeek[n].height = 42;
+		imgWeek[n].width = 44;
+		imgWeek[n].height = 44;
 		imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 	}
