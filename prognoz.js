@@ -164,10 +164,11 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=0; n<7; n++){
-		document.getElementById(n+'1').innerHTML = '';
-		document.getElementById(n+'0').innerHTML = day[n].toLocaleString("ru", options);
-		document.getElementById(n+'1').appendChild(imgWeek[n]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		var c = n+1;
+		document.getElementById(c+'1').innerHTML = '';
+		document.getElementById(c+'0').innerHTML = day[n].toLocaleString("ru", options);
+		document.getElementById(c+'1').appendChild(imgWeek[n]);
+		document.getElementById(c+'2').innerHTML =  market['descript'+n];
 	}
 	/*document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
 	document.getElementById('12').innerHTML =  market['descript1'];
