@@ -200,7 +200,7 @@ function createTableWeek(){
 	var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
-	for (var i=0; i<7; i++){
+	for (var i=0; i<8; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
