@@ -102,7 +102,7 @@ function marketGet(){
 		}
 		market['loaded'] = true;
 		url['loaded'] = true;
-		for (n=0; n<11; n++){
+		for (n=0; n<3; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
@@ -163,7 +163,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	document.getElementById("00").style.opacity = "1";	
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
-	for (n=0; n<7; n++){
+	for (n=0; n<6; n++){
 		var w = n+1;
 		document.getElementById(w+'1').innerHTML = '';
 		document.getElementById(w+'0').innerHTML = day[n].toLocaleString("ru", options);
