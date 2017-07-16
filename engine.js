@@ -71,7 +71,7 @@ var getUserName = function () {//описываем функцию, котора
 	document.getElementById('table').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
 	buttonCreation();
 	document.getElementById('container1').style.width = "94%";
-	document.getElementById('container1').style.height = "450px";
+	document.getElementById('container1').style.height = "565px";
 	document.getElementById('container2').style.width = "0";
 	}
 	else getUserName();
