@@ -56,6 +56,8 @@ var backToMainMenu = function(){
 
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
+	document.getElementById('container1').style.width = "94%";
+	document.getElementById('container2').style.width = "0";
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
 	user['id'] = data.response[0].id;
