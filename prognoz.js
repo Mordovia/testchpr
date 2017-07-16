@@ -267,7 +267,7 @@ function createTableToday(){
 		{
 			var td = document.createElement('TD');
 			td.id = 't'+"".concat(i,j);
-			td.width = 33,3333%
+			td.width = '33,3333%'
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
