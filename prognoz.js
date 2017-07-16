@@ -163,7 +163,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	document.getElementById("00").style.opacity = "1";	
 	daySelected = '2';
 	document.getElementById('33').innerHTML = '';
-	for (n=0; n<6; n++){
+	for (n=0; n<7; n++){
 		var w = n+1;
 		document.getElementById(w+'1').innerHTML = '';
 		document.getElementById(w+'0').innerHTML = day[n].toLocaleString("ru", options);
@@ -200,7 +200,7 @@ function createTableWeek(){
 	var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
-	for (var i=0; i<8; i++){
+	for (var i=0; i<9; i++){
 		var tr = document.createElement('TR');
     	for (var j=0;j<4;j++)
 		{
