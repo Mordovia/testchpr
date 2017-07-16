@@ -145,14 +145,14 @@ var buttonCreation2 = function(){
 
 function prognozWeek(){
 	
-	for (n=1; n<8; n++){
+	for (n=0; n<7; n++){
 		imgWeek[n] = new Image;
 		imgWeek[n].width = 44;
 		imgWeek[n].height = 44;
 		imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 	}
-		//console.log(imgWeek[1]);
+		console.log(imgWeek);
 }
 
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
