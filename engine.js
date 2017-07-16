@@ -26,14 +26,14 @@ function clearScreen(){
 }
 	
 var buttonCreation = function(){
-	var buttonYes = document.getElementById('button');
+	var buttonYes = document.getElementById('postPrognoz');
 	var btn = document.createElement('input')
 	btn.id = 'yes'
 	btn.type = 'button'
 	btn.value = 'Да'
 	btn.setAttribute('onclick', 'marketGet();')
 	buttonYes.appendChild(btn);
-	var buttonExit = document.getElementById('exit');
+	var buttonExit = document.getElementById('newPrognoz');
 	var btn2 = document.createElement('input')
 	btn2.id = 'no'
 	btn2.type = 'button'
@@ -69,7 +69,7 @@ var getUserName = function () {//описываем функцию, котора
 	group['groupname'] = data.response[0].name;
 //	group['group_avatar'] = data.response[0].photo_50;
 	if (user['name'] !== 'none'){
-	document.getElementById('hello').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
+	document.getElementById('table').innerHTML='Привет, '+ user['name'] + ', хочешь получить чайный прогноз от ' + group['groupname'] + '?';//ищем в html-коде кусок с тегом "hello", после чего записываем в него текст 
 	buttonCreation();
 	}
 	else getUserName();
