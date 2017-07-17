@@ -118,6 +118,9 @@ function marketDrawWeekToday1(){
 		document.getElementById(className[i].id).style.height = "450px";
 	}}
 	else {
+		setTimeout(function(){
+		//console.log(forecast);
+	}, 2000)
 	marketDrawWeekToday1();
 	}
 }
