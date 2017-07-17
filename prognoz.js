@@ -38,7 +38,7 @@ function marketGet(){
 						
 		forecast = a.sort(compareRandom);
 		console.log(forecast[0].title);
-		xtraForecast = forecast.sort(compareRandom);
+		xtraForecast = forecast;
 		console.log(xtraForecast[0].title);
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
