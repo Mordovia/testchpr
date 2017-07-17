@@ -107,7 +107,7 @@ function prognozWeek(){
 		imgWeek[n].width = 44;
 		imgWeek[n].height = 44;
 		imgWeek[n].src = market['photo_'+n];
-		imgWeek[n].href = url[n];
+		//imgWeek[n].href = url[n];
 	}
 		//console.log(imgWeek);
 }
@@ -118,7 +118,7 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	document.getElementById("00").style.fontWeight = "bold";
 	document.getElementById("00").style.border = "10px solid #fff";
 	document.getElementById("00").style.opacity = "1";	
-	daySelected = '2';
+	//daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=0; n<7; n++){
 		var w = n+1;
@@ -133,17 +133,7 @@ function createTableWeek(){
 	var element = document.getElementById('table2');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
-	/*for (var i=0; i<3; i++){
-		var tr = document.createElement('TR');
-		for (var j=0;j<1;j++)
-		{
-			var th = document.createElement('TH'); //создаем th-шку
-			th.id = "".concat(i,j);
-			tr.appendChild(th);
-		}
-			table.appendChild(tr);
-	}*/
-	var caption = document.createElement('caption');
+		var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
 	for (var i=0; i<9; i++){
@@ -188,16 +178,6 @@ function createTableToday(){
 	var element = document.getElementById('table');
 	var table =  document.createElement('table'); 
 	element.addEventListener('click', onClickCell, false);
-	/*for (var i=0; i<1; i++){
-		var tr = document.createElement('TR');
-		for (var j=0;j<3;j++)
-		{
-			var th = document.createElement('TH'); //создаем th-шку
-			th.id = 't'+"".concat(i,j);
-			tr.appendChild(th);
-		}
-			table.appendChild(tr);
-	}*/
 	var caption = document.createElement('caption');
 	caption.id = "t00";
 	table.appendChild(caption);
@@ -217,7 +197,7 @@ function createTableToday(){
 		{
 			var td = document.createElement('TD');
 			td.id = 't'+"".concat(i,j);
-			td.width = "33%"
+			//td.width = "33%"
 			tr.appendChild(td);
 		}
 		table.appendChild(tr);
@@ -226,8 +206,6 @@ function createTableToday(){
 	document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
-	//document.getElementById('t01').innerHTML = 'Завтра (' + day[1].toLocaleString("ru", options) + ')';
-	//document.getElementById('t02').innerHTML = 'На неделю';
 	document.getElementById('t30').innerHTML = 'Утро';
 	document.getElementById('t31').innerHTML = 'День';
 	document.getElementById('t32').innerHTML = 'Вечер';
