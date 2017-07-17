@@ -21,7 +21,7 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
-var forecast = [];
+var forecast;
 
 
 function onClickCell(event){//функция события
@@ -87,6 +87,7 @@ function marketDrawWeekToday1(){
 	/*setTimeout(function(){
 		console.log(forecast);
 	}, 2000)*/
+	console.log(forecast);
 	if (forecast !== 'undefined'){
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
