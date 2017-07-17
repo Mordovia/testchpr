@@ -140,13 +140,13 @@ function marketGet(){
                     }, function(data) {
 					                   
 					var a = data.response.items;
-		console.log(a[0]);
+		console.log(a[1]);
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
 						
 		forecast = a.sort(compareRandom);
-		console.log(a[0]);
+		console.log(a[1]);
 		var b = a;
 		function compareRandom2(a, b) {
 			return Math.random() - 0.5;
