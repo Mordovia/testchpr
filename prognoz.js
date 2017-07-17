@@ -88,7 +88,7 @@ function marketDrawWeekToday1(){
 		console.log(forecast);
 	}, 2000)*/
 	console.log(forecast);
-	if (forecast !== 'undefined'){
+	if (typeof (forecast) !== 'undefined'){
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
 		market['photo_'+n] = forecast[n].thumb_photo;
