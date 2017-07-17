@@ -118,7 +118,7 @@ function marketDrawWeekToday1(){
 		document.getElementById(className[i].id).style.height = "450px";
 	}}
 	else {
-	marketGet();
+	marketDrawWeekToday1();
 	}
 }
 function marketGet(){
