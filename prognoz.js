@@ -21,7 +21,7 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
-var a = [];
+var forecast = [];
 
 
 function onClickCell(event){//функция события
@@ -84,36 +84,35 @@ function getRandomInt(min,max){
 }
 function marketDrawWeekToday1(){
 	marketGet();
-	console.log(a);
+	console.log(forecast);
 	for (var n=0; n<7; n++){
-                       	market['descript'+n] = a[n].title;
-                       	market['photo_'+n] = a[n].thumb_photo;
-			market['id'+n] = a[n].owner_id+'_'+a[n].id;
-			//console.log(market['id'+n]);
-                       	url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
+		market['descript'+n] = forecast[n].title;
+		market['photo_'+n] = forecast[n].thumb_photo;
+		market['id'+n] = forecast[n].owner_id+'_'+forecast[n].id;
+		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + forecast[n].id + '%2Fquery';
 		}
-		market['loaded'] = true;
-		url['loaded'] = true;
-		for (n=0; n<3; n++){
+	market['loaded'] = true;
+	url['loaded'] = true;
+	for (n=0; n<3; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
-		todayImage = new Image;
-		todayImage.width = 100;
-		todayImage.height = 100;
-		todayImage.src = market['photo_0'];
-		todayImage.title = market['descript0'];
-		todayImage.href = url['0'];
-		prognozWeek();
-		drawTableWeek();
-		drawTableToday();
-		var className = document.getElementsByClassName('container');
-		for(i = 0; i < className.length; i++){
-			document.getElementById(className[i].id).style.height = "450px";
-		}
+	todayImage = new Image;
+	todayImage.width = 100;
+	todayImage.height = 100;
+	todayImage.src = market['photo_0'];
+	todayImage.title = market['descript0'];
+	todayImage.href = url['0'];
+	prognozWeek();
+	drawTableWeek();
+	drawTableToday();
+	var className = document.getElementsByClassName('container');
+	for(i = 0; i < className.length; i++){
+		document.getElementById(className[i].id).style.height = "450px";
+	}
 }
 function marketGet(){
 	VK.api('market.get', {
@@ -121,15 +120,15 @@ function marketGet(){
 							'album_id': '16',
                     }, function(data) {
 					                   
-					a = data.response.items;
+					forecast = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
-		a.sort(compareRandom);
+		forecast.sort(compareRandom);
 		
 	}
 	      )
-	console.log(a);
+	console.log(forecast);
 }
 
 var buttonCreation2 = function(){
