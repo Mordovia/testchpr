@@ -34,8 +34,15 @@ function marketGet(){
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
-					
-		a.sort(compareRandom);		
+		a.sort(compareRandom);
+		console.log(a[0].title);
+		var b = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;
+					}
+		b.sort(compareRandom); 
+		console.log(a[0].title);
+		console.log(b[0].title);
 	for (var n=0; n<7; n++){
 		market['descript'+n] = a[n].title;
 		market['photo_'+n] = a[n].thumb_photo;
