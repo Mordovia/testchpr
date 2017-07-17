@@ -145,11 +145,12 @@ function marketGet(){
 					var a = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
+					}
 					var b = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;	
 					}
-		forecast = a.sort(compareRandom),
+		forecast = a.sort(compareRandom);
 		xtraForecat = b.sort(compareRandom);			
 	}	       
 	      )	
