@@ -259,11 +259,15 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
 	document.getElementById('t20').appendChild(todayImage);
 	document.getElementById('t20').colSpan = 2;
-	for (n=0; n<3; n++){
+	for (n=0; n<1; n++){
 		document.getElementById('t4'+n).appendChild(img[n]);
 		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
 	}
-	daySelected = 3;
+	for (n=1; n<3; n++){
+		document.getElementById('t4'+n).appendChild(img[n]);
+		document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
+	}
+	//daySelected = 3;
 	//joke();	
 }
 function createTableToday(){
