@@ -14,6 +14,12 @@ var market = {
 ['photo_'+n]: '',
 loaded: false
 };
+var marketXtra = {
+['id'+n]: 'none',
+['descript'+n]: 'none',
+['photo_'+n]: '',
+loaded: false
+};
 var url = {
 loaded: false
 };  
@@ -22,7 +28,7 @@ var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
 var forecast;
-
+var xtraForecast;
 
 function onClickCell(event){//функция события
 	/*if (typeof event.target.href !== 'undefined'){
@@ -84,7 +90,6 @@ function getRandomInt(min,max){
 }
 function marketDrawWeekToday1(){
 	marketGet();
-	console.log(forecast);
 	if (typeof (forecast) !== 'undefined'){
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
@@ -94,11 +99,22 @@ function marketDrawWeekToday1(){
 		}
 	market['loaded'] = true;
 	url['loaded'] = true;
-	for (n=0; n<3; n++){
+	for (n=0; n<1; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
+		img[n].href = url[n];
+		}
+	for (n=1; n<3; n++){
+		marketXtra['descript'+n] = xtraForecat[n].title;
+		marketXtra['photo_'+n] = xtraForecat[n].thumb_photo;
+		marketXtra['id'+n] = xtraForecat[n].owner_id+'_'+xtraForecat[n].id;
+		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + xtraForecat[n].id + '%2Fquery';
+		img[n] = new Image;
+		img[n].width = 50;
+		img[n].height = 50;
+		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
 		}
 	todayImage = new Image;
@@ -117,7 +133,7 @@ function marketDrawWeekToday1(){
 	else {
 		setTimeout(function(){
 		marketDrawWeekToday1();
-		}, 2000)
+		}, 1000)
 	}
 }
 function marketGet(){
@@ -129,8 +145,12 @@ function marketGet(){
 					var a = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
+					var b = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;	
 					}
 		forecast = a.sort(compareRandom);
+		xtraForecat = b.sort(compareRandom);			
 	}	       
 	      )	
 }
