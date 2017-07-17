@@ -112,7 +112,7 @@ function marketDrawWeekToday1(){
 		img[n].height = 50;
 		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
-		console.log(marketXtra);
+		//console.log(marketXtra);
 		}
 	todayImage = new Image;
 	todayImage.width = 100;
