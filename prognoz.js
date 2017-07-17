@@ -151,7 +151,9 @@ function marketGet(){
 					return Math.random() - 0.5;	
 					}
 		forecast = a.sort(compareRandom);
-		xtraForecat = b.sort(compareRandom);			
+		xtraForecat = b.sort(compareRandom);	
+		console.log(forecast);
+		console.log(xtraForecat);
 	}	       
 	      )	
 }
