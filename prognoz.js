@@ -118,10 +118,7 @@ function marketDrawWeekToday1(){
 		document.getElementById(className[i].id).style.height = "450px";
 	}}
 	else {
-		setTimeout(function(){
-		//console.log(forecast);
-	}, 2000)
-	marketDrawWeekToday1();
+		marketGet();
 	}
 }
 function marketGet(){
@@ -137,6 +134,7 @@ function marketGet(){
 		forecast = a.sort(compareRandom);
 	}	       
 	      )
+	setTimeout(function(){}, 2000)
 }
 
 var buttonCreation2 = function(){
