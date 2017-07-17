@@ -85,9 +85,6 @@ function onClickCell(event){//функция события
 	}*/
 }
 
-//function getRandomInt(min,max){
-//	return Math.floor(min + Math.random() * (max + 1 - min));
-//}
 function marketDrawWeekToday1(){
 	marketGet();
 	if (typeof (forecast) !== 'undefined'){
@@ -147,10 +144,10 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 					var b = data.response.items;
-					//getRandomInt(min,max);
+					var m = getRandomInt(0,b);
 		
 		forecast = a.sort(compareRandom);
-		xtraForecat = b.sort(compareRandom);	
+		xtraForecat = m.sort(compareRandom);	
 		console.log(forecast);
 		console.log(xtraForecat);
 	}	       
