@@ -7,6 +7,10 @@ var attchId = [];
 var text;
 var path;
 
+function getRandomInt(min,max){
+	return Math.floor(min + Math.random() * (max + 1 - min));
+}
+
 function wallGet(){
 	clearScreen();
 		VK.api('wall.get', {
