@@ -125,11 +125,11 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 		forecast = a.sort(compareRandom);
-	}
-	       setTimeout(function(){
+	}	       
+	      )
+	setTimeout(function(){
 		console.log(forecast);
 	}, 2000)
-	      )
 }
 
 var buttonCreation2 = function(){
