@@ -21,7 +21,7 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
-var a;
+var a = [];
 
 
 function onClickCell(event){//функция события
