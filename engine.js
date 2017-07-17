@@ -31,7 +31,7 @@ var buttonCreation = function(){
 	btn.id = 'yes'
 	btn.type = 'button'
 	btn.value = 'Да'
-	btn.setAttribute('onclick', 'marketGet();')
+	btn.setAttribute('onclick', 'marketDrawWeekToday1();')
 	buttonYes.appendChild(btn);
 	var buttonExit = document.getElementById('newPrognoz');
 	var btn2 = document.createElement('input')
