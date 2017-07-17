@@ -21,7 +21,6 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
-var forecast = [];
 
 
 function onClickCell(event){//функция события
@@ -115,6 +114,7 @@ function marketDrawWeekToday1(){
 	}
 }
 function marketGet(){
+	var forecast = [];
 	VK.api('market.get', {
 							'owner_id': '-121807904', 
 							'album_id': '16',
