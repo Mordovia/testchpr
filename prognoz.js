@@ -84,9 +84,6 @@ function getRandomInt(min,max){
 }
 function marketDrawWeekToday1(){
 	marketGet();
-	/*setTimeout(function(){
-		console.log(forecast);
-	}, 2000)*/
 	console.log(forecast);
 	if (typeof (forecast) !== 'undefined'){
 	for (var n=0; n<7; n++){
@@ -118,7 +115,9 @@ function marketDrawWeekToday1(){
 		document.getElementById(className[i].id).style.height = "450px";
 	}}
 	else {
+		setTimeout(function(){
 		marketGet();
+		}, 2000)*/
 	}
 }
 function marketGet(){
