@@ -18,7 +18,7 @@ var marketXtra = {
 ['descript'+n]: 'none',
 ['photo_'+n]: '',
 };
-var url;  
+var url=[];  
 var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
