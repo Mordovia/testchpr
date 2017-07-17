@@ -125,6 +125,7 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 		a.sort(compareRandom);
+		console.log(a);
 	}
 	      )
 }
