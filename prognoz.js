@@ -15,9 +15,9 @@ var market = {
 loaded: false
 };
 var marketXtra = {
-['id'+n]: 'none',
-['descript'+n]: 'none',
-['photo_'+n]: '',
+['id_'+n]: 'none',
+['descr'+n]: 'none',
+['ph_'+n]: '',
 };
 var url = {
 loaded: false
@@ -103,9 +103,9 @@ function marketDrawWeekToday1(){
 		img[n].href = url[n];
 		}
 	for (n=1; n<3; n++){
-		marketXtra['descript'+n] = xtraForecast[n].title;
-		marketXtra['photo_'+n] = xtraForecast[n].thumb_photo;
-		marketXtra['id'+n] = xtraForecast[n].owner_id+'_'+xtraForecast[n].id;
+		marketXtra['descr'+n] = xtraForecast[n].title;
+		marketXtra['ph_'+n] = xtraForecast[n].thumb_photo;
+		marketXtra['id_'+n] = xtraForecast[n].owner_id+'_'+xtraForecast[n].id;
 		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + xtraForecast[n].id + '%2Fquery';
 		img[n] = new Image;
 		img[n].width = 50;
@@ -265,7 +265,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	}
 	for (n=1; n<3; n++){
 		document.getElementById('t4'+n).appendChild(img[n]);
-		document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
+		document.getElementById('t5'+n).innerHTML =  marketXtra['descr'+n];
 	}
 	//daySelected = 3;
 	//joke();	
