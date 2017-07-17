@@ -84,7 +84,9 @@ function getRandomInt(min,max){
 }
 function marketDrawWeekToday1(){
 	marketGet();
-	console.log(forecast);
+	setTimeout(function(){
+		console.log(forecast);
+	}, 2000)
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
 		market['photo_'+n] = forecast[n].thumb_photo;
@@ -127,9 +129,6 @@ function marketGet(){
 		forecast = a.sort(compareRandom);
 	}	       
 	      )
-	setTimeout(function(){
-		console.log(forecast);
-	}, 2000)
 }
 
 var buttonCreation2 = function(){
