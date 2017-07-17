@@ -35,25 +35,33 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 		a.sort(compareRandom);
-		console.log(a[0].title);
 		var b = a.slice();
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
-		b.sort(compareRandom); 
-		console.log(a[0].title);
-		console.log(b[0].title);
+		b.sort(compareRandom); 		
 	for (var n=0; n<7; n++){
 		market['descript'+n] = a[n].title;
 		market['photo_'+n] = a[n].thumb_photo;
 		market['id'+n] = a[n].owner_id+'_'+a[n].id;
 		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-	for (n=0; n<3; n++){
+	for (n=0; n<1; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
+		img[n].href = url[n];
+		}
+		for (n=0; n<3; n++){
+		marketXtra['descript'+n] = b[n].title;
+		marketXtra['photo_'+n] = b[n].thumb_photo;
+		marketXtra['id'+n] = b[n].owner_id+'_'+b[n].id;
+		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + b[n].id + '%2Fquery';	
+		img[n] = new Image;
+		img[n].width = 50;
+		img[n].height = 50;
+		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
 		}
 	todayImage = new Image;
