@@ -46,8 +46,7 @@ function marketGet(){
 		function compareRandom2(a, b) {
 			return Math.random() - 0.5;
 		}	
-		xtraForecast = b.sort(compareRandom2);
-		if (typeof (forecast) !== 'undefined'){
+		xtraForecast = b.sort(compareRandom2);		
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
 		market['photo_'+n] = forecast[n].thumb_photo;
@@ -89,11 +88,6 @@ function marketGet(){
 	var className = document.getElementsByClassName('container');
 	for(i = 0; i < className.length; i++){
 		document.getElementById(className[i].id).style.height = "450px";
-	}}
-	else {
-		setTimeout(function(){
-		marketDrawWeekToday1();
-		}, 1000)
 	}
 	}	       
 	      )	
