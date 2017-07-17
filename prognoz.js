@@ -104,10 +104,10 @@ function marketDrawWeekToday1(){
 		img[n].href = url[n];
 		}
 	for (n=1; n<3; n++){
-		marketXtra['descript'+n] = xtraForecat[n].title;
-		marketXtra['photo_'+n] = xtraForecat[n].thumb_photo;
-		marketXtra['id'+n] = xtraForecat[n].owner_id+'_'+xtraForecat[n].id;
-		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + xtraForecat[n].id + '%2Fquery';
+		marketXtra['descript'+n] = xtraForecast[n].title;
+		marketXtra['photo_'+n] = xtraForecast[n].thumb_photo;
+		marketXtra['id'+n] = xtraForecast[n].owner_id+'_'+xtraForecast[n].id;
+		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + xtraForecast[n].id + '%2Fquery';
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
@@ -149,9 +149,9 @@ function marketGet(){
 					}
 		
 		forecast = a.sort(compareRandom);
-		xtraForecat = b.sort(compareRandom2);	
+		xtraForecast = b.sort(compareRandom2);	
 		console.log(forecast);
-		console.log(xtraForecat);
+		console.log(xtraForecast);
 	}	       
 	      )	
 }
