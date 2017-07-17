@@ -36,7 +36,7 @@ function marketGet(){
 					}
 		a.sort(compareRandom);
 		console.log(a[0].title);
-		var b = data.response.items;
+		var b = a.slice();
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
