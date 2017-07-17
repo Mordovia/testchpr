@@ -117,7 +117,7 @@ function marketDrawWeekToday1(){
 	else {
 		setTimeout(function(){
 		marketGet();
-		}, 2000)*/
+		}, 2000)
 	}
 }
 function marketGet(){
@@ -132,10 +132,7 @@ function marketGet(){
 					}
 		forecast = a.sort(compareRandom);
 	}	       
-	      )
-	setTimeout(function(){
-	return forecast;
-	}, 2000)
+	      )	
 }
 
 var buttonCreation2 = function(){
