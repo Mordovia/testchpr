@@ -113,6 +113,7 @@ function marketDrawWeekToday1(){
 		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
 		//console.log(marketXtra);
+		console.log(forecast[0].title);
 		}
 	todayImage = new Image;
 	todayImage.width = 100;
@@ -140,14 +141,14 @@ function marketGet(){
                     }, function(data) {
 					                   
 					var a = data.response.items;
-		console.log(a[0]);
+		console.log(a[0].title);
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
 						
 		forecast = a.sort(compareRandom);
-		console.log(a[0]);
-		console.log(forecast);
+		console.log(a[0].title);
+		console.log(forecast[0].title);
 		var b = a;
 		function compareRandom2(a, b) {
 			return Math.random() - 0.5;
