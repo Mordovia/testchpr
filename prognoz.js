@@ -134,7 +134,9 @@ function marketGet(){
 		forecast = a.sort(compareRandom);
 	}	       
 	      )
-	setTimeout(function(){}, 2000)
+	setTimeout(function(){
+	return forecast;
+	}, 2000)
 }
 
 var buttonCreation2 = function(){
@@ -165,7 +167,7 @@ function prognozWeek(){
 		imgWeek[n].src = market['photo_'+n];
 		imgWeek[n].href = url[n];
 	}
-		console.log(imgWeek);
+		//console.log(imgWeek);
 }
 
 function drawTableWeek() {//заполняем таблицу для исходного случая "на неделю" - в правый див
