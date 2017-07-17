@@ -53,7 +53,7 @@ function marketGet(){
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
-		for (n=0; n<3; n++){
+		for (n=1; n<3; n++){
 		marketXtra['descript'+n] = b[n].title;
 		marketXtra['photo_'+n] = b[n].thumb_photo;
 		marketXtra['id'+n] = b[n].owner_id+'_'+b[n].id;
