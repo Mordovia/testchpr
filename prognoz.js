@@ -114,6 +114,7 @@ function marketDrawWeekToday1(){
 		img[n].href = url[n];
 		//console.log(marketXtra);
 		console.log(forecast[0].title);
+		console.log(xtraForecast[0].title);
 		}
 	todayImage = new Image;
 	todayImage.width = 100;
