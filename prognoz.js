@@ -116,7 +116,7 @@ function marketDrawWeekToday1(){
 	}}
 	else {
 		setTimeout(function(){
-		marketGet();
+		marketDrawWeekToday1();
 		}, 2000)
 	}
 }
