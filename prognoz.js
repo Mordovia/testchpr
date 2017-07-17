@@ -143,8 +143,8 @@ function marketGet(){
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
-					var b = data.response.items;
-					function compareRandom2(b, a) {
+					var b = a;
+					function compareRandom2(a, b) {
 					return Math.random() - 0.5;
 					}		
 		forecast = a.sort(compareRandom);
