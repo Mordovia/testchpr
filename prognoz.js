@@ -81,19 +81,9 @@ function onClickCell(event){//функция события
 function getRandomInt(min,max){
 	return Math.floor(min + Math.random() * (max + 1 - min));
 }
-
-function marketGet(){
-	VK.api('market.get', {
-							'owner_id': '-121807904', 
-							'album_id': '16',
-                    }, function(data) {
-					                   
-					var a = data.response.items;
-					function compareRandom(a, b) {
-					return Math.random() - 0.5;
-					}
-		a.sort(compareRandom);
-		for (var n=0; n<7; n++){
+function marketDrawWeekToday1(){
+	marketGet();
+	for (var n=0; n<7; n++){
                        	market['descript'+n] = a[n].title;
                        	market['photo_'+n] = a[n].thumb_photo;
 			market['id'+n] = a[n].owner_id+'_'+a[n].id;
@@ -122,7 +112,21 @@ function marketGet(){
 		for(i = 0; i < className.length; i++){
 			document.getElementById(className[i].id).style.height = "450px";
 		}
-	})}
+}
+function marketGet(){
+	VK.api('market.get', {
+							'owner_id': '-121807904', 
+							'album_id': '16',
+                    }, function(data) {
+					                   
+					var a = data.response.items;
+					function compareRandom(a, b) {
+					return Math.random() - 0.5;
+					}
+		a.sort(compareRandom);
+	}
+	      )
+}
 
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
