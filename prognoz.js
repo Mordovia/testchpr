@@ -147,7 +147,7 @@ function marketGet(){
 						
 		forecast = a.sort(compareRandom);
 		console.log(a[0]);
-		console.log(forecast[0]);
+		console.log(forecast);
 		var b = a;
 		function compareRandom2(a, b) {
 			return Math.random() - 0.5;
