@@ -84,6 +84,7 @@ function getRandomInt(min,max){
 }
 function marketDrawWeekToday1(){
 	marketGet();
+	console.log(a);
 	for (var n=0; n<7; n++){
                        	market['descript'+n] = a[n].title;
                        	market['photo_'+n] = a[n].thumb_photo;
@@ -125,9 +126,10 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 		a.sort(compareRandom);
-		console.log(a);
+		
 	}
 	      )
+	console.log(a);
 }
 
 var buttonCreation2 = function(){
