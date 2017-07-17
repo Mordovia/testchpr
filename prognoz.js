@@ -21,6 +21,7 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
+var a;
 
 
 function onClickCell(event){//функция события
@@ -119,7 +120,7 @@ function marketGet(){
 							'album_id': '16',
                     }, function(data) {
 					                   
-					var a = data.response.items;
+					a = data.response.items;
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
