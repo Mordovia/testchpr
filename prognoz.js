@@ -12,16 +12,13 @@ var market = {
 ['id'+n]: 'none',
 ['descript'+n]: 'none',
 ['photo_'+n]: '',
-loaded: false
 };
 var marketXtra = {
 ['id'+n]: 'none',
 ['descript'+n]: 'none',
 ['photo_'+n]: '',
 };
-var url = {
-loaded: false
-};  
+var url;  
 var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
@@ -40,21 +37,17 @@ function marketGet(){
 					}
 						
 		forecast = a.sort(compareRandom);
-		console.log(a[0].title);
 		console.log(forecast[0].title);
-		var b = a;
-		function compareRandom2(a, b) {
-			return Math.random() - 0.5;
-		}	
-		xtraForecast = b.sort(compareRandom2);		
+		xtraForecast = forecast.sort(compareRandom);
+		console.log(xtraForecast[0].title);
 	for (var n=0; n<7; n++){
 		market['descript'+n] = forecast[n].title;
 		market['photo_'+n] = forecast[n].thumb_photo;
 		market['id'+n] = forecast[n].owner_id+'_'+forecast[n].id;
 		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + forecast[n].id + '%2Fquery';
 		}
-	market['loaded'] = true;
-	url['loaded'] = true;
+	//market['loaded'] = true;
+	//url['loaded'] = true;
 	for (n=0; n<1; n++){
 		img[n] = new Image;
 		img[n].width = 50;
@@ -73,9 +66,9 @@ function marketGet(){
 		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
 		//console.log(marketXtra);
-		console.log(forecast[0].title);
-		console.log(xtraForecast[0].title);
 		}
+	console.log(forecast[0].title);
+	console.log(xtraForecast[0].title);
 	todayImage = new Image;
 	todayImage.width = 100;
 	todayImage.height = 100;
@@ -139,17 +132,6 @@ function drawTableWeek() {//заполняем таблицу для исход�
 		document.getElementById(w+'1').appendChild(imgWeek[n]);
 		document.getElementById(w+'2').innerHTML =  market['descript'+n];
 	}
-	/*document.getElementById('11').appendChild(imgWeek[1]);//нужно взять "день" из сегодня
-	document.getElementById('12').innerHTML =  market['descript1'];
-	document.getElementById('21').appendChild(imgWeek[4]);//"день" из завтра
-	document.getElementById('22').innerHTML =  market['descript4'];
-	document.getElementById('31').appendChild(imgWeek[0]);//и просто у меня [0] из массива где 'market.get' не использовался
-	document.getElementById('32').innerHTML =  market['descript0'];
-	for (n=4; n<8; n++){//остальные задаем через цикл
-		var w = n+3;
-		document.getElementById(n+'1').appendChild(imgWeek[w]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+w];
-	}*/
 }
 
 function createTableWeek(){
