@@ -144,10 +144,12 @@ function marketGet(){
 					return Math.random() - 0.5;
 					}
 					var b = data.response.items;
-					
+					function compareRandom2(a, b) {
+					return Math.random() - 0.5;
+					}
 		
 		forecast = a.sort(compareRandom);
-		xtraForecat = getRandomInt(0,b);	
+		xtraForecat = b.sort(compareRandom2);	
 		console.log(forecast);
 		console.log(xtraForecat);
 	}	       
