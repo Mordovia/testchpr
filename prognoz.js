@@ -23,8 +23,7 @@ var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage;
-var forecast;
-var xtraForecast;
+
 
 function marketGet(){
 	VK.api('market.get', {
@@ -35,40 +34,21 @@ function marketGet(){
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
-						
-		forecast = a.sort(compareRandom);
-		console.log(forecast[0].title);
-		xtraForecast = forecast;
-		console.log(xtraForecast[0].title);
+					
+		a.sort(compareRandom);		
 	for (var n=0; n<7; n++){
-		market['descript'+n] = forecast[n].title;
-		market['photo_'+n] = forecast[n].thumb_photo;
-		market['id'+n] = forecast[n].owner_id+'_'+forecast[n].id;
-		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + forecast[n].id + '%2Fquery';
+		market['descript'+n] = a[n].title;
+		market['photo_'+n] = a[n].thumb_photo;
+		market['id'+n] = a[n].owner_id+'_'+a[n].id;
+		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-	//market['loaded'] = true;
-	//url['loaded'] = true;
-	for (n=0; n<1; n++){
+	for (n=0; n<3; n++){
 		img[n] = new Image;
 		img[n].width = 50;
 		img[n].height = 50;
 		img[n].src = market['photo_'+n];
 		img[n].href = url[n];
 		}
-	for (n=1; n<3; n++){
-		marketXtra['descript'+n] = xtraForecast[n].title;
-		marketXtra['photo_'+n] = xtraForecast[n].thumb_photo;
-		marketXtra['id'+n] = xtraForecast[n].owner_id+'_'+xtraForecast[n].id;
-		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + xtraForecast[n].id + '%2Fquery';
-		img[n] = new Image;
-		img[n].width = 50;
-		img[n].height = 50;
-		img[n].src = marketXtra['photo_'+n];
-		img[n].href = url[n];
-		//console.log(marketXtra);
-		}
-	console.log(forecast[0].title);
-	console.log(xtraForecast[0].title);
 	todayImage = new Image;
 	todayImage.width = 100;
 	todayImage.height = 100;
@@ -181,11 +161,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	for (n=0; n<3; n++){
 		document.getElementById('t4'+n).appendChild(img[n]);
 		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
-	}
-	for (n=1; n<3; n++){
-		document.getElementById('t4'+n).appendChild(img[n]);
-		document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
-	}
+	}	
 	//daySelected = 3;
 	//joke();	
 }
