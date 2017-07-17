@@ -140,18 +140,18 @@ function marketGet(){
                     }, function(data) {
 					                   
 					var a = data.response.items;
+		console.log(a[0]);
 					function compareRandom(a, b) {
 					return Math.random() - 0.5;
 					}
 						
 		forecast = a.sort(compareRandom);
+		console.log(a[0]);
 		var b = a;
 		function compareRandom2(a, b) {
 			return Math.random() - 0.5;
 		}	
-		xtraForecast = b.sort(compareRandom2);	
-		console.log(forecast[0]);
-		console.log(xtraForecast[0]);
+		xtraForecast = b.sort(compareRandom2);
 	}	       
 	      )	
 }
