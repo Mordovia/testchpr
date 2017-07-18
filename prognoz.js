@@ -284,7 +284,7 @@ function onClickCell(event){//функция события по клику на
 function postItOnWall(){
 	$(document).ready(function() {
 		//var testdiv = document.getElementById("testdiv");
-		html2canvas($("#testdiv"), {
+		html2canvas($("#container1"), {
 			onrendered: function(canvas) {
 				// canvas is the final rendered <canvas> element
 				var myImage = canvas.toDataURL("image/png");
