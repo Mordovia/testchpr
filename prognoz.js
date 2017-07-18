@@ -212,7 +212,8 @@ function createTableToday(){
 		table.appendChild(tr);
 	}
 	element.appendChild(table);
-	document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	//document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
+	document.getElementById('t00').innerHTML = day[0].toLocaleString("ru", options2);
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById('t30').innerHTML = 'Утро';
@@ -262,7 +263,7 @@ function onClickCell(event){//функция события
 	var m = n-1;
 	var k = n*2;
 	var l = k+1;
-	document.getElementById('t00').innerHTML = day[m].toLocaleString("ru", options);
+	document.getElementById('t00').innerHTML = day[m].toLocaleString("ru", options2);
 	document.getElementById('t10').innerHTML =  todayImage[m].title;
 	document.getElementById('t20').appendChild(todayImage[m]);
 	document.getElementById('t40').appendChild(img[m]);
