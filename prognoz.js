@@ -161,14 +161,11 @@ function createTableWeek(){
 function drawTableToday() {//заполняем таблицу для исходного случая "сегодня"
 	//clearScreen();
 	createTableToday();
-	document.getElementById("t00").style.fontWeight = "bold";
-	document.getElementById("t00").style.border = "10px solid #fff";
-	document.getElementById("t00").style.opacity = "1";
+	
 	document.getElementById('t10').innerHTML =  todayImage[0].title;
-	document.getElementById('t10').colSpan = 2;
-	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
+	
 	document.getElementById('t20').appendChild(todayImage[0]);
-	document.getElementById('t20').colSpan = 2;
+	
 	for (n=0; n<1; n++){
 		document.getElementById('t4'+n).appendChild(img[n]);
 		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
@@ -216,6 +213,12 @@ function createTableToday(){
 	document.getElementById('t30').innerHTML = 'Утро';
 	document.getElementById('t31').innerHTML = 'День';
 	document.getElementById('t32').innerHTML = 'Вечер';
+	document.getElementById("t00").style.fontWeight = "bold";
+	document.getElementById("t00").style.border = "10px solid #fff";
+	document.getElementById("t00").style.opacity = "1";
+	document.getElementById('t10').colSpan = 2;
+	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
+	document.getElementById('t20').colSpan = 2;
 	buttonCreation2();
 }
 function clearStyle() {
