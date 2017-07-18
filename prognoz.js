@@ -292,7 +292,7 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#table'), {
+	html2canvas($('header'), {
 		allowTaint: true,
 		taintTest: false,
 		onrendered: function(canvas) {
