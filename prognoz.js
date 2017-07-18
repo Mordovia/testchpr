@@ -245,14 +245,12 @@ function onClickImg(event){//функция события
 	parent.window.location.href = event.target.href;
 }
 function onClickCell(event){//функция события
-	console.log(event.target.id);
 	document.getElementById('table').innerHTML = "";
 	document.getElementById('postPrognoz').innerHTML = "";
 	document.getElementById('newPrognoz').innerHTML = "";
 	createTableToday();	
 	var str = event.target.id;
 	var n = str.charAt(0);
-	console.log(n);
 	var m = n-1;
 	var k = n*2;
 	var l = k+1;
