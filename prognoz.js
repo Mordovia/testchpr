@@ -249,6 +249,7 @@ function onClickCell(event){//функция события
 	createTableToday();	
 	var str = event.target.id;
 	var n = str.charAt(0);
+	console.log(n);
 	var k = n*2;
 	var l = k+1;
 	document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
@@ -256,8 +257,6 @@ function onClickCell(event){//функция события
 	document.getElementById('t20').appendChild(todayImage[n]);
 	document.getElementById('t40').appendChild(img[n]);
 	document.getElementById('t50').innerHTML =  market['descript'+n];
-	console.log(k);
-	console.log(l);
 	document.getElementById('t41').appendChild(img[k]);
 	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
 	document.getElementById('t42').appendChild(img[l]);
