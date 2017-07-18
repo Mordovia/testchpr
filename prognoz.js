@@ -292,9 +292,10 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('header'), {
+	html2canvas($('#avatar'), {
 		allowTaint: true,
 		taintTest: true,
+		logging : true,
 		useCORS:true,
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
