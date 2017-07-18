@@ -249,7 +249,7 @@ function onClickCell(event){//функция события
 		for (n=0; n<8; n++){
 			if (event.target.id = n+m){
 				k = n*2;
-				l = k+1
+				l = k+1;
 			document.getElementById('table2').innerHTML = "";	
 			createTableToday();
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
