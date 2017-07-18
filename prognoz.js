@@ -125,11 +125,11 @@ function drawTableWeek() {//заполняем таблицу для исход�
 	//daySelected = '2';
 	document.getElementById('33').innerHTML = '';
 	for (n=0; n<7; n++){
-		//var w = n+1;
-		document.getElementById(n+'1').innerHTML = '';
-		document.getElementById(n+'0').innerHTML = day[n].toLocaleString("ru", options);
-		document.getElementById(n+'1').appendChild(imgWeek[n]);
-		document.getElementById(n+'2').innerHTML =  market['descript'+n];
+		var w = n+1;
+		document.getElementById(w+'1').innerHTML = '';
+		document.getElementById(w+'0').innerHTML = day[n].toLocaleString("ru", options);
+		document.getElementById(w+'1').appendChild(imgWeek[n]);
+		document.getElementById(w+'2').innerHTML =  market['descript'+n];
 	}
 }
 
@@ -140,7 +140,7 @@ function createTableWeek(){
 		var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
-	for (var i=0; i<9; i++){
+	for (var i=1; i<9; i++){
 		var tr = document.createElement('TR');
 		tr.id = 'tr'+i;
 		tr.addEventListener('click', onClickCell, false);
@@ -246,8 +246,8 @@ function onClickImg(event){//функция события
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	document.getElementById('table').innerHTML = "";
-	document.getElementById('pprg').innerHTML = "";
-	document.getElementById('nprg').innerHTML = "";
+	document.getElementById('postPrognoz').innerHTML = "";
+	document.getElementById('newPrognoz').innerHTML = "";
 	createTableToday();	
 	var str = event.target.id;
 	var n = str.charAt(0);
