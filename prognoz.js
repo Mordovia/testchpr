@@ -292,7 +292,7 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#container1'), {
+	html2canvas($('#wiseMan'), {
   onrendered: function(canvas) {
     var img = canvas.toDataURL()
     window.open(img);
