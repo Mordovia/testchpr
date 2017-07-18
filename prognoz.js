@@ -134,12 +134,13 @@ function drawTableWeek() {//заполняем таблицу для исход�
 function createTableWeek(){
 	var element = document.getElementById('table2');
 	var table =  document.createElement('table'); 
-	element.addEventListener('click', onClickCell, false);
+	
 		var caption = document.createElement('caption');
 	caption.id = "00";
 	table.appendChild(caption);
 	for (var i=0; i<9; i++){
 		var tr = document.createElement('TR');
+		tr.addEventListener('click', onClickCell, false);
     	for (var j=0;j<4;j++)
 		{
 			var td = document.createElement('TD'); //создаем td-шку
