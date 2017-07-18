@@ -293,10 +293,10 @@ function postItOnWall(){
 		});
 	});*/
 	html2canvas($('#container1'), {
-		allowTaint: true,
-  onrendered: function(canvas) {
-    var img = canvas.toDataURL()
-    window.open(img);
-  }
-});	
+		allowTaint: false,
+		onrendered: function(canvas) {
+			var img = canvas.toDataURL()
+			window.open(img);
+		}
+	});	
 }
