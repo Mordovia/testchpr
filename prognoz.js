@@ -250,9 +250,9 @@ function onClickCell(event){//функция события
 			if (event.target.id = n+m){
 				k = n*2;
 				l = k+1;
-			document.getElementById('table2').innerHTML = "";	
+			document.getElementById('table1').innerHTML = "";	
 			createTableToday();
-			/*document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
+			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 			document.getElementById('t10').innerHTML =  todayImage[n].title;
 			document.getElementById('t20').appendChild(todayImage[n]);
 			document.getElementById('t40').appendChild(img[n]);
@@ -262,7 +262,7 @@ function onClickCell(event){//функция события
 			document.getElementById('t41').appendChild(img[k]);
 			document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
 			document.getElementById('t42').appendChild(img[l]);
-			document.getElementById('t52').innerHTML =  marketXtra['descript'+l];*/
+			document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 			}
 		}
 		
