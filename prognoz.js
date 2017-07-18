@@ -215,8 +215,8 @@ function createTableToday(){
 	//document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById('t00').innerHTML = day[0].toLocaleString("ru", options2);
 	var str = document.getElementById('t00').innerHTML;
-	var n = str[0].toUpperCase() + str.slice(1);
-	document.getElementById('t00').innerHTML = n;
+	var newStr = str[0].toUpperCase() + str.slice(1);//возвращает первый элемент строки в виде заглавной буквы и прибавляет копию массива, начиная со второго символа
+	document.getElementById('t00').innerHTML = newStr;
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById('t30').innerHTML = 'Утро';
@@ -267,6 +267,9 @@ function onClickCell(event){//функция события
 	var k = n*2;
 	var l = k+1;
 	document.getElementById('t00').innerHTML = day[m].toLocaleString("ru", options2);
+	var str = document.getElementById('t00').innerHTML;
+	var newStr = str[0].toUpperCase() + str.slice(1);
+	document.getElementById('t00').innerHTML = newStr;
 	document.getElementById('t10').innerHTML =  todayImage[m].title;
 	document.getElementById('t20').appendChild(todayImage[m]);
 	document.getElementById('t40').appendChild(img[m]);
