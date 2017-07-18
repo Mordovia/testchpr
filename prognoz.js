@@ -174,8 +174,9 @@ function drawTableToday() {//заполняем таблицу для исход
 		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
 	}
 	for (n=1; n<3; n++){
-		document.getElementById('t4'+n).appendChild(img[n]);
-		document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
+		var m = n+1;
+		document.getElementById('t4'+n).appendChild(img[m]);
+		document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+m];
 	}		
 	//daySelected = 3;
 	//joke();	
@@ -252,13 +253,14 @@ function onClickCell(event){//функция события
 	var str = event.target.id;
 	var n = str.charAt(0);
 	console.log(n);
+	var m = n-1;
 	var k = n*2;
 	var l = k+1;
 	document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
-	document.getElementById('t10').innerHTML =  todayImage[n].title;
-	document.getElementById('t20').appendChild(todayImage[n]);
+	document.getElementById('t10').innerHTML =  todayImage[m].title;
+	document.getElementById('t20').appendChild(todayImage[m]);
 	document.getElementById('t40').appendChild(img[n]);
-	document.getElementById('t50').innerHTML =  market['descript'+n];
+	document.getElementById('t50').innerHTML =  market['descript'+m];
 	document.getElementById('t41').appendChild(img[k]);
 	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
 	document.getElementById('t42').appendChild(img[l]);
