@@ -256,7 +256,7 @@ function onClickCell(event){//функция события
 	var m = n-1;
 	var k = n*2;
 	var l = k+1;
-	document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
+	document.getElementById('t00').innerHTML = day[m].toLocaleString("ru", options);
 	document.getElementById('t10').innerHTML =  todayImage[m].title;
 	document.getElementById('t20').appendChild(todayImage[m]);
 	document.getElementById('t40').appendChild(img[m]);
