@@ -246,27 +246,23 @@ function onClickImg(event){//функция события
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	document.getElementById('table').innerHTML = "";
-	createTableToday();
-	for (m=0; m<3; m++){		
-		for (n=0; n<8; n++){
-			if (event.target.id = n+m){
-				k = n*2;
-				l = k+1;
-			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
-			document.getElementById('t10').innerHTML =  todayImage[n].title;
-			document.getElementById('t20').appendChild(todayImage[n]);
-			document.getElementById('t40').appendChild(img[n]);
-			document.getElementById('t50').innerHTML =  market['descript'+n];
-				console.log(k);
-				console.log(l);
-			document.getElementById('t41').appendChild(img[k]);
-			document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
-			document.getElementById('t42').appendChild(img[l]);
-			document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
-			}
-		}
-		
-	}
+	createTableToday();	
+	var str = event.target.id;
+	var n = str.charAt(0);
+	var k = n*2;
+	var l = k+1;
+	document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
+	document.getElementById('t10').innerHTML =  todayImage[n].title;
+	document.getElementById('t20').appendChild(todayImage[n]);
+	document.getElementById('t40').appendChild(img[n]);
+	document.getElementById('t50').innerHTML =  market['descript'+n];
+	console.log(k);
+	console.log(l);
+	document.getElementById('t41').appendChild(img[k]);
+	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
+	document.getElementById('t42').appendChild(img[l]);
+	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
+
 	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
