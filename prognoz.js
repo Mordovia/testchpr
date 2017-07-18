@@ -245,13 +245,13 @@ function onClickImg(event){//функция события
 }
 function onClickCell(event){//функция события
 	console.log(event.target.id);
+	document.getElementById('table').innerHTML = "";
+	createTableToday();
 	for (m=0; m<3; m++){		
 		for (n=0; n<8; n++){
 			if (event.target.id = n+m){
 				k = n*2;
 				l = k+1;
-			document.getElementById('table').innerHTML = "";	
-			createTableToday();
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 			document.getElementById('t10').innerHTML =  todayImage[n].title;
 			document.getElementById('t20').appendChild(todayImage[n]);
