@@ -7,6 +7,11 @@ var options = {
   month: 'short',
   day: 'numeric',
   };
+var options2 = {
+	weekday: 'long',
+	month: 'short',
+	day: 'numeric',
+};
 var n=0;
 var market = {
 ['id'+n]: 'none',
