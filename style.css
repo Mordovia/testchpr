@@ -110,6 +110,11 @@ margin:10px;
 {
 font:normal 18px Antiqua, Arial, sans-serif;
 }
+#testdiv{
+	height: 50px;
+	width: 50px;
+	background-color: #2C7CC3;
+}
 h1, h2, .h1, .h2, h3, h4, .h3, .h4
 {
 font-family:Antiqua, sans-serif; 
