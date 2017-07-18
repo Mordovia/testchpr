@@ -51,12 +51,13 @@ function marketGet(){
 		market['id'+n] = a[n].owner_id+'_'+a[n].id;
 		url[n] = 'http://vk.com/market-121807904?w=product-121807904_' + a[n].id + '%2Fquery';
 		}
-	for (n=0; n<1; n++){
-		img[n] = new Image;
-		img[n].width = 50;
-		img[n].height = 50;
-		img[n].src = market['photo_'+n];
-		img[n].href = url[n];
+	for (n=0; n<8; n++){
+		imgMorning[n] = new Image;
+		imgMorning[n].width = 50;
+		imgMorning[n].height = 50;
+		imgMorning[n].src = market['photo_'+n];
+		imgMorning[n].href = url[n];
+		imgMorning[n].addEventListener('click', onClickImg, false);
 		}
 		for (n=1; n<16; n++){
 		marketXtra['descript'+n] = b[n].title;
@@ -172,7 +173,7 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById('t20').appendChild(todayImage[0]);
 	
 	for (n=0; n<1; n++){
-		document.getElementById('t4'+n).appendChild(img[n]);
+		document.getElementById('t4'+n).appendChild(imgMorning[n]);
 		document.getElementById('t5'+n).innerHTML =  market['descript'+n];
 	}
 	for (n=1; n<3; n++){
@@ -253,10 +254,10 @@ function joke() {
 		}
 	}
 })}
-function onClickImg(event){//функция события
+function onClickImg(event){//функция события по клику на картинки в таблице "День"
 	parent.window.location.href = event.target.href;
 }
-function onClickCell(event){//функция события
+function onClickCell(event){//функция события по клику на ячейки в табоице "неделя"
 	document.getElementById('table').innerHTML = "";
 	document.getElementById('postPrognoz').innerHTML = "";
 	document.getElementById('newPrognoz').innerHTML = "";
@@ -272,7 +273,7 @@ function onClickCell(event){//функция события
 	document.getElementById('t00').innerHTML = newStr;
 	document.getElementById('t10').innerHTML =  todayImage[m].title;
 	document.getElementById('t20').appendChild(todayImage[m]);
-	document.getElementById('t40').appendChild(img[m]);
+	document.getElementById('t40').appendChild(imgMorning[m]);
 	document.getElementById('t50').innerHTML =  market['descript'+m];
 	document.getElementById('t41').appendChild(img[k]);
 	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
