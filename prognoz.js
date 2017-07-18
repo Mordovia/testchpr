@@ -292,8 +292,8 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#container1'), {
-		allowTaint: true,
+	html2canvas($('#table'), {
+		allowTaint: false,
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
 			window.open(img);
