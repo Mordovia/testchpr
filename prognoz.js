@@ -260,7 +260,8 @@ function onClickCell(event){//функция события
 			document.getElementById('t41').appendChild(img[n*2]);
 			document.getElementById('t51').innerHTML =  marketXtra['descript'+n*2];
 			document.getElementById('t42').appendChild(img[n*2+1]);
-			document.getElementById('t52').innerHTML =  marketXtra['descript'+n*2+1];		
+			document.getElementById('t52').innerHTML =  marketXtra['descript'+n*2+1];
+		}
 		}
 		
 	}
