@@ -250,6 +250,7 @@ function onClickCell(event){//функция события
 		for (n=0; n<8; n++){
 			if (event.target.id = n+m){
 				k = n*2;
+				l = k+1
 			document.getElementById('t'+n+'0').innerHTML =  "";
 			document.getElementById('t30').innerHTML = 'Утро';
 			document.getElementById('t31').innerHTML = 'День';
@@ -261,8 +262,8 @@ function onClickCell(event){//функция события
 			document.getElementById('t50').innerHTML =  market['descript'+n];
 			document.getElementById('t41').appendChild(img[k]);
 			document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
-			document.getElementById('t42').appendChild(img[k+1]);
-			document.getElementById('t52').innerHTML =  marketXtra['descript'+k+1];
+			document.getElementById('t42').appendChild(img[l);
+			document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 			}
 		}
 		
