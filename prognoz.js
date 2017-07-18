@@ -245,13 +245,15 @@ function onClickImg(event){//функция события
 }
 function onClickCell(event){//функция события
 	console.log(event.target.id);
-	for (m=0; m<3; m++){
-		document.getElementById('t0'+m).innerHTML =  "";
+	for (m=0; m<3; m++){		
 		for (n=0; n<8; n++){
 			if (event.target.id = n+m){
 				k = n*2;
 				l = k+1
+				
 			document.getElementById('t'+n+'0').innerHTML =  "";
+			document.getElementById('t'+n+'1').innerHTML =  "";
+			document.getElementById('t'+n+'2').innerHTML =  "";
 			document.getElementById('t30').innerHTML = 'Утро';
 			document.getElementById('t31').innerHTML = 'День';
 			document.getElementById('t32').innerHTML = 'Вечер';
