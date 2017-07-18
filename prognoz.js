@@ -292,11 +292,17 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#container1'), {
+	/*html2canvas($('#container1'), {
   onrendered: function(canvas) {
     var img = canvas.toDataURL()
     window.open(img);
   }
+});*/
+	html2canvas(document.body,{
+   onrendered:function(canvas){
+      var img = canvas.toDataURL()
+    window.open(img);
+   }
 });
 }
 
