@@ -259,9 +259,9 @@ function onClickCell(event){//функция события
 			document.getElementById('t20').appendChild(todayImage[n]);
 			document.getElementById('t40').appendChild(img[n]);
 			document.getElementById('t50').innerHTML =  market['descript'+n];
-			document.getElementById('t41').appendChild(img[n*2]);
+			document.getElementById('t41').appendChild(img[k]);
 			document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
-			document.getElementById('t42').appendChild(img[n*2+1]);
+			document.getElementById('t42').appendChild(img[k+1]);
 			document.getElementById('t52').innerHTML =  marketXtra['descript'+k+1];
 			}
 		}
