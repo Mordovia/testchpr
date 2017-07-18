@@ -63,7 +63,7 @@ function marketGet(){
 		img[n].height = 50;
 		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
-		img[n].addEventListener('click', onClickCell, false);
+		img[n].addEventListener('click', onClickImg, false);
 		}
 	todayImage = new Image;
 	todayImage.width = 100;
@@ -71,7 +71,7 @@ function marketGet(){
 	todayImage.src = market['photo_0'];
 	todayImage.title = market['descript0'];
 	todayImage.href = url['0'];
-	todayImage.addEventListener('click', onClickCell, false);
+	todayImage.addEventListener('click', onClickImg, false);
 	prognozWeek();
 	drawTableWeek();
 	drawTableToday();
@@ -179,7 +179,7 @@ function drawTableToday() {//заполняем таблицу для исход
 function createTableToday(){
 	var element = document.getElementById('table');
 	var table =  document.createElement('table'); 
-	element.addEventListener('click', onClickCell, false);
+	//element.addEventListener('click', onClickCell, false);
 	var caption = document.createElement('caption');
 	caption.id = "t00";
 	table.appendChild(caption);
@@ -236,8 +236,11 @@ function joke() {
 		}
 	}
 })}
-function onClickCell(event){//функция события
+function onClickImg(event){//функция события
 	parent.window.location.href = event.target.href;
+}
+function onClickCell(event){//функция события
+	
 	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
