@@ -250,13 +250,8 @@ function onClickCell(event){//функция события
 			if (event.target.id = n+m){
 				k = n*2;
 				l = k+1
-				
-			document.getElementById('t'+n+'0').innerHTML =  "";
-			document.getElementById('t'+n+'1').innerHTML =  "";
-			document.getElementById('t'+n+'2').innerHTML =  "";
-			document.getElementById('t30').innerHTML = 'Утро';
-			document.getElementById('t31').innerHTML = 'День';
-			document.getElementById('t32').innerHTML = 'Вечер';
+			document.getElementById('table2').innerHTML = "";	
+			createTableToday();
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 			document.getElementById('t10').innerHTML =  todayImage[n].title;
 			document.getElementById('t20').appendChild(todayImage[n]);
