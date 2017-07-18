@@ -241,7 +241,7 @@ function onClickImg(event){//функция события
 	parent.window.location.href = event.target.href;
 }
 function onClickCell(event){//функция события
-	
+	console.log(event.target.id);
 	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
