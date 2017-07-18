@@ -41,7 +41,8 @@ var buttonCreation = function(){
 	btn2.setAttribute('onclick', 'exit();')
 	buttonExit.appendChild(btn2);
 	if (user['id']==10368288 || user['id']==5513350){
-		document.getElementById('market').innerHTML = '<input value = "Управление группой" type = "button" onclick = "administration();">';
+	//	document.getElementById('market').innerHTML = '<input value = "Управление группой" type = "button" onclick = "administration();">';
+	document.getElementById('market').innerHTML = '<input value = "Управление группой" type = "button" onclick = "postItOnWall();">';
 	}
 };
 var administration = function(){
