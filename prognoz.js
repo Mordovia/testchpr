@@ -164,10 +164,10 @@ function drawTableToday() {//заполняем таблицу для исход
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById("t00").style.opacity = "1";
-	document.getElementById('t10').innerHTML =  todayImage.title;
+	document.getElementById('t10').innerHTML =  todayImage[0].title;
 	document.getElementById('t10').colSpan = 2;
 	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
-	document.getElementById('t20').appendChild(todayImage);
+	document.getElementById('t20').appendChild(todayImage[0]);
 	document.getElementById('t20').colSpan = 2;
 	for (n=0; n<1; n++){
 		document.getElementById('t4'+n).appendChild(img[n]);
