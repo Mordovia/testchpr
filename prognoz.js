@@ -140,6 +140,7 @@ function createTableWeek(){
 	table.appendChild(caption);
 	for (var i=0; i<9; i++){
 		var tr = document.createElement('TR');
+		tr.id = 'tr'+i;
 		tr.addEventListener('click', onClickCell, false);
     	for (var j=0;j<4;j++)
 		{
