@@ -245,10 +245,11 @@ function onClickImg(event){//функция события
 }
 function onClickCell(event){//функция события
 	console.log(event.target.id);
-	for (n=0; n<8; n++){
-		for (m=0; m<3; m++){
-		if (event.target.id = n+m){
-			document.getElementById('t'+n+m).innerHTML =  "";
+	for (m=0; m<3; m++){
+		document.getElementById('t0'+m).innerHTML =  "";
+		for (n=0; n<8; n++){
+			if (event.target.id = n+m){
+			document.getElementById('t'+n+'0').innerHTML =  "";
 			document.getElementById('t30').innerHTML = 'Утро';
 			document.getElementById('t31').innerHTML = 'День';
 			document.getElementById('t32').innerHTML = 'Вечер';
@@ -261,7 +262,7 @@ function onClickCell(event){//функция события
 			document.getElementById('t51').innerHTML =  marketXtra['descript'+n*2];
 			document.getElementById('t42').appendChild(img[n*2+1]);
 			document.getElementById('t52').innerHTML =  marketXtra['descript'+n*2+1];
-		}
+			}
 		}
 		
 	}
