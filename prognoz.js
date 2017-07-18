@@ -8,7 +8,7 @@ var options = {
   day: 'numeric',
   };
 var options2 = {
-	weekday: 'Long',
+	weekday: 'long',
 	month: 'short',
 	day: 'numeric',
 };
