@@ -294,7 +294,7 @@ function postItOnWall(){
 	});*/
 	html2canvas($('header'), {
 		allowTaint: true,
-		taintTest: false,
+		taintTest: true,
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
 			window.open(img);
