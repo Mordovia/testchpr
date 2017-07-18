@@ -250,7 +250,7 @@ function onClickCell(event){//функция события
 			if (event.target.id = n+m){
 				k = n*2;
 				l = k+1;
-			document.getElementById('table1').innerHTML = "";	
+			document.getElementById('table').innerHTML = "";	
 			createTableToday();
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 			document.getElementById('t10').innerHTML =  todayImage[n].title;
