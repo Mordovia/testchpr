@@ -259,7 +259,7 @@ function onClickCell(event){//функция события
 	document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 	document.getElementById('t10').innerHTML =  todayImage[m].title;
 	document.getElementById('t20').appendChild(todayImage[m]);
-	document.getElementById('t40').appendChild(img[n]);
+	document.getElementById('t40').appendChild(img[m]);
 	document.getElementById('t50').innerHTML =  market['descript'+m];
 	document.getElementById('t41').appendChild(img[k]);
 	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
