@@ -246,9 +246,14 @@ function onClickImg(event){//функция события
 function onClickCell(event){//функция события
 	console.log(event.target.id);
 	for (n=0; n<8; n++){
-		if (event.target.id = n+'0'){
+		for (m=0; m<3; m++){
+		if (event.target.id = n+m){
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
-			document.getElementById('t10').innerHTML =  todayImage.title;
+			document.getElementById('t10').innerHTML =  todayImage[n].title;
+			document.getElementById('t'+n+m).innerHTML =  "";
+			document.getElementById('t30').innerHTML = 'Утро';
+			document.getElementById('t31').innerHTML = 'День';
+			document.getElementById('t32').innerHTML = 'Вечер';
 			document.getElementById('t20').appendChild(todayImage[n]);
 			document.getElementById('t40').appendChild(img[n]);
 			document.getElementById('t50').innerHTML =  market['descript'+n];
