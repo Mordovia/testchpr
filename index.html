@@ -12,6 +12,18 @@
 	<script src="market.js" type="text/javascript"></script>
 	<script src="wallpost.js" type="text/javascript"></script>
 	<script src="prognoz.js" type="text/javascript"></script>
+	    <script language="javascript">
+$(document).ready(function() {
+//var testdiv = document.getElementById("testdiv");
+    html2canvas($("#testdiv"), {
+        onrendered: function(canvas) {
+            // canvas is the final rendered <canvas> element
+            var myImage = canvas.toDataURL("image/png");
+            window.open(myImage);
+        }
+    });
+});
+</script>
 	</head>
 	<body>    
 <header>
@@ -37,6 +49,7 @@
 
 </div>
 <div class = 'main' id='market2' align=center name = 'market2'></div>
+		<div id="testdiv">
 <footer id="footer">
  Магазин чая, кофе, орехов, сухофруктов и сладостей "VINTAGE" в городе Сосновый Бор (проспект Героев, д.78, ТРЦ "Крым", вход 4, 2-й этаж)<br>
 </footer>
