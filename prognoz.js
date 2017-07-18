@@ -297,6 +297,7 @@ function postItOnWall(){
 		taintTest: true,
 		logging : true,
 		useCORS:true,
+		proxy: "html2canvasproxy.php",
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
 			window.open(img);
