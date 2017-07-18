@@ -63,6 +63,7 @@ function marketGet(){
 		img[n].height = 50;
 		img[n].src = marketXtra['photo_'+n];
 		img[n].href = url[n];
+		img[n].addEventListener('click', onClickCell, false);
 		}
 	todayImage = new Image;
 	todayImage.width = 100;
@@ -70,6 +71,7 @@ function marketGet(){
 	todayImage.src = market['photo_0'];
 	todayImage.title = market['descript0'];
 	todayImage.href = url['0'];
+	todayImage.addEventListener('click', onClickCell, false);
 	prognozWeek();
 	drawTableWeek();
 	drawTableToday();
@@ -235,6 +237,7 @@ function joke() {
 	}
 })}
 function onClickCell(event){//функция события
+	parent.window.location.href = event.target.href;
 	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
