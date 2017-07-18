@@ -106,7 +106,7 @@ var buttonCreation2 = function(){
 	pprg.id = 'pprg'
 	pprg.type = 'button'
 	pprg.value = 'Опубликовать прогноз'
-	pprg.setAttribute('onclick', 'postItRandom();')
+	pprg.setAttribute('onclick', 'postItOnWall();')
 	postPrognoz.appendChild(pprg);
 	backToMainMenu();
 };
@@ -280,11 +280,17 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t51').innerHTML =  marketXtra['descript'+k];
 	document.getElementById('t42').appendChild(img[l]);
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
-
-	/*
-	function formatStyle() {
-	document.getElementById(event.target.id).style.fontWeight = "bold";
-	document.getElementById(event.target.id).style.border = "10px solid #fff";
-	document.getElementById(event.target.id).style.opacity = "1";
-	}*/
 }
+function postItOnWall(){
+	$(document).ready(function() {
+		//var testdiv = document.getElementById("testdiv");
+		html2canvas($("#testdiv"), {
+			onrendered: function(canvas) {
+				// canvas is the final rendered <canvas> element
+				var myImage = canvas.toDataURL("image/png");
+				window.open(myImage);
+			}
+		});
+	});
+}
+
