@@ -22,7 +22,7 @@ var url=[];
 var img = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
-var todayImage;
+var todayImage = [];
 
 
 function marketGet(){
@@ -250,14 +250,12 @@ function onClickCell(event){//функция события
 			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
 			document.getElementById('t10').innerHTML =  todayImage.title;
 			document.getElementById('t20').appendChild(todayImage[n]);
-			for (n=0; n<1; n++){
-				document.getElementById('t4'+n).appendChild(img[n]);
-				document.getElementById('t5'+n).innerHTML =  market['descript'+n];
-			}
-			for (n=1; n<3; n++){
-				document.getElementById('t4'+n).appendChild(img[n]);
-				document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
-			}		
+			document.getElementById('t40').appendChild(img[n]);
+			document.getElementById('t50').innerHTML =  market['descript'+n];
+			document.getElementById('t41').appendChild(img[n*2]);
+			document.getElementById('t51').innerHTML =  marketXtra['descript'+n*2];
+			document.getElementById('t42').appendChild(img[n*2+1]);
+			document.getElementById('t52').innerHTML =  marketXtra['descript'+n*2+1];		
 		}
 		
 	}
