@@ -282,7 +282,7 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
-	$(document).ready(function() {
+	/*$(document).ready(function() {
 		//var testdiv = document.getElementById("testdiv");
 		html2canvas($("#container1"), {
 			onrendered: function(canvas) {
@@ -291,6 +291,12 @@ function postItOnWall(){
 				window.open(myImage);
 			}
 		});
-	});
+	});*/
+	html2canvas($('#container1'), {
+  onrendered: function(canvas) {
+    var img = canvas.toDataURL()
+    window.open(img);
+  }
+});
 }
 
