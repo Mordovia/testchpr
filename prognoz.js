@@ -217,7 +217,6 @@ function createTableToday(){
 	var str = document.getElementById('t00').innerHTML;
 	var n = str[0].toUpperCase() + str.slice(1);
 	document.getElementById('t00').innerHTML = n;
-	document.getElementById('t00').innerHTML = str[0].toUpperCase();
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById('t30').innerHTML = 'Утро';
