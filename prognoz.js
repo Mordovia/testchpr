@@ -292,10 +292,10 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#container1', allowTaint), {
+	html2canvas($('#container1'), {
   onrendered: function(canvas) {
     var img = canvas.toDataURL()
     window.open(img);
   }
-});	
+},allowTaint);	
 }
