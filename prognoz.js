@@ -215,7 +215,8 @@ function createTableToday(){
 	//document.getElementById('t00').innerHTML = 'Сегодня (' + day[0].toLocaleString("ru", options) + ')';//дата отформатированная с учетом переменной опции
 	document.getElementById('t00').innerHTML = day[0].toLocaleString("ru", options2);
 	var str = document.getElementById('t00').innerHTML;
-	document.getElementById('t00').innerHTML = str[0].toUpperCase();
+	var str2 = str-str[0];
+	document.getElementById('t00').innerHTML = str[0].toUpperCase()+str2;
 	document.getElementById("t00").style.fontWeight = "bold";
 	document.getElementById("t00").style.border = "10px solid #fff";
 	document.getElementById('t30').innerHTML = 'Утро';
