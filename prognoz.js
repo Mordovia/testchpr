@@ -266,53 +266,7 @@ function onClickCell(event){//функция события
 	document.getElementById('t42').appendChild(img[l]);
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 
-	/*if (typeof event.target.href !== 'undefined'){
-		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
-	}
-	switch (event.target.id) {
-		case '01'://завтра
-			clearScreen();
-			createTable();
-			document.getElementById('33').innerHTML = '';
-			daySelected = '6';
-			clearStyle();
-			formatStyle();
-			
-			for (n=1; n<4; n++){
-				var t = n+3;
-				document.getElementById(n+'1').innerHTML = '';
-				document.getElementById(n+'1').appendChild(img[t]);
-				document.getElementById(n+'2').innerHTML =  market['descript'+t];
-			}
-			joke();
-			break;
-		case '00'://если возвращаемся на сегодня
-			drawTable();
-			clearStyle();
-			formatStyle();
-			break;
-		case '02'://на неделю
-			clearStyle();
-			daySelected = '2';
-			document.getElementById('33').innerHTML = '';
-			formatStyle();
-			for (n=1; n<8; n++){
-				document.getElementById(n+'1').innerHTML = '';
-				document.getElementById(n+'0').innerHTML = day[n-1].toLocaleString("ru", options);
-			}
-			document.getElementById('11').appendChild(img[1]);//нужно взять "день" из сегодня
-			document.getElementById('12').innerHTML =  market['descript1'];
-			document.getElementById('21').appendChild(img[4]);//"день" из завтра
-			document.getElementById('22').innerHTML =  market['descript4'];
-			document.getElementById('31').appendChild(img[0]);//и просто у меня [0] из массива где 'market.get' не использовался
-			document.getElementById('32').innerHTML =  market['descript0'];
-			for (n=4; n<8; n++){//остальные задаем через цикл
-				var w = n+3;
-				document.getElementById(n+'1').appendChild(img[w]);
-				document.getElementById(n+'2').innerHTML =  market['descript'+w];
-			}
-			break;
-			       }
+	/*
 	function formatStyle() {
 	document.getElementById(event.target.id).style.fontWeight = "bold";
 	document.getElementById(event.target.id).style.border = "10px solid #fff";
