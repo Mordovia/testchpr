@@ -25,6 +25,7 @@ var marketXtra = {
 };
 var url=[];  
 var img = [];
+var imgMorning = [];
 var imgWeek = [];
 var daySelected;//3 - сегодня, 6 - завтра, 2 - неделя
 var todayImage = [];
