@@ -293,7 +293,7 @@ function postItOnWall(){
 		});
 	});*/
 	html2canvas($('header'), {
-		allowTaint: false,
+		allowTaint: true,
 		taintTest: false,
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
