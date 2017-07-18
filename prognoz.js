@@ -65,13 +65,15 @@ function marketGet(){
 		img[n].href = url[n];
 		img[n].addEventListener('click', onClickImg, false);
 		}
-	todayImage = new Image;
-	todayImage.width = 100;
-	todayImage.height = 100;
-	todayImage.src = market['photo_0'];
-	todayImage.title = market['descript0'];
-	todayImage.href = url['0'];
-	todayImage.addEventListener('click', onClickImg, false);
+		for (n=0; n<8; n++){
+			todayImage[n] = new Image;
+			todayImage[n].width = 100;
+			todayImage[n].height = 100;
+			todayImage[n].src = market['photo_'+n];
+			todayImage[n].title = market['descript'+n];
+			todayImage[n].href = url[n];
+			todayImage[n].addEventListener('click', onClickImg, false);
+		}
 	prognozWeek();
 	drawTableWeek();
 	drawTableToday();
@@ -243,6 +245,22 @@ function onClickImg(event){//функция события
 }
 function onClickCell(event){//функция события
 	console.log(event.target.id);
+	for (n=0; n<8; n++){
+		if (event.target.id = n+'0'){
+			document.getElementById('t00').innerHTML = day[n].toLocaleString("ru", options);
+			document.getElementById('t10').innerHTML =  todayImage.title;
+			document.getElementById('t20').appendChild(todayImage[n]);
+			for (n=0; n<1; n++){
+				document.getElementById('t4'+n).appendChild(img[n]);
+				document.getElementById('t5'+n).innerHTML =  market['descript'+n];
+			}
+			for (n=1; n<3; n++){
+				document.getElementById('t4'+n).appendChild(img[n]);
+				document.getElementById('t5'+n).innerHTML =  marketXtra['descript'+n];
+			}		
+		}
+		
+	}
 	/*if (typeof event.target.href !== 'undefined'){
 		parent.window.location.href = event.target.href;//эвент.таргет - ссылка на конкретный элемент, где клик
 	}
