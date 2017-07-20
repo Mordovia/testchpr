@@ -298,7 +298,7 @@ function postItOnWall(){
 		
 		useCORS:true,*/
 		logging : true,
-		proxy: 'https://html2canvas.appspot.com/query',
+		proxy: 'html2canvasproxy.php',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
 			window.open(img);
