@@ -292,9 +292,10 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#container1'), {
+	html2canvas($('#table'), {
 		useCORS: true,
 		logging: true,
+		timeout: 1000,
 		//proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
