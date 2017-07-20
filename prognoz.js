@@ -282,23 +282,13 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
-	VK.api('photos.getWallUploadServer', {
+	VK.api('photos.getUploadServer', {
 				'album_id': '175986797',		
 			}, function(data) {
 				console.log(data.response);
 			})
 	
-	/*$(document).ready(function() {
-		//var testdiv = document.getElementById("testdiv");
-		html2canvas($("#container1"), {
-			onrendered: function(canvas) {
-				// canvas is the final rendered <canvas> element
-				var myImage = canvas.toDataURL("image/png");
-				window.open(myImage);
-			}
-		});
-	});*/
-	html2canvas($('#table'), {
+		html2canvas($('#table'), {
 		useCORS: true,
 		logging: true,
 		//proxy: 'html2canvasproxy.asp',
