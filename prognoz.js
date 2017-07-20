@@ -303,8 +303,7 @@ function postItOnWall(){
 			VK.api('photos.getWallUploadServer', {
 				group_id: '121807904'		
 			}, function(data) {
-				x = data.response;
-				console.log(x);
+				console.log(data.response);
 			})
 			/*var attach;
 			VK.api('wall.post', {
