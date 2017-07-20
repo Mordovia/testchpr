@@ -282,11 +282,9 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
-	VK.api('photos.getUploadServer', {
-				'album_id': '175986797',		
-			}, function(data) {
-				console.log(data.response);
-			})
+	VK.api('photos.getUploadServer', {'album_id': '175986797',}, function(r) {
+				console.log(r.response);
+			})}
 	
 		html2canvas($('#table'), {
 		useCORS: true,
@@ -310,7 +308,7 @@ function postItOnWall(){
 			})*/
 		}
 	});
-}
+//}
 /*function postItOnMyWall(){
 	var str = new String;
 	for (var n=0; n<attach.length; n++){
