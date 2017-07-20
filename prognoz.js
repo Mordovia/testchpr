@@ -292,7 +292,7 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#avatar'), {
+	/*html2canvas($('#avatar'), {
 		/*allowTaint: true,
 		taintTest: true,
 		
@@ -303,5 +303,23 @@ function postItOnWall(){
 			var img = canvas.toDataURL()
 			window.open(img);
 		}
-	});	
+	});*/
+				html2canvas(document.body, {
+					"logging": true, //Enable log (use Web Console for get Errors and Warings)
+					"proxy":"html2canvasproxy.asp",
+					"onrendered": function(canvas) {
+						var img = new Image();
+						img.onload = function() {
+							document.body.appendChild(img);
+						};
+						img.error = function() {
+							if(window.console.log) {
+								window.console.log("Not loaded image from canvas.toDataURL");
+							} else {
+								alert("Not loaded image from canvas.toDataURL");
+							}
+						};
+						img.src = canvas.toDataURL("image/png");
+					}
+				});
 }
