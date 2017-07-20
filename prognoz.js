@@ -292,7 +292,7 @@ function postItOnWall(){
 			}
 		});
 	});*/
-	html2canvas($('#avatar'), {
+	html2canvas($('#container1'), {
 		useCORS: true,
 		logging: true,
 		//proxy: 'html2canvasproxy.asp',
