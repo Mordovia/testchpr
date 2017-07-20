@@ -296,7 +296,7 @@ function postItOnWall(){
 		/*allowTaint: true,
 		taintTest: true,
 		
-		useCORS:true,*/
+		useCORS:true,
 		logging : true,
 		proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
@@ -307,6 +307,7 @@ function postItOnWall(){
 				html2canvas(document.body, {
 					"logging": true, //Enable log (use Web Console for get Errors and Warings)
 					"proxy":"html2canvasproxy.asp",
+					"logging" : true,
 					"onrendered": function(canvas) {
 						var img = new Image();
 						img.onload = function() {
