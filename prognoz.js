@@ -295,11 +295,39 @@ function postItOnWall(){
 	html2canvas($('#table'), {
 		useCORS: true,
 		logging: true,
-		timeout: 1000,
 		//proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
-			window.open(img);
+			//window.open(img);
+			VK.api('wall.post', {
+				'owner_id': '-121807904',
+				'message': 'Мой Чайный прогноз на сегодня:',
+				//	'publish_date': time(),
+				'from_group': '1',
+				'attachments': img
+			})
 		}
 	});
 }
+/*function postItOnMyWall(){
+	var str = new String;
+	for (var n=0; n<attach.length; n++){
+		if (attach[0].type == 'market_album'){
+			path = 'market'+owner_id+'_'+attchId[n];
+		}
+		else{
+			path = attach[0].type+owner_id+'_'+attchId[n];
+		}
+		str += path+',';
+	}	
+//console.log(time());
+//console.log(path);
+//console.log(str);	
+VK.api('wall.post', {
+	'owner_id': '-121807904',
+	'message': x[0].text,
+//	'publish_date': time(),
+	'from_group': '1',
+	'attachments': str
+})
+}*/
