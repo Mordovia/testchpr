@@ -302,7 +302,7 @@ function postItOnWall(){
 			//window.open(img);
 			VK.api('photos.getWallUploadServer', {
 				group_id: '121807904'		
-			}function(data) {
+			}, function(data) {
 				x = data.response.items;
 				console.log(x);
 			})
