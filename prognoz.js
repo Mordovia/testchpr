@@ -298,6 +298,7 @@ function postItOnWall(){
 		//proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL("image/png")
+			console.log(img);
 			//window.open(img);
 			VK.api('wall.post', {
 				'owner_id': '-121807904',
