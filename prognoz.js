@@ -293,10 +293,8 @@ function postItOnWall(){
 		});
 	});*/
 	html2canvas($('#avatar'), {
-		allowTaint: true,
-		taintTest: true,
-		useCORS:true,
-		logging : true,
+		useCORS: true,
+		logging: true,
 		//proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
