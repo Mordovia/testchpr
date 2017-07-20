@@ -305,7 +305,7 @@ function postItOnWall(){
 				'message': 'Мой Чайный прогноз на сегодня:',
 				//	'publish_date': time(),
 				'from_group': '1',
-				'attachments': img
+				'attachments': 'photo'+img
 			})
 		}
 	});
