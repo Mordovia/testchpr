@@ -293,11 +293,11 @@ function postItOnWall(){
 		});
 	});*/
 	html2canvas($('#avatar'), {
-		allowTaint: true,
+		/*allowTaint: true,
 		taintTest: true,
 		logging : true,
-		useCORS:true,
-		proxy: "html2canvasproxy.php",
+		useCORS:true,*/
+		proxy: 'https://html2canvas.appspot.com/query',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
 			window.open(img);
