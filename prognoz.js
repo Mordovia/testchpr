@@ -301,13 +301,13 @@ function postItOnWall(){
 			//console.log(img);
 			//window.open(img);
 			VK.api('photos.getWallUploadServer', {
-				group_id: '121807904'		
+				user_id: user['id'],		
 			}, function(data) {
 				console.log(data.response);
 			})
 			/*var attach;
 			VK.api('wall.post', {
-				'owner_id': user['name'],
+				'owner_id': user['id'],
 				'message': 'Мой Чайный прогноз на сегодня:',
 				//	'publish_date': time(),
 				'attachments': attach
