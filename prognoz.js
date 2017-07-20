@@ -307,7 +307,6 @@ function postItOnWall(){
 				html2canvas(document.body, {
 					"logging": true, //Enable log (use Web Console for get Errors and Warings)
 					"proxy":"html2canvasproxy.asp",
-					"logging" : true,
 					"onrendered": function(canvas) {
 						var img = new Image();
 						img.onload = function() {
