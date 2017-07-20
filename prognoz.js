@@ -282,6 +282,12 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
+	VK.api('photos.getWallUploadServer', {
+				'album_id': '175986797',		
+			}, function(data) {
+				console.log(data.response);
+			})
+	
 	/*$(document).ready(function() {
 		//var testdiv = document.getElementById("testdiv");
 		html2canvas($("#container1"), {
