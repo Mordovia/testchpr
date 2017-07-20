@@ -282,8 +282,14 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
-	VK.api('photos.getUploadServer', {'album_id': '175986797',}, function(r) {
-				console.log(r.response);
+	VK.api('photos.getUploadServer', {'album_id': '175986797',}, function(data) {
+				//console.log(data.response);
+		if (data.response) {
+console.log("ok1");
+// А чё ок? Мы только лишь получили адрес сервера для загрузки
+} else {
+console.log(data.error.error_msg);
+}
 			})}
 	
 		html2canvas($('#table'), {
