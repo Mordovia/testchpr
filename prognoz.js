@@ -300,12 +300,18 @@ function postItOnWall(){
 			var img = canvas.toDataURL("image/png")
 			console.log(img);
 			//window.open(img);
+			VK.api('photos.getWallUploadServer', {
+				group_id: '121807904'		
+			}function(data) {
+				x = data.response.items;
+				console.log(x);
+			})
+			var attach;
 			VK.api('wall.post', {
-				'owner_id': '-121807904',
+				'owner_id': user['name'],
 				'message': 'Мой Чайный прогноз на сегодня:',
 				//	'publish_date': time(),
-				'from_group': '1',
-				'attachments': 'photo'+img
+				'attachments': attach
 			})
 		}
 	});
