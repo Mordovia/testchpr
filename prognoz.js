@@ -295,8 +295,9 @@ function postItOnWall(){
 	html2canvas($('#avatar'), {
 		/*allowTaint: true,
 		taintTest: true,
-		logging : true,
+		
 		useCORS:true,*/
+		logging : true,
 		proxy: 'https://html2canvas.appspot.com/query',
 		onrendered: function(canvas) {
 			var img = canvas.toDataURL()
