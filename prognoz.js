@@ -285,10 +285,10 @@ function postItOnWall(){
 	VK.api('photos.getUploadServer', {'album_id': '175986797',}, function(data) {
 				//console.log(data.response);
 		if (data.response) {
-alert("ok1");
+document.write("ok1");
 // А чё ок? Мы только лишь получили адрес сервера для загрузки
 } else {
-alert(data.error.error_msg);
+document.write(data.error.error_msg);
 }
 			})}
 	
