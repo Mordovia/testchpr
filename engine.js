@@ -56,7 +56,7 @@ var backToMainMenu = function(){
 
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
-	
+	VK.callMethod("showSettingsBox", 4);
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
 	user['id'] = data.response[0].id;
@@ -84,11 +84,11 @@ var getUserName = function () {//описываем функцию, котора
 function exit() {//функция выхода - перебрасывает на главную страницу ВК
 		    parent.window.location.href = 'http://vk.com/';
 }
-  var status = false;	       
+  var status = false;
 VK.init(function() { //с этого мы начинаем работу с ВКонтакте API
       status = true; //меняем состояние переменной
       getUserName();//это наша функция, которая обращается к API
 //console.log('VK is inited'); 
   }, function() { //если произошла ошибка инициализации
      console.log('error'); 
-}, '5.63'); //версия API
+}, '5.67'); //версия API
