@@ -283,13 +283,12 @@ function onClickCell(event){//функция события по клику на
 }
 function postItOnWall(){
 	VK.api('photos.getWallUploadServer', {}, function(data) {
-				//console.log(data.response);
 		if (data.response) {
-document.write("ok1");
-// А чё ок? Мы только лишь получили адрес сервера для загрузки
-} else {
-document.write(data.error.error_msg);
-}
+			
+		} 
+		else {
+			document.write(data.error.error_msg);
+		}
 			})}
 	
 		html2canvas($('#table'), {
