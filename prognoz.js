@@ -282,7 +282,7 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
-	VK.api('photos.getUploadServer', {'album_id': user['id'],}, function(data) {
+	VK.api('photos.getWallUploadServer ', {}, function(data) {
 				//console.log(data.response);
 		if (data.response) {
 document.write("ok1");
