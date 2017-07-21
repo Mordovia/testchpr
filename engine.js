@@ -57,7 +57,17 @@ var backToMainMenu = function(){
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
 	//VK.callMethod("showSettingsBox", 4);
-	VK.Auth.login (null,VK.access.FRIENDS);
+	login:function(callback){                   
+	        function authInfo(response){    
+	             if(response.session){ // Авторизация успешна
+	               vk.data.user = response.session.user;
+	               callback(vk.data.user);                           
+	             }else {
+	               alert("Авторизоваться не удалось!");
+	             }    
+	        }                      
+		VK.Auth.login(authInfo, vk.appPermissions);
+	     },
   	VK.api('users.get', {"fields" : "photo_50"}, function (data) {//метод users.get - это тоже функция, которая выводит что-то, обращаясь к АПИ %(
 	user['name'] = data.response[0].first_name;//обратились к ВК API - получили ответ, который записали в параметр name переменной user
 	user['id'] = data.response[0].id;
