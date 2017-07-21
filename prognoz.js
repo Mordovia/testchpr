@@ -284,55 +284,21 @@ function onClickCell(event){//функция события по клику на
 function postItOnWall(){
 	VK.api('photos.getWallUploadServer', {}, function(data) {
 		if (data.response) {
-			
+		console.log(data.response.upload_url);
 		} 
 		else {
 			document.write(data.error.error_msg);
 		}
-			})}
+	}
+	      )
+}
 	
-		html2canvas($('#table'), {
-		useCORS: true,
-		logging: true,
-		//proxy: 'html2canvasproxy.asp',
-		onrendered: function(canvas) {
-			var img = canvas.toDataURL("image/png")
-			//console.log(img);
-			//window.open(img);
-			VK.api('photos.getWallUploadServer', {
-				user_id: user['id'],		
-			}, function(data) {
-				console.log(data.response);
-			})
-			/*var attach;
-			VK.api('wall.post', {
-				'owner_id': user['id'],
-				'message': 'Мой Чайный прогноз на сегодня:',
-				//	'publish_date': time(),
-				'attachments': attach
-			})*/
+html2canvas($('#table'), {
+	useCORS: true,
+	logging: true,
+	//proxy: 'html2canvasproxy.asp',
+	onrendered: function(canvas) {
+		var img = canvas.toDataURL("image/png")
 		}
-	});
-//}
-/*function postItOnMyWall(){
-	var str = new String;
-	for (var n=0; n<attach.length; n++){
-		if (attach[0].type == 'market_album'){
-			path = 'market'+owner_id+'_'+attchId[n];
-		}
-		else{
-			path = attach[0].type+owner_id+'_'+attchId[n];
-		}
-		str += path+',';
-	}	
-//console.log(time());
-//console.log(path);
-//console.log(str);	
-VK.api('wall.post', {
-	'owner_id': '-121807904',
-	'message': x[0].text,
-//	'publish_date': time(),
-	'from_group': '1',
-	'attachments': str
-})
-}*/
+}
+		
