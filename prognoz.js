@@ -300,5 +300,4 @@ html2canvas($('#table'), {
 	onrendered: function(canvas) {
 		var img = canvas.toDataURL("image/png")
 		}
-}
-		
+});
