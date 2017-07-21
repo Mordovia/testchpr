@@ -57,7 +57,7 @@ var backToMainMenu = function(){
 var getUserName = function () {//описываем функцию, которая обращается к API
 	clearScreen();
 	//VK.callMethod("showSettingsBox", 4);
-	login:function(callback){                   
+	function(callback){                   
 	        function authInfo(response){    
 	             if(response.session){ // Авторизация успешна
 	               vk.data.user = response.session.user;
