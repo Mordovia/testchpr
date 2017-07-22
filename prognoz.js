@@ -298,7 +298,6 @@ function postItOnWall(){
 			/*$.post(uploadUrl, // загружаем     - не понимаю отсюда и дальше ничего(((
 			       {photo : img, crossDomain: true}, function (request) { // параметры для сохранения
 				request.user_id = user['id'];*/
-			$.ajax.cors = true;
 			$.ajax({
 				type: 'POST',
 				headers: { 'Access-Control-Allow-Origin': 'https://mordovia.github.io' },
@@ -313,7 +312,7 @@ function postItOnWall(){
 				},
 				error: function (request) {
 					alert('POST failed.');
-					console.log(request.error.error_msg);
+					console.log(request);
 				}
 			});
 				/*VK.Api('photos.saveWallPhoto', { // сохраняем
