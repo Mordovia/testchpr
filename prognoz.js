@@ -301,6 +301,7 @@ function postItOnWall(){
 				type: 'POST',
 				url: uploadUrl,
 				crossDomain: true,
+				photo : img,
 				data: '{"some":"json"}',
 				dataType: 'json',
 				success: function(request) {
