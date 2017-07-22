@@ -300,6 +300,7 @@ function postItOnWall(){
 				request.user_id = user['id'];*/
 			$.ajax({
 				type: 'POST',
+				header: 'Access-Control-Allow-Origin: https://mordovia.github.io/testchpr/html2canvas.js';  
 				url: uploadUrl,
 				useCORS: true,
 				photo : img,
