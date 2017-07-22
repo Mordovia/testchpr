@@ -282,22 +282,35 @@ function onClickCell(event){//функция события по клику на
 	document.getElementById('t52').innerHTML =  marketXtra['descript'+l];
 }
 function postItOnWall(){
+	var img;
+	html2canvas($('#table'), {
+		useCORS: true,
+		logging: true,
+		//proxy: 'html2canvasproxy.asp',
+		onrendered: function(canvas) {
+			img = canvas.toDataURL("image/png")
+			}
+	});
 	VK.api('photos.getWallUploadServer', {}, function(data) {
 		if (data.response) {
-		console.log(data.response.upload_url);
+			var uploadUrl = data.response.upload_url;
+			$.post(uploadUrl, // загружаем
+			       {photo : img}, function (request) { // параметры для сохранения
+				request.user_id = user['id'];
+				VK.Api('photos.saveWallPhoto', { // сохраняем
+					request // передаем параметры полученные от post + uid_того_кому_отправляешь
+				}, function (result) { // данные о сохраненном фото
+					VK.Api('wall.post', { // постим на стену
+						owner_id : result.owner_id,
+						attachments : '<photo><' + result.owner_id + '>_<' + result.id + '>',
+						message : 'фото для тебя '
+					});
+				});
+			});
 		} 
 		else {
 			document.write(data.error.error_msg);
 		}
-	}
-	      )
-}
+})}
 	
-html2canvas($('#table'), {
-	useCORS: true,
-	logging: true,
-	//proxy: 'html2canvasproxy.asp',
-	onrendered: function(canvas) {
-		var img = canvas.toDataURL("image/png")
-		}
-});
+
