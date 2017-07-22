@@ -294,9 +294,23 @@ function postItOnWall(){
 	VK.api('photos.getWallUploadServer', {}, function(data) {
 		if (data.response) {
 			var uploadUrl = data.response.upload_url;
-			$.post(uploadUrl, // загружаем     - не понимаю отсюда и дальше ничего(((
+			/*$.post(uploadUrl, // загружаем     - не понимаю отсюда и дальше ничего(((
 			       {photo : img, crossDomain: true}, function (request) { // параметры для сохранения
-				request.user_id = user['id'];
+				request.user_id = user['id'];*/
+			$.ajax({
+				type: 'POST',
+				url: uploadUrl,
+				crossDomain: true,
+				data: '{"some":"json"}',
+				dataType: 'json',
+				success: function(request) {
+					request.user_id = user['id'];
+					console.log(request.user_id);
+				},
+				error: function (responseData, textStatus, errorThrown) {
+					alert('POST failed.');
+				}
+			});
 				VK.Api('photos.saveWallPhoto', { // сохраняем
 					request // передаем параметры полученные от post + user_id
 				}, function (result) { // данные о сохраненном фото
@@ -306,7 +320,7 @@ function postItOnWall(){
 						message : 'фото для тебя '
 					});
 				});
-			});
+			//});
 		} 
 		else {
 			document.write(data.error.error_msg);
