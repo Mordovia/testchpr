@@ -297,6 +297,7 @@ function postItOnWall(){
 			$.post(uploadUrl, // загружаем
 			       {photo : img}, function (request) { // параметры для сохранения
 				request.user_id = user['id'];
+				crossDomain: true,
 				VK.Api('photos.saveWallPhoto', { // сохраняем
 					request // передаем параметры полученные от post + uid_того_кому_отправляешь
 				}, function (result) { // данные о сохраненном фото
