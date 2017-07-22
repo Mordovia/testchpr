@@ -298,9 +298,10 @@ function postItOnWall(){
 			/*$.post(uploadUrl, // загружаем     - не понимаю отсюда и дальше ничего(((
 			       {photo : img, crossDomain: true}, function (request) { // параметры для сохранения
 				request.user_id = user['id'];*/
+			$.ajax.cors = true;
 			$.ajax({
 				type: 'POST',
-				headers: { 'Access-Control-Allow-Origin': '*' },
+				headers: { 'Access-Control-Allow-Origin': 'https://mordovia.github.io' },
 				crossDomain: true,
 				url: uploadUrl,
 				photo : img,
