@@ -301,8 +301,8 @@ function postItOnWall(){
 			$.ajax({
 				type: 'POST',
 				headers: { 'Access-Control-Allow-Origin': '*' },
+				crossDomain: true,
 				url: uploadUrl,
-				useCORS: true,
 				photo : img,
 				data: '{"some":"json"}',
 				dataType: 'json',
