@@ -304,7 +304,7 @@ function postItOnWall(){
 				photo : img,
 				data: '{"some":"json"}',
 				dataType: 'json',
-				success: function(request) {
+				success: function (request) {
 					request.user_id = user['id'];
 					console.log(request.user_id);
 				},
@@ -312,7 +312,7 @@ function postItOnWall(){
 					alert('POST failed.');
 				}
 			});
-				VK.Api('photos.saveWallPhoto', { // сохраняем
+				/*VK.Api('photos.saveWallPhoto', { // сохраняем
 					request // передаем параметры полученные от post + user_id
 				}, function (result) { // данные о сохраненном фото
 					VK.Api('wall.post', { // постим на стену
@@ -320,7 +320,7 @@ function postItOnWall(){
 						attachments : '<photo><' + result.owner_id + '>_<' + result.id + '>',
 						message : 'фото для тебя '
 					});
-				});
+				});*/
 			//});
 		} 
 		else {
