@@ -304,14 +304,15 @@ function postItOnWall(){
 				crossDomain: true,
 				url: uploadUrl,
 				photo : img,
-				data: '{"some":"json"}',
-				dataType: 'json',
+				//data: '{"some":"json"}',
+				//dataType: 'json',
 				success: function (request) {
 					request.user_id = user['id'];
 					console.log(request.user_id);
 				},
-				error: function (responseData, textStatus, errorThrown) {
+				error: function (request) {
 					alert('POST failed.');
+					console.log(request.error.error_msg);
 				}
 			});
 				/*VK.Api('photos.saveWallPhoto', { // сохраняем
