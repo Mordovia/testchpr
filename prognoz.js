@@ -289,6 +289,7 @@ function postItOnWall(){
 		//proxy: 'html2canvasproxy.asp',
 		onrendered: function(canvas) {
 			img = canvas.toDataURL("image/png")
+			window.open(img);
 			}
 	});
 	VK.api('photos.getWallUploadServer', {}, function(data) {
@@ -300,7 +301,7 @@ function postItOnWall(){
 			$.ajax({
 				type: 'POST',
 				url: uploadUrl,
-				crossDomain: true,
+				useCORS: true,
 				photo : img,
 				data: '{"some":"json"}',
 				dataType: 'json',
