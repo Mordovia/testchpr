@@ -105,7 +105,7 @@ var buttonCreation2 = function(){
 	var pprg = document.createElement('input')
 	pprg.id = 'pprg'
 	pprg.type = 'image'
-	pprg.src = '/res/4p.png'
+	pprg.src = 'res/4p.png'
 	pprg.value = 'Опубликовать прогноз'
 	pprg.setAttribute('onclick', 'postItOnWall();')
 	postPrognoz.appendChild(pprg);
