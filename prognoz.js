@@ -124,10 +124,11 @@ var buttonCreation2 = function(){
 function prognozWeek(){
 	
 	for (n=0; n<7; n++){
+		var o = n+1;
 		imgWeek[n] = new Image;
 		imgWeek[n].width = 44;
 		imgWeek[n].height = 44;
-		imgWeek[n].id = n+'img';
+		imgWeek[n].id = o+'img';
 		imgWeek[n].src = market['photo_'+n];
 		//imgWeek[n].href = url[n];
 	}
