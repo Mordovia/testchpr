@@ -54,6 +54,7 @@ clearScreen();
 	}
 var backToMainMenu = function(){
 	document.getElementById('market2').innerHTML = '<input value = "Вернуться в главное меню" type = "button" onclick = "getUserName();">';
+	document.getElementById('market2').style = 'margin-top: 15px';
 }
 
 var getUserName = function () {//описываем функцию, которая обращается к API
