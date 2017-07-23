@@ -100,6 +100,7 @@ var buttonCreation2 = function(){
 	nprg.src = 'res/refresh-512.png'
 	nprg.style = 'float: left'
 	nprg.width = '50'
+	nprg.height = '50'
 	nprg.value = 'Получить новый прогноз'
 	nprg.setAttribute('onclick', 'marketGet();')
 	newPrognoz.appendChild(nprg);
@@ -111,6 +112,7 @@ var buttonCreation2 = function(){
 	pprg.src = 'res/4p.png'
 	pprg.style = 'float: right'
 	pprg.width = '50'
+	pprg.height = '50'
 	pprg.value = 'Опубликовать прогноз'
 	pprg.setAttribute('onclick', 'postItOnWall();')
 	postPrognoz.appendChild(pprg);
