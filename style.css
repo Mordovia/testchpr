@@ -65,6 +65,9 @@ td, th{
 	vertical-align: middle;
 	   
 }
+#table2{
+cursor:pointer;
+}
 #table2 tr:hover td {background: rgba(188, 154, 164, 0.61);}
 img{
 cursor:pointer;
