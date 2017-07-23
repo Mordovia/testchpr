@@ -325,7 +325,7 @@ function postItOnWall(){
 				},
 				error: function (request) {
 					alert('POST failed.');
-					console.log(request);
+					//console.log(request);
 				}
 			});
 				/*VK.Api('photos.saveWallPhoto', { // сохраняем
