@@ -23,6 +23,8 @@ function clearScreen(){
 			document.getElementById(className2[i].id).style.height = "";
 			document.getElementById(className2[i].id).style.width = "45%";
 		}
+	document.getElementById('postPrognoz').style = '';
+	document.getElementById('newPrognoz').style = '';
 }
 	
 var buttonCreation = function(){
