@@ -97,6 +97,7 @@ var buttonCreation2 = function(){
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'image'
+	nprg.src = 'res/refresh-512.png'
 	nprg.style = 'float: left'
 	nprg.width = '50'
 	nprg.value = 'Получить новый прогноз'
