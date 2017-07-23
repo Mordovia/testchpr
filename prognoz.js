@@ -107,7 +107,7 @@ var buttonCreation2 = function(){
 	newPrognoz.appendChild(nprg);
 	
 	var postPrognoz = document.getElementById('postPrognoz');
-	postPrognoz.style = 'float: left; margin-left: 50px'
+	postPrognoz.style = 'float: right; margin-left: 50px'
 	var pprg = document.createElement('input')
 	pprg.id = 'pprg'
 	pprg.type = 'image'
