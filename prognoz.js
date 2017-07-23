@@ -238,11 +238,8 @@ function createTableToday(){
 	document.getElementById('t10').colSpan = 2;
 	document.getElementById("t10").style.font= 'bold 16px Antiqua, Arial, sans-serif';
 	document.getElementById('t20').colSpan = 2;
-	document.getElementById("t50").height= '90';
 	document.getElementById("t50").width= '70';
-	document.getElementById("t51").height= '90';
 	document.getElementById("t51").width= '70';
-	document.getElementById("t52").height= '90';
 	document.getElementById("t52").width= '70';
 	buttonCreation2();
 }
