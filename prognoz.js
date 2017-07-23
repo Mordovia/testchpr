@@ -94,11 +94,12 @@ function marketGet(){
 
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
+	newPrognoz.style = 'float: left; margin-left: 50px'
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'image'
 	nprg.src = 'res/refresh-512.png'
-	nprg.style = 'float: left; margin-left: 50px'
+	
 	nprg.width = '50'
 	nprg.height = '50'
 	nprg.value = 'Получить новый прогноз'
@@ -106,11 +107,12 @@ var buttonCreation2 = function(){
 	newPrognoz.appendChild(nprg);
 	
 	var postPrognoz = document.getElementById('postPrognoz');
+	postPrognoz.style = 'float: left; margin-left: 50px'
 	var pprg = document.createElement('input')
 	pprg.id = 'pprg'
 	pprg.type = 'image'
 	pprg.src = 'res/4p.png'
-	pprg.style = 'float: right; margin-right: 50px'
+	
 	pprg.width = '50'
 	pprg.height = '50'
 	pprg.value = 'Опубликовать прогноз'
