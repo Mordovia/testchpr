@@ -94,6 +94,7 @@ function marketGet(){
 
 var buttonCreation2 = function(){
 	var newPrognoz = document.getElementById('newPrognoz');
+	newPrognoz.style = 'position: absolute; bottom: 10px';
 	var nprg = document.createElement('input')
 	nprg.id = 'nprg'
 	nprg.type = 'image'
@@ -106,6 +107,7 @@ var buttonCreation2 = function(){
 	newPrognoz.appendChild(nprg);
 	
 	var postPrognoz = document.getElementById('postPrognoz');
+	postPrognoz.style = 'position: absolute; bottom: 10px';
 	var pprg = document.createElement('input')
 	pprg.id = 'pprg'
 	pprg.type = 'image'
